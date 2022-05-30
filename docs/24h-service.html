@@ -14,6 +14,7 @@
 		.flex-vertical {flex-direction: column;}
 		.flex-space-between {justify-content: space-between;}
 		.flex-equal > * {flex-grow: 1; width: 50%;}
+		.flex-vertically-centered {align-items: center;}
 		.img-responsive {width: 100%;max-width: 100%;}
 		ul, ol {margin: 0; padding: 0}
 		.text-center {text-align: center;}
@@ -35,8 +36,10 @@
 		.margin-small-top {margin-top: 10px;}
 		.margin-large-top {margin-top: 40px;}
 		.margin-large-bottom {margin-bottom: 40px !important;}
+		.margin-small-bottom {margin-bottom: 10px !important;}
 		.margin-extra-large-bottom {margin-bottom: 80px !important;}
 		.margin-top-none {margin-top: 0 !important;}
+		.margin-bottom-none {margin-bottom: 0 !important;}
 		a {color: inherit;}
 		.no-underline {text-decoration: none;}
 		.full-bg {background-repeat: no-repeat;background-position: center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
@@ -102,7 +105,7 @@
 		@media (max-width: 600px) {
 			.contact-section {background-image: url(contact-bg-left-small.png), url(contact-bg-right-small.png);background-size: auto;}
 			.flex {display: block !important; width: 100%;}
-			.flex-equal > * {width: 100%; max-width: fit-content;}
+			.flex-equal > * {width: 100%;max-width: fit-content;}
 			.mb-text-center {text-align: center;}
 			header {padding: 20px;}
 			#logos > div {margin-left: -40px}
@@ -111,6 +114,7 @@
 			#breadcrumbs ol {display: flex !important;}
 			#mainPhoneNumber {font-size: 1.8em !important;}
 			#mainPhoneNumber img {width: 30px}
+			#services a {display: block; min-height: 230px !important;}
 		}
 		</style>
 	</head>
