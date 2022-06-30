@@ -117,13 +117,16 @@
 			#services a {display: block; min-height: 230px !important;}
 		}
 		</style>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.7.0/keen-slider.min.css" />
+		<link rel="stylesheet" href="slider.css"/>
+		
 	</head>
 	<body>
 		<header>
 			<div class="flex flex-space-between container-extra-wide mb-text-center padding-medium">
 				<div id="logo">
 					<a id="logo-link" href="index.html">
-						<img id="brand-logo" src="logo.jpg" alt="ProTech Diesel Steinbach" class="img-responsive">
+						<img id="brand-logo" src="logo-optimized.webp" alt="ProTech Diesel Steinbach" class="img-responsive">
 					</a>
 					<h1 class="hidden">ProTech Diesel Steinbach</h1>
 				</div>
@@ -161,7 +164,28 @@
 		</div>
 
 		<div class="container-extra-wide">
-			<img class="img-responsive" alt="" src="volvo_truck_wide.jpg"/>
+			<!-- <img class="img-responsive" alt="" src="volvo_truck_wide-optimized.webp"/> -->
+
+
+			<div id="my-keen-slider" class="keen-slider">
+				<div class="keen-slider__slide number-slide full-bg" style="background-image: url(volvo_truck_wide-optimized.webp);"></div>
+				<div class="keen-slider__slide number-slide full-bg" style="background-image: url(IMG_20220629_214821_521-optimized.webp);"></div>
+				<div class="keen-slider__slide number-slide full-bg" style="background-image: url(IMG_20220629_214823_231-optimized.webp);"></div>
+				<div class="keen-slider__slide number-slide full-bg" style="background-image: url(IMG_20220629_214826_029-optimized.webp);"></div>
+				<div class="keen-slider__slide number-slide full-bg" style="background-image: url(IMG_20220629_214832_630-optimized.webp);"></div>
+				<div class="keen-slider__slide number-slide full-bg" style="background-image: url(IMG_20220629_214835_862-optimized.webp);"></div>
+				<div class="keen-slider__slide number-slide full-bg" style="background-image: url(IMG_20220629_214837_875-optimized.webp);"></div>
+			</div>
+			
+			<script src="https://cdn.jsdelivr.net/npm/keen-slider@6.7.0/keen-slider.min.js"></script>
+			<script src="./slider.js"></script>
+
+
+
+
+
+
+			
 		</div>
 
 		<div class="container-wide margin-extra-large-bottom">
