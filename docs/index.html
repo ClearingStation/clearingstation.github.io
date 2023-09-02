@@ -214,6 +214,47 @@
 			</div>
 		</div>
 
+		<div>
+		  <div id="google-reviews"></div>
+		  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdaWV11vMJY5-lfkDCZQM4X4ONTM1f_lk&libraries=places"></script>
+		  <script>
+		    function initMap() {
+			const map = new google.maps.Map(document.getElementById('google-reviews'), {
+			    center: { lat: 0, lng: 0 }, // Set to your desired map center
+			    zoom: 1, // Set an appropriate zoom level
+			});
+
+			const service = new google.maps.places.PlacesService(map);
+
+			service.getDetails(
+			    {
+				placeId: '10785899902558695452', // Replace with the Place ID of the location for which you want to display reviews
+			    },
+			    (place, status) => {
+				if (status === google.maps.places.PlacesServiceStatus.OK) {
+				    if (place.reviews && place.reviews.length > 0) {
+					const reviewsContainer = document.getElementById('google-reviews');
+					const reviewsList = document.createElement('ul');
+					place.reviews.forEach((review) => {
+					    const listItem = document.createElement('li');
+					    listItem.innerHTML = `<strong>${review.author_name}</strong>: ${review.text}`;
+					    reviewsList.appendChild(listItem);
+					});
+					reviewsContainer.appendChild(reviewsList);
+				    } else {
+					document.getElementById('google-reviews').innerHTML =
+					    'No reviews found.';
+				    }
+				} else {
+				    document.getElementById('google-reviews').innerHTML =
+					'Error fetching reviews.';
+				}
+			    }
+			);
+		    }
+		  </script>
+		</div>
+
 
 		<!-- contact -->
 		<div class="contact-section dark-background">
