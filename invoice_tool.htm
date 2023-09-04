@@ -1,0 +1,255 @@
+<html>
+	<head>
+		<style>
+		.flex {display: flex}
+		.space-between {justify-content:space-between;}
+		.inline-block {display: inline-block;}
+		.v-centered {align-items: center}
+
+		html, body {font-family: Proxima Nova, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Arial;}
+		.top-navbar { height: 45px; background: #344258; color: white;}
+		.top-navbar input {background: #4e5969; border: 0; outline: none; color: #dae5f5; height: 30; font-size: 14px; margin: 0 2px; border-radius: 3px; padding: 0 10px}
+		.top-navbar .right input {width: 150px}
+		.main {min-height: calc(100vh - 40px);background: #101a29; color: #fff;}
+		.sidebar {background: #4e5969; min-width: 200px; min-height: 100%}
+		.sidebar .tabs{gap: 10px; border-bottom: 1px solid #5e6a7a; padding: 0 10px; height: 50px;}
+		.sidebar .tabs .tab {padding: 0 10px; font-size: 13px;  display: flex; align-items: center; border-bottom: 3px transparent; text-decoration: none; color: #fff; opacity: 0.6}
+		.sidebar .tabs .tab:hover {opacity: 1;}
+		.sidebar .tabs .tab.active {border-bottom: 4px solid #5e6a7a; font-weight: 600; opacity: 1;}
+		.sidebar ul {padding: 0; margin: 0;}
+		.sidebar ul li {list-style: none; margin: 2px 0}
+		.sidebar ul li a {display: block; color: #fff; text-decoration: none; padding: 8px 10px; font-size: 14px}
+		.sidebar ul li a:hover, .sidebar ul li .active {background: #5e6a7a}
+		.sidebar ul li .active {font-weight: 500;}
+		.main section {width: 100%; color: #fff}
+		.main sidebar {border-left: 1px solid #5e6a7a;border-right: 1px solid #5e6a7a;}
+		.header {height: 50px; background: #445670; padding: 0 20px;}
+		.header .headline {font-weight: 600; }
+		.bolder {font-weight: 600;}
+		.sidebar .journal-entry {font-size: 13px; padding: 10px; border-bottom: 1px solid #5e6a7a}
+		.sidebar .journal-entry .tag {border-left: 2px solid rgba(255,255,255,0.4); background: #445670; padding: 1px 0px 1px 12px; border-radius: 3px; opacity: 0.5}
+		.sidebar .journal-entry .tag svg {opacity: 0}
+		.sidebar .journal-entry .tag:hover svg {opacity: 1}
+		.sidebar .journal-entry .posting {opacity: 0.7}
+		.sidebar .journal-entry .posting:hover {text-decoration: underline; cursor: pointer;}
+		.sidebar .journal-entry .posting div:first-of-type{flex: 1; margin-right: 10px;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+		.sidebar .journal-entry .posting div:nth-of-type(2) {flex-shrink: 0;}
+		.document-list-header {font-size: 13px; opacity: 0.5;}
+		.document-list-date {width: 60px; padding: 5px 10px}
+		.document-list-name {padding: 5px 10px}
+		.document-list-item{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+		</style>
+		
+		<link href="dashboard.css" rel="stylesheet"/>
+		
+	</head>
+	<body>
+		<header class="flex space-between v-centered top-navbar">
+			<div class="flex">
+				<div style="width: 200px">
+					<div style="padding: 3px 10px; font-weight: bold">ClearingStation</div>
+				</div>
+				<div>
+					<input name="" type="text" value="399" placeholder="Search" style="min-width: 500px; background: #101a29"/>
+				</div>
+			</div>
+			<div class="right">
+				<input name="" type="text" value="" placeholder="Time"/>
+				<input name="" type="text" value="" placeholder="Account"/>
+				<input name="" type="text" value="" placeholder="Filter by tag, payee, ..."/>
+				<div style="display: inline-block">
+					&nbsp;&nbsp;&nbsp;
+				</div>
+			</div>
+		</header>
+
+		<main class="flex main">
+			<sidebar class="sidebar">
+				<ul>
+					<li><a href="income_statement.htm">Income Statement</a></li>
+					<li><a href="balance_sheet.htm">Balance Sheet</a></li>
+					<li><a href="trial_balance.htm">Trial Balance</a></li>
+					<li><a href="documents.htm" class="active">Documents</a></li>
+					<li><a href="journal.htm">Journal</a></li>
+				</ul>
+			</sidebar>
+
+			<sidebar class="sidebar" style="width: 450px">
+				<div class="flex document-list-header v-centered">
+					<div style="margin-left: 10px">
+						<!-- Search for document - mark all. Search for document, unmarking all will only unmark the selected ones that matched the previous query, allowing for "unselect all that include the word x" type behaviour. -->
+						<input name="" type="checkbox" value="" checked/>
+					</div>
+					<div class="document-list-date" style="width: 55px">Date</div>
+					<div class="document-list-name">Name</div>
+					<div>
+						<!-- Batch Actions:
+						     Create Journal Entry: This action opens a dialog box where the user can specify the details of the journal entry, such as the account, amount, date, and description.
+						     Mark as Paid: This action marks the selected documents as paid, which can be useful for keeping track of which documents have been paid and which ones are still outstanding.
+						     Delete: This action deletes the selected documents. A confirmation dialog box appears to prevent accidental deletion.
+						-->
+						<button>Batch Actions</button>
+					</div>
+				</div>
+				<ul>
+					<li>
+						<a href="" class="active" title="Trace-based Just-in-Time Type Specialization for Dynamic Languages">
+							<div class="flex space-between v-centered">
+								<div class="document-list-item">
+									<input name="" type="checkbox" value="" checked/>
+									<span style="margin-right: 5px">2015-01-06</span> Trace-based Just-in-Time Type Specialization for Dynamic Languages
+								</div>
+								<div style="display: none;">
+									<svg fill="#f25454" height="10px" width="10px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+										viewBox="0 0 512 512" xml:space="preserve">
+										<g>
+											<g>
+												<path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z"/>
+											</g>
+										</g>
+									</svg>
+								</div>
+							</div>
+						</a>
+						<ul>
+						  <li>
+						    <a href="" style="padding-left: 40px; font-size: 13px">... Total <b>399</b> CAD...</a>
+						  </li>
+						  <li>
+						    <a href="" style="padding-left: 40px; font-size: 13px;">... GST <b>39.9</b>4 CAD...</a>
+						  </li>
+						</ul>
+					</li>
+					<li>
+						<a href="">
+							<div class="flex space-between v-centered">
+								<div class="document-list-item">
+									<input name="" type="checkbox" value="" checked/>
+									<span style="margin-right: 5px">2015-01-06</span> Second Document <span class="bolder">(2)</span>
+								</div>
+								<div>
+									<svg fill="#ff892e" height="10px" width="10px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+										   viewBox="0 0 512 512" xml:space="preserve">
+										<g>
+											<g>
+												<path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z"/>
+											</g>
+										</g>
+									</svg>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</sidebar>
+
+			<section>
+
+				<div class="header flex v-centered space-between">
+					<div>
+						<!--<button style="margin-right: 10px">Back</button>-->
+						<div class="headline">Trace-based Just-in-Time Type Specialization for Dynamic Languages.pdf</div>
+					</div>
+					<div>
+						<button>Download</button>
+						<button>Share</button>
+					</div>
+				</div>
+
+
+				<iframe frameborder="0" src="https://mozilla.github.io/pdf.js/web/viewer.html" width="100%" style="height: calc(100vh - 50px)"></iframe>
+				<!-- <div style="padding: 20px; line-height: 1.6">
+				     Please be advised that all user activity is being monitored for security reasons. <br />
+				     Requesting access...<br />
+				     Verifying authentication... <br />
+				     Authentication has been successfully verified... <br />
+				     Access granted. <br />
+				     <div style="padding: 20px">
+				     Erwin Flaming opened "Trace-based Just-in-Time Type Specialization for Dynamic Languages.pdf" at Mar 2 00:16. <br />
+				     </div>
+				     
+				     Downloading file over AES-256 encrypted message channel, please wait... <br />
+				     Decrypting file for your access...<br />
+				     </div>-->
+
+			</section>
+
+			<sidebar class="sidebar" style="width: 600px">
+				<div class="tabs flex" style="white-space: nowrap; overflow-x: auto;">
+					<a class="tab active" href="#">Batch Journal Entry</a>
+					<a class="tab" href="#">Journal Entries</a>
+					<a class="tab" href="#">Comments</a>
+					<a class="tab" href="#">Activity</a>
+				</div>
+				<ul>
+					<li>
+						<div class="journal-entry active">
+							<div class="flex space-between" style="margin-bottom: 10px">
+								<div contentEditable="true">2015-01-06</div>
+								
+								<div style="text-align: right">
+									<span style="opacity: 0.3;">
+										<img alt="" src="https://cdn2.iconfinder.com/data/icons/finance-337/24/Payee_Pay-512.png" width="16" align="top" style="margin-right: 5px" />
+									</span>
+									<span class="bolder" contentEditable="true" spellcheck="false">
+										MB Hydro
+									</span>
+								</div>
+								
+							</div>
+							<div style="margin: 5px 0 10px 0; opacity: 0.8" class="flex v-centered">
+								<span style="opacity: 0.6; margin-right: 8px">
+									<svg fill="#fff" width="16px" height="16px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21,7H3V4A1,1,0,0,1,4,3H20a1,1,0,0,1,1,1ZM3,20V9H21V20a1,1,0,0,1-1,1H4A1,1,0,0,1,3,20Zm3-6H18V12H6Zm0,4h6V16H6Z"/></svg>
+								</span>
+								<span contentEditable="true">Paying the Hydro</span>
+							</div>
+							<div style="margin: 5px 0 10px 0; gap: 10px;" class="flex">
+								<div class="tag flex v-centered">
+									<span>homeoffice</span>
+									<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" role="presentation" class="v-Icon i-cancel">
+										<line x1="16" y1="8" x2="8" y2="16"></line>
+										<line x1="8" y1="8" x2="16" y2="16"></line>
+									</svg>
+								</div>
+								<div class="tag flex v-centered">
+									<span>invoice</span>
+									<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" role="presentation" class="v-Icon i-cancel">
+										<line x1="16" y1="8" x2="8" y2="16"></line>
+										<line x1="8" y1="8" x2="16" y2="16"></line>
+									</svg>
+								</div>
+							</div>
+							<div class="flex space-between" style="opacity: 0.7">
+								<div>1010 &middot; <span title="Assets:US:BofA:Checking" style="opacity: 0.8">Checking</span></div>
+								<div><input name="" type="text" value="-" style="width: 15" /> <input name="" type="text" value="" placeholder="Total" style="width: 60" /> <span style="opacity: 0.6">USD</style></div>
+							</div>
+							<div class="flex space-between" style="opacity: 0.7">
+								<div>2350 &middot; <span title="Expenses:Home:" style="opacity: 0.8">Rent</span></div>
+								<div><input name="" type="text" value="" placeholder="Total" style="width: 60" /> <span style="opacity: 0.6">USD</style></div>
+							</div>
+							
+							<div class="flex space-between" style="opacity: 0.7">
+								<div>1010 &middot; <span title="Expenses:Home:" style="opacity: 0.8">Checking</span></div>
+								<div><input name="" type="text" value="-" style="width: 15" /> <input name="" type="text" value="" placeholder="GST" style="width: 60" /> <span style="opacity: 0.6">USD</style></div>
+							</div>
+							<div class="flex space-between" style="opacity: 0.7">
+								<div>2350 &middot; <span title="Expenses:Home:" style="opacity: 0.8">GST</span></div>
+								<div><input name="" type="text" value="" placeholder="GST" style="width: 60" /> <span style="opacity: 0.6">USD</style></div>
+							</div>
+
+							<div style="margin-top: 20px; text-align: right">
+								<!--
+								     Preview shows the whole list of journal entries, they can click on one and the invoice will come up, they can also see the line and make corrections.
+								     If a number is missing, it will show them in the list and foce them to click on a number on the invoice and proceed, or draw a box around it via freehand.
+								-->
+								<button>Preview & Save &raquo;</button>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</sidebar>
+
+		</main>
+	</body>
+</html>

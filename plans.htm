@@ -1,0 +1,662 @@
+<!--
+    APPLICATION_NAME "Total Truck Care"
+    APPLICATION_DESCRIPTION "Truck Oil Change Steinbach"
+
+    OFFLINE_MANIFEST_PATH "./offline.appcache"
+
+    LANG "en"
+    LOCALE "en_US"
+
+    PAGE_KEYWORD "uselessness"
+    PAGE_NAME "About uselessness"
+    PAGE_DESCRIPTION "Some useless news about nothing in particular. Just trying to find out the answer."
+    PAGE_IMAGE_URL "https://static.example.com/article/about-uselessness.png"
+    PAGE_CANONICAL_URL "https://example.com/about-uselessness"
+    PAGE_SHORTLINK_URL "https://bit.ly/totoenvacances"
+
+    GOOGLE_WEBMASTER_TOOLS_KEY "xxx"
+
+    TWITTER_CREATOR_ACCOUNT "@ChtefiD"
+    TWITTER_WEBSITE_ACCOUNT "@ChtefiD"
+
+    FACEBOOK_PUBLISHER "https://www.facebook.com/my-website-page"
+    FACEBOOK_AUTHOR "https://www.facebook.com/personal-author-page"
+    GOOGLE_PUBLISHER "https://plus.google.com/+my-website-page"
+    GOOGLE_AUTHOR "https://plus.google.com/+personal-author-page"
+
+    SITEMAP_URL "/sitemap.xml"
+
+  -->
+<html lang="EN" manifest="{{ OFFLINE_MANIFEST_PATH }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <meta http-equiv="Content-Language" content="EN">	
+    <meta name="language" content="EN" />
+    <meta name="description" content="Corporate Accounting for Manitobans">
+    <meta name="keywords" content="accountant,corporate accounting,bookkeeping,winnipeg,steinbach,winkler" />
+    <meta name="robots" content="index,follow" /> <!-- robots.txt devrait suffir -->
+
+    <link rel="pingback" href=".../xmlrpc.php" />
+    <link rel="alternate" type="application/rss+xml" title="..." href=".../feed/" />
+    <link rel="prev" title="..." href=".../page/1" />
+    <link rel="next" title="..." href=".../page/3" />
+    <link rel="canonical" href="{{ PAGE_CANONICAL_URL }}" />
+    <link rel="shortlink" href="{{ PAGE_SHORTLINK_URL }}" />
+    <link rel="publisher" href="{{ GOOGLE_PUBLISHER }}"/>
+    <link rel="author" href="{{ GOOGLE_AUTHOR }}"/>
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ SITEMAP_URL }}" />
+
+    <!-- Resolve DNS asap (can be useful for future pages) -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//themes.googleusercontent.com">
+    <!-- Better: DNS + TCP handshake + optional TLS negotiation -->
+    <!-- Use for current page -->
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    
+    <!-- always nice to use dns-prefetch or preconnect before, for stylesheets that are using those urls -->
+    <!-- eg: <link ref="preconnect" href="//fonts.gstatic.com"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800" rel="stylesheet" type="text/css">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <!-- Enable Chrome Frame -->
+    <meta http-equiv="Default-Style" content="dark">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes, minimal-ui">
+    
+    <!-- Don't want the content to be translated on the fly by the browser ? -->
+    <meta name="google" value="notranslate">
+    <meta name="google-site-verification" content="{{ GOOGLE_WEBMASTER_TOOLS_KEY }}">
+
+    <!-- fav icon -->
+    <link rel="fluid-icon" href="https://.../fluidicon.png" title="..."> <!-- ? -->
+    <link rel="shortcut icon" type="image/x-icon" href="http://.../favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="image_src" href="{{ PAGE_IMAGE_URL }}">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph -->
+    <!-- TODO DYNAMIC ACCORDING TO THE TYPE -->
+    <meta property="og:locale" content="{{ LOCALE }}" />
+    <meta property="og:type" content="article" /> <!-- product... -->
+    <meta property="og:title" content="{{ PAGE_NAME }}" />
+    <meta property="og:description" content="Corporate Accounting for Manitobans" />
+    <meta property="og:image" content="{{ PAGE_IMAGE_URL }}" />
+    <meta property="og:url" content="{{ PAGE_CANONICAL_URL }}" />
+    <meta property="og:site_name" content="{{ APPLICATION_NAME }}" />	
+
+    <meta property="article:publisher" content="{{ FACEBOOK_PUBLISHER }}" />
+    <meta property="article:author" content="{{ FACEBOOK_AUTHOR }}" />
+    <meta property="article:section" content="Technology" />
+    <meta property="article:published_time" content="2015-01-06T23:07:41+00:00" />
+    <meta property="article:modified_time" content="2015-05-12T22:24:50+00:00" />
+    <meta property="og:updated_time" content="2015-05-12T22:24:50+00:00" />
+    <meta property="fb:admins" content="???" />
+    <meta property="fb:app_id" content="123456789456489" />
+
+    <!-- TODO DYNAMIC ACCORDING TO THE CARD TYPE -->
+    <meta name="twitter:card" content="summary"/> <!-- photo -->
+    <meta name="twitter:title" content="{{ PAGE_NAME }}"/>
+    <meta name="twitter:description" content="Corporate Accounting for Manitobans"/>
+    <meta name="twitter:site" content="{{ TWITTER_WEBSITE_ACCOUNT }}"/>
+    <meta name="twitter:image" content="{{ PAGE_IMAGE_URL }}" />
+    <meta name="twitter:creator" content="{{ TWITTER_CREATOR_ACCOUNT }}"/>
+    <meta name="twitter:domain" content="mon.site.com"/>
+
+    <!-- Bing -->
+    <meta name="geo.placename" content="United States" />
+    <meta name="geo.position" content="x;x" />
+    <meta name="geo.region" content="usa" />
+    <meta name="ICBM" content="x,x" />
+
+    <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","url":"https:\/\/...","name":"...","alternateName":"..."}</script>
+
+    <!-- Really Simple Discovery http://en.wikipedia.org/wiki/Really_Simple_Discovery -->
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.example.com/xmlrpc.php?rsd" />
+
+    <!-- WindowsLiveWriter  -->
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.example.com/wlwmanifest.xml" />
+
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="...">
+
+    <!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	 <style>
+	   html, body, div, span, applet, object, iframe,
+	   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	   a, abbr, acronym, address, big, cite, code,
+	   del, dfn, em, img, ins, kbd, q, s, samp,
+	   small, strike, strong, sub, sup, tt, var,
+	   b, u, i, center,
+	   dl, dt, dd, ol, ul, li,
+	   fieldset, form, label, legend,
+	   table, caption, tbody, tfoot, thead, tr, th, td,
+	   article, aside, canvas, details, embed, 
+	   figure, figcaption, footer, header, hgroup, 
+	   menu, nav, output, ruby, section, summary,
+	   time, mark, audio, video {
+	       margin: 0;
+	       padding: 0;
+	       border: 0;
+	       font-size: 100%;
+	       font: inherit;
+	       vertical-align: baseline;
+	   }
+	   /* HTML5 display-role reset for older browsers */
+	   article, aside, details, figcaption, figure, 
+	   footer, header, hgroup, menu, nav, section {
+	       display: block;
+	   }
+	   body {
+	       line-height: 1.6em;
+	   }
+	   ol, ul {
+	       list-style: none;
+	   }
+	   blockquote, q {
+	       quotes: none;
+	   }
+	   blockquote:before, blockquote:after,
+	   q:before, q:after {
+	       content: '';
+	       content: none;
+	   }
+	   table {
+	       border-collapse: collapse;
+	       border-spacing: 0;
+	   }
+
+	   body {font-family: Geometria, sans-serif; background-color: #f4f4f4;}
+	   a {text-decoration: none;}
+	   .flex{display: flex;}
+	   .flex-space-between{justify-content:space-between;}
+	   .flex-center{align-items: center;}
+	   .text-bold{font-weight: bold;}
+	   .ml-36{margin-left: 36px;}
+	   .mt-50{margin-top: 50px;}
+	   .mt-30{margin-top: 30px;}
+	   .mt-20{margin-top: 20px;}
+	   .mb-20{margin-bottom: 20px;}
+	   .mb-30{margin-bottom: 30px;}
+	   .mb-50{margin-bottom: 50px;}
+	   .img-responsive {width: 100%;max-width: 100%;}
+	   .absolute {position: absolute;}
+	   .full-bg {background-repeat: no-repeat;background-position: center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
+	   .full-bg.fixed {background-attachment: fixed;}
+	   .full-height {min-height: 100vh;}
+	   .text-center {text-align: center;}
+	   .text-white {color: #fff !important;}
+	   .btn {
+	       display: inline-block;
+	       margin-bottom: 0;
+	       font-weight: 400;
+	       text-align: center;
+	       white-space: nowrap;
+	       vertical-align: middle;
+	       -ms-touch-action: manipulation;
+	       touch-action: manipulation;
+	       cursor: pointer;
+	       background-image: none;
+	       border: 1px solid transparent;
+	       padding: 6px 12px;
+	       font-size: 14px;
+	       line-height: 1.42857143;
+	       border-radius: 4px;
+	       -webkit-user-select: none;
+	       -moz-user-select: none;
+	       -ms-user-select: none;
+	       user-select: none;
+	   }
+	   .primary-btn {
+	       background: #75af26;
+	       color: #fff !important;
+	       box-shadow: none;
+	       border: 3px solid transparent;
+	       
+	   }
+	   .primary-btn.outlined {
+	       background: #fff;
+	       color: #75af26 !important;
+	       border-color: #75af26;
+	   }
+	   h1 {font-size: 56px; line-height: 76px; max-width: 60%; margin-top: 106px; color: #282828; font-family: Geometria, sans-serif; font-weight: bold; margin-bottom: 36px;}
+	   h2 {font-size: 36px; line-height: 36px; color: #282828; font-family: Geometria, sans-serif; font-weight: bold; margin-bottom: 36px;}
+	   h3 {line-height: 1.6em; font-size: 22px;}
+	   
+	   header {height: 48px; position: relative;background-color: #f4f4f4;box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.09);z-index:9;}
+	   header #top-nav {height: 48px;font-size: 14px;max-width: 1724px; margin: 0 auto;}
+	   header #top-nav ul li {display: inline-block}
+	   header #top-nav a {margin-right: 36px;color: rgba(0, 0, 0, .72);}
+	   nav#main {padding-left: 24px;padding-right: 24px;max-width: 1652px;margin-top: 56px; margin-left: auto; margin-right: auto;position: static;}
+	   nav#main > ul {border-radius: 4px 4px 0 0;background-color: #fff; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.02), 0 4px 4px 0 rgba(0, 0, 0, 0.02), 0 8px 8px 0 rgba(0, 0, 0, 0.02), 0 16px 16px 0 rgba(0, 0, 0, 0.02), 0 32px 32px 0 rgba(0, 0, 0, 0.02), 0 64px 64px 0 rgba(0, 0, 0, 0.02);border: 1px solid #e7e7e7;}
+	   nav#main > ul > li {flex: 1; border-right: 1px solid #f0f0f0;}
+	   nav#main > ul > li > a {display: flex; justify-content: center; align-items:center;height: 80px;color: #282828; transition: background-color 0.2s ease;}
+	   nav#main > ul > li > a:hover {background-color: #f4f4f4}
+	   nav#main > ul > li > a.active {font-weight: bold;}
+	   .slide {width: 100%; max-width: 100%; padding: 100px;}
+	   .slide-content {max-width: 1500px;  width: 100%; margin: 0 auto;}
+	   .btn {font-size: 19px;
+		 letter-spacing: 0.15px;
+		 line-height: 28px;
+		 border-radius: 0;
+		 font-weight: bold;
+		 margin-right: 18px;
+		 margin-top: 18px;
+		 text-shadow: none;
+		 padding: 13px 56px;
+		 text-transform: uppercase;
+		 padding: 13px 0;
+		 min-width: 340px;
+		 max-width: 100%;
+		}
+	   footer {padding: 50px 40px; max-width: 1584px; margin-left: auto; margin-right: auto;}
+	   footer a {
+	       font-size: 13px;
+	       line-height: 16px;
+	       letter-spacing: 0.6px;
+	       color: rgba(0, 0, 0, 0.54);
+	       margin-top: 12px;
+	   }
+	   footer b {
+	       font-size: 13px;
+	       line-height: 16px;
+	       letter-spacing: 0.6px;
+	       color: rgba(0, 0, 0, 0.54);
+	       font-weight: bold;
+	       font-family: Geometria, sans-serif;
+	   }
+	   footer p {
+	       font-size: 16px;
+	       letter-spacing: 0.27px;
+	       line-height: 21px;
+	       color: #282828;
+	       font-family: Helvetica, Arial, sans-serif;
+	       font-feature-settings: 'tnum';
+	   }
+	   footer ul li {margin-bottom: 15px; }
+
+	   .bullet-list li {list-style: inside; margin-bottom: 10px}
+	   .content {max-width: 1500px; margin: 0 auto; padding: 100px; font-size: 18px}
+
+	   .plan-wrapper {display: flex; align-items: baseline; justify-content: center; margin-bottom: 100px}
+	   .plan {display: inline-block;background: white; margin: 0 30px;box-shadow: rgba(0, 0, 0, 0.13) 1px 1px 20px 0px;position: relative;width: 500px;}
+	   .plan > div {padding: 20px 30px}
+	   .plan > div:first-of-type {  background-color: rgb(250, 249, 247);border-radius: 5px 5px 0px 0px;color: rgb(47, 48, 52);padding: 43px 34px;text-align: center;}
+	   .plan > div:nth-of-type(3) {  border-top: 1px solid rgb(212, 210, 206);padding: 30px; }
+	   .plan h2 {font-size: 32px;font-weight: bold; margin-bottom: 0px;}
+	   .plan p {margin-bottom: 20px; margin-top: 20px}
+	   .plan small {font-size: 16px;}
+	   .plan .btn { margin: 0; font-size: 15px;}
+	   .plan li {margin-bottom: 10px;}
+	   .most-popular-label {width: 145px;background-color: rgb(219, 174, 85);border-radius: 4px;color: rgb(255, 255, 255);font-size: 14px;padding: 5px 12px;position: absolute;right: 16px;text-align: center;text-transform: uppercase;top: -14px;}
+	   .plan-list {min-height: 313px; list-style: none;padding-left: 0; padding-top: 10px; display: flex; gap: 10px; flex-direction: column; font-size: 0.9em;}
+	   .plan-list li {padding-left: 30px; background-image: url("data:image/svg+xml,%3Csvg height='16px' version='1.1' viewBox='0 0 17 16' width='17px' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd' id='202107-(DEBUNDLE-™)' stroke='none' stroke-width='1'%3E%3Cg id='2.1_cardDesktop' transform='translate(-334.000000, -928.000000)'%3E%3Cg id='Group' transform='translate(334.000000, 928.000000)'%3E%3Crect height='16' id='Rectangle' width='16' x='0' y='0'%3E%3C/rect%3E%3Crect height='12' id='Rectangle' width='16' x='0' y='2'%3E%3C/rect%3E%3Cg fill='%230A8991' fill-rule='nonzero' id='check-(2)' transform='translate(0.145924, 2.686803)'%3E%3Cpath d='M13.8992722,0.330143199 C14.3947377,-0.123994858 15.1808917,-0.107569935 15.6551964,0.366829291 C16.0978807,0.809601902 16.1124497,1.49482997 15.7095929,1.95345689 L15.6168812,2.04809477 L6.21052292,10.6698556 C5.78577207,11.0591773 5.14010948,11.1064813 4.6614239,10.7994779 L4.55409865,10.7223359 L0.444331082,7.42518778 C-0.0814056108,7.00340438 -0.150492877,6.25340857 0.290020354,5.75002526 C0.701166037,5.28020083 1.41091737,5.19125537 1.93116697,5.52440962 L2.03957061,5.60227554 L5.29657607,8.21537474 L13.8992722,0.330143199 Z' id='Path'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");background-repeat: no-repeat;background-position: 0 50%;}
+	   .plan-list li b {font-weight: bolder; display: block}
+
+	 </style>
+	 <!-- Add the slick-theme.css if you want default styling -->
+	 <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+	 <!-- Add the slick-theme.css if you want default styling -->
+	 <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> -->
+	 <link rel="stylesheet" href="slick.css?v=v1.0.49" type="text/css" media="screen" />
+	 <link rel="stylesheet" href="slick-theme.css?v=v1.0.49" type="text/css" media="screen" />
+  </head>
+  <body>
+    <!-- utiliser les roles -->
+    <header role="banner">
+      <div id="top-nav" class="flex flex-space-between flex-center">
+	<ul>
+	  <li class="ml-36"><a href="index.htm" class="text-bold">ClearingStation</a></li>
+	  <li><a href="about.htm">About us</a></li>
+	  <li><a href="support.htm">Help</a></li>
+	</ul>
+
+	<ul>
+	  <li><a href="tel:(204) 381 9308">(204) 381 9308</a></li>
+	  <li><a href="login.htm">Login</a></li>
+	</ul>
+      </div>
+
+      <nav id="main" class="absolute">
+	<ul class="flex flex-center">
+	  <li><a href="services.htm">Services</a></li>
+	  <li><a class="active" href="plans.htm">Plans</a></li>
+	  <li><a href="automation.htm">Automation</a></li>
+	  <li><a href="audits.htm">Financial Audits</a></li>
+	  <li><a href="security.htm">Security</a></li>
+	  <li><a href="">Login</a></li>
+	  <li>
+	    <a href="start.htm">
+	      Get Started&nbsp;
+	      <span class="icon-24">
+		<img src="https://img.icons8.com/cute-clipart/128/login-rounded-right.png" width="32" alt="">
+	      </span>
+	    </a>
+	  </li>
+	</ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="content">
+
+	<h1>Plans</h1>
+
+	<h2 class="mb-20">Simple, straightforward pricing for all your business needs.</h2>
+
+	<h3 class="mb-50">Experience streamlined professional accounting, at the fraction of the cost.</h3>
+
+	<div class="plan-wrapper">
+
+	  <div class="plan">
+	    <div style="background-color: rgb(8, 45, 94);" class="text-white">
+	      <div class="most-popular-label">Most popular</div>
+	      <h2 class="text-white">Standard Plan</h2>
+	      <p>Streamlined & Affordable Accounting</p>
+	      <h2 class="text-white">$499 <small>/mo</small></h2>
+	    </div>
+	    <div>
+	      <ul class="plan-list">
+		<li><b>Effortless Financial Management:</b> Have your finances taken care of seamlessly with ease.</li>
+		<li><b>Monthly Insights:</b> Categorize income and expenses, reconcile bank statements, manage payables and receivables, and receive monthly reports directly in your inbox.</li>
+		<li><b>Tax Compliance:</b> Plus, get ready for tax season with T2 filing support (additional $450/year).</li>
+	      </ul>
+	    </div>
+	    <div class="text-center">
+	      <a href="start.htm?type=monthly" class="green btn primary-btn" style="padding: 10px 20px;">Start Your Free Consultation &raquo;</a>
+
+	      <!--Take the first step towards a more efficient and profitable business -->
+	    </div>
+	  </div>
+	  
+
+	  <div class="plan">
+	    <div>
+	      <h2>Business Plan</h2>
+	      <p>Elevate Your Business</p>
+	      <h2>$1,199 <small>/mo</small></h2>
+	    </div>
+	    <div>
+	      <ul class="plan-list">
+		<li><b>Elevate Your Financial Strategy:</b> Take your business to new heights with advanced financial services.</li>
+		<li><b>Comprehensive Financial Analysis:</b> Access everything in the Basic Plan plus in-depth financial statement reviews, profit allocation calculations, and expert tax planning.</li>
+		<li><b>Comprehensive Tax Peace of Mind:</b> Ensure smooth sailing with sales tax filings, corporate T2 filing, payroll management, and T4 issuance.</li>
+		<!--<li> Everything in the Basic Plan</li>
+		<li> Review and analyze financial statements</li>
+		<li> Calculate profit allocation</li>
+		<li> Sales tax filings</li>
+		<li> Corporate T2 filing</li>
+		<li> Payroll & Source Deduction remittances to CRA</li>
+		<li> Issuance of T4</li>
+		<li> Comprehensive tax planning</li>-->
+	      </ul>
+	    </div>
+	    <div class="text-center">
+	      <a href="start.htm?type=hourly" class="btn primary-btn outlined">Get More Info</a>
+	    </div>
+	    
+	  </div>
+	</div>
+
+	<h3 class="text-bold">More Ways to Maximize Savings</h3>
+	<p class="mb-20">
+	  When you refer a fellow entrepreneur to ClearingStation, both of you will receive $500 in free bookkeeping services. Additionally, our services are fully tax-deductible, allowing you to maximize your tax savings even further.
+	</p>
+
+	<h3 class="text-bold">Complimentary CRA Audit Assistance</h3>
+	<p class="mb-20">
+	  Our commitment to your success extends to helping you stay compliant with government regulations. We offer free support for CRA audits and government communications for all the years you've filed with us. Enjoy accurate financial records and peace of mind at no extra cost. With nearly 100 successful CRA audits completed, we're equipped to handle any bookkeeping challenge.
+	</p>
+
+	<h3 class="text-bold mt-50">Limited Spots Available - Act Now</h3>
+	<p class="mb-20">
+	  We have limited availability for new clients, and we take great care in selecting partners to ensure the highest level of service and support. Our track record of aiding small businesses in Manitoba, including those in software, medical, financial industries speaks for itself.
+	</p>
+	<p>
+	  If you're eager to partner with us and harness our expertise in these areas, don't delay. Space is limited and filling up quickly. Call us now to arrange a free consultation and secure your spot.
+	</p>
+      </section>
+
+
+      <section>
+	
+        <div class="content">
+	  <h2 class="text-center">Frequently Asked Questions</h2>
+	
+          <div class="faq">
+	    <div class="question">
+              <h3><i class="fas fa-plus"></i> Does ClearingStation sync with accounting software like QuickBooks?</h3>
+              <div class="answer">
+                <p class="mt-20">
+		  ClearingStation operates autonomously and does not integrate or synchronize financial data with external bookkeeping software. We utilize our own proprietary software to efficiently manage your financial records, eliminating the need for additional third-party software. In contrast to solutions like QuickBooks, which are geared towards do-it-yourself bookkeeping.
+		</p>
+		<p class="mt-30">
+		  If you are transitioning from QuickBooks, we seamlessly adapt to your closing balances to ensure the continuity of your bookkeeping.
+		</p>
+              </div>
+            </div>
+            <div class="question">
+              <h3><i class="fas fa-plus"></i> What exactly does my bookkeeper at ClearingStation do?</h3>
+              <div class="answer">
+                <p>
+		  Your dedicated bookkeeper at ClearingStation takes care of multiple tasks, including reconciling your accounts, categorizing transactions, and generating your financial statements. They also make necessary adjustments to ensure your books comply with tax regulations. While your bookkeeper may occasionally seek your input on transaction categorization, our aim is to make bookkeeping as hassle-free as possible for you.
+		</p>
+		<p>
+		  Moreover, you can schedule a call with your bookkeeper or send them a message whenever you wish. We provide this support without additional fees or hourly charges because we're always eager to discuss bookkeeping and your financial statements with you.
+		</p>
+              </div>
+            </div>
+	    <div class="question">
+	      <h3><i class="fas fa-plus"></i> I'm behind on my bookkeeping and taxes. Can ClearingStation help me get caught up?</h3>
+	      <div class="answer">
+		<p>
+		  Absolutely! ClearingStation offers the flexibility to add Catch Up bookkeeping to a standard plan. Regardless of how far behind you are, even if it's been years, we can swiftly assist you in getting back on track. For clients who are several years behind on their bookkeeping and taxes, we provide comprehensive solutions to ensure you are up-to-date and in compliance.
+		</p>
+	      </div>
+	    </div>
+	    <div class="question">
+	      <h3><i class="fas fa-plus"></i> How do I submit my documents to ClearingStation? Do I need to provide receipts?</h3>
+	      <div class="answer">
+		<p>
+		  You have the flexibility to choose how you submit your documents to ClearingStation. You can either upload the documents digitally, or share them with us if you already have a document management system, or opt for our convenient doorstep pickup service.
+		</p>
+		<p>
+		  We want the document submission process to be as hassle-free and efficient for you as possible.
+		</p>
+		<p>
+		  Here is a list of typical paperwork that may be needed for accurate bookkeeping:
+		  <ul class="bullet-list compact" style="margin-left: 15px">
+		    <li>Invoices of all incomes</li>
+		    <li>Invoices for all expenses (e.g., utility bills, office supplies, services)</li>
+		    <li>Expenses related to your home office (e.g., rent or mortgage statements, utilities)</li>
+		    <li>Bank statements</li>
+		    <li>Credit Card Statements</li>
+		    <li>... and more, depending on your specific transactions and business needs.</li>
+		  </ul>
+		  <style>.bullet-list.compact li {margin: 0}</style>
+		</p>
+	      </div>
+	    </div>
+	    <div class="question">
+	      <h3><i class="fas fa-plus"></i> Where are ClearingStation's bookkeepers located, and what are their qualifications?</h3>
+	      <div class="answer">
+		<p>
+		  ClearingStation's bookkeepers are all located in Manitoba, Canada, near Winnipeg.
+		</p>
+		<p>
+		  Each client's main point of contact at ClearingStation is a dedicated, professionally-trained, in-house bookkeeper based in the heart of Manitoba. Our team is characterized by their deep expertise with years of experience in accounting and finance, ensuring that you receive the highest standard of service.
+		</p>
+		<p>
+		  In addition to that, your data is kept locally in our Winnipeg Datacenter, utilizing robust encryption on ClearingStation-owned powerful on-premises servers. This unique approach combines personalized service with state-of-the-art technology, all located right here in Manitoba.
+		</p>
+		<p>
+		  This dynamic combination allows us to effortlessly process substantial volumes of financial data with precision and speed, ultimately resulting in quicker and more accurate book closing for your financial peace of mind.
+		</p>
+	      </div>
+	    </div>
+	    <div class="question">
+	      <h3><i class="fas fa-plus"></i> Does ClearingStation support personal accounts used for business purposes?</h3>
+	      <div class="answer">
+		<p>
+		  If you have personal accounts that are also used for business, ClearingStation can work with you to ensure proper categorization and handling of transactions. Our goal is to help you maintain accurate financial records, whether they are for personal or business use.
+		</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!-- Add more questions and answers as needed -->
+	<style>	  
+	  .faq {
+	  max-width: 800px;
+	  margin: 0 auto;
+	  padding: 20px;
+	  }
+
+	  .question {
+	  margin-bottom: 20px;
+	  border: 1px solid #ddd;
+	  border-radius: 5px;
+	  padding: 10px;
+	  cursor: pointer;
+	  }
+
+	  .question h3 {
+	  margin: 10px;
+	  }
+
+	  .answer {
+	  display: none;
+	  }
+
+	  .answer p {
+	  margin: 10px
+	  }
+
+	  /* Style for active/expanded questions */
+	  .question.active {
+	  background-color: #f7f7f7;
+	  }
+
+	  .answer.active {
+	  display: block;
+	  }
+
+	  /* Style for the expand/collapse icons */
+	  .question i {
+	  font-size: 1.2rem;
+	  margin-right: 3px;
+	  transition: transform 0.2s;
+	  }
+
+	  .question.active i {
+	  transform: rotate(45deg);
+	  }
+	</style>
+	<script type="text/javascript">
+	  (function() {
+	  
+	  const questions = document.querySelectorAll('.question');
+
+	  questions.forEach(question => {
+	  question.addEventListener('click', () => {
+          question.classList.toggle('active');
+          const answer = question.querySelector('.answer');
+          answer.classList.toggle('active');
+	  });
+	  });
+
+	  })();
+	</script>
+      </section>
+
+
+      
+
+      <section style="background-image: url(tyler.jpg); min-height: 500px;align-items: center;" class="full-bg flex">
+	<div class="content" style="background: #fff; margin: 100px auto;">
+	  <h2 class="mb-20" style="line-height: 1.3;">Ready to streamline your accounting and boost your business's financial health?</h2>
+	  <h3 class="mb-30">Don't miss out on this opportunity to save money, receive expert assistance, and achieve peace of mind with your finances. Join our satisfied clients who have taken their businesses to new heights.</h3>
+	  
+	  <a href="start.htm" class="green btn primary-btn" style="padding: 10px 20px;">Get Started Now &raquo;</a>
+	  <div class="mt-20" style=" opacity: 0.8;">
+	    See why our clients rave about their experiences and have our experts:
+	    <ul class="mt-10" style="gap: 20px; opacity: 0.6; font-size: 14px;">
+	      <li><svg height="13px" version="1.1" viewBox="0 0 17 16" width="13px" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" id="202107-(DEBUNDLE-™)" stroke="none" stroke-width="1"><g id="2.1_cardDesktop" transform="translate(-334.000000, -928.000000)"><g id="Group" transform="translate(334.000000, 928.000000)"><rect height="16" id="Rectangle" width="16" x="0" y="0"></rect><rect height="12" id="Rectangle" width="16" x="0" y="2"></rect><g fill="#0A8991" fill-rule="nonzero" id="check-(2)" transform="translate(0.145924, 2.686803)"><path d="M13.8992722,0.330143199 C14.3947377,-0.123994858 15.1808917,-0.107569935 15.6551964,0.366829291 C16.0978807,0.809601902 16.1124497,1.49482997 15.7095929,1.95345689 L15.6168812,2.04809477 L6.21052292,10.6698556 C5.78577207,11.0591773 5.14010948,11.1064813 4.6614239,10.7994779 L4.55409865,10.7223359 L0.444331082,7.42518778 C-0.0814056108,7.00340438 -0.150492877,6.25340857 0.290020354,5.75002526 C0.701166037,5.28020083 1.41091737,5.19125537 1.93116697,5.52440962 L2.03957061,5.60227554 L5.29657607,8.21537474 L13.8992722,0.330143199 Z" id="Path"></path></g></g></g></g></svg> Review your situation</li>
+	      <li><svg height="13px" version="1.1" viewBox="0 0 17 16" width="13px" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" id="202107-(DEBUNDLE-™)" stroke="none" stroke-width="1"><g id="2.1_cardDesktop" transform="translate(-334.000000, -928.000000)"><g id="Group" transform="translate(334.000000, 928.000000)"><rect height="16" id="Rectangle" width="16" x="0" y="0"></rect><rect height="12" id="Rectangle" width="16" x="0" y="2"></rect><g fill="#0A8991" fill-rule="nonzero" id="check-(2)" transform="translate(0.145924, 2.686803)"><path d="M13.8992722,0.330143199 C14.3947377,-0.123994858 15.1808917,-0.107569935 15.6551964,0.366829291 C16.0978807,0.809601902 16.1124497,1.49482997 15.7095929,1.95345689 L15.6168812,2.04809477 L6.21052292,10.6698556 C5.78577207,11.0591773 5.14010948,11.1064813 4.6614239,10.7994779 L4.55409865,10.7223359 L0.444331082,7.42518778 C-0.0814056108,7.00340438 -0.150492877,6.25340857 0.290020354,5.75002526 C0.701166037,5.28020083 1.41091737,5.19125537 1.93116697,5.52440962 L2.03957061,5.60227554 L5.29657607,8.21537474 L13.8992722,0.330143199 Z" id="Path"></path></g></g></g></g></svg> Give guidance and recommendations</li>
+	      <li><svg height="13px" version="1.1" viewBox="0 0 17 16" width="13px" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" id="202107-(DEBUNDLE-™)" stroke="none" stroke-width="1"><g id="2.1_cardDesktop" transform="translate(-334.000000, -928.000000)"><g id="Group" transform="translate(334.000000, 928.000000)"><rect height="16" id="Rectangle" width="16" x="0" y="0"></rect><rect height="12" id="Rectangle" width="16" x="0" y="2"></rect><g fill="#0A8991" fill-rule="nonzero" id="check-(2)" transform="translate(0.145924, 2.686803)"><path d="M13.8992722,0.330143199 C14.3947377,-0.123994858 15.1808917,-0.107569935 15.6551964,0.366829291 C16.0978807,0.809601902 16.1124497,1.49482997 15.7095929,1.95345689 L15.6168812,2.04809477 L6.21052292,10.6698556 C5.78577207,11.0591773 5.14010948,11.1064813 4.6614239,10.7994779 L4.55409865,10.7223359 L0.444331082,7.42518778 C-0.0814056108,7.00340438 -0.150492877,6.25340857 0.290020354,5.75002526 C0.701166037,5.28020083 1.41091737,5.19125537 1.93116697,5.52440962 L2.03957061,5.60227554 L5.29657607,8.21537474 L13.8992722,0.330143199 Z" id="Path"></path></g></g></g></g></svg> Explain our services</li>
+	    </ul>
+	  </div>
+	</div>
+      </section>
+
+
+      
+    </main>
+
+    <footer>
+      <div class="flex flex-space-between">
+	<ul>
+	  <li><b>Services</b></li>
+	  <li><a href="services.htm">Services</a></li>
+	  <li><a href="plans.htm">Plans & Pricing</a></li>
+	  <li><a href="automation.htm">Automation</a></li>
+	  <li><a href="audits.htm">CRA Audits</a></li>
+	</ul>
+	<ul>
+	  <li><b>Company</b></li>
+	  <li><a href="about.htm">About us</a></li>
+	  <li><a href="support.htm">Help</a></li>
+	</ul>
+	<ul>
+	  <li><b>Industries</b></li>
+	  <li><a href="landing-doctors.htm">Healthcare</a></li>
+	  <li><a href="landing.htm">Small business</a></li>
+	</ul>
+	<div>
+	  <p>Call <a href="tel:(204) 381 9308">(204) 381 9308</a></p>
+	  <hr/>
+	  <p>Email <a href="mailto:support@clearingstation.ca">support@clearingstation.ca</a></p>
+	  <hr/>
+	  <p><a href="login.htm">Upload documents</a></p>
+	</div>
+      </div>
+
+      <hr class="mt-50"/>
+
+      <div class="flex flex-space-between" style="min-width: 100%;">
+	<div class="mt-20" style="width: 100%">
+	  <div class="flex" style="align-items: center;justify-content: space-between; gap: 30px;">
+	    <p>Copyright 2023 ClearingStation</p>
+	    <div class="flex" style="align-items: center; gap: 10px">
+	      Based in Manitoba, Canada
+	      <svg style="display: inline-block; margin: 0 auto;" width="60px" xmlns="http://www.w3.org/2000/svg" viewBox="80 0 75 104.99"><defs><style>.cls-1,.cls-2{fill:none;}.cls-1{stroke:green;stroke-miterlimit:10;stroke-width:3.65px;}</style></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_3" data-name="Layer 3"><path class="cls-1" d="M90.59,4.88,89.13,48.35l2,52.88H127S126,76.85,125.71,75.92s-.66-9.54-.66-9.54l7.55-8.61,19.75-29s-3.71.13-4.77-.4-3.45-1.72-4-1.86a14.65,14.65,0,0,0-4.77,1.19,19.5,19.5,0,0,0-3.18,1.46l-2.12,1.59s1.19-3,1.33-3.45a6.76,6.76,0,0,0-1.06-4.37c-1.19-1.86-1.72-4.11-2.52-5.83a10.57,10.57,0,0,1-.93-2.78L126,14s.66,2.39-.13,3.18-.8-2.39-.8-2.39a2.22,2.22,0,0,1-2-.93c-.66-1.06-1.33-1.19-1.06-2.52a25.67,25.67,0,0,0,.8-2.92c0-.8-.93-2.25-.93-2.65V4.22Z"/><rect class="cls-2" width="241.49" height="104.99"/></g></g></svg>
+	    </div>
+	  </div>
+	  
+	</div>
+      </div>
+    </footer>
+
+  </body>
+</html>

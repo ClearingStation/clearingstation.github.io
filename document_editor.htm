@@ -1,0 +1,385 @@
+<html>
+    <head>
+	<style>
+	 .flex {display: flex}
+	 .space-between {justify-content:space-between;}
+	 .inline-block {display: inline-block;}
+	 .v-centered {align-items: center}
+
+	 html, body {font-family: Proxima Nova, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Arial;}
+	 .top-navbar { height: 45px; background: #344258; color: white;}
+	 .top-navbar input {background: #4e5969; border: 0; outline: none; color: #dae5f5; height: 30; font-size: 14px; margin: 0 2px; border-radius: 3px; padding: 0 10px}
+	 .top-navbar .right input {width: 150px}
+	 .main {min-height: calc(100vh - 40px);background: #101a29; color: #fff;}
+	 .sidebar {background: #4e5969; min-width: 200px; min-height: 100%}
+	 .sidebar .tabs{gap: 10px; border-bottom: 1px solid #5e6a7a; padding: 0 10px; height: 50px;}
+	 .sidebar .tabs .tab {padding: 0 10px; font-size: 13px;  display: flex; align-items: center; border-bottom: 3px transparent; text-decoration: none; color: #fff; opacity: 0.6}
+	 .sidebar .tabs .tab:hover {opacity: 1;}
+	 .sidebar .tabs .tab.active {border-bottom: 4px solid #5e6a7a; font-weight: 600; opacity: 1;}
+	 .sidebar.content-sidebar .tabs{gap: 10px; border-bottom: 1px solid #5e6a7a; padding: 0 0px; height: 25px;}
+	 .sidebar.content-sidebar .tabs .tab {padding: 0 10px; font-size: 13px;  display: flex; align-items: center; border-bottom: 3px transparent; text-decoration: none; color: #fff; opacity: 0.6}
+	 .sidebar.content-sidebar .tabs .tab.active {border-bottom: none; background: #5e6a7a; font-weight: 600; opacity: 1;}
+	 .sidebar.content-sidebar ul li:first-of-type {margin-top: 0;}
+	 .sidebar ul {padding: 0; margin: 0;}
+	 .sidebar ul li {list-style: none; margin: 2px 0}
+	 .sidebar ul li a {display: block; color: #fff; text-decoration: none; padding: 8px 10px; font-size: 14px}
+	 .sidebar ul li a:hover, .sidebar ul li .active {background: #5e6a7a}
+	 .sidebar ul li .active {font-weight: 500;}
+	 .main section {width: 100%; color: #fff}
+	 .main sidebar {border-left: 1px solid #5e6a7a;border-right: 1px solid #5e6a7a;}
+	 .header {height: 50px; background: #445670; padding: 0 20px;}
+	 .header .headline {font-weight: 600; }
+	 .bolder {font-weight: 600;}
+	 .sidebar .journal-entry {font-size: 13px; padding: 10px; border-bottom: 1px solid #5e6a7a}
+	 .sidebar .journal-entry .tag {border-left: 2px solid rgba(255,255,255,0.4); background: #445670; padding: 1px 0px 1px 12px; border-radius: 3px; opacity: 0.5}
+	 .sidebar .journal-entry .tag svg {opacity: 0}
+	 .sidebar .journal-entry .tag:hover svg {opacity: 1}
+	 .sidebar .journal-entry .posting {opacity: 0.7}
+	 .sidebar .journal-entry .posting:hover {text-decoration: underline; cursor: pointer;}
+	 .sidebar .journal-entry .posting div:first-of-type{flex: 1; margin-right: 10px;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+	 .sidebar .journal-entry .posting div:nth-of-type(2) {flex-shrink: 0;}
+	 .document-list-header {font-size: 13px; opacity: 0.5;}
+	 .document-list-date {width: 60px; padding: 5px 10px}
+	 .document-list-name {padding: 5px 10px}
+	</style>
+	
+	<link href="dashboard.css" rel="stylesheet"/>
+	
+    </head>
+    <body>
+	<header class="flex space-between v-centered top-navbar">
+	    <div class="flex">
+		<div style="width: 200px">
+		    <div style="padding: 3px 10px; font-weight: bold">ClearingStation</div>
+		</div>
+		<div>
+		    <input name="" type="text" value="" placeholder="Search" style="min-width: 500px; background: #101a29"/>
+		</div>
+	    </div>
+	    <div class="right">
+		<input name="" type="text" value="" placeholder="Time"/>
+		<input name="" type="text" value="" placeholder="Account"/>
+		<input name="" type="text" value="" placeholder="Filter by tag, payee, ..."/>
+		<div style="display: inline-block">
+		    &nbsp;&nbsp;&nbsp;
+		</div>
+	    </div>
+	</header>
+
+	<main class="flex main">
+	    <sidebar class="sidebar">
+		<ul>
+		    <li><a href="income_statement.htm">Income Statement</a></li>
+		    <li><a href="balance_sheet.htm">Balance Sheet</a></li>
+		    <li><a href="trial_balance.htm">Trial Balance</a></li>
+		    <li><a href="documents.htm" class="active">Documents</a></li>
+		    <li><a href="journal.htm">Journal</a></li>
+		</ul>
+	    </sidebar>
+
+	    <sidebar class="sidebar" style="width: 450px">
+		<div class="flex document-list-header">
+		    <div class="document-list-date">Date</div>
+		    <div class="document-list-name">Name</div>
+		</div>
+		<ul>
+		    <li>
+			<a href="" class="active" title="Trace-based Just-in-Time Type Specialization for Dynamic Languages">
+			    <div class="flex space-between v-centered">
+				<div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><span style="margin-right: 5px">2015-01-06</span> Trace-based Just-in-Time Type Specialization for Dynamic Languages</div>
+				<div style="display: none;">
+				    <svg fill="#f25454" height="10px" width="10px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+					 viewBox="0 0 512 512" xml:space="preserve">
+					<g>
+					    <g>
+						<path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z"/>
+					    </g>
+					</g>
+				    </svg>
+				</div>
+			    </div>
+			</a>
+		    </li>
+		    <li>
+			<a href="">
+			    <div class="flex space-between v-centered">
+				<div><span style="margin-right: 5px">2015-01-06</span> Second Document <span class="bolder">(2)</span></div>
+				<div>
+				    <svg fill="#ff892e" height="10px" width="10px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+					       viewBox="0 0 512 512" xml:space="preserve">
+					<g>
+					    <g>
+						<path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z"/>
+					    </g>
+					</g>
+				    </svg>
+				</div>
+			    </div>
+			</a>
+		    </li>
+		    <li>
+			<a href="">
+			    <div class="flex space-between v-centered">
+				<div><span style="margin-right: 5px">2015-01-06</span> Document</div>
+				<div>
+				    <svg fill="#8bed51" height="10px" width="10px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+					 viewBox="0 0 512 512" xml:space="preserve">
+					<g>
+					    <g>
+						<path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z"/>
+					    </g>
+					</g>
+				    </svg>
+				</div>
+			    </div>
+			</a>	
+		    </li>
+		    <li>
+			<a href="">
+			    <div class="flex space-between v-centered">
+				<div><span style="margin-right: 5px">2015-01-06</span> Document</div>
+				<div>
+				    <svg fill="#8bed51" height="10px" width="10px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+					 viewBox="0 0 512 512" xml:space="preserve">
+					<g>
+					    <g>
+						<path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z"/>
+					    </g>
+					</g>
+				    </svg>
+				</div>
+			    </div>
+			</a>	
+		    </li>
+		    <li>
+			<a href="">
+			    <div class="flex space-between v-centered">
+				<div><span style="margin-right: 5px">2015-01-06</span> Document</div>
+				<div>
+				    <svg fill="#8bed51" height="10px" width="10px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+					 viewBox="0 0 512 512" xml:space="preserve">
+					<g>
+					    <g>
+						<path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z"/>
+					    </g>
+					</g>
+				    </svg>
+				</div>
+			    </div>
+			</a>	
+		    </li>
+		    <li>
+			<a href="">
+			    <div class="flex space-between v-centered">
+				<div><span style="margin-right: 5px">2015-01-06</span> Document</div>
+				<div>
+				    <svg fill="#8bed51" height="10px" width="10px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+					 viewBox="0 0 512 512" xml:space="preserve">
+					<g>
+					    <g>
+						<path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z"/>
+					    </g>
+					</g>
+				    </svg>
+				</div>
+			    </div>
+			</a>	
+		    </li>
+		</ul>
+	    </sidebar>
+
+	    
+
+
+	    <section>
+
+		<div class="header flex v-centered space-between">
+		    <div>
+			<!--<button style="margin-right: 10px">Back</button>-->
+			<div class="headline">Trace-based Just-in-Time Type Specialization for Dynamic Languages.pdf</div>
+		    </div>
+		    <div>
+			<button>Download</button>
+			<button>Share</button>
+		    </div>
+		</div>
+
+
+		<iframe frameborder="0" src="https://mozilla.github.io/pdf.js/web/viewer.html" width="100%" style="height: calc(100vh - 50px)"></iframe>
+		<!-- <div style="padding: 20px; line-height: 1.6">
+		     Please be advised that all user activity is being monitored for security reasons. <br />
+		     Requesting access...<br />
+		     Verifying authentication... <br />
+		     Authentication has been successfully verified... <br />
+		     Access granted. <br />
+		     <div style="padding: 20px">
+		     Erwin Flaming opened "Trace-based Just-in-Time Type Specialization for Dynamic Languages.pdf" at Mar 2 00:16. <br />
+		     </div>
+		     
+		     Downloading file over AES-256 encrypted message channel, please wait... <br />
+		     Decrypting file for your access...<br />
+		     </div>-->
+
+	    </section>
+
+	    <!-- todo: sidebar should be movable to the left -->
+	    <sidebar class="sidebar content-sidebar" style="width: 600px">
+		<div class="tabs flex">
+		    <a class="tab active" href="#">Journal Entries</a>
+		    <a class="tab" href="#">Comments</a>
+		    <a class="tab" href="#">Activity</a>
+		</div>
+		<ul>
+		    <li>
+			<div class="journal-entry active">
+			    <div class="flex space-between" style="margin-bottom: 10px">
+				<div contentEditable="true">2015-01-06</div>
+				
+				<div style="text-align: right">
+				    <span style="opacity: 0.3;">
+					<img alt="" src="https://cdn2.iconfinder.com/data/icons/finance-337/24/Payee_Pay-512.png" width="16" align="top" style="margin-right: 5px" />
+				    </span>
+				    <span class="bolder" contentEditable="true" spellcheck="false">
+					RiverBank Properties
+				    </span>
+				</div>
+				
+			    </div>
+			    <div style="margin: 5px 0 10px 0; opacity: 0.8" class="flex v-centered">
+				<span style="opacity: 0.6; margin-right: 8px">
+				    <svg fill="#fff" width="16px" height="16px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21,7H3V4A1,1,0,0,1,4,3H20a1,1,0,0,1,1,1ZM3,20V9H21V20a1,1,0,0,1-1,1H4A1,1,0,0,1,3,20Zm3-6H18V12H6Zm0,4h6V16H6Z"/></svg>
+				</span>
+				<span contentEditable="true">Paying the rent</span>
+			    </div>
+			    <div style="margin: 5px 0 10px 0; gap: 10px;" class="flex">
+				<div class="tag flex v-centered">
+				    <span>riverbank</span>
+				    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" role="presentation" class="v-Icon i-cancel">
+					<line x1="16" y1="8" x2="8" y2="16"></line>
+					<line x1="8" y1="8" x2="16" y2="16"></line>
+				    </svg>
+				</div>
+				<div class="tag flex v-centered">
+				    <span>invoice</span>
+				    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" role="presentation" class="v-Icon i-cancel">
+					<line x1="16" y1="8" x2="8" y2="16"></line>
+					<line x1="8" y1="8" x2="16" y2="16"></line>
+				    </svg>
+				</div>
+			    </div>
+			    <div class="flex space-between" style="opacity: 0.7">
+				<div>1010 &middot; <span title="Assets:US:BofA:Checking" style="opacity: 0.8">Checking</span></div>
+				<div>-2400.00 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between" style="opacity: 0.7">
+				<div>1010 &middot; <span title="Expenses:Home:" style="opacity: 0.8">Rent</span></div>
+				<div>2400.00 <span style="opacity: 0.6">USD</style></div>
+				    
+			    </div>
+			    
+			</div>
+		    </li>
+		    <li>
+			<div class="journal-entry">
+			    <div class="flex space-between" style="margin-bottom: 10px">
+				<div>2015-01-06</div>
+				<div style="text-align: right">
+				    <span style="opacity: 0.3;">
+					<img alt="" src="https://cdn2.iconfinder.com/data/icons/finance-337/24/Payee_Pay-512.png" width="16" align="top" style="margin-right: 5px" />
+				    </span>
+				    <span class="bolder" contentEditable="true" spellcheck="false">
+					Hoogle
+				    </span>
+				</div>
+				
+			    </div>
+			    <div style="margin: 5px 0 10px 0; opacity: 0.8" class="flex v-centered">
+				<span style="opacity: 0.6; margin-right: 8px">
+				    <svg fill="#fff" width="16px" height="16px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21,7H3V4A1,1,0,0,1,4,3H20a1,1,0,0,1,1,1ZM3,20V9H21V20a1,1,0,0,1-1,1H4A1,1,0,0,1,3,20Zm3-6H18V12H6Zm0,4h6V16H6Z"/></svg>
+				</span>
+				Payroll
+			    </div>
+			    <div class="flex space-between posting">
+				<div>5944 &middot; <span title="Assets:US:BofA:Checking" style="opacity: 0.8">Checking</span></div>
+				<div>-2400.00 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>1010 &middot; <span title="Assets:US:BofA:Checking" style="opacity: 0.8">Checking</span></div>
+				<div>1350.60 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>1039 &middot; <span title="Assets:US:Vanguard:Cash" style="opacity: 0.8">Cash</span></div>
+				<div>1200.00 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>4205 &middot; <span title="Income:US:Hoogle:Salary" style="opacity: 0.8">Salary</span></div>
+				<div>-4615.38 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>4205 &middot; <span title="Income:US:Hoogle:GroupTermLife" style="opacity: 0.8">GroupTermLife</span></div>
+				<div>-24.32 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>5241 &middot; <span title="Expenses:Health:Dental:Insurance" style="opacity: 0.8">Critical</span></div>
+				<div>2.90 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>5242 &middot; <span title="Expenses:Health:Medical:Insurance" style="opacity: 0.8">CMC</span></div>
+				<div>27.38 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>5489 &middot; <span title="Expenses:Health:Vision:Insurance" style="opacity: 0.8">Dental</span></div>
+				<div>42.30 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>5893 &middot; <span title="Expenses:Taxes:Y2015:US:Medicare" style="opacity: 0.8">Medicare</span></div>
+				<div>106.62 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>5894 &middot; <span title="Expenses:Taxes:Y2015:US:Federal" style="opacity: 0.8">Federal</span></div>
+				<div>1062.92 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>5823 &middot; <span title="Expenses:Taxes:Y2015:US:State" style="opacity: 0.8">State</span></div>
+				<div>365.08 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>5894 &middot; <span title="Expenses:Taxes:Y2015:US:CityNYC" style="opacity: 0.8">CityNYC</span></div>
+				<div>174.92 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>5894 &middot; <span title="Expenses:Taxes:Y2015:US:SDI" style="opacity: 0.8">SDI</span></div>
+				<div>1.12 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>5930 &middot; <span title="Expenses:Taxes:Y2015:US:SocSec" style="opacity: 0.8">SocSec</span></div>
+				<div>281.54 <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>1030 &middot; <span title="Assets:US:Federal:PreTax401k" style="opacity: 0.8">PreTax401k</span></div>
+				<div>-1200.00 <span style="opacity: 0.6">IRAUSD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>5283 &middot; <span title="Expenses:Taxes:Y2015:US:Federal:PreTax401k" style="opacity: 0.8">PreTax401k</span></div>
+				<div>1200.00 <span style="opacity: 0.6">IRAUSD</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>1033 &middot; <span title="Assets:US:Hoogle:Vacation" style="opacity: 0.8">Vacation</span></div>
+				<div>5 <span style="opacity: 0.6">VACHR</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>4304 &middot; <span title="Income:US:Hoogle:Vacation" style="opacity: 0.8">Vacation</span></div>
+				<div>-5 <span style="opacity: 0.6">VACH</style></div>
+			    </div>
+			    <div class="flex space-between posting">
+				<div>4834 &middot; <span title="Expenses:Home:Rent" style="opacity: 0.8">Rent</span></div>
+				<div><span class="bolder">2400.00</span> <span style="opacity: 0.6">USD</style></div>
+			    </div>
+			</div>
+		    </li>
+		</ul>
+	    </sidebar>
+
+	</main>
+    </body>
+</html>
