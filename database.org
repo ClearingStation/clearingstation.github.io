@@ -1,0 +1,21 @@
+* 10 years of Erlang lead me to this
+** Chain replication
+*** CP in the datacenter
+*** AP in the galaxy
+** Poor man's Load Balancer
+** Recovering from Netsplits made easy with CRDTs
+** CAP Theorem, let your software choose one. Automated AP / CP relay through constraints
+** Never lose any data through ransomware attacks with Log-Append writes
+** One file per user scales nicely. Encrypt the file
+** Production
+*** Things are going to fail
+**** your paxos algorithm might be shit
+**** System should have ways to attain its higher level goals like "always stay online"
+**** Never lose any data
+**** Use VMs that were made to withstand crashes
+**** Cap your process memory heap
+*** Leverage DB Engines like RocksDB which is optimized for fast writes on SSD
+*** You might not need a database
+**** SSDs solved may file writes problems we had with HDDs
+*** Nobody is going to pay for this crap, don't do it, build a monolith
+**** Nobody cares about uptime, not even banks.

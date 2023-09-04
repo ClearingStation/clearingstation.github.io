@@ -1,0 +1,1488 @@
+<html>
+  <head>
+      <style>
+       :root {
+	   --font-family: "Fira Sans", sans-serif;
+	   --font-family-alternative: "Source Serif Pro", sans-serif;
+	   --font-family-monospaced: "Fira Mono", monospace;
+	   --font-family-editor: "Source Code Pro", monospace;
+	   --z-index-aside: 1;
+	   --z-index-header: 2;
+	   --z-index-floating-ui: 3;
+	   --z-index-keyboard-overlays: 10;
+	   --z-index-autocomplete: 8;
+	   --z-index-overlay: 4;
+	   --error: hsl(0deg 100% 30%);
+	   --warning: hsl(52deg 84% 56%);
+	   --red: var(--error);
+	   --yellow: var(--warning);
+	   --green: hsl(151deg 100% 25%);
+	   --gray: #aaa;
+	   --transparent-black: hsl(0deg 0% 0% / 50%);
+	   --transparent-white: hsl(0deg 0% 100% / 50%);
+	   --background: #fff;
+	   --background-darker: hsl(0deg 0% 85%);
+	   --text-color: #fff;
+	   --text-color-lighter: hsl(0deg 0% 33%);
+	   --text-color-lightest: hsl(0deg 0% 47%);
+	   --link-color: hsl(203deg 100% 32%);
+	   --link-hover-color: hsl(0deg 0% 33%);
+	   --heading-color: #333;
+	   --code-background: hsl(0deg 0% 97%);
+	   --border: hsl(0deg 0% 85%);
+	   --border-darker: hsl(0deg 0% 80%);
+	   --button-color: #fff;
+	   --button-background: hsl(203deg 100% 32%);
+	   --button-muted-color: var(--text-color);
+	   --button-muted-background: var(--background-darker);
+	   --sidebar-color: #444;
+	   --sidebar-hover-color: var(--link-color);
+	   --sidebar-background: hsl(0deg 0% 96%);
+	   --sidebar-border: hsl(0deg 0% 87%);
+	   --summary-background: hsl(0deg 0% 95%);
+	   --summary-background-darker: hsl(0deg 0% 90%);
+	   --header-color: #fff;
+	   --header-background: hsl(203deg 100% 32%);
+	   --header-placeholder-color: hsl(203deg 47% 66%);
+	   --header-placeholder-background: hsl(203deg 56% 45%);
+	   --table-header-text: hsl(0deg 0% 95%);
+	   --table-header-background: hsl(0deg 0% 60%);
+	   --table-border: hsl(0deg 0% 30%);
+	   --table-background-hover: hsl(0deg 0% 20%);
+	   --table-background-even: hsl(0deg 0% 95%);
+	   --treetable-expander: #fff;
+	   --budget-negative: #af3d3d;
+	   --budget-positive: #3daf46;
+	   --editor-comment: #998;
+	   --editor-trailing-whitespace: rgb(255 199 199 / 50%);
+	   --editor-directive: #333;
+	   --editor-class: #b84;
+	   --editor-date: #099;
+	   --editor-constant: #008080;
+	   --editor-account: var(--link-color);
+	   --editor-invalid: #333;
+	   --editor-activeline: #ffc;
+	   --notification-color: #fff;
+	   --chart-axis: #999;
+	   --autocomplete-match: #ffd27c;
+	   --mobile-button-text: #000;
+	   --placeholder-color: var(--text-color-lightest);
+	   --placeholder-background: var(--background);
+	   --dragover-background: hsl(203deg 100% 32% / 50%);
+	   --overlay-wrapper-background: rgb(0 0 0 / 50%);
+	   --help-sidebar-background: #f8f8f8;
+	   --help-sidebar-border: #eaeaea;
+       }
+       .flex {display: flex}
+       .space-between {justify-content:space-between;}
+       .inline-block {display: inline-block;}
+       .v-centered {align-items: center}
+
+       html, body {font-family: Proxima Nova, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Arial;}
+       .top-navbar { height: 45px; background: #344258; color: white;}
+       .top-navbar input {background: #4e5969; border: 0; outline: none; color: #dae5f5; height: 30; font-size: 14px; margin: 0 2px; border-radius: 3px; padding: 0 10px}
+       .top-navbar .right input {width: 150px}
+       .main {min-height: calc(100vh - 40px);background: #101a29;}
+       .sidebar {background: #4e5969; min-width: 200px; min-height: 100%}
+       .sidebar ul {padding: 0;}
+       .sidebar ul li {list-style: none; margin: 2px 0}
+       .sidebar ul li a {display: block; color: #fff; text-decoration: none; padding: 8px 10px; font-size: 14px}
+       .sidebar ul li a:hover, .sidebar ul li a.active {background: #5e6a7a}
+       .sidebar ul li a.active {font-weight: 500;}
+       .main section {width: 100%; padding: 20px; color: #fff;}
+       .row {display: flex;flex-wrap: wrap;padding: 5px;margin: -10px -20px;}
+       .column {flex: 1;margin: 5px;}
+      </style>
+    
+    <link href="dashboard.css" rel="stylesheet"/>
+    
+  </head>
+  <body>
+    <header class="flex space-between v-centered top-navbar">
+      <div class="flex">
+	<div style="width: 200px">
+	  <div style="padding: 3px 10px; font-weight: bold">ClearingStation</div>
+	</div>
+	<div>
+	  <input name="" type="text" value="" placeholder="Search" style="min-width: 500px; background: #101a29"/>
+	</div>
+      </div>
+      <div class="right">
+	<input name="" type="text" value="" placeholder="Time"/>
+	<input name="" type="text" value="" placeholder="Account"/>
+	<input name="" type="text" value="" placeholder="Filter by tag, payee, ..."/>
+	<div style="display: inline-block">
+	  &nbsp;&nbsp;&nbsp;
+	</div>
+      </div>
+    </header>
+
+    <main class="flex main">
+      <sidebar class="sidebar">
+	<ul>
+	  <li><a href="income_statement.htm" class="active">Income Statement</a></li>
+	  <li><a href="balance_sheet.htm">Balance Sheet</a></li>
+	  <li><a href="trial_balance.htm">Trial Balance</a></li>
+	  <li><a href="documents.htm">Documents</a></li>
+	  <li><a href="journal.htm">Journal</a></li>
+	</ul>
+      </sidebar>
+
+
+      <section>
+
+
+
+
+
+	  <div class="row">
+	      <div class="column">
+		  <tree-table>
+		      <ol class="flex-table tree-table" title="Hold Shift while clicking to expand all children.
+				 Hold Ctrl or Cmd while clicking to expand one level.">
+			  <li class="head">
+			      <p>
+				  <span class="account-cell">
+				      <button type="button" class="link expand-all hidden" title="Expand all accounts">Expand all</button>
+				      <button type="button" class="link close-all" title="Close all accounts">Close all</button>
+				  </span>
+				  <span class="num">CAD</span>
+			      </p>
+			  </li>
+			  <li class="">
+			      <p>
+				  <span class="account-cell depth-0 droptarget has-children" data-account-name="Income">
+				      <a href="/example-beancount-file/account/Income/" class="account">Income</a>
+
+				  </span>
+				  <span class="num">
+				      <span class="balance">  <span class="number"></span>
+				      </span>
+				      <span class="balance-children">  <span class="number">-357944.58</span>
+				      </span>
+				  </span>
+			      </p>
+			      <ol>
+				  <li>
+				      <p>
+					  <span class="account-cell depth-1 droptarget has-children" data-account-name="Income:US">
+					      <a href="/example-beancount-file/account/Income:US/" class="account">US</a>
+
+					  </span>
+					  <span class="num">
+					      <span class="balance">  <span class="number"></span>
+					      </span>
+					      <span class="balance-children">  <span class="number">-357944.58</span>
+					      </span>
+					  </span>
+				      </p>
+				      <ol>
+					  <li>
+					      <p>
+						  <span class="account-cell depth-2 droptarget has-children" data-account-name="Income:US:ETrade">
+						      <a href="/example-beancount-file/account/Income:US:ETrade/" class="account">ETrade</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number"></span>
+						      </span>
+						      <span class="balance-children">  <span class="number">-1275.88</span>
+						      </span>
+						  </span>
+					      </p>
+					      <ol>
+						  <li>
+						      <p class="has-balance">
+							  <span class="account-cell depth-3 droptarget" data-account-name="Income:US:ETrade:Dividends">
+							      <a href="/example-beancount-file/account/Income:US:ETrade:Dividends/" class="account">Dividends</a>
+
+							  </span>
+							  <span class="num">
+							      <span class="balance">  <span class="number">-479.46</span>
+							      </span>
+							      <span class="balance-children">  <span class="number">-479.46</span>
+							      </span>
+							  </span>
+						      </p>
+						  </li>
+						  <li>
+						      <p class="has-balance">
+							  <span class="account-cell depth-3 droptarget" data-account-name="Income:US:ETrade:Gains">
+							      <a href="/example-beancount-file/account/Income:US:ETrade:Gains/" class="account">Gains</a>
+
+							  </span>
+							  <span class="num">
+							      <span class="balance">  <span class="number">-796.42</span>
+							      </span>
+							      <span class="balance-children">  <span class="number">-796.42</span>
+							      </span>
+							  </span>
+						      </p>
+						  </li>
+
+					      </ol>
+					  </li>
+					  <li>
+					      <p>
+						  <span class="account-cell depth-2 droptarget has-children" data-account-name="Income:US:Federal">
+						      <a href="/example-beancount-file/account/Income:US:Federal/" class="account">Federal</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number"></span>
+						      </span>
+						      <span class="balance-children">  <span class="number"></span>
+						      </span>
+						  </span>
+					      </p>
+					      <ol>
+						  <li>
+						      <p class="has-balance">
+							  <span class="account-cell depth-3 droptarget" data-account-name="Income:US:Federal:PreTax401k">
+							      <a href="/example-beancount-file/account/Income:US:Federal:PreTax401k/" class="account">PreTax401k</a>
+
+							  </span>
+							  <span class="num">
+							      <span class="balance">  <span class="number"></span>
+							      </span>
+							      <span class="balance-children">  <span class="number"></span>
+							      </span>
+							  </span>
+						      </p>
+						  </li>
+
+					      </ol>
+					  </li>
+					  <li>
+					      <p>
+						  <span class="account-cell depth-2 droptarget has-children" data-account-name="Income:US:Hoogle">
+						      <a href="/example-beancount-file/account/Income:US:Hoogle/" class="account">Hoogle</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number"></span>
+						      </span>
+						      <span class="balance-children">  <span class="number">-356668.70</span>
+						      </span>
+						  </span>
+					      </p>
+					      <ol>
+						  <li>
+						      <p class="has-balance">
+							  <span class="account-cell depth-3 droptarget" data-account-name="Income:US:Hoogle:GroupTermLife">
+							      <a href="/example-beancount-file/account/Income:US:Hoogle:GroupTermLife/" class="account">GroupTermLife</a>
+
+							  </span>
+							  <span class="num">
+							      <span class="balance">  <span class="number">-1726.72</span>
+							      </span>
+							      <span class="balance-children">  <span class="number">-1726.72</span>
+							      </span>
+							  </span>
+						      </p>
+						  </li>
+						  <li>
+						      <p class="has-balance">
+							  <span class="account-cell depth-3 droptarget" data-account-name="Income:US:Hoogle:Match401k">
+							      <a href="/example-beancount-file/account/Income:US:Hoogle:Match401k/" class="account">Match401k</a>
+
+							  </span>
+							  <span class="num">
+							      <span class="balance">  <span class="number">-27250.00</span>
+							      </span>
+							      <span class="balance-children">  <span class="number">-27250.00</span>
+							      </span>
+							  </span>
+						      </p>
+						  </li>
+						  <li>
+						      <p class="has-balance">
+							  <span class="account-cell depth-3 droptarget" data-account-name="Income:US:Hoogle:Salary">
+							      <a href="/example-beancount-file/account/Income:US:Hoogle:Salary/" class="account">Salary</a>
+
+							  </span>
+							  <span class="num">
+							      <span class="balance">  <span class="number">-327691.98</span>
+							      </span>
+							      <span class="balance-children">  <span class="number">-327691.98</span>
+							      </span>
+							  </span>
+						      </p>
+						  </li>
+						  <li>
+						      <p class="has-balance">
+							  <span class="account-cell depth-3 droptarget" data-account-name="Income:US:Hoogle:Vacation">
+							      <a href="/example-beancount-file/account/Income:US:Hoogle:Vacation/" class="account">Vacation</a>
+
+							  </span>
+							  <span class="num">
+							      <span class="balance">  <span class="number"></span>
+							      </span>
+							      <span class="balance-children">  <span class="number"></span>
+							      </span>
+							  </span>
+						      </p>
+						  </li>
+
+					      </ol>
+					  </li>
+
+				      </ol>
+				  </li>
+
+			      </ol>
+			  </li>
+		      </ol>
+		  </tree-table>
+
+	      </div>
+	      <div class="column">
+		  <tree-table>
+		      <ol class="flex-table tree-table" title="Hold Shift while clicking to expand all children.
+				 Hold Ctrl or Cmd while clicking to expand one level.">
+			  <li class="head">
+			      <p>
+				  <span class="account-cell">
+				      <button type="button" class="link expand-all hidden" title="Expand all accounts">Expand all</button>
+				      <button type="button" class="link close-all" title="Close all accounts">Close all</button>
+				  </span>
+				  <span class="num">CAD</span>
+			      </p>
+			  </li>
+			  <li class="toggled">
+			      <p>
+				  <span class="account-cell depth-0 droptarget has-children" data-account-name="Expenses">
+				      <a href="/example-beancount-file/account/Expenses/" class="account">Expenses</a>
+
+				  </span>
+				  <span class="num">
+				      <span class="balance">  <span class="number"></span>
+				      </span>
+				      <span class="balance-children">  <span class="number">254609.05</span>
+				      </span>
+				  </span>
+			      </p>
+			      <ol>
+				  <li>
+				      <p>
+					  <span class="account-cell depth-1 droptarget has-children" data-account-name="Expenses:Financial">
+					      <a href="/example-beancount-file/account/Expenses:Financial/" class="account">Financial</a>
+
+					  </span>
+					  <span class="num">
+					      <span class="balance">  <span class="number"></span>
+					      </span>
+					      <span class="balance-children">  <span class="number">382.60</span>
+					      </span>
+					  </span>
+				      </p>
+				      <ol>
+					  <li>
+					      <p class="has-balance">
+						  <span class="account-cell depth-2 droptarget" data-account-name="Expenses:Financial:Commissions">
+						      <a href="/example-beancount-file/account/Expenses:Financial:Commissions/" class="account">Commissions</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number">250.60</span>
+						      </span>
+						      <span class="balance-children">  <span class="number">250.60</span>
+						      </span>
+						  </span>
+					      </p>
+					  </li>
+					  <li>
+					      <p class="has-balance">
+						  <span class="account-cell depth-2 droptarget" data-account-name="Expenses:Financial:Fees">
+						      <a href="/example-beancount-file/account/Expenses:Financial:Fees/" class="account">Fees</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number">132.00</span>
+						      </span>
+						      <span class="balance-children">  <span class="number">132.00</span>
+						      </span>
+						  </span>
+					      </p>
+					  </li>
+
+				      </ol>
+				  </li>
+				  <li>
+				      <p>
+					  <span class="account-cell depth-1 droptarget has-children" data-account-name="Expenses:Food">
+					      <a href="/example-beancount-file/account/Expenses:Food/" class="account">Food</a>
+
+					  </span>
+					  <span class="num">
+					      <span class="balance">  <span class="number"></span>
+					      </span>
+					      <span class="balance-children">  <span class="number">18160.81</span>
+					      </span>
+					  </span>
+				      </p>
+				      <ol>
+					  <li>
+					      <p class="has-balance">
+						  <span class="account-cell depth-2 droptarget" data-account-name="Expenses:Food:Alcohol">
+						      <a href="/example-beancount-file/account/Expenses:Food:Alcohol/" class="account">Alcohol</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number">63.58</span>
+						      </span>
+						      <span class="balance-children">  <span class="number">63.58</span>
+						      </span>
+						  </span>
+					      </p>
+					  </li>
+					  <li>
+					      <p class="has-balance">
+						  <span class="account-cell depth-2 droptarget" data-account-name="Expenses:Food:Coffee">
+						      <a href="/example-beancount-file/account/Expenses:Food:Coffee/" class="account">Coffee</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number">76.98</span>
+						      </span>
+						      <span class="balance-children">  <span class="number">76.98</span>
+						      </span>
+						  </span>
+					      </p>
+					  </li>
+					  <li>
+					      <p class="has-balance">
+						  <span class="account-cell depth-2 droptarget" data-account-name="Expenses:Food:Groceries">
+						      <a href="/example-beancount-file/account/Expenses:Food:Groceries/" class="account">Groceries</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number">5936.42</span>
+						      </span>
+						      <span class="balance-children">  <span class="number">5936.42</span>
+						      </span>
+						  </span>
+					      </p>
+					  </li>
+					  <li>
+					      <p class="has-balance">
+						  <span class="account-cell depth-2 droptarget" data-account-name="Expenses:Food:Restaurant">
+						      <a href="/example-beancount-file/account/Expenses:Food:Restaurant/" class="account">Restaurant</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number">12083.83</span>
+						      </span>
+						      <span class="balance-children">  <span class="number">12083.83</span>
+						      </span>
+						  </span>
+					      </p>
+					  </li>
+
+				      </ol>
+				  </li>
+				  <li>
+				      <p>
+					  <span class="account-cell depth-1 droptarget has-children" data-account-name="Expenses:Health">
+					      <a href="/example-beancount-file/account/Expenses:Health/" class="account">Health</a>
+
+					  </span>
+					  <span class="num">
+					      <span class="balance">  <span class="number"></span>
+					      </span>
+					      <span class="balance-children">  <span class="number">6879.90</span>
+					      </span>
+					  </span>
+				      </p>
+				      <ol>
+					  <li>
+					      <p>
+						  <span class="account-cell depth-2 droptarget has-children" data-account-name="Expenses:Health:Dental">
+						      <a href="/example-beancount-file/account/Expenses:Health:Dental/" class="account">Dental</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number"></span>
+						      </span>
+						      <span class="balance-children">  <span class="number">205.90</span>
+						      </span>
+						  </span>
+					      </p>
+					      <ol>
+						  <li>
+						      <p class="has-balance">
+							  <span class="account-cell depth-3 droptarget" data-account-name="Expenses:Health:Dental:Insurance">
+							      <a href="/example-beancount-file/account/Expenses:Health:Dental:Insurance/" class="account">Insurance</a>
+
+							  </span>
+							  <span class="num">
+							      <span class="balance">  <span class="number">205.90</span>
+							      </span>
+							      <span class="balance-children">  <span class="number">205.90</span>
+							      </span>
+							  </span>
+						      </p>
+						  </li>
+
+					      </ol>
+					  </li>
+					  <li>
+					      <p>
+						  <span class="account-cell depth-2 droptarget has-children" data-account-name="Expenses:Health:Life">
+						      <a href="/example-beancount-file/account/Expenses:Health:Life/" class="account">Life</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number"></span>
+						      </span>
+						      <span class="balance-children">  <span class="number">1726.72</span>
+						      </span>
+						  </span>
+					      </p>
+					      <ol>
+						  <li>
+						      <p class="has-balance">
+							  <span class="account-cell depth-3 droptarget" data-account-name="Expenses:Health:Life:GroupTermLife">
+							      <a href="/example-beancount-file/account/Expenses:Health:Life:GroupTermLife/" class="account">GroupTermLife</a>
+
+							  </span>
+							  <span class="num">
+							      <span class="balance">  <span class="number">1726.72</span>
+							      </span>
+							      <span class="balance-children">  <span class="number">1726.72</span>
+							      </span>
+							  </span>
+						      </p>
+						  </li>
+
+					      </ol>
+					  </li>
+					  <li>
+					      <p>
+						  <span class="account-cell depth-2 droptarget has-children" data-account-name="Expenses:Health:Medical">
+						      <a href="/example-beancount-file/account/Expenses:Health:Medical/" class="account">Medical</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number"></span>
+						      </span>
+						      <span class="balance-children">  <span class="number">1943.98</span>
+						      </span>
+						  </span>
+					      </p>
+					      <ol>
+						  <li>
+						      <p class="has-balance">
+							  <span class="account-cell depth-3 droptarget" data-account-name="Expenses:Health:Medical:Insurance">
+							      <a href="/example-beancount-file/account/Expenses:Health:Medical:Insurance/" class="account">Insurance</a>
+
+							  </span>
+							  <span class="num">
+							      <span class="balance">  <span class="number">1943.98</span>
+							      </span>
+							      <span class="balance-children">  <span class="number">1943.98</span>
+							      </span>
+							  </span>
+						      </p>
+						  </li>
+
+					      </ol>
+					  </li>
+					  <li>
+					      <p>
+						  <span class="account-cell depth-2 droptarget has-children" data-account-name="Expenses:Health:Vision">
+						      <a href="/example-beancount-file/account/Expenses:Health:Vision/" class="account">Vision</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number"></span>
+						      </span>
+						      <span class="balance-children">  <span class="number">3003.30</span>
+						      </span>
+						  </span>
+					      </p>
+					      <ol>
+						  <li>
+						      <p class="has-balance">
+							  <span class="account-cell depth-3 droptarget" data-account-name="Expenses:Health:Vision:Insurance">
+							      <a href="/example-beancount-file/account/Expenses:Health:Vision:Insurance/" class="account">Insurance</a>
+
+							  </span>
+							  <span class="num">
+							      <span class="balance">  <span class="number">3003.30</span>
+							      </span>
+							      <span class="balance-children">  <span class="number">3003.30</span>
+							      </span>
+							  </span>
+						      </p>
+						  </li>
+
+					      </ol>
+					  </li>
+
+				      </ol>
+				  </li>
+				  <li>
+				      <p>
+					  <span class="account-cell depth-1 droptarget has-children" data-account-name="Expenses:Home">
+					      <a href="/example-beancount-file/account/Expenses:Home/" class="account">Home</a>
+
+					  </span>
+					  <span class="num">
+					      <span class="balance">  <span class="number"></span>
+					      </span>
+					      <span class="balance-children">  <span class="number">83451.24</span>
+					      </span>
+					  </span>
+				      </p>
+				      <ol>
+					  <li>
+					      <p class="has-balance">
+						  <span class="account-cell depth-2 droptarget" data-account-name="Expenses:Home:Electricity">
+						      <a href="/example-beancount-file/account/Expenses:Home:Electricity/" class="account">Electricity</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number">2080.00</span>
+						      </span>
+						      <span class="balance-children">  <span class="number">2080.00</span>
+						      </span>
+						  </span>
+					      </p>
+					  </li>
+					  <li>
+					      <p class="has-balance">
+						  <span class="account-cell depth-2 droptarget" data-account-name="Expenses:Home:Internet">
+						      <a href="/example-beancount-file/account/Expenses:Home:Internet/" class="account">Internet</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number">2559.51</span>
+						      </span>
+						      <span class="balance-children">  <span class="number">2559.51</span>
+						      </span>
+						  </span>
+					      </p>
+					  </li>
+					  <li>
+					      <p class="has-balance">
+						  <span class="account-cell depth-2 droptarget" data-account-name="Expenses:Home:Phone">
+						      <a href="/example-beancount-file/account/Expenses:Home:Phone/" class="account">Phone</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number">2011.73</span>
+						      </span>
+						      <span class="balance-children">  <span class="number">2011.73</span>
+						      </span>
+						  </span>
+					      </p>
+					  </li>
+					  <li>
+					      <p class="has-balance">
+						  <span class="account-cell depth-2 droptarget" data-account-name="Expenses:Home:Rent">
+						      <a href="/example-beancount-file/account/Expenses:Home:Rent/" class="account">Rent</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number">76800.00</span>
+						      </span>
+						      <span class="balance-children">  <span class="number">76800.00</span>
+						      </span>
+						  </span>
+					      </p>
+					  </li>
+
+				      </ol>
+				  </li>
+				  <li>
+				      <p>
+					  <span class="account-cell depth-1 droptarget has-children" data-account-name="Expenses:Taxes">
+					      <a href="/example-beancount-file/account/Expenses:Taxes/" class="account">Taxes</a>
+
+					  </span>
+					  <span class="num">
+					      <span class="balance">  <span class="number"></span>
+					      </span>
+					      <span class="balance-children">  <span class="number">142014.50</span>
+					      </span>
+					  </span>
+				      </p>
+				      <ol>
+					  <li>
+					      <p>
+						  <span class="account-cell depth-2 droptarget has-children" data-account-name="Expenses:Taxes:Y2015">
+						      <a href="/example-beancount-file/account/Expenses:Taxes:Y2015/" class="account">Y2015</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number"></span>
+						      </span>
+						      <span class="balance-children">  <span class="number">53758.01</span>
+						      </span>
+						  </span>
+					      </p>
+					      <ol>
+						  <li>
+						      <p>
+							  <span class="account-cell depth-3 droptarget has-children" data-account-name="Expenses:Taxes:Y2015:US">
+							      <a href="/example-beancount-file/account/Expenses:Taxes:Y2015:US/" class="account">US</a>
+
+							  </span>
+							  <span class="num">
+							      <span class="balance">  <span class="number"></span>
+							      </span>
+							      <span class="balance-children">  <span class="number">53758.01</span>
+							      </span>
+							  </span>
+						      </p>
+						      <ol>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2015:US:CityNYC">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2015:US:CityNYC/" class="account">CityNYC</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">4722.84</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">4722.84</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget has-children" data-account-name="Expenses:Taxes:Y2015:US:Federal">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2015:US:Federal/" class="account">Federal</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">28994.07</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">28994.07</span>
+								      </span>
+								  </span>
+							      </p>
+							      <ol>
+								  <li>
+								      <p class="has-balance">
+									  <span class="account-cell depth-5 droptarget" data-account-name="Expenses:Taxes:Y2015:US:Federal:PreTax401k">
+									      <a href="/example-beancount-file/account/Expenses:Taxes:Y2015:US:Federal:PreTax401k/" class="account">PreTax401k</a>
+
+									  </span>
+									  <span class="num">
+									      <span class="balance">  <span class="number"></span>
+									      </span>
+									      <span class="balance-children">  <span class="number"></span>
+									      </span>
+									  </span>
+								      </p>
+								  </li>
+
+							      </ol>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2015:US:Medicare">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2015:US:Medicare/" class="account">Medicare</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">2878.74</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">2878.74</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2015:US:SDI">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2015:US:SDI/" class="account">SDI</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">30.24</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">30.24</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2015:US:SocSec">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2015:US:SocSec/" class="account">SocSec</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">7000.04</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">7000.04</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2015:US:State">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2015:US:State/" class="account">State</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">10132.08</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">10132.08</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+
+						      </ol>
+						  </li>
+
+					      </ol>
+					  </li>
+					  <li>
+					      <p>
+						  <span class="account-cell depth-2 droptarget has-children" data-account-name="Expenses:Taxes:Y2016">
+						      <a href="/example-beancount-file/account/Expenses:Taxes:Y2016/" class="account">Y2016</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number"></span>
+						      </span>
+						      <span class="balance-children">  <span class="number">52396.89</span>
+						      </span>
+						  </span>
+					      </p>
+					      <ol>
+						  <li>
+						      <p>
+							  <span class="account-cell depth-3 droptarget has-children" data-account-name="Expenses:Taxes:Y2016:US">
+							      <a href="/example-beancount-file/account/Expenses:Taxes:Y2016:US/" class="account">US</a>
+
+							  </span>
+							  <span class="num">
+							      <span class="balance">  <span class="number"></span>
+							      </span>
+							      <span class="balance-children">  <span class="number">52396.89</span>
+							      </span>
+							  </span>
+						      </p>
+						      <ol>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2016:US:CityNYC">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2016:US:CityNYC/" class="account">CityNYC</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">4547.92</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">4547.92</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget has-children" data-account-name="Expenses:Taxes:Y2016:US:Federal">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2016:US:Federal/" class="account">Federal</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">28099.08</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">28099.08</span>
+								      </span>
+								  </span>
+							      </p>
+							      <ol>
+								  <li>
+								      <p class="has-balance">
+									  <span class="account-cell depth-5 droptarget" data-account-name="Expenses:Taxes:Y2016:US:Federal:PreTax401k">
+									      <a href="/example-beancount-file/account/Expenses:Taxes:Y2016:US:Federal:PreTax401k/" class="account">PreTax401k</a>
+
+									  </span>
+									  <span class="num">
+									      <span class="balance">  <span class="number"></span>
+									      </span>
+									      <span class="balance-children">  <span class="number"></span>
+									      </span>
+									  </span>
+								      </p>
+								  </li>
+
+							      </ol>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2016:US:Medicare">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2016:US:Medicare/" class="account">Medicare</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">2772.12</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">2772.12</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2016:US:SDI">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2016:US:SDI/" class="account">SDI</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">29.12</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">29.12</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2016:US:SocSec">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2016:US:SocSec/" class="account">SocSec</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">7000.04</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">7000.04</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2016:US:State">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2016:US:State/" class="account">State</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">9948.61</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">9948.61</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+
+						      </ol>
+						  </li>
+
+					      </ol>
+					  </li>
+					  <li>
+					      <p>
+						  <span class="account-cell depth-2 droptarget has-children" data-account-name="Expenses:Taxes:Y2017">
+						      <a href="/example-beancount-file/account/Expenses:Taxes:Y2017/" class="account">Y2017</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number"></span>
+						      </span>
+						      <span class="balance-children">  <span class="number">35859.60</span>
+						      </span>
+						  </span>
+					      </p>
+					      <ol>
+						  <li>
+						      <p>
+							  <span class="account-cell depth-3 droptarget has-children" data-account-name="Expenses:Taxes:Y2017:US">
+							      <a href="/example-beancount-file/account/Expenses:Taxes:Y2017:US/" class="account">US</a>
+
+							  </span>
+							  <span class="num">
+							      <span class="balance">  <span class="number"></span>
+							      </span>
+							      <span class="balance-children">  <span class="number">35859.60</span>
+							      </span>
+							  </span>
+						      </p>
+						      <ol>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2017:US:CityNYC">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2017:US:CityNYC/" class="account">CityNYC</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">3148.56</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">3148.56</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget has-children" data-account-name="Expenses:Taxes:Y2017:US:Federal">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2017:US:Federal/" class="account">Federal</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">19132.56</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">19132.56</span>
+								      </span>
+								  </span>
+							      </p>
+							      <ol>
+								  <li>
+								      <p class="has-balance">
+									  <span class="account-cell depth-5 droptarget" data-account-name="Expenses:Taxes:Y2017:US:Federal:PreTax401k">
+									      <a href="/example-beancount-file/account/Expenses:Taxes:Y2017:US:Federal:PreTax401k/" class="account">PreTax401k</a>
+
+									  </span>
+									  <span class="num">
+									      <span class="balance">  <span class="number"></span>
+									      </span>
+									      <span class="balance-children">  <span class="number"></span>
+									      </span>
+									  </span>
+								      </p>
+								  </li>
+
+							      </ol>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2017:US:Medicare">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2017:US:Medicare/" class="account">Medicare</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">1919.16</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">1919.16</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2017:US:SDI">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2017:US:SDI/" class="account">SDI</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">20.16</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">20.16</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2017:US:SocSec">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2017:US:SocSec/" class="account">SocSec</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">5067.72</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">5067.72</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+							  <li>
+							      <p class="has-balance">
+								  <span class="account-cell depth-4 droptarget" data-account-name="Expenses:Taxes:Y2017:US:State">
+								      <a href="/example-beancount-file/account/Expenses:Taxes:Y2017:US:State/" class="account">State</a>
+
+								  </span>
+								  <span class="num">
+								      <span class="balance">  <span class="number">6571.44</span>
+								      </span>
+								      <span class="balance-children">  <span class="number">6571.44</span>
+								      </span>
+								  </span>
+							      </p>
+							  </li>
+
+						      </ol>
+						  </li>
+
+					      </ol>
+					  </li>
+
+				      </ol>
+				  </li>
+				  <li>
+				      <p>
+					  <span class="account-cell depth-1 droptarget has-children" data-account-name="Expenses:Transport">
+					      <a href="/example-beancount-file/account/Expenses:Transport/" class="account">Transport</a>
+
+					  </span>
+					  <span class="num">
+					      <span class="balance">  <span class="number"></span>
+					      </span>
+					      <span class="balance-children">  <span class="number">3720.00</span>
+					      </span>
+					  </span>
+				      </p>
+				      <ol>
+					  <li>
+					      <p class="has-balance">
+						  <span class="account-cell depth-2 droptarget" data-account-name="Expenses:Transport:Tram">
+						      <a href="/example-beancount-file/account/Expenses:Transport:Tram/" class="account">Tram</a>
+
+						  </span>
+						  <span class="num">
+						      <span class="balance">  <span class="number">3720.00</span>
+						      </span>
+						      <span class="balance-children">  <span class="number">3720.00</span>
+						      </span>
+						  </span>
+					      </p>
+					  </li>
+
+				      </ol>
+				  </li>
+				  <li>
+				      <p class="has-balance">
+					  <span class="account-cell depth-1 droptarget" data-account-name="Expenses:Vacation">
+					      <a href="/example-beancount-file/account/Expenses:Vacation/" class="account">Vacation</a>
+
+					  </span>
+					  <span class="num">
+					      <span class="balance">  <span class="number"></span>
+					      </span>
+					      <span class="balance-children">  <span class="number"></span>
+					      </span>
+					  </span>
+				      </p>
+				  </li>
+
+			      </ol>
+			  </li>
+		      </ol>
+		  </tree-table>
+
+	      </div>
+	      <div class="column">
+		  <tree-table>
+		      <ol class="flex-table tree-table" title="Hold Shift while clicking to expand all children.
+				 Hold Ctrl or Cmd while clicking to expand one level.">
+			  <li class="head">
+			      <p>
+				  <span class="account-cell"><button type="button" class="link expand-all hidden" title="Expand all accounts">Expand all</button></span>
+				  <span class="num">CAD</span>
+			      </p>
+			  </li>
+			  <li>
+			      <p class="has-balance">
+				  <span class="account-cell depth-0 droptarget" data-account-name="Net Profit">
+				      <a href="/example-beancount-file/account/Net%20Profit/" class="account">Net Profit</a>
+
+				  </span>
+				  <span class="num">
+				      <span class="balance">  <span class="number">-103335.53</span>
+				      </span>
+				      <span class="balance-children">  <span class="number">-103335.53</span>
+				      </span>
+				  </span>
+			      </p>
+			  </li>
+		      </ol>
+		  </tree-table>
+
+	      </div>
+	  </div>
+
+	  <style>
+	   .main section {font-size: 14px}
+	   .hidden {display: none;}
+	   .row {
+	       display: flex;
+	       flex-wrap: wrap;
+	       padding: 5px;
+	       margin: -10px -20px;
+	   }
+	   .column {
+	       flex: 1;
+	       margin: 5px;
+	   }
+	   ol {padding: 0;
+	       margin: 0 0 1rem;
+	       list-style-type: none;}
+	   .flex-table p,
+	   .flex-table li,
+	   .flex-table ul,
+	   .flex-table ol {
+	       padding: 0;
+	       margin: 0;
+	   }
+	   .flex-table p {
+	       display: flex;
+	   }
+	   .flex-table p > span {
+	       flex-shrink: 0;
+	       padding: 2px 4px;
+	       margin: 0;
+	   }
+	   .flex-table p:hover > span {
+	       background: var(--table-background-hover)
+	   }
+	   .flex-table .num {
+	       font-family: var(--font-family-monospaced);
+	       color: var(--text-color);
+	       text-align: right;
+	   }
+	   .flex-table .number {
+	       white-space: nowrap;
+	   }
+	   .flex-table .head p > span {
+	       padding: 3px 4px;
+	       color: var(--table-header-text);
+	       background-color: var(--table-header-background);
+	   }
+	   .flex-table .head .num {
+	       font-family: var(--font-family);
+	       color: var(--table-header-text);
+	       background-color: var(--table-header-background);
+	   }
+	   /* css/tree-table.css */
+	   .tree-table.fullwidth {
+	       display: block;
+	       max-width: 100%;
+	       overflow-x: auto;
+	   }
+	   .tree-table p {
+	       margin-top: -1px;
+	   }
+	   .tree-table p > span {
+	       margin-right: -1px;
+	       border: 1px solid var(--table-border);
+	   }
+	   .tree-table .account-cell {
+	       display: flex;
+	       flex: 1;
+	       align-items: center;
+	       min-width: 14em;
+	       max-width: 30em;
+	   }
+	   .tree-table .account-cell.depth-1 {
+	       min-width: 13em;
+	       max-width: 29em;
+	       margin-left: 1em;
+	   }
+	   .tree-table .account-cell.depth-2 {
+	       min-width: 12em;
+	       max-width: 28em;
+	       margin-left: 2em;
+	   }
+	   .tree-table .account-cell.depth-3 {
+	       min-width: 11em;
+	       max-width: 27em;
+	       margin-left: 3em;
+	   }
+	   .tree-table .account-cell.depth-4 {
+	       min-width: 10em;
+	       max-width: 26em;
+	       margin-left: 4em;
+	   }
+	   .tree-table .account-cell.depth-5 {
+	       min-width: 9em;
+	       max-width: 25em;
+	       margin-left: 5em;
+	   }
+	   .tree-table .account-cell.depth-6 {
+	       min-width: 8em;
+	       max-width: 24em;
+	       margin-left: 6em;
+	   }
+	   .tree-table .account-cell.depth-7 {
+	       min-width: 7em;
+	       max-width: 23em;
+	       margin-left: 7em;
+	   }
+	   .tree-table .account-cell.depth-8 {
+	       min-width: 6em;
+	       max-width: 22em;
+	       margin-left: 8em;
+	   }
+	   .tree-table .account-cell.depth-9 {
+	       min-width: 5em;
+	       max-width: 21em;
+	       margin-left: 9em;
+	   }
+	   .tree-table .account-cell a {
+	       margin-left: 1em;
+	   }
+	   .tree-table .has-children {
+	       cursor: pointer;
+	   }
+	   .tree-table .has-children::before {
+	       margin: 0 -10px 0 0;
+	       content: "";
+	       border-top: 5px solid var(--treetable-expander);
+	       border-right: 5px solid transparent;
+	       border-left: 5px solid transparent;
+	   }
+	   .tree-table .num {
+	       width: 10em;
+	   }
+	   .tree-table .num a {
+	       display: block;
+	       color: inherit;
+	   }
+	   .tree-table .other {
+	       width: 13em;
+	   }
+	   .tree-table .other a {
+	       display: block;
+	       color: inherit;
+	   }
+	   .tree-table .balance-children {
+	       display: block;
+	       opacity: 70%;
+	   }
+	   .tree-table .has-balance .balance {
+	       display: block;
+	   }
+	   .tree-table .has-balance .balance-children {
+	       display: none;
+	   }
+	   .tree-table .toggled ol {
+	       display: none;
+	   }
+	   .tree-table .toggled .balance {
+	       display: none;
+	   }
+	   .tree-table .toggled .balance-children {
+	       display: block;
+	       color: var(--text-color);
+	   }
+	   .tree-table .toggled .has-children::before {
+	       transform: rotate(270deg);
+	   }
+	   .tree-table .expand-all, .tree-table .close-all {
+	       margin-left: 15px;
+	       font-weight: normal;
+	       opacity: 50%;
+	   }
+	   .tree-table .diff {
+	       margin-right: 3px;
+	       font-size: 0.9em;
+	       color: var(--budget-zero);
+	       white-space: nowrap;
+	   }
+	   .tree-table .diff.negative {
+	       color: var(--budget-negative);
+	   }
+	   .tree-table .diff.positive {
+	       color: var(--budget-positive);
+	   }
+	   .two-currencies {
+	       font-size: 0.9em;
+	   }
+	   .two-currencies .num {
+	       width: 8em;
+	   }
+	   .two-currencies .other {
+	       width: 11em;
+	   }
+	   .tree-table a {color: #fff; text-decoration: none; font-weight: bolder;}
+	  </style>
+	  
+	  <script>
+	   var TreeTable = class extends HTMLElement {
+	       constructor() {
+		   super();
+		   // todo: add functionality that expands step-wise and closes step-wise
+		   const expandAllLink = this.querySelector(".expand-all");
+		   const closeAllLink = this.querySelector(".close-all");
+		   expandAllLink == null ? void 0 : expandAllLink.addEventListener("click", () => {
+		       expandAllLink.classList.add("hidden");
+		       if (closeAllLink) closeAllLink.classList.remove("hidden");
+		       this.querySelectorAll(".toggled").forEach((el) => {
+			   el.classList.remove("toggled");
+		       });
+		   });
+		   
+		   closeAllLink == null ? void 0 : closeAllLink.addEventListener("click", () => {
+		       closeAllLink.classList.add("hidden");
+		       if (expandAllLink) expandAllLink.classList.remove("hidden");
+		       this.querySelectorAll("li").forEach((el) => {
+			   el.classList.add("toggled");
+		       });
+		   });
+		   delegate(this, "click", "span.has-children", (event) => {
+		       const { target } = event;
+		       if (!(target instanceof HTMLElement) || target instanceof HTMLAnchorElement) {
+			   return;
+		       }
+		       const row = target.closest("li");
+		       if (!row) {
+			   return;
+		       }
+		       const willShow = row.classList.contains("toggled");
+		       if (event.shiftKey) {
+			   this.querySelectorAll("li").forEach((el) => {
+			       el.classList.toggle("toggled", !willShow);
+			   });
+		       }
+		       if (event.ctrlKey || event.metaKey) {
+			   this.querySelectorAll("li").forEach((el) => {
+			       el.classList.toggle("toggled", willShow);
+			   });
+		       }
+		       row.classList.toggle("toggled");
+		       expandAllLink == null ? void 0 : expandAllLink.classList.toggle(
+			   "hidden",
+			   !this.querySelectorAll(".toggled").length
+		       );
+		   });
+	       }
+	   };
+
+	   function defineCustomElements() {
+	       // customElements.define("copyable-text", CopyableText);
+	       // customElements.define("fava-journal", FavaJournal);
+	       // customElements.define("sortable-table", SortableTable, { extends: "table" });
+	       customElements.define("tree-table", TreeTable);
+	   }
+
+	   function delegate(element2, type, selector, callback) {
+	       element2.addEventListener(type, (event) => {
+		   let { target } = event;
+		   if (!(target instanceof Node)) {
+		       return;
+		   }
+		   if (!(target instanceof Element)) {
+		       target = target.parentNode;
+		   }
+		   if (target instanceof Element) {
+		       const closest = target.closest(selector);
+		       if (closest) {
+			   callback(event, closest);
+		       }
+		   }
+	       });
+	   }
+
+	   (function () {
+	       defineCustomElements();
+	   })();
+
+	  </script>
+
+	  
+
+
+	  
+	  
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,938 @@
+<html>
+  <head>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://en.privatbank.ua/sites/pb/libs/animate/animate.css?v=v1.0.49" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://en.privatbank.ua/sites/pb/libs/slick/slick.css?v=v1.0.49" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://en.privatbank.ua/sites/pb/libs/slick/slick-theme.css?v=v1.0.49" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://en.privatbank.ua/assetic/pb_libs_css.css?v=v1.0.49" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://en.privatbank.ua/assetic/pb_main_individuals.css?v=v1.0.49" type="text/css" media="screen" />
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    
+    <script type="text/javascript" src="https://en.privatbank.ua/assetic/common.min.js?v=v1.0.49"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://en.privatbank.ua/sites/pb/libs/LazyLoad/lazysizes-umd.min.js"></script>
+    
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    
+    <header class="menu_container">
+      <div class="header-container">
+	<div class="wr">
+	  <ul class="divide">
+            <li class="logo">
+              <a href="/">ClearingStation</a>
+            </li>
+            <li class="section"><a href="https://privatbank.ua">Careers</a></li>
+            <li class="section"><a href="https://privatbank.ua/business">About us</a></li>
+            <li class="section"><a href="https://privatbank.ua/vip">Help</a></li>
+	  </ul>
+
+	  <ul class="tariffs">
+            <li><a href="/tariffs">Login</a></li>
+	  </ul>
+
+	</div>
+      </div>
+
+      <div class="navbar_container">
+	<div class="wr">
+
+	  <div class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse cbp-hrmenu" id="cbp-hrmenu">
+
+              <div class="mob-search">
+		<div>
+		  <form id="search_form_mobile" action="/search/str" method="GET" autocomplete="off">
+                    <svg class="magnifier" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                      <g fill="none" fill-rule="evenodd" stroke="#979797">
+			<path fill="#D8D8D8" d="M29.768 28.06a.5.5 0 1 0-.707.708l5.085 5.086a.5.5 0 0 0 .708-.708l-5.086-5.085z"></path>
+			<path stroke-width="2" d="M18 23.28c0-3.458 2.765-6.28 6.18-6.28 3.402 0 6.178 2.81 6.178 6.28s-2.765 6.281-6.179 6.281S18 26.74 18 23.281z"></path>
+                      </g>
+                    </svg>
+                    <input class="search_input" type="search" name="search" placeholder="Search on the site" maxlength="512">
+                    <svg class="search-btn-hide search-mob-hide" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                      <path fill="#D8D8D8" fill-rule="evenodd" stroke="#979797" d="M31.718 16.575L25 23.293l-6.718-6.718a.5.5 0 0 0-.707.707L24.293 24l-6.718 6.718a.5.5 0 0 0 .707.707L25 24.707l6.718 6.718a.5.5 0 0 0 .707-.707L25.707 24l6.718-6.718a.5.5 0 0 0-.707-.707z"></path>
+                    </svg>
+		  </form>
+		</div>
+		<div class="search-result-mob">
+		  <ul class="list-result-search">
+
+
+
+
+		  </ul>
+		</div>
+              </div>
+
+              <ul class="nav nav-justified  navbar-nav">
+		<li class="mobile-menu search_li">
+		  <p>
+                    Main menu
+		  </p>
+		</li>
+
+		<li class="dropdown mega-dropdown active">
+		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+		  <span class="hide_this">
+                    <img class="close-img" src="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/8a08c215ae930f874a39d23ee79aebfa23c39a37.svg" alt="close-button-image">
+		  </span>
+		  <ul class="dropdown-menu mega-dropdown-menu">
+                    <li>
+                      <div class="wr_inner col-lg-3 col-md-4">
+			<a href="/about">General information</a>
+			<a href="/about/ownership-structure">Ownership structure</a>
+			<a href="/about/corporate-governance">Corporate Governance</a>
+			<a href="/about/management-board">Management Board</a>
+			<a href="/about/financial-statements">Financial statements</a>
+                      </div>
+
+                      <div class="wr_inner col-lg-3 col-md-4">
+			<a href="/about/strategy">The strategy of PrivatBank</a>
+			<a href="/about/credentials">Ratings</a>
+			<a href="/about/social-position">Social position</a>
+			<a href="/about/contacts">Contacts</a>
+                      </div>
+
+                      <div class="wr_inner col-lg-3 col-md-4">
+			<p class="сaption-h3 no-word-wrap">Investor relations</p>
+			<a href="/business/depository-services">Depository services</a>
+			<a class="another-link" href="https://static.privatbank.ua/files/Act%20of%20Patriot%2007.09.2017.pdf" target="_blank" rel="nofollow noopener">Certification regarding correspondent accounts</a>
+                      </div>
+                    </li>
+		  </ul>
+		</li>
+
+		<li class="dropdown mega-dropdown">
+		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Plans & Pricing</a>
+		  <span class="hide_this">
+                    <img class="close-img" src="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/8a08c215ae930f874a39d23ee79aebfa23c39a37.svg" alt="close-button-image">
+		  </span>
+		  <ul class="dropdown-menu mega-dropdown-menu">
+                    <li>
+                      <div class="wr_inner col-lg-3 col-md-4">
+			<a class="another-link" href="https://static.privatbank.ua/files/03032020_Act_of_Patriot_01.11.2019.pdf" target="_blank" rel="nofollow noopener">Act of Patriot</a>
+			<a class="another-link" href="https://static.privatbank.ua/files/FATCA.pdf" target="_blank" rel="nofollow noopener">Information on FATCA</a>
+                      </div>
+
+                      <div class="wr_inner col-lg-3 col-md-4">
+			<a class="another-link" href="https://static.privatbank.ua/files/W-8BEN-E_signed+11.11.2021.pdf" target="_blank" rel="nofollow noopener">W-8BEN-E forms</a>
+			<a class="another-link" href="https://static.privatbank.ua/files/1711021_Wolfsberg+group+questionnaire.pdf" target="_blank" rel="nofollow noopener">Wolfsberg group questionnaire</a>
+                      </div>
+                    </li>
+		  </ul>
+		</li>
+
+		<!-- new item -->
+		<li class="dropdown mega-dropdown">
+		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Automation</a>
+		  <span class="hide_this">
+                    <img class="close-img" src="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/8a08c215ae930f874a39d23ee79aebfa23c39a37.svg" alt="close-button-image">
+		  </span>
+		  <ul class="dropdown-menu mega-dropdown-menu">
+                    <li>
+                      <div class="wr_inner col-lg-3 col-md-4">
+			<a href="/perekaz-z-privat24">Privat24: how to easily receive and send money abroad</a>
+			<a href="/all-ways-to-receive-send-an-international-transfer">All methods to receive/send an international money transfer</a>
+			<a href="/international-money-transfers">International money transfers</a>
+			<a href="/international-money-transfers/transfergo">TransferGo</a>
+			<a href="/international-money-transfers/payoneer">Payoneer</a>
+			<a href="/international-money-transfers/spoko ">Spoko</a>
+			<a href="/swift">SWIFT</a>
+                      </div>
+                      <div class="wr_inner col-lg-3 col-md-4">
+			<a href="/how-to-get-money-from-abroad">How to get money from abroad</a>
+			<a href="/how-to-send-funds-abroad">How to send funds abroad</a>
+			<a href="/iban">IBAN</a>
+			<a href="/currency-outpayments">Mass payments for international companies</a>
+			<a href="/transfers-to-card-by-phone-number">Transfers to Card by phone number</a>
+                      </div>
+                    </li>
+		  </ul>
+		</li>
+		<!-- new item-->
+
+		<li class="dropdown mega-dropdown">
+		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Financial Audits</a>
+		  <span class="hide_this">
+                    <img class="close-img" src="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/8a08c215ae930f874a39d23ee79aebfa23c39a37.svg" alt="close-button-image">
+		  </span>
+		  <ul class="dropdown-menu mega-dropdown-menu">
+                    <li>
+                      <div class="wr_inner col-lg-3 col-md-4">
+			<a href="/business/privat24-for-business">Privat24 for business</a>
+			<a href="/apps/privat-24-business">Mobile Privat24 for Business</a>
+			<a href="/business/international-letters-of-credit">International letters of credit</a>
+			<a href="/business/international-bank-guarantees">International bank guarantees</a>
+                      </div>
+                      <div class="wr_inner col-lg-3 col-md-4">
+			<a href="/business/trade-finance">Trade Finance</a>
+			<a href="/business/overdraft">Overdraft facility</a>
+                      </div>
+                      <div class="wr_inner col-lg-3 col-md-4">
+			<a href="/business/loan-facility">Loan Facility</a>
+			<a href="/business/business-connect-liqpay">Online acquiring LiqPay</a>
+                      </div>
+                    </li>
+		  </ul>
+		</li>
+
+		<li class="tariffs-mobile dropdown mega-dropdown">
+		  <a href="/tariffs">Tariffs</a>
+		</li>
+
+		<li class="dropdown mega-dropdown">
+		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Support</a>
+		  <span class="hide_this">
+                    <img class="close-img" src="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/8a08c215ae930f874a39d23ee79aebfa23c39a37.svg" alt="close-button-image">
+		  </span>
+		  <ul class="dropdown-menu mega-dropdown-menu">
+                    <li>
+                      <div class="wr_inner col-lg-3 col-md-4">
+			<a href="/card-is-lost">Lost your card?</a>
+			<a href="/safeness">Safety tips</a>
+			<a href="/convenient-and-safe-purchases-via-internet">Convenient online purchases</a>
+                      </div>
+                      <div class="wr_inner col-lg-3 col-md-4">
+			<a href="/emoney">E-currency</a>
+			<a class="another-link" href="https://zakupivli24.pb.ua/prozorro/main?&amp;lang=en">Government procurement Prozorro</a>
+                      </div>
+                      <div class="wr_inner col-lg-3 col-md-4">
+			<a href="/check">PrivatBank documents verification</a>
+			<a href="/selling-bank-s-property">Bank properties for sale</a>
+			<a href="/electronic-payment-systems">Interaction with payment systems</a>
+                      </div>
+                    </li>
+		  </ul>
+		</li>
+
+		<li class="go-pr-24-lg mega-dropdown">
+		  <a href="https://next.privat24.ua/?lang=en" class="nowrap">
+                    <span style="margin-top: 8px; display: inline-block;">
+                      Log in
+                    </span>&nbsp;
+                    <span class="icon-24">
+                      <img src="https://img.icons8.com/cute-clipart/128/login-rounded-right.png" width="32" alt="">
+                    </span>
+		  </a>
+		  <span class="hide_this">
+                    <img class="close-img" src="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/8a08c215ae930f874a39d23ee79aebfa23c39a37.svg" alt="close-button-image">
+		  </span>
+		</li>
+
+		<li class="search_li mega-dropdown">
+		  <button class="search-open-btn" aria-label="search">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28px" height="29px" viewBox="0 0 28 29" version="1.1">
+                      <title></title>
+                      <desc></desc>
+                      <defs></defs>
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+			<g class="search" fill="#75AF26">
+			  <g>
+                            <path d="M19.4312369,18.894938 C21.2734881,16.8917211 22.4228147,14.2094008 22.4228147,11.2554752 C22.4228147,5.05900207 17.4030486,0 11.2170743,0 C5.03110003,0 0.0113339934,5.05900207 0.0113339934,11.2554752 C0.0113339934,17.4519483 5.03110003,22.5109504 11.2170743,22.5109504 C13.735428,22.5109504 16.0509032,21.6791178 17.9269774,20.2700413 L26.2594311,28.6394773 C26.4622499,28.8431963 26.7157735,28.9450558 26.969297,28.9450558 C27.2228205,28.9450558 27.4932258,28.8431963 27.6791629,28.6394773 C28.0679189,28.2489959 28.0679189,27.6039256 27.6791629,27.1964876 L19.4312369,18.894938 L19.4312369,18.894938 Z M2.03952229,11.2554752 C2.03952229,6.17945661 6.14660359,2.03719008 11.2170743,2.03719008 C16.2706634,2.03719008 20.3946264,6.1625 20.3946264,11.2554752 C20.3946264,16.3484504 16.2875451,20.4737603 11.2170743,20.4737603 C6.14660359,20.4737603 2.03952229,16.3314938 2.03952229,11.2554752 L2.03952229,11.2554752 Z"></path>
+			  </g>
+			</g>
+                      </g>
+                    </svg>
+		  </button>
+		  <div class="search-show">
+                    <form id="search_form" action="/search/str" method="GET" autocomplete="off">
+                      <input class="search_input" type="search" name="search" placeholder="On-site search" maxlength="512">
+
+                      <div class="search-buttons">
+			<div tabindex="0" class="search-btn col-xs-6">
+			  <svg class="search-go" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28px" height="29px" viewBox="0 0 28 29" version="1.1">
+                            <defs></defs>
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g fill="#75AF26">
+				<g>
+				  <path d="M19.4312369,18.894938 C21.2734881,16.8917211 22.4228147,14.2094008 22.4228147,11.2554752 C22.4228147,5.05900207 17.4030486,0 11.2170743,0 C5.03110003,0 0.0113339934,5.05900207 0.0113339934,11.2554752 C0.0113339934,17.4519483 5.03110003,22.5109504 11.2170743,22.5109504 C13.735428,22.5109504 16.0509032,21.6791178 17.9269774,20.2700413 L26.2594311,28.6394773 C26.4622499,28.8431963 26.7157735,28.9450558 26.969297,28.9450558 C27.2228205,28.9450558 27.4932258,28.8431963 27.6791629,28.6394773 C28.0679189,28.2489959 28.0679189,27.6039256 27.6791629,27.1964876 L19.4312369,18.894938 L19.4312369,18.894938 Z M2.03952229,11.2554752 C2.03952229,6.17945661 6.14660359,2.03719008 11.2170743,2.03719008 C16.2706634,2.03719008 20.3946264,6.1625 20.3946264,11.2554752 C20.3946264,16.3484504 16.2875451,20.4737603 11.2170743,20.4737603 C6.14660359,20.4737603 2.03952229,16.3314938 2.03952229,11.2554752 L2.03952229,11.2554752 Z"></path>
+				</g>
+                              </g>
+                            </g>
+			  </svg>
+			</div>
+			<div tabindex="0" class="search-btn-hide col-xs-6">
+			  <svg class="remove-search" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="2" stroke="#979797" fill="none" fill-rule="evenodd" stroke-linecap="square"><path d="M.447.826l24.106 24.106M24.664.558L.558 24.664"></path></g>
+			  </svg>
+			</div>
+                      </div>
+                    </form>
+		  </div>
+		  <div class="search-result">
+                    <ul class="list-result-search list-result-height">
+                      <li></li>
+                    </ul>
+		  </div>
+		</li>
+
+
+              </ul>
+
+              <div class="help-menu_container mobile-menu light-box">
+		<ul class=" help_menu ">
+		  <li class="go-pr-24-md">
+
+                    <a href="https://next.privat24.ua/?lang=en" class="btn btn-secondary-round">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" viewBox="0 0 11 14">
+			<g fill="none" fill-rule="nonzero">
+			  <path fill="#75AF26" d="M2 6h6.67a2 2 0 0 1 2 2v3.865a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"></path>
+			  <path fill="#FFF" d="M5.48 10.874a.98.98 0 1 0 0-1.96.98.98 0 0 0 0 1.96z"></path>
+			  <path fill="#75AF26" d="M2.731 4.556V4.34c0-1.5 1.196-2.714 2.667-2.714 1.47 0 2.666 1.213 2.666 2.714v2.217h1V4.34c0-2.05-1.64-3.714-3.666-3.714C3.37.625 1.73 2.29 1.73 4.34v.217h1z"></path>
+			</g>
+                      </svg>
+                      Log in Privat24
+                    </a>
+		  </li>
+
+
+		</ul>
+              </div>
+            </div>
+
+
+
+	  </div>
+
+
+	</div>
+      </div>
+    </header>
+
+
+
+
+
+
+
+
+
+    <div class="banner_container">
+      <div id="indexCarousel" class="carousel carousel-fade slide">
+	<!-- Indicators -->
+	<div class="carousel-indicators">
+	  <a tabindex="0" class="left carousel-control green-arrow"  onclick="javascript:void(0);"  data-slide="prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+              <g fill="none" fill-rule="evenodd">
+		<rect class="white-stroke arrows-round-primary" width="27" height="27" x=".5" y=".5" stroke="#888888" rx="13.5"/>
+		<path class="arrows-primary" fill="#888888" fill-rule="nonzero" d="M11.414 13.85l5.143 5.142-.707.707L10 13.85 15.85 8l.707.707z"/>
+              </g>
+            </svg>
+	  </a>
+	  <div class="num-slide"><span class="white-stroke arrows-round-primary"></span></div>
+	  <a tabindex="0" class="right carousel-control green-arrow" onclick="javascript:void(0);"  data-slide="next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+              <g fill="none" fill-rule="evenodd">
+		<rect class="white-stroke arrows-round-primary" width="27" height="27" x=".5" y=".5" stroke="#888888" rx="13.5"/>
+		<path class="arrows-primary" fill="#888888" fill-rule="nonzero" d="M16.643 13.85L11.5 8.707 12.207 8l5.85 5.85-5.85 5.85-.707-.708z"/>
+              </g>
+            </svg>
+	  </a>
+	</div>
+
+	<div class="carousel-inner">
+	  <div
+            class="item active gray-theme"
+            >
+	    
+	    <picture data-lazyload="on">
+
+                <!-- <source -->
+                <!-- srcset="https://images.unsplash.com/photo-1613483811459-1c4bb7a234f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" -->
+                <!-- data-srcset="https://images.unsplash.com/photo-1613483811459-1c4bb7a234f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" -->
+
+                <!-- media="(max-width: 665px)" -->
+                <!-- data-srcset="https://images.unsplash.com/photo-1613483811459-1c4bb7a234f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" -->
+                <!-- type="image/jpeg" -->
+                <!-- > -->
+
+		
+		<!-- <img -->
+		<!--   src="https://images.unsplash.com/photo-1531796311868-83672cd144f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" -->
+		<!--   data-src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" -->
+		<!--   alt="Construction Accounting" -->
+		<!--   class="item-source" style="width:100%;" -->
+		<!--   > -->
+
+              <source
+                srcset="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+                data-srcset="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+
+                media="(max-width: 665px)"
+                data-srcset="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+                type="image/jpeg"
+                >
+
+		
+		<img
+		  src="https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80"
+		  data-src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+		  alt="Construction Accounting"
+		  class="item-source" style="width:100%;"
+		  >
+            </picture>
+            <div class="mask"></div>
+            <div class="carousel-caption">
+              <div class="gutter"></div>
+              <div class="layout-slide">
+		<div class="text-bar">
+		  <h1 class="fadeFallDown">Be on top of your construction business from any part of the world</h1>
+		  <p class="fadeFallDown">Any business operation automatically monitored in our bookkeeping system &mdash; 24/7 </p>
+		  <div class="btn-group fadeFallDown">
+                    <a class="btn primary-btn" href="https://en.privatbank.ua/help-vsu" target="_blank" rel="nofollow">Details</a>
+		  </div>
+		</div>
+              </div>
+            </div>
+
+
+	  </div>
+	  <div
+            class="item animated-slider-text  gray-theme-navigation"
+            >
+
+            <picture data-lazyload="on">
+
+              <source
+                srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/0188950ce83c74f410faa4e5a7f77fe3ae30acd2.avif"
+
+                media="(max-width: 665px)"
+                data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/0188950ce83c74f410faa4e5a7f77fe3ae30acd2.avif"
+                type="image/avif"
+                >
+
+		<source
+                  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/0021dcbf52e2992453bf50c4428c085dc5c8403d.avif"
+
+                  media="(max-width: 1920px)"
+                  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/0021dcbf52e2992453bf50c4428c085dc5c8403d.avif"
+                  type="image/avif"
+                  >
+
+		  <source
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/3e30f8b4566ba76e94f14e399eb8c3ee0f219395.avif"
+
+                    media="(min-width: 1921px)"
+                    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/3e30f8b4566ba76e94f14e399eb8c3ee0f219395.avif"
+                    type="image/avif"
+                    >
+
+		    <source
+                      srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/a0d3a1dd7e47fc44d05fb219412bfd251867aa98.webp"
+
+                      media="(max-width: 665px)"
+                      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/a0d3a1dd7e47fc44d05fb219412bfd251867aa98.webp"
+                      type="image/webp"
+                      >
+
+		      <source
+			srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/9b68ced0fdea37a3c7b30f61dbc32606601822f3.webp"
+
+			media="(max-width: 1920px)"
+			data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/9b68ced0fdea37a3c7b30f61dbc32606601822f3.webp"
+			type="image/webp"
+			>
+
+			<source
+			  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/90d1de723492a3f4637afb298c493a1ecc9b9a47.webp"
+
+			  media="(min-width: 1921px)"
+			  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/90d1de723492a3f4637afb298c493a1ecc9b9a47.webp"
+			  type="image/webp"
+			  >
+
+			  <source
+			    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/2dd985fb76c16078595fcce25448311774cd0c7f.jpeg"
+
+			    media="(max-width: 1921px)"
+			    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/2dd985fb76c16078595fcce25448311774cd0c7f.jpeg"
+			    type="image/jpeg"
+			    >
+
+			    <source
+			      srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/099f513da27e48c2002686d094d4393625e02c38.jpeg"
+
+			      media="(max-width: 1921px)"
+			      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/099f513da27e48c2002686d094d4393625e02c38.jpeg"
+			      type="image/jpeg"
+			      >
+
+			      <source
+				srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+				data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/17affa8e445aeb11ce1075c0db3984fa3b49c1c7.jpeg"
+
+				media="(max-width: 1921px)"
+				data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/17affa8e445aeb11ce1075c0db3984fa3b49c1c7.jpeg"
+				type="image/jpeg"
+				>
+				<img
+				  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+				  data-src="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/20/0188950ce83c74f410faa4e5a7f77fe3ae30acd2.avif"
+				  alt="All the ways to support your family, loved ones, volunteers from abroad"
+				  class="item-source" style="width:100%;"
+				  >
+            </picture>
+            <div class="mask"></div>
+            <div class="carousel-caption">
+              <div class="gutter"></div>
+              <div class="layout-slide">
+		<div class="text-bar">
+		  <h1 class="fadeFallDown">All the ways to support your family, loved ones, volunteers from abroad</h1>
+		  <p class="fadeFallDown">Send money to Ukraine with the help of our partners and the bank's technologies, including instant transfers</p>
+		  <div class="btn-group fadeFallDown">
+                    <a class="btn primary-btn" href="https://en.privatbank.ua/how-to-get-money-from-abroad?utm_source=website&utm_medium=ref&utm_campaign=how-to-get-money-from-abroad" target="_blank" rel="nofollow noopener">Details</a>
+		  </div>
+		</div>
+              </div>
+            </div>
+
+
+	  </div>
+	  <div
+            class="item animated-slider-text darken-slide gray-theme-navigation"
+            >
+
+            <picture data-lazyload="on">
+
+              <source
+                srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/398ee3d72328577995734fee3ce0f1f10431c9fb.avif"
+
+                media="(max-width: 665px)"
+                data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/398ee3d72328577995734fee3ce0f1f10431c9fb.avif"
+                type="image/avif"
+                >
+
+		<source
+                  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/337f249e084ce6b6ac4ee3749b164f8d59cd7f5e.avif"
+
+                  media="(max-width: 1920px)"
+                  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/337f249e084ce6b6ac4ee3749b164f8d59cd7f5e.avif"
+                  type="image/avif"
+                  >
+
+		  <source
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/71b0e3f845dc648a039630690237ebb1a931eefa.avif"
+
+                    media="(min-width: 1921px)"
+                    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/71b0e3f845dc648a039630690237ebb1a931eefa.avif"
+                    type="image/avif"
+                    >
+
+		    <source
+                      srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/3d429d9ed5c53c2fadca31a5948db3a2b020a6cb.webp"
+
+                      media="(max-width: 665px)"
+                      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/3d429d9ed5c53c2fadca31a5948db3a2b020a6cb.webp"
+                      type="image/webp"
+                      >
+
+		      <source
+			srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/4bdbfc8a5dd249ab0f9f7df98c76783b997e658c.webp"
+
+			media="(max-width: 1920px)"
+			data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/4bdbfc8a5dd249ab0f9f7df98c76783b997e658c.webp"
+			type="image/webp"
+			>
+
+			<source
+			  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/1ac1f22d71208464d6b575ccc170418256c1f160.webp"
+
+			  media="(min-width: 1921px)"
+			  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/1ac1f22d71208464d6b575ccc170418256c1f160.webp"
+			  type="image/webp"
+			  >
+
+			  <source
+			    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/3f587d359fe634b1d685dcba14041f0cce395f42.jpeg"
+
+			    media="(max-width: 1921px)"
+			    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/3f587d359fe634b1d685dcba14041f0cce395f42.jpeg"
+			    type="image/jpeg"
+			    >
+
+			    <source
+			      srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/d9bcd517576d7870609cc316ece102b3f3405c33.jpeg"
+
+			      media="(max-width: 1921px)"
+			      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/d9bcd517576d7870609cc316ece102b3f3405c33.jpeg"
+			      type="image/jpeg"
+			      >
+
+			      <source
+				srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+				data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/d75c1f4a7cd7d690359c471bcb2c222e70030815.jpeg"
+
+				media="(max-width: 1921px)"
+				data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/d75c1f4a7cd7d690359c471bcb2c222e70030815.jpeg"
+				type="image/jpeg"
+				>
+				<img
+				  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+				  data-src="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/398ee3d72328577995734fee3ce0f1f10431c9fb.avif"
+				  alt="Money Transfers"
+				  class="item-source" style="width:100%;"
+				  >
+            </picture>
+            <div class="mask"></div>
+            <div class="carousel-caption">
+              <div class="gutter"></div>
+              <div class="layout-slide">
+		<div class="text-bar">
+		  <h1 class="fadeFallDown">Money Transfers</h1>
+		  <p class="fadeFallDown">Receive and send money quickly, safely and profitably <br> with 8 money transfer systems</p>
+		  <div class="btn-group fadeFallDown">
+                    <a class="btn primary-btn" href="https://en.privatbank.ua/international-money-transfers?utm_source=google&utm_medium=cpc&utm_campaign=money-transfers_en">Details</a>
+		  </div>
+		</div>
+              </div>
+            </div>
+
+
+	  </div>
+	  <div
+            class="item animated-slider-text darken-slide white-theme-navigation"
+            >
+
+            <picture data-lazyload="on">
+
+              <source
+                srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/7d1aaaef679c574be7afda44e8eef91fa38bf471.webp"
+
+                media="(max-width: 665px)"
+                data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/7d1aaaef679c574be7afda44e8eef91fa38bf471.webp"
+                type="image/webp"
+                >
+
+		<source
+                  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/ff33144e67ad14826a1bb687e14c3c752d84b4ad.webp"
+
+                  media="(max-width: 1920px)"
+                  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/ff33144e67ad14826a1bb687e14c3c752d84b4ad.webp"
+                  type="image/webp"
+                  >
+
+		  <source
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/f72af3ad567d7f2d05b85d32db663b7813b2ed39.webp"
+
+                    media="(min-width: 1921px)"
+                    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/f72af3ad567d7f2d05b85d32db663b7813b2ed39.webp"
+                    type="image/webp"
+                    >
+
+		    <source
+                      srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/ec5a774eea48f1f7c14f02d583a9562fa76cb50d.jpeg"
+
+                      media="(max-width: 665px)"
+                      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/ec5a774eea48f1f7c14f02d583a9562fa76cb50d.jpeg"
+                      type="image/jpeg"
+                      >
+
+		      <source
+			srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/72fba2067d42de2278e38e98e695b34afa0d2113.jpeg"
+
+			media="(max-width: 1920px)"
+			data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/72fba2067d42de2278e38e98e695b34afa0d2113.jpeg"
+			type="image/jpeg"
+			>
+
+			<source
+			  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/8d080ffd3cd3100076db3dbde909933a354194aa.jpeg"
+
+			  media="(min-width: 1921px)"
+			  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/8d080ffd3cd3100076db3dbde909933a354194aa.jpeg"
+			  type="image/jpeg"
+			  >
+			  <img
+			    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			    data-src="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/7d1aaaef679c574be7afda44e8eef91fa38bf471.webp"
+			    alt="Privat24 Internet Banking"
+			    class="item-source" style="width:100%;"
+			    >
+            </picture>
+            <div class="mask"></div>
+            <div class="carousel-caption">
+              <div class="gutter"></div>
+              <div class="layout-slide">
+		<div class="text-bar">
+		  <h1 class="fadeFallDown">PRIVAT24 – OPEN FOR EVERYONE!</h1>
+		  <p class="fadeFallDown">Convenient services in a new design.</p>
+		  <div class="btn-group fadeFallDown">
+                    <a class="btn primary-btn" href="https://en.privatbank.ua/apps/privat-24?utm_source=google&utm_medium=cpc&utm_campaign=privat-24_apps_en">Details</a>
+		  </div>
+		  <div class="float-svg fadeFallDown">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56px" height="56px" viewBox="0 0 56 56" version="1.1">
+                      <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+                      <title>logo_P24</title>
+                      <desc>Created with Sketch.</desc>
+                      <g id="logo_P24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+			<circle id="Oval" fill="#000000" cx="28" cy="28" r="27"/>
+			<g id="Group" fill-rule="nonzero">
+			  <path d="M28,56 C12.536027,56 0,43.463973 0,28 C0,12.536027 12.536027,0 28,0 C43.463973,0 56,12.536027 56,28 C56,43.463973 43.463973,56 28,56 Z M28,52.9174312 C41.7615172,52.9174312 52.9174312,41.7615172 52.9174312,28 C52.9174312,14.2384828 41.7615172,3.08256881 28,3.08256881 C14.2384828,3.08256881 3.08256881,14.2384828 3.08256881,28 C3.08256881,41.7615172 14.2384828,52.9174312 28,52.9174312 Z" id="Oval" fill="#8DC641"/>
+			  <path d="M26.0822556,35.6647681 L26.0822556,38 L13,38 L13.0036993,37.9333395 C13.1254847,35.7387892 13.6979342,34.1424316 14.7781691,32.815666 C15.666602,31.724475 16.742443,30.9091085 18.9470544,29.5285537 C18.9406683,29.5325827 19.727292,29.039798 19.9540957,28.8947177 C21.1408485,28.1355828 21.9024469,27.545057 22.5049292,26.8478344 C23.260418,25.973545 23.6552838,25.0143692 23.6552838,23.8907812 C23.6552838,21.7098274 22.1103836,20.1987993 19.8776218,20.1987993 C17.2882478,20.1987993 15.9555702,22.1682073 15.8854787,25.1266666 L15.8840177,25.1883329 L13.5590149,25.1883329 L13.556083,25.1282484 L13.5300124,24.5924344 C13.5300124,20.6346808 16.1111854,18 19.9881029,18 C23.7818439,18 26.2512267,20.297825 26.2512267,23.8388069 C26.2512267,25.6477318 25.6028829,27.1131741 24.3546082,28.4116467 C23.4136483,29.3904461 22.4568364,30.0553951 20.2740667,31.3772682 C20.2450344,31.394682 20.2152063,31.4125285 20.1842599,31.4310034 C20.0812704,31.4924873 19.6072286,31.7733557 19.477752,31.8507774 C18.4350523,32.4742691 17.8035702,32.9119571 17.2458524,33.4448356 C16.5607113,34.0994621 16.1077327,34.8172855 15.8900171,35.6647681 L26.0822556,35.6647681 Z M42.4594595,30.8701381 L42.4594595,33.1923765 L39.7429232,33.1923765 L39.7429232,38 L37.400437,38 L37.400437,33.1923765 L28.678926,33.1923765 L28.678926,30.6861609 L37.4760317,18 L39.7429232,18 L39.7429232,30.8701381 L42.4594595,30.8701381 Z M31.2264848,30.8636414 L37.400437,30.8636414 L37.400437,21.7066809 L31.2264848,30.8636414 Z" id="24_old" fill="#FFFFFF"/>
+			</g>
+                      </g>
+                    </svg>
+		  </div>
+		</div>
+              </div>
+            </div>
+
+
+	  </div>
+	  <div
+            class="item animated-slider-text  gray-theme-navigation"
+            >
+
+            <picture data-lazyload="on">
+
+              <source
+                srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/c917db0a25b6d7d7fad831c01ea822a7d37b2aa5.avif"
+
+                media="(max-width: 665px)"
+                data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/c917db0a25b6d7d7fad831c01ea822a7d37b2aa5.avif"
+                type="image/avif"
+                >
+
+		<source
+                  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/3cf2346dd628eb658d18570622a365ea877331a8.avif"
+
+                  media="(max-width: 1920px)"
+                  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/3cf2346dd628eb658d18570622a365ea877331a8.avif"
+                  type="image/avif"
+                  >
+
+		  <source
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/ff768d58ba67fb97b4dc37d209daa0bb6ff0bea2.avif"
+
+                    media="(min-width: 1921px)"
+                    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/ff768d58ba67fb97b4dc37d209daa0bb6ff0bea2.avif"
+                    type="image/avif"
+                    >
+
+		    <source
+                      srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/567a90fddabb0d502438a642438650ba36ff37e0.webp"
+
+                      media="(max-width: 665px)"
+                      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/567a90fddabb0d502438a642438650ba36ff37e0.webp"
+                      type="image/webp"
+                      >
+
+		      <source
+			srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/72439bf910995c33a5ba5818c10c267573258d40.webp"
+
+			media="(max-width: 1920px)"
+			data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/72439bf910995c33a5ba5818c10c267573258d40.webp"
+			type="image/webp"
+			>
+
+			<source
+			  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/e2f25c66e3c1640128d93d40a69cf9d643b19cdf.webp"
+
+			  media="(min-width: 1921px)"
+			  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/e2f25c66e3c1640128d93d40a69cf9d643b19cdf.webp"
+			  type="image/webp"
+			  >
+
+			  <source
+			    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/f0e4a31fbfce0d693bdd3a8249d202c6cb689c2c.jpeg"
+
+			    media="(max-width: 1921px)"
+			    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/f0e4a31fbfce0d693bdd3a8249d202c6cb689c2c.jpeg"
+			    type="image/jpeg"
+			    >
+
+			    <source
+			      srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/77700a22c66354292737a5cbe28866b8c2d67432.jpeg"
+
+			      media="(max-width: 1921px)"
+			      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/77700a22c66354292737a5cbe28866b8c2d67432.jpeg"
+			      type="image/jpeg"
+			      >
+
+			      <source
+				srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+				data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/9e66607ecaabe4626bc7bd0fe164cae23cfd25cf.jpeg"
+
+				media="(max-width: 1921px)"
+				data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/9e66607ecaabe4626bc7bd0fe164cae23cfd25cf.jpeg"
+				type="image/jpeg"
+				>
+				<img
+				  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+				  data-src="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/17/c917db0a25b6d7d7fad831c01ea822a7d37b2aa5.avif"
+				  alt="Privat24 for business"
+				  class="item-source" style="width:100%;"
+				  >
+            </picture>
+            <div class="mask"></div>
+            <div class="carousel-caption">
+              <div class="gutter"></div>
+              <div class="layout-slide">
+		<div class="text-bar">
+		  <h1 class="fadeFallDown">Privat24 for Business</h1>
+		  <p class="fadeFallDown">Any business operations – 24/7</p>
+		  <div class="btn-group fadeFallDown">
+                    <a class="btn primary-btn" href="https://en.privatbank.ua/business/privat24-for-business?utm_source=google&utm_medium=cpc&utm_campaign=privat24-for-business_en">Details</a>
+		  </div>
+		</div>
+              </div>
+            </div>
+
+
+	  </div>
+	  <div
+            class="item animated-slider-text  gray-theme-navigation"
+            >
+
+            <picture data-lazyload="on">
+
+              <source
+                srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/362100866c8059aca208768edb94f0b2501df7d3.avif"
+
+                media="(max-width: 665px)"
+                data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/362100866c8059aca208768edb94f0b2501df7d3.avif"
+                type="image/avif"
+                >
+
+		<source
+                  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/bc9f9a54c1ddf20896c180ca59bb3d9c89759e31.avif"
+
+                  media="(max-width: 1920px)"
+                  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/bc9f9a54c1ddf20896c180ca59bb3d9c89759e31.avif"
+                  type="image/avif"
+                  >
+
+		  <source
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/8520548399fece1965af09df7cecb89a3abb1cc6.avif"
+
+                    media="(min-width: 1921px)"
+                    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/8520548399fece1965af09df7cecb89a3abb1cc6.avif"
+                    type="image/avif"
+                    >
+
+		    <source
+                      srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/d0f1ad895c991ea30501c38500f8a7f915fbbeef.webp"
+
+                      media="(max-width: 665px)"
+                      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/d0f1ad895c991ea30501c38500f8a7f915fbbeef.webp"
+                      type="image/webp"
+                      >
+
+		      <source
+			srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/4641a94a53c1f21eb9e52316c026c1c789ce777c.webp"
+
+			media="(max-width: 1920px)"
+			data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/4641a94a53c1f21eb9e52316c026c1c789ce777c.webp"
+			type="image/webp"
+			>
+
+			<source
+			  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/59f61ff1a038a09caa2698b1a74f15983f7be20a.webp"
+
+			  media="(min-width: 1921px)"
+			  data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/59f61ff1a038a09caa2698b1a74f15983f7be20a.webp"
+			  type="image/webp"
+			  >
+
+			  <source
+			    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/df6b92d8ff9cdaea8ca79f99740a19aa3147e75c.jpeg"
+
+			    media="(max-width: 1921px)"
+			    data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/df6b92d8ff9cdaea8ca79f99740a19aa3147e75c.jpeg"
+			    type="image/jpeg"
+			    >
+
+			    <source
+			      srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/528b0ef2e4e90e5b04849d37835ce5d5b3900e95.jpeg"
+
+			      media="(max-width: 1921px)"
+			      data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/528b0ef2e4e90e5b04849d37835ce5d5b3900e95.jpeg"
+			      type="image/jpeg"
+			      >
+
+			      <source
+				srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+				data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/617e037c5241ebfa1f32825f04e3d5f9a2674c35.jpeg"
+
+				media="(max-width: 1921px)"
+				data-srcset="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/617e037c5241ebfa1f32825f04e3d5f9a2674c35.jpeg"
+				type="image/jpeg"
+				>
+				<img
+				  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+				  data-src="https://d2z9uwnt8eubh7.cloudfront.net/media/default/0001/19/362100866c8059aca208768edb94f0b2501df7d3.avif"
+				  alt="Transfers by Phone Number"
+				  class="item-source" style="width:100%;"
+				  >
+            </picture>
+            <div class="mask"></div>
+            <div class="carousel-caption">
+              <div class="gutter"></div>
+              <div class="layout-slide">
+		<div class="text-bar">
+		  <h1 class="fadeFallDown">Transfers by Phone Number</h1>
+		  <p class="fadeFallDown">Remember how Olya is named in your contacts, and don't ask for her card number again</p>
+		  <div class="btn-group fadeFallDown">
+                    <a class="btn primary-btn" href="https://en.privatbank.ua/transfers-to-card-by-phone-number?utm_source=google&utm_medium=cpc&utm_campaign=perekaz-za-nomerom-telefonu_en">Details</a>
+		  </div>
+		</div>
+              </div>
+            </div>
+
+
+	  </div>
+      </div>                </div>
+    </div>
+
+
+  </body>
+</html>
