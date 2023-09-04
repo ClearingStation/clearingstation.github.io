@@ -1,0 +1,789 @@
+<!--
+     APPLICATION_NAME "Total Truck Care"
+     APPLICATION_DESCRIPTION "Truck Oil Change Steinbach"
+
+     OFFLINE_MANIFEST_PATH "./offline.appcache"
+
+     LANG "en"
+     LOCALE "en_US"
+
+     PAGE_KEYWORD "uselessness"
+     PAGE_NAME "About uselessness"
+     PAGE_DESCRIPTION "Some useless news about nothing in particular. Just trying to find out the answer."
+     PAGE_IMAGE_URL "https://static.example.com/article/about-uselessness.png"
+     PAGE_CANONICAL_URL "https://example.com/about-uselessness"
+     PAGE_SHORTLINK_URL "https://bit.ly/totoenvacances"
+
+     GOOGLE_WEBMASTER_TOOLS_KEY "xxx"
+
+     TWITTER_CREATOR_ACCOUNT "@ChtefiD"
+     TWITTER_WEBSITE_ACCOUNT "@ChtefiD"
+
+     FACEBOOK_PUBLISHER "https://www.facebook.com/my-website-page"
+     FACEBOOK_AUTHOR "https://www.facebook.com/personal-author-page"
+     GOOGLE_PUBLISHER "https://plus.google.com/+my-website-page"
+     GOOGLE_AUTHOR "https://plus.google.com/+personal-author-page"
+
+     SITEMAP_URL "/sitemap.xml"
+
+-->
+<html lang="EN" manifest="{{ OFFLINE_MANIFEST_PATH }}">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+		<meta http-equiv="Content-Language" content="EN">	
+		<meta name="language" content="EN" />
+		<meta name="description" content="Corporate Accounting for Manitobans">
+		<meta name="keywords" content="accountant,corporate accounting,bookkeeping,winnipeg,steinbach,winkler" />
+		<meta name="robots" content="index,follow" /> <!-- robots.txt devrait suffir -->
+
+		<link rel="pingback" href=".../xmlrpc.php" />
+		<link rel="alternate" type="application/rss+xml" title="..." href=".../feed/" />
+		<link rel="prev" title="..." href=".../page/1" />
+		<link rel="next" title="..." href=".../page/3" />
+		<link rel="canonical" href="{{ PAGE_CANONICAL_URL }}" />
+		<link rel="shortlink" href="{{ PAGE_SHORTLINK_URL }}" />
+		<link rel="publisher" href="{{ GOOGLE_PUBLISHER }}"/>
+		<link rel="author" href="{{ GOOGLE_AUTHOR }}"/>
+		<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ SITEMAP_URL }}" />
+
+		<!-- Resolve DNS asap (can be useful for future pages) -->
+		<link rel="dns-prefetch" href="//fonts.googleapis.com">
+		<link rel="dns-prefetch" href="//themes.googleusercontent.com">
+		<!-- Better: DNS + TCP handshake + optional TLS negotiation -->
+		<!-- Use for current page -->
+		<link rel="preconnect" href="//fonts.googleapis.com">
+		
+		<!-- always nice to use dns-prefetch or preconnect before, for stylesheets that are using those urls -->
+		<!-- eg: <link ref="preconnect" href="//fonts.gstatic.com"> -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800" rel="stylesheet" type="text/css">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <!-- Enable Chrome Frame -->
+		<meta http-equiv="Default-Style" content="dark">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes, minimal-ui">
+		
+		<!-- Don't want the content to be translated on the fly by the browser ? -->
+		<meta name="google" value="notranslate">
+		<meta name="google-site-verification" content="{{ GOOGLE_WEBMASTER_TOOLS_KEY }}">
+
+		<!-- fav icon -->
+		<link rel="fluid-icon" href="https://.../fluidicon.png" title="..."> <!-- ? -->
+		<link rel="shortcut icon" type="image/x-icon" href="http://.../favicon.ico">
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="image_src" href="{{ PAGE_IMAGE_URL }}">
+
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+		<!-- Open Graph -->
+		<!-- TODO DYNAMIC ACCORDING TO THE TYPE -->
+		<meta property="og:locale" content="{{ LOCALE }}" />
+		<meta property="og:type" content="article" /> <!-- product... -->
+		<meta property="og:title" content="{{ PAGE_NAME }}" />
+		<meta property="og:description" content="Corporate Accounting for Manitobans" />
+		<meta property="og:image" content="{{ PAGE_IMAGE_URL }}" />
+		<meta property="og:url" content="{{ PAGE_CANONICAL_URL }}" />
+		<meta property="og:site_name" content="{{ APPLICATION_NAME }}" />	
+
+		<meta property="article:publisher" content="{{ FACEBOOK_PUBLISHER }}" />
+		<meta property="article:author" content="{{ FACEBOOK_AUTHOR }}" />
+		<meta property="article:section" content="Technology" />
+		<meta property="article:published_time" content="2015-01-06T23:07:41+00:00" />
+		<meta property="article:modified_time" content="2015-05-12T22:24:50+00:00" />
+		<meta property="og:updated_time" content="2015-05-12T22:24:50+00:00" />
+		<meta property="fb:admins" content="???" />
+		<meta property="fb:app_id" content="123456789456489" />
+
+		<!-- TODO DYNAMIC ACCORDING TO THE CARD TYPE -->
+		<meta name="twitter:card" content="summary"/> <!-- photo -->
+		<meta name="twitter:title" content="{{ PAGE_NAME }}"/>
+		<meta name="twitter:description" content="Corporate Accounting for Manitobans"/>
+		<meta name="twitter:site" content="{{ TWITTER_WEBSITE_ACCOUNT }}"/>
+		<meta name="twitter:image" content="{{ PAGE_IMAGE_URL }}" />
+		<meta name="twitter:creator" content="{{ TWITTER_CREATOR_ACCOUNT }}"/>
+		<meta name="twitter:domain" content="mon.site.com"/>
+
+		<!-- Bing -->
+		<meta name="geo.placename" content="United States" />
+		<meta name="geo.position" content="x;x" />
+		<meta name="geo.region" content="usa" />
+		<meta name="ICBM" content="x,x" />
+
+		<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","url":"https:\/\/...","name":"...","alternateName":"..."}</script>
+
+		<!-- Really Simple Discovery http://en.wikipedia.org/wiki/Really_Simple_Discovery -->
+		<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.example.com/xmlrpc.php?rsd" />
+
+		<!-- WindowsLiveWriter  -->
+		<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.example.com/wlwmanifest.xml" />
+
+		<link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="...">
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<style>
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed, 
+		figure, figcaption, footer, header, hgroup, 
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure, 
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			line-height: 1.6em;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		body {font-family: Geometria, sans-serif; background-color: #f4f4f4;}
+		a {text-decoration: none;}
+		.flex{display: flex;}
+		.flex-space-between{justify-content:space-between;}
+		.flex-center{align-items: center;}
+		.text-bold{font-weight: bold;}
+		.ml-36{margin-left: 36px;}
+		.mt-50{margin-top: 50px;}
+		.mt-30{margin-top: 30px;}
+		.mt-20{margin-top: 20px;}
+		.mt-10{margin-top: 10px;}
+		.mb-20{margin-bottom: 20px;}
+		.mb-30{margin-bottom: 30px;}
+		.mb-50{margin-bottom: 50px;}
+		.img-responsive {width: 100%;max-width: 100%;}
+		.absolute {position: absolute;}
+		.full-bg {background-repeat: no-repeat;background-position: center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
+		.full-bg.fixed {background-attachment: fixed;}
+		.full-height {min-height: 100vh;}
+		.text-center {text-align: center;}
+		.text-white {color: #fff !important;}
+		.btn {
+			display: inline-block;
+			margin-bottom: 0;
+			font-weight: 400;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+			-ms-touch-action: manipulation;
+			touch-action: manipulation;
+			cursor: pointer;
+			background-image: none;
+			border: 1px solid transparent;
+			padding: 6px 12px;
+			font-size: 14px;
+			line-height: 1.42857143;
+			border-radius: 4px;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		.primary-btn {
+			background: #75af26;
+			color: #fff !important;
+			box-shadow: none;
+			border: 3px solid transparent;
+			
+		}
+		.primary-btn.outlined {
+			background: #fff;
+			color: #75af26 !important;
+			border-color: #75af26;
+		}
+		h1 {font-size: 56px; line-height: 76px; max-width: 60%; margin-top: 106px; color: #282828; font-family: Geometria, sans-serif; font-weight: bold; margin-bottom: 36px;}
+		h2 {font-size: 36px; line-height: 36px; color: #282828; font-family: Geometria, sans-serif; font-weight: bold; margin-bottom: 36px;}
+		h3 {line-height: 1.6em; font-size: 22px;}
+		
+		header {height: 48px; position: relative;background-color: #f4f4f4;box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.09);z-index:9;}
+		header #top-nav {height: 48px;font-size: 14px;max-width: 1724px; margin: 0 auto;}
+		header #top-nav ul li {display: inline-block}
+		header #top-nav a {margin-right: 36px;color: rgba(0, 0, 0, .72);}
+		nav#main {padding-left: 24px;padding-right: 24px;max-width: 1652px;margin-top: 56px; margin-left: auto; margin-right: auto;position: static;}
+		nav#main > ul {border-radius: 4px 4px 0 0;background-color: #fff; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.02), 0 4px 4px 0 rgba(0, 0, 0, 0.02), 0 8px 8px 0 rgba(0, 0, 0, 0.02), 0 16px 16px 0 rgba(0, 0, 0, 0.02), 0 32px 32px 0 rgba(0, 0, 0, 0.02), 0 64px 64px 0 rgba(0, 0, 0, 0.02);border: 1px solid #e7e7e7;}
+		nav#main > ul > li {flex: 1; border-right: 1px solid #f0f0f0;}
+		nav#main > ul > li > a {display: flex; justify-content: center; align-items:center;height: 80px;color: #282828; transition: background-color 0.2s ease;}
+		nav#main > ul > li > a:hover {background-color: #f4f4f4}
+		nav#main > ul > li > a.active {font-weight: bold;}
+		.slide {width: 100%; max-width: 100%; padding: 100px;}
+		.slide-content {max-width: 1500px;  width: 100%; margin: 0 auto;}
+		.btn {font-size: 19px;
+			letter-spacing: 0.15px;
+			line-height: 28px;
+			border-radius: 0;
+			font-weight: bold;
+			margin-right: 18px;
+			margin-top: 18px;
+			text-shadow: none;
+			padding: 13px 56px;
+			text-transform: uppercase;
+			padding: 13px 0;
+			min-width: 340px;
+			max-width: 100%;
+		}
+		footer {padding: 50px 40px; max-width: 1584px; margin-left: auto; margin-right: auto;}
+		footer a {
+			font-size: 13px;
+			line-height: 16px;
+			letter-spacing: 0.6px;
+			color: rgba(0, 0, 0, 0.54);
+			margin-top: 12px;
+		}
+		footer b {
+			font-size: 13px;
+			line-height: 16px;
+			letter-spacing: 0.6px;
+			color: rgba(0, 0, 0, 0.54);
+			font-weight: bold;
+			font-family: Geometria, sans-serif;
+		}
+		footer p {
+			font-size: 16px;
+			letter-spacing: 0.27px;
+			line-height: 21px;
+			color: #282828;
+			font-family: Helvetica, Arial, sans-serif;
+			font-feature-settings: 'tnum';
+		}
+		footer ul li {margin-bottom: 15px; }
+
+		.bullet-list li {list-style: inside; margin-bottom: 10px}
+		section { border-bottom: 1px solid #d8d8d8;}
+		.content {max-width: 1500px; margin: 0 auto; padding: 100px; font-size: 18px}
+
+		.plan-wrapper {display: flex; align-items: baseline; justify-content: center; margin-bottom: 100px}
+		.plan {display: inline-block;background: white; margin: 0 30px;box-shadow: rgba(0, 0, 0, 0.13) 1px 1px 20px 0px;position: relative;width: 500px;}
+		.plan > div {padding: 20px 30px}
+		.plan > div:first-of-type {  background-color: rgb(250, 249, 247);border-radius: 5px 5px 0px 0px;color: rgb(47, 48, 52);padding: 43px 34px;text-align: center;}
+		.plan > div:nth-of-type(3) {  border-top: 1px solid rgb(212, 210, 206);padding: 45px 70px 25px 55px; }
+		.plan h2 {font-size: 32px;font-weight: bold; margin-bottom: 0px;}
+		.plan p {margin-bottom: 20px; margin-top: 20px}
+		.plan small {font-size: 16px;}
+		.plan .btn { margin: 0}
+		.plan li {margin-bottom: 10px;}
+		.most-popular-label {width: 145px;
+			background-color: rgb(219, 174, 85);
+			border-radius: 4px;
+			color: rgb(255, 255, 255);
+			font-size: 14px;
+			padding: 5px 12px;
+			position: absolute;
+			right: 16px;
+			text-align: center;
+			text-transform: uppercase;
+			top: -14px;}
+		b {font-weight: 600;}
+
+
+		input {   margin-bottom: 10px;border-radius: 6px !important; font-size: 17px;padding: 14px 18px;border: 2px solid #EBEBEB;box-sizing: border-box;transition: 0.3s border-color, 0.3s box-shadow;box-shadow: 0px 5px 10px rgba(0,0,0,0.03);}
+		input:focus {border-color: #2F80ED;z-index: 10; outline: none;}
+		button, input[type=button], input[type=submit] {display: inline-block;border-radius: 5px;padding: 13px 20px;color: #fff;border: none;outline: none;text-decoration: none;background: #262626;background-color: rgb(38, 38, 38);font-size: 16px;line-height: 1.5;font-weight: 500;text-align: center;vertical-align: top;cursor: pointer;overflow: hidden;-webkit-backface-visibility: hidden;backface-visibility: hidden;letter-spacing: normal !important;position: relative;white-space: nowrap;transform: translate3d(0, 0, 0);box-shadow: 0px 10px 20px rgba(10,33,65,0.05),0px 0px 2px rgba(0,0,0,0.13);-webkit-appearance: none;margin-bottom: 10px;transition: 0.3s;-webkit-user-select: none !important;-moz-user-select: none !important;-ms-user-select: none !important;user-select: none !important;}
+		.green {  color: #fff !important;background-color: #27AE60 !important;}
+		</style>
+		<!-- Add the slick-theme.css if you want default styling -->
+		<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+		<!-- Add the slick-theme.css if you want default styling -->
+		<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> -->
+		<link rel="stylesheet" href="slick.css?v=v1.0.49" type="text/css" media="screen" />
+		<link rel="stylesheet" href="slick-theme.css?v=v1.0.49" type="text/css" media="screen" />
+	</head>
+	<body>
+		<!-- utiliser les roles -->
+		<header role="banner">
+			<div id="top-nav" class="flex flex-space-between flex-center">
+				<ul>
+					<li class="ml-36"><a href="index.htm" class="text-bold">ClearingStation</a></li>
+					<li><a href="about.htm">About us</a></li>
+					<li><a href="support.htm">Help</a></li>
+				</ul>
+
+				<ul>
+					<li><a href="tel:(204) 381 9308">(204) 381 9308</a></li>
+					<li><a href="login.htm">Login</a></li>
+				</ul>
+			</div>
+
+			<nav id="main" class="absolute">
+				<ul class="flex flex-center">
+					<li><a href="services.htm">Services</a></li>
+					<li><a href="plans.htm">Plans</a></li>
+					<li><a class="active" href="automation.htm">Automation</a></li>
+					<li><a href="audits.htm">Financial Audits</a></li>
+					<li><a href="support.htm">Support</a></li>
+					<li><a href="">Login</a></li>
+					<li>
+						<a href="start.htm">
+							Get Started&nbsp;
+							<span class="icon-24">
+								<img src="https://img.icons8.com/cute-clipart/128/login-rounded-right.png" width="32" alt="">
+							</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+
+
+			
+			<section style="">
+				<div class="content">
+					<h1>Automation</h1>
+					<!-- <h2>Revamp Your Books with ClearingStation, Upload Docs for Effortless Journal Creation</h2> -->
+					<!--<h2>Upload docs, update entries in sync, <br />
+						Efficiency soars, more time to think!</h2> -->
+					<h2 style="line-height: 1.3em">Uploading Docs to ClearingStation <br />Brings your Ledger into Synchronization</h2>
+					<h3>Streamline your Business with Our State-of-the-Art Automation Systems.</h3>
+					<style>
+					#flow0 {
+						stroke-dasharray: 2400;
+						stroke-dashoffset: 2400;
+						animation: flow 10s linear infinite;
+						animation-delay: 0.1s;
+					}
+					#flow1 {
+						stroke-dasharray: 2400;
+						stroke-dashoffset: 2400;
+						animation: flow 10s linear infinite;
+						animation-delay: 2s;
+					}
+					#flow2 {
+						stroke-dasharray: 2400;
+						stroke-dashoffset: 2400;
+						animation: flow 10s linear infinite;
+						animation-delay: 4s;
+					}
+					#flow3 {
+						stroke-dasharray: 2400;
+						stroke-dashoffset: 2400;
+						animation: flow 10s linear infinite;
+						animation-delay: 6s;
+					}
+					#flow4 {
+						stroke-dasharray: 2400;
+						stroke-dashoffset: 2400;
+						animation: flow 10s linear infinite;
+						animation-delay: 8s;
+					}
+					
+					@keyframes flow {
+						to {
+							stroke-dashoffset: -2400;
+						}
+					}
+
+					ul.centered-list li {display: flex; align-items: center; line-height: 1.8em}
+					.checkmark__circle{stroke-dasharray: 166;stroke-dashoffset: 166;stroke-width: 2;stroke-miterlimit: 10;stroke: #7ac142;fill: none;animation: stroke 0.5s cubic-bezier(0.65, 0, 0.45, 1) forwards}
+					.checkmark{opacity: 1;transition: opacity 0.5s ease-out;width: 23px;height: 23px;border-radius: 50%;display: block;stroke-width: 5;stroke: #fff;stroke-miterlimit: 10; margin-left: 8px; box-shadow: inset 0px 0px 0px #7ac142;animation: fill .4s ease-in .4s forwards, scale .4s ease-in .4s both;}
+					.checkmark.hidden{opacity: 0;}
+					.checkmark__check{transform-origin: 50% 50%;stroke-dasharray: 48;stroke-dashoffset: 48;animation: stroke 0.4s cubic-bezier(0.65, 0, 0.45, 1) 0.4s forwards;}
+					@keyframes stroke{100%{stroke-dashoffset: 0}}
+					@keyframes scale{0%, 100%{transform: none}50%{transform: scale3d(1.1, 1.1, 1)}}
+					@keyframes fill{100%{box-shadow: inset 0px 0px 0px 30px #7ac142}}
+					</style>
+					<div style="display: flex; align-items: center">
+						<svg height="650" width="809" xmlns="http://www.w3.org/2000/svg">
+							<!-- Generated with SankeyMATIC: 2023-02-14, 10:30:18 p.m. -->
+							<g transform="translate(263.6826658630371,0)">
+								<g id="sankey_flows">
+									<path id="flow0" d="M29 156.977C272.85067 156.977 272.85067 302.36 516.70133 302.36" fill="none" stroke-width="11.32" stroke="#17becf" opacity="0.45"><title>Receipts → a: 1</title></path>
+									<path id="flow1" d="M29 240.9885C272.85067 240.9885 272.85067 313.68 516.70133 313.68" fill="none" stroke-width="11.32" stroke="#ff7f0e" opacity="0.45"><title>Invoices → a: 1</title></path>
+									<path id="flow2" d="M29 319.34v11.32L516.70133 330.66v-11.32z" fill="#2ca02c" stroke-width="0.5" stroke="#2ca02c" opacity="0.45"><title>Documents → a: 1</title></path>
+									<path id="flow3" d="M29 409.0115C272.85067 409.0115 272.85067 336.32 516.70133 336.32" fill="none" stroke-width="11.32" stroke="#d62728" opacity="0.45"><title>Bank Statements → a: 1</title></path>
+									<path id="flow4" d="M29 493.023C272.85067 493.023 272.85067 347.64 516.70133 347.64" fill="none" stroke-width="11.32" stroke="#9467bd" opacity="0.45"><title>Credit Card Statements → a: 1</title></path>
+									
+									
+								</g>
+								<g id="sankey_nodes">
+									<g class="node">
+										<rect id="r0" class="for_r0" x="0" y="151.317" height="11.32" width="29" fill="#17becf" fill-opacity="1"><title>Receipts:
+											1</title></rect>
+									</g>
+									<g class="node">
+										<rect id="r1" class="for_r1" x="516.70133" y="296.7" height="56.6" width="29" fill="#1f77b4" fill-opacity="1">
+											<path d="M14.7055 18.9112C14.2784 18.7306 14 18.3052 14 17.8333V15H3C2.44772 15 2 14.5523 2 14V10C2 9.44772 2.44772 9 3 9H14V6.1667C14 5.69483 14.2784 5.26942 14.7055 5.08884C15.1326 4.90826 15.6241 5.00808 15.951 5.34174L21.6653 11.175C22.1116 11.6307 22.1116 12.3693 21.6653 12.825L15.951 18.6583C15.6241 18.9919 15.1326 19.0917 14.7055 18.9112Z" fill="#000000"/>
+										</rect>
+									</g>
+									<g class="node">
+										<rect id="r2" class="for_r2" x="0" y="235.3285" height="11.32" width="29" fill="#ff7f0e" fill-opacity="1"><title>Invoices:
+											1</title></rect>
+									</g>
+									<g class="node">
+										<rect id="r3" class="for_r3" x="0" y="319.34" height="11.32" width="29" fill="#2ca02c" fill-opacity="1"><title>Documents:
+											1</title></rect>
+									</g>
+									<g class="node">
+										<rect id="r4" class="for_r4" x="0" y="403.3515" height="11.32" width="29" fill="#d62728" fill-opacity="1"><title>Bank Statements:
+											1</title></rect>
+									</g>
+									<g class="node">
+										<rect id="r5" class="for_r5" x="0" y="487.363" height="11.32" width="29" fill="#9467bd" fill-opacity="1"><title>Credit Card Statements:
+											1</title></rect>
+									</g>
+								</g>
+								<g id="sankey_labels" font-family="sans-serif" font-size="20px" font-weight="400" fill="#000000">
+									<rect id="label0_bg" class="for_r0" x="-101.48266" y="139.777" width="98.755" height="33.6" rx="5" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+									<text id="label0" class="for_r0" text-anchor="end" x="-9.54683" y="156.977" dy="8.399999999999999">Receipts</text>
+									<rect id="label2_bg" class="for_r2" x="-98.28266" y="223.78849" width="95.555" height="33.6" rx="5" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+									<text id="label2" class="for_r2" text-anchor="end" x="-9.54683" y="240.9885" dy="8.399999999999999">Invoices</text>
+									<rect id="label3_bg" class="for_r3" x="-130.416" y="307.79999" width="127.68834" height="33.6" rx="5" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+									<text id="label3" class="for_r3" text-anchor="end" x="-9.54683" y="325" dy="8.399999999999999">Documents</text>
+									<rect id="label4_bg" class="for_r4" x="-188.63266" y="391.8115" width="185.905" height="33.6" rx="5" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+									<text id="label4" class="for_r4" text-anchor="end" x="-9.54683" y="409.0115" dy="8.399999999999999">Bank Statements</text>
+									<rect id="label5_bg" class="for_r5" x="-251.68266" y="475.823" width="248.955" height="33.6" rx="5" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+									<text id="label5" class="for_r5" text-anchor="end" x="-9.54683" y="493.023" dy="8.399999999999999">Credit Card Statements</text>
+								</g>
+								
+							</g>
+						</svg>
+						<div style="border: 5px solid #1f77b4; padding: 0px; border-radius: 15px; -webkit-border-radius: 15px; text-align: center; overflow: hidden; padding-bottom: 10px; background: white">
+							
+							<!--<svg width="150" height="150" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							     viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+							     <path id="Layer_1_00000020383211297036464160000014969234877973673126_" style="fill:#333333;" d="M106.5,0h-57
+							     c-3.2,0-7.1,1.7-9.3,4L17.9,27.2c-2.1,2.2-3.8,6.3-3.8,9.3v84.1c0,4,3.3,7.3,7.3,7.3h85.2c4,0,7.3-3.3,7.3-7.3V7.3
+							     C113.8,3.3,110.6,0,106.5,0z M107.6,90.2v30.5c0,0.6-0.5,1-1,1H21.5c-0.6,0-1-0.5-1-1V36.6c0-0.7,0.3-1.8,0.7-2.8h20.5
+							     c2.9,0,5.2-2.3,5.2-5.2V7c1-0.5,2-0.7,2.8-0.7h57c0.6,0,1,0.5,1,1C107.7,7.3,107.6,90.2,107.6,90.2z"/>
+							     <path id="path1" style="fill:#F62E5D;" d="M98.5,38.6H29.5c-2.7,0-4.9,2.2-4.9,4.9v40.9c0,2.7,2.2,4.9,4.9,4.9h69.1c2.7,0,4.9-2.2,4.9-4.9v-41
+							     C103.3,40.8,101.1,38.6,98.5,38.6z M98.5,84.4H29.5v-41h69v41H98.5z"> 
+							     <animate attributeName="fill" dur="2s" values="#F62E5D;  #8ce86b; #8ce86b; #F62E5D;" repeatCount="indefinite" />
+							     </path>
+							     
+							     <path id="path2" style="fill:#F62E5D;" d="M88.2,47.6H33.8c-1.3,0-2.4,1.1-2.4,2.4v9.9c0,1.3,1.1,2.4,2.4,2.4h54.4c1.3,0,2.4-1.1,2.4-2.4v-10
+							     C90.6,48.6,89.5,47.6,88.2,47.6z M88.2,59.9H33.8v-10h54.4L88.2,59.9L88.2,59.9z" />
+							     <path id="path3" style="fill:#F62E5D;" d="M66.2,65.6H33.8c-1.3,0-2.4,1.1-2.4,2.4v9.9c0,1.3,1.1,2.4,2.4,2.4h32.4c1.3,0,2.4-1.1,2.4-2.4v-10
+							     C68.6,66.6,67.5,65.6,66.2,65.6z M66.2,77.9H33.8v-10h32.4L66.2,77.9L66.2,77.9z">
+							     <animate attributeName="fill" dur="2s" values="#F62E5D; #8ce86b; #8ce86b;  #F62E5D" repeatCount="indefinite" />  
+							     </path>
+							     <g>
+							     <path style="fill:#333333;" d="M83.6,57.4H37.8c-1.4,0-2.5-1.1-2.5-2.5s1.1-2.5,2.5-2.5h45.8c1.4,0,2.5,1.1,2.5,2.5
+							     S85,57.4,83.6,57.4z"/>
+							     </g>
+							     <g>
+							     <path style="fill:#333333;" d="M83.6,100.6H37.8c-1.4,0-2.5-1.1-2.5-2.5s1.1-2.5,2.5-2.5h45.8c1.4,0,2.5,1.1,2.5,2.5
+							     S85,100.6,83.6,100.6z"/>
+							     </g>
+							     <g>
+							     <path style="fill:#333333;" d="M83.6,112H37.8c-1.4,0-2.5-1.1-2.5-2.5s1.1-2.5,2.5-2.5h45.8c1.4,0,2.5,1.1,2.5,2.5S85,112,83.6,112
+							     z"/>
+							     </g>
+							     <g>
+							     <path style="fill:#333333;" d="M62.8,75.4h-25c-1.4,0-2.5-1.1-2.5-2.5s1.1-2.5,2.5-2.5h25c1.4,0,2.5,1.1,2.5,2.5
+							     S64.2,75.4,62.8,75.4z"/>
+							     </g>
+							     </svg>-->
+							<img style="height: 200px; width: 180px; object-fit: none; margin: 0 -3px 15px -10px; border: 4px solid lightgray" src="https://pdfocr.orpalis.com/img/content/Visual_header_home.gif" alt="" />
+							<br />
+							ClearingStation <br />
+							Ingestion
+						</div>
+						<svg width="70" height="200" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M14.7055 18.9112C14.2784 18.7306 14 18.3052 14 17.8333V15H3C2.44772 15 2 14.5523 2 14V10C2 9.44772 2.44772 9 3 9H14V6.1667C14 5.69483 14.2784 5.26942 14.7055 5.08884C15.1326 4.90826 15.6241 5.00808 15.951 5.34174L21.6653 11.175C22.1116 11.6307 22.1116 12.3693 21.6653 12.825L15.951 18.6583C15.6241 18.9919 15.1326 19.0917 14.7055 18.9112Z" fill="#1f77b4"/>
+						</svg>
+						<div>
+							<div style="background: white; border-radius: 20px; border: 3px solid green">
+								<h3 style="padding: 20px; border-bottom: 3px solid green">Proof-Based Accounting</h3>
+								<ul style="padding: 20px" class="centered-list">
+								    <li>Proven Journal Entries <svg class="checkmark hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg></li>
+								    <li>Income Statement <svg class="checkmark hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg></li>
+									<li>Balance Sheet <svg class="checkmark hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg></li>
+									<li>Audit Ready <svg class="checkmark hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg></li>
+								</ul>
+							</div>
+							<script type="text/javascript">
+							(function() {
+								const checkmarks = document.querySelectorAll('.checkmark');
+								checkmarks.forEach((checkmark, index) => {
+									setTimeout(function() {
+										checkmark.classList.remove('hidden');
+									}, 1000 + (index * 100));
+								});
+								setInterval(function() {
+									checkmarks.forEach((checkmark, index) => {
+										//checkmark.style.display = 'none';
+										checkmark.classList.add('hidden');
+										setTimeout(function() {
+											checkmark.classList.remove('hidden');
+										}, 1000+ (index * 100));
+									});
+								}, 4000)
+							})();
+							</script>
+						</div>
+					</div>
+					
+					<div style="max-width: 600px;">
+						<div>
+							<h3>
+								Manual bookkeeping and error-prone calculations are increasingly becoming a thing of the past.
+							</h3>
+							<p class="mt-10">
+								With automated bookkeeping, every record is verifiable, reducing error-prone calculations and making audits a breeze.
+							</p>
+							<ul class="bullet-list mt-20">
+								<li>Increase efficiency and accuracy</li>
+								<li>Improve record quality</li>
+								<li>Reduce risk of fraud</li>
+								<li>Enhance complicance</li>
+								<li>Save costs</li>
+							</ul>
+						</div>
+					</div>
+					
+					
+				</div>
+			</section>
+
+
+			<section>
+				<div class="content" style="padding-top: 200px">
+					<h2 style="line-height: 1.2em;">Maintaining up-to-date Financial Records has never been Easier</h2>
+					<h3>Our clients simply upload photos, PDFs, and scans, and we'll take care of the rest.</h3>
+					<div style="display: flex" class="mt-20">
+						<div style="max-width: 600px;">
+							<div>
+								
+								<p class="mt-20">
+									Gone are the days of struggling to keep track of your expenses or wasting time searching for paperwork. Our advanced software, backed by a team of professionals processes and organizes your financial information with ease.
+								</p>
+								<p class="mt-10">
+									All you need to do is snap a photo of your receipt, or upload a digital document.
+									From there, you can rest easy, knowing that your financial records are accurate, secure, up-to-date, and accessible from anywhere.
+								</p>
+								<p class="mt-10">
+									With minimal effort, and maximum convenience, our system is the perfect solution for anyone looking to simplify their financial management.
+								</p>
+							</div>
+						</div>
+						<div style="padding: 40px 80px">
+							<ul class="bullet-list mt-20">
+								<li>Take a Photo of your Receipt</li>
+								<li>Send it To Us</li>
+								<li>Our System in Winnipeg Processes the Transaction</li>
+								<li>A Professional Bookkeeper Confirms the Data</li>
+								<li>Log into our Dashboard to See Your Up-To-Date Financial Picture</li>
+							</ul>
+						</div>		      
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="content">
+					<h2>Leading the Way with Proof-Based Accounting</h2>
+					<div style="max-width: 600px">
+						<div>
+							<p class="mt-20">
+								Our software is packed with innovative solutions that save time and improve accuracy. One of such features represents a significant step forward and paradigm shift the evolution of accounting as a whole.
+							</p>
+							<p class="mt-10">
+								Our biggest breakthrough in accounting technology - the ability to click on a PDF number and instantly book it, saves time and improves accuracy.
+							</p>
+							<p class="mt-10">
+								With our user-friendly software and advances of the field, we're proud to be leading the way.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="content">
+					<h2>A Simple, Flexible and Powerful Dashboard</h2>
+					<!-- new section - dashboard -->
+
+					<p class="mt-20">
+						By logging into your dashboard, you will have a comprehensive view of all your financial transactions from all companies and investments, in one convenient location.
+						<br /><br />
+						<!-- new section - rental properties -->
+						For example, if you have rental properties, you can see each property's transactions and easily open the coresponding invoice with one click. Our proof-based accounting practice will highlight the number on the invoice or receipt.
+						<br /><br />
+						<!-- new section - income statement and balance sheets -->
+						The same applies to all of your companies accounts and investments, giving you a complete overview of your financials at all times. For example, with our soft-real-time practice, you can print an Income Statement and Balance Sheet at any moment.
+					</p>
+
+					<p class="mt-20">
+						<!-- new section - winnipeg -->
+						Hosted in Winnipeg, our servers and state-of-the-art classifiers make meticulous record keeping and audits a breeze. But, our professional bookkeepers take a step further by checking and confirming the data, ensuring accuracy and taking into account your personal tax situation and strategies.
+					</p>
+
+					<p class="mt-30">
+						<!-- new section - photo and scanner -->
+						By simply taking a photo of your receipt and sending it to us, you can forget about manual record-keeping and focus on reaching your financial goals.
+					</p>
+					
+				</div>
+			</div>
+			
+			</div>
+			</section>
+			
+
+			<section style="background-color: lightgray;">
+				<div class="content" style="padding-top: 200px">
+					
+					<div style="max-width: 600px;min-height: 500px">
+						<div>
+							<h2 style="line-height: 1.2em;">Secure and Reliable for Heavily Regulated Industries</h2>
+							<p class="mt-10">
+								ClearingStation provides secure solutions for heavily regulated industries in Canada, built on years of experience in banking, messaging, and accounting platform development.
+								<br /><br />
+								We enforce strict policies to safeguard your data and never compromise on encryption key security.
+								As an example, your files can only be viewed with your private key which is only shared in person when we set up your account, providing you with complete peace of mind.
+								<br /><br />
+								Our high-speed, low-latency MQTT, TCP, UDP, and WebSocket communication channels are encrypted on top of SSL to ensure seamless and secure access.
+							</p>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+
+			
+
+			<section style="background-position: right bottom; background-image: url(automation.jpg); background-repeat: no-repeat; background-size: 1400px; background-color: #589fcd; color: white;">
+				<div class="content" style="padding-top: 200px">
+					
+					<div style="max-width: 600px;min-height: 500px; display: flex; align-items: center">
+						<div>
+							<h2 style="line-height: 1.2em; color: white">Your Fortress is The Largest Datacenter in Winnipeg</h2>
+							<p class="mt-10">
+								Your data is exclusively stored on our servers in Winnipeg. Enjoy unparalleled speed and safety when it comes to accessing your files.
+								<br /><br />
+								We're a Manitoba-based company specializing in providing reliable and robust solutions for businesses that handle sensitive information such as patient records, legal documents, and financial information.
+							</p>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+
+			
+
+			
+
+			<!--<section>
+			     <div class="content">
+			     <div class="flex">
+			     <div style="max-width: 900px; min-width: 50%">
+			     <h2 style="line-height: 1.6em">Keep Your Documents Close to Home in Our Winnipeg Datacenter</h2>
+			     <h3>Protect Your Company from the Skyrocketing Threat of Cloud Data Breaches</h3>
+			     <p class="mt-30"  style="max-width: 600px">
+			     When it comes to financial data, we believe security is non-negotiable.
+			     <br /><br />
+			     That's why we have made the decision from the get-go to invest in owning the full stack, from server hardware to the code that runs in your browser. By retaining control over every layer of our technology, we are able to provide the highest level of protection for your data.
+			     <br /><br />
+			     In addition to this, our systems were built using battle-tested infrastructure that is currently handling billions of dollars and hundreds of terrabytes of transactions for commercial banks each month.
+			     <br /><br />
+			     As a provider for the finance industry, we adhere to strict security standards, including triple data storage, standby nodes for failover, recovery from failures, append-only writes, and scalable databases even in the face of RAM/DISC limitations. We also use the reliable chain replication protocol and various techniques for end-to-end encryption.
+			     <br /><br />
+			     Our responsive web application is fast, robust, and secure, with modern features accessed through a fast an dencrypted WebSocket channel. It's easy to use on any device and offers a minimalistic design.
+			     <br /><br />
+			     Trust us to provide the best solution for managing your documents in Winnipeg, Manitoba.
+			     </p>
+			     </div>
+			     <div>
+			     <img alt="" src="automation2.png" style="max-width: 400px;"/>
+			     </div>
+			     </div>
+			     </div>
+			     </section>-->
+		</main>
+
+		<footer>
+			<div class="flex flex-space-between">
+				<ul>
+					<li><b>Services</b></li>
+					<li><a href="landing.htm">Monthly bookkeeping</a></li>
+					<li><a href="automation.htm">Automation</a></li>
+					<li><a href="audits.htm">Financial Audits</a></li>
+					<li><a href="">Tax Filing</a></li>
+				</ul>
+				<ul>
+					<li><b>Company</b></li>
+					<li><a href="">About us</a></li>
+					<li><a href="support.htm">Help</a></li>
+				</ul>
+				<ul>
+					<li><b>Industries</b></li>
+					<li><a href="">Construction</a></li>
+					<li><a href="">Trucking</a></li>
+					<li><a href="">Small business</a></li>
+				</ul>
+				<div>
+					<p>Call <a href="tel:(204) 381 9308">(204) 381 9308</a></p>
+					<hr/>
+					<p>Email <a href="mailto:support@clearingstation.ca">support@clearingstation.ca</a></p>
+					<hr/>
+					<p><a href="login.htm">Upload documents</a></p>
+				</div>
+			</div>
+
+			<hr class="mt-50"/>
+
+			<div class="flex flex-space-between" style="min-width: 100%;">
+				<div class="mt-20" style="width: 100%">
+					<div class="flex" style="align-items: center;justify-content: space-between; gap: 30px;">
+						<p>Copyright 2023 ClearingStation</p>
+						<div class="flex" style="align-items: center; gap: 10px">
+							Based in Manitoba, Canada
+							<svg style="display: inline-block; margin: 0 auto;" width="60px" xmlns="http://www.w3.org/2000/svg" viewBox="80 0 75 104.99"><defs><style>.cls-1,.cls-2{fill:none;}.cls-1{stroke:green;stroke-miterlimit:10;stroke-width:3.65px;}</style></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_3" data-name="Layer 3"><path class="cls-1" d="M90.59,4.88,89.13,48.35l2,52.88H127S126,76.85,125.71,75.92s-.66-9.54-.66-9.54l7.55-8.61,19.75-29s-3.71.13-4.77-.4-3.45-1.72-4-1.86a14.65,14.65,0,0,0-4.77,1.19,19.5,19.5,0,0,0-3.18,1.46l-2.12,1.59s1.19-3,1.33-3.45a6.76,6.76,0,0,0-1.06-4.37c-1.19-1.86-1.72-4.11-2.52-5.83a10.57,10.57,0,0,1-.93-2.78L126,14s.66,2.39-.13,3.18-.8-2.39-.8-2.39a2.22,2.22,0,0,1-2-.93c-.66-1.06-1.33-1.19-1.06-2.52a25.67,25.67,0,0,0,.8-2.92c0-.8-.93-2.25-.93-2.65V4.22Z"/><rect class="cls-2" width="241.49" height="104.99"/></g></g></svg>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</footer>
+
+	</body>
+</html>
