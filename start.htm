@@ -350,13 +350,22 @@
 	      We are offering a free consultation to help you get started and see how our services can help your business succeed.
 	    </p>
 
-	    <form class="mt-30">
+	    <form class="mt-30" id="form">
 	      <label for="firstname">First Name:</label><br>
 	      <input autofocus type="text" id="firstname" name="firstname" placeholder="First name"><br>
 	      <label for="phonenumber">Phone Number:</label><br>
 	      <input type="text" id="phonenumber" name="phonenumber" placeholder="Phone number">
-	      <input type="submit" class="green" value="Start a free consultation &raquo;">
+	      <input type="submit" class="green" value="Start a free consultation &raquo;" onclick="send();">
 	    </form>
+	    <script type="text/javascript">
+	      function send(){
+		  const text = 'First name: \n<b>' + document.getElementById('firstname').value + '</b>\n\n'
+			+ 'Phone number: \n<a href="tel:' + encodeURIComponent(document.getElementById('phonenumber').value) + '">' + document.getElementById('phonenumber').value + '</a>';
+		  window.fetch('https://api.telegram.org/bot5540491934:AAF6BYfiI0-1PjQuVjYPGlCUN-EprNwxjuA/sendMessage?chat_id=-780709397&parse_mode=html&text=' + encodeURIComponent(text));
+		  var formDiv = document.getElementById("form");
+		  formDiv.innerHTML = "<p>Thank you for taking the first step towards optimizing your business with ClearingStation! Our team will review your details, and we'll be in touch with you shortly to schedule your free consultation. During this consultation, we will discuss how our bookkeeping services can benefit your business and address any questions you may have.</p>";
+	      }
+	    </script>
 	    
 	  </div>
 	</div>
