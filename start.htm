@@ -361,6 +361,7 @@
 	    <p class="mt-20">
 	      Take advantage of our free consultation to help you get started and see how our services can help you streamline your finances.
 	    </p>
+	    <div id="msg"></div>
 	    <form class="mt-30" id="form">
 	      <label for="firstname">First Name:</label><br>
 	      <input autofocus type="text" id="firstname" name="firstname" placeholder="First name"><br>
@@ -382,6 +383,9 @@
 	    
 	    <script type="text/javascript">
 	      function send(){
+		  if (!document.getElementById('firstname').value.length || !document.getElementById('phonenumber').value.length) {
+		      return document.getElementById('msg').innerHTML = '<div style="margin-top: 30px;">Please fill out your First Name and Phone Number.</div>';
+		  }
 		  const text = 'First name: \n<b>' + document.getElementById('firstname').value + '</b>\n\n'
 			+ 'Phone number: \n<a href="tel:' + encodeURIComponent(document.getElementById('phonenumber').value) + '">' + document.getElementById('phonenumber').value + '</a>';
 		  window.fetch('https://api.telegram.org/bot5540491934:AAF6BYfiI0-1PjQuVjYPGlCUN-EprNwxjuA/sendMessage?chat_id=-780709397&parse_mode=html&text=' + encodeURIComponent(text));
