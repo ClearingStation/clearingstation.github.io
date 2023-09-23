@@ -29,6 +29,7 @@
   -->
 <html lang="EN" manifest="{{ OFFLINE_MANIFEST_PATH }}">
   <head>
+    <title>Get started | ClearingStation</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
@@ -355,13 +356,15 @@
       
       <section style="border: none;">
 	<div class="content" >
-	  <div style="max-width: 400px; margin: 0 auto">
-	    <h2>ClearingStation</h2>
-	    <h3>Get started with Manitoba's foremost bookkeeping service</h3>
+	  <div style="max-width: 450px; margin: 0 auto">
+	    <h2>Find Out More About ClearingStation</h2>
+	    <h3>Find out, how you too can experience streamlined professional accounting, at the fraction of the cost.</h3>
 	    <p class="mt-20">
-	      Take advantage of our free consultation to help you get started and see how our services can help you streamline your finances.
+	      Unlock financial clarity effortlessly... Our expertise caters to busy healthcare professionals in Manitoba.
+	      We <b>tackle tax backlog, boost compliance, and minimize taxes owed</b>.
+
+	      <br /><br />Jump in for a free, uncomplicated over-the-phone consultation to get your most pressing tax questions answered.
 	    </p>
-	    <div id="msg"></div>
 	    <form class="mt-30" id="form">
 	      <label for="firstname">First Name:</label><br>
 	      <input autofocus type="text" id="firstname" name="firstname" placeholder="First name"><br>
@@ -383,8 +386,15 @@
 	    
 	    <script type="text/javascript">
 	      function send(){
-		  if (!document.getElementById('firstname').value.length || !document.getElementById('phonenumber').value.length) {
-		      return document.getElementById('msg').innerHTML = '<div style="margin-top: 30px;">Please fill out your First Name and Phone Number.</div>';
+		  if (!document.getElementById('firstname').value.length) {
+		      document.getElementById('firstname').style.borderColor = 'red';
+		      document.getElementById('firstname').focus();
+		      return;
+		  }
+		  if (!document.getElementById('phonenumber').value.length) {
+		      document.getElementById('phonenumber').style.borderColor = 'red';
+		      document.getElementById('phonenumber').focus();
+		      return;
 		  }
 		  const text = 'First name: \n<b>' + document.getElementById('firstname').value + '</b>\n\n'
 			+ 'Phone number: \n<a href="tel:' + encodeURIComponent(document.getElementById('phonenumber').value) + '">' + document.getElementById('phonenumber').value + '</a>';
