@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Details</title>
+    <style>
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0px;
+      padding: 0;
+      }
+
+      .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+      text-align: center;
+      }
+
+      .invoice-info {
+      margin-top: 20px;
+      }
+
+      .invoice-info div {
+      margin-bottom: 10px;
+      }
+
+      button {
+      padding: 15px 30px;
+      font-size: 18px;
+      color: white;
+      background: #4990E2;
+      font-weight: bold;
+      font-family: inherit;
+      line-height: 1;
+      border: none;
+      text-transform: uppercase;
+      border-radius: 4px;
+      box-shadow: 0px 10px 15px -5px rgba(100, 100, 100, .035);
+      margin: 10px;
+      cursor: pointer;
+      }
+      button.primary {
+          background-color: #27AE60 !important;
+          padding: 15px 30px;
+          box-shadow: 0px 10px 15px -5px rgba(100, 100, 100, .35);
+          margin-bottom: 10px;
+      }
+
+      .text-center {
+      text-align: center;
+      }
+
+      .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+      }
+
+      iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      }
+
+      hr {
+          border: none;
+          height: 1.5px;
+          background: linear-gradient(to right, transparent, #f2f2f2, transparent); /* Subtle gradient color */
+          background: linear-gradient(to right, #f2f2f2, #EBEBEB, #f2f2f2); /* Subtle gradient effect */
+          margin: 20px 0 40px 0; /* Margin for spacing */
+      }
+
+      .dark-footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px;
+      }
+
+      .dark-footer-container {
+      max-width: 1200px;
+      justify-content: space-around;
+      margin: 0 auto;
+      }
+
+      .feature {
+      width: 30%; /* Adjust width as needed */
+      }
+
+      .feature h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      }
+
+      .feature p {
+      font-size: 1rem;
+      line-height: 1.4;
+      }
+
+      .flex {
+          display: flex;
+      }
+
+      @media only screen and (max-width: 900px) {
+          .flex {
+              flex-direction: column;
+          }
+          .feature {
+              width: 100% !important;
+          }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container clearfix">
+      <div style="margin-bottom: 50px">
+        <img alt="" src="logo.jpg" style="width: auto; max-width: 100%;"/>
+      </div>
+      <h1 style="margin-bottom: 40px">Invoice Details</h1>
+      <div class="invoice-info">
+        <div>
+          <strong>Invoice Number:</strong> INV123456
+        </div>
+        <div>
+          <strong>Invoice Date:</strong> October 25, 2023
+        </div>
+        <div>
+          <strong>Due Date:</strong> November 10, 2023
+        </div>
+        <div>
+          <strong>Total Amount:</strong> $500.00
+        </div>
+        <div style="text-align: right; margin-top: 70px">
+          Please make the payment by clicking this link: <br/>
+          <button class="primary">Pay Now &raquo;</button>
+        </div>
+
+        <hr/>
+        <div>
+          <iframe src="./invoice5.pdf"></iframe>
+        </div>
+
+        <div class="text-center">
+          <button>Forward via Email</button>
+          <button>Download as PDF</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin: 50px auto 0 auto;">
+      <div class="flex" style="align-items: center; max-width: 600px; margin: 70px auto; gap: 20px; padding: 20px">
+        <svg width="60px" xmlns="http://www.w3.org/2000/svg" viewBox="80 0 75 104.99"><defs><style>.cls-1,.cls-2{fill:none;}.cls-1{stroke:green;stroke-miterlimit:10;stroke-width:3.65px;}</style></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_3" data-name="Layer 3"><path class="cls-1" d="M90.59,4.88,89.13,48.35l2,52.88H127S126,76.85,125.71,75.92s-.66-9.54-.66-9.54l7.55-8.61,19.75-29s-3.71.13-4.77-.4-3.45-1.72-4-1.86a14.65,14.65,0,0,0-4.77,1.19,19.5,19.5,0,0,0-3.18,1.46l-2.12,1.59s1.19-3,1.33-3.45a6.76,6.76,0,0,0-1.06-4.37c-1.19-1.86-1.72-4.11-2.52-5.83a10.57,10.57,0,0,1-.93-2.78L126,14s.66,2.39-.13,3.18-.8-2.39-.8-2.39a2.22,2.22,0,0,1-2-.93c-.66-1.06-1.33-1.19-1.06-2.52a25.67,25.67,0,0,0,.8-2.92c0-.8-.93-2.25-.93-2.65V4.22Z"></path><rect class="cls-2" width="241.49" height="104.99"></rect></g></g></svg>
+        <div>QR-Code Invoices powered by ClearingStation from Manitoba, Canada</div>
+      </div>
+    </div>
+
+    <div class="dark-footer">
+
+      <div style="background-color: #333; color: #fff; text-align: center; padding: 20px;">
+    <h2>Ready to Simplify Your Own Invoicing Process?</h2>
+    <p>Get started with your own professional invoices today!</p>
+    <button style="padding: 10px 20px; font-size: 18px; color: white; background: #4990E2; font-weight: bold;
+      font-family: inherit; line-height: 1; border: none; text-transform: uppercase; border-radius: 4px;
+      box-shadow: 0px 10px 15px -5px rgba(100, 100, 100, .035); margin: 10px;">Start Invoicing</button>
+    </div>
+
+      <div class="dark-footer-container flex">
+
+        <div class="feature">
+          <h3>QR Codes for Swift Payments</h3>
+          <p>Save time and get paid faster! Our QR codes allow clients to make payments instantly by scanning. No hassle, just tap and pay.</p>
+        </div>
+        <div class="feature">
+          <h3>Transparent Itemized Billing</h3>
+          <p>Ensure clarity in transactions. Break down costs with itemized billing, making it easier for clients to understand charges.</p>
+        </div>
+        <div class="feature">
+          <h3>Automated Payment Reminders</h3>
+          <p>Never miss a payment. Automated reminders gently prompt clients, ensuring timely payments without manual follow-ups.</p>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>
