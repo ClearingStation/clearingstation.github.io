@@ -1,0 +1,372 @@
+<html>
+  <head>
+      <style>
+		html, body {margin: 0; padding: 0;}
+       :root {
+	   --font-family: "Fira Sans", sans-serif;
+	   --font-family-alternative: "Source Serif Pro", sans-serif;
+	   --font-family-monospaced: "Fira Mono", monospace;
+	   --font-family-editor: "Source Code Pro", monospace;
+	   --z-index-aside: 1;
+	   --z-index-header: 2;
+	   --z-index-floating-ui: 3;
+	   --z-index-keyboard-overlays: 10;
+	   --z-index-autocomplete: 8;
+	   --z-index-overlay: 4;
+	   --error: hsl(0deg 100% 30%);
+	   --warning: hsl(52deg 84% 56%);
+	   --red: var(--error);
+	   --yellow: var(--warning);
+	   --green: hsl(151deg 100% 25%);
+	   --gray: #aaa;
+	   --transparent-black: hsl(0deg 0% 0% / 50%);
+	   --transparent-white: hsl(0deg 0% 100% / 50%);
+	   --background: #fff;
+	   --background-darker: hsl(0deg 0% 85%);
+	   --text-color: #fff;
+	   --text-color-lighter: hsl(0deg 0% 33%);
+	   --text-color-lightest: hsl(0deg 0% 47%);
+	   --link-color: hsl(203deg 100% 32%);
+	   --link-hover-color: hsl(0deg 0% 33%);
+	   --heading-color: #333;
+	   --code-background: hsl(0deg 0% 97%);
+	   --border: hsl(0deg 0% 85%);
+	   --border-darker: hsl(0deg 0% 80%);
+	   --button-color: #fff;
+	   --button-background: hsl(203deg 100% 32%);
+	   --button-muted-color: var(--text-color);
+	   --button-muted-background: var(--background-darker);
+	   --sidebar-color: #444;
+	   --sidebar-hover-color: var(--link-color);
+	   --sidebar-background: hsl(0deg 0% 96%);
+	   --sidebar-border: hsl(0deg 0% 87%);
+	   --summary-background: hsl(0deg 0% 95%);
+	   --summary-background-darker: hsl(0deg 0% 90%);
+	   --header-color: #fff;
+	   --header-background: hsl(203deg 100% 32%);
+	   --header-placeholder-color: hsl(203deg 47% 66%);
+	   --header-placeholder-background: hsl(203deg 56% 45%);
+	   --table-header-text: hsl(0deg 0% 95%);
+	   --table-header-background: hsl(0deg 0% 60%);
+	   --table-border: hsl(0deg 0% 30%);
+	   --table-background-hover: hsl(0deg 0% 20%);
+	   --table-background-even: hsl(0deg 0% 95%);
+	   --treetable-expander: #fff;
+	   --budget-negative: #af3d3d;
+	   --budget-positive: #3daf46;
+	   --editor-comment: #998;
+	   --editor-trailing-whitespace: rgb(255 199 199 / 50%);
+	   --editor-directive: #333;
+	   --editor-class: #b84;
+	   --editor-date: #099;
+	   --editor-constant: #008080;
+	   --editor-account: var(--link-color);
+	   --editor-invalid: #333;
+	   --editor-activeline: #ffc;
+	   --notification-color: #fff;
+	   --chart-axis: #999;
+	   --autocomplete-match: #ffd27c;
+	   --mobile-button-text: #000;
+	   --placeholder-color: var(--text-color-lightest);
+	   --placeholder-background: var(--background);
+	   --dragover-background: hsl(203deg 100% 32% / 50%);
+	   --overlay-wrapper-background: rgb(0 0 0 / 50%);
+	   --help-sidebar-background: #f8f8f8;
+	   --help-sidebar-border: #eaeaea;
+       }
+       .flex {display: flex}
+       .space-between {justify-content:space-between;}
+       .inline-block {display: inline-block;}
+       .v-centered {align-items: center}
+
+       html, body {font-family: Proxima Nova, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Arial;}
+       .top-navbar { height: 45px; background: #344258; color: white;}
+       .top-navbar input {background: #4e5969; border: 0; outline: none; color: #dae5f5; height: 30; font-size: 14px; margin: 0 2px; border-radius: 3px; padding: 0 10px}
+       .top-navbar .right input {width: 150px}
+       .main {min-height: calc(100vh - 40px);background: #101a29;}
+       .sidebar {background: #4e5969; min-width: 200px; min-height: 100%}
+       .sidebar ul {padding: 0;}
+       .sidebar ul li {list-style: none; margin: 2px 0}
+       .sidebar ul li a {display: block; color: #fff; text-decoration: none; padding: 8px 10px; font-size: 14px}
+       .sidebar ul li a:hover, .sidebar ul li a.active {background: #5e6a7a}
+       .sidebar ul li a.active {font-weight: 500;}
+       .main section {width: 100%; padding: 20px; color: #fff;}
+       .row {display: flex;flex-wrap: wrap;padding: 5px;margin: -10px -20px;}
+       .column {flex: 1;margin: 5px;}
+      </style>
+    
+    <link href="dashboard.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.2.3/css/tabulator.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.2.3/js/tabulator.min.js"></script>
+    
+  	 <!-- Google tag (gtag.js) -->
+	 <script async src="https://www.googletagmanager.com/gtag/js?id=G-65T2GTVZ2N"></script>
+	 <script>
+	   window.dataLayer = window.dataLayer || [];
+	   function gtag(){dataLayer.push(arguments);}
+	   gtag('js', new Date());
+
+	   gtag('config', 'G-65T2GTVZ2N');
+	 </script>
+  </head>
+  <body>
+    <header class="flex space-between v-centered top-navbar">
+      <div class="flex">
+	<div style="width: 200px">
+	  <div style="padding: 3px 10px; font-weight: bold">ClearingStation Ltd.</div>
+	</div>
+	<div>
+	  <input name="" type="text" value="" placeholder="Search" style="min-width: 500px; background: #101a29"/>
+	</div>
+      </div>
+      <div class="right">
+	<input name="" type="text" value="" placeholder="Time"/>
+	<input name="" type="text" value="" placeholder="Account"/>
+	<input name="" type="text" value="" placeholder="Filter by tag, payee, ..."/>
+	<div style="display: inline-block">
+	  &nbsp;&nbsp;&nbsp;
+	</div>
+      </div>
+    </header>
+
+    <main class="flex main">
+      <sidebar class="sidebar">
+	<ul>
+	  <li><a href="income_statement.htm" class="active">Income Statement</a></li>
+	  <li><a href="balance_sheet.htm">Balance Sheet</a></li>
+	  <li><a href="trial_balance.htm">Trial Balance</a></li>
+	  <li><a href="documents.htm">Documents</a></li>
+	  <li><a href="journal.htm">Journal</a></li>
+	</ul>
+      </sidebar>
+
+
+      <section>
+
+
+
+	      <div id="journal-table"></div>
+
+    <script>
+      (function() {
+	  // Sample data for the journal entries (replace this with your actual data)
+          var journalData = [
+              { date: "2023-09-01", description: "Lorem ipsum dolor sit amet.", amount: 100.00 },
+              { date: "2023-09-05", description: "Consectetur adipiscing elit.", amount: 50.00 },
+              // Add more entries as needed
+              { date: "2023-09-10", description: "New entry with complex filter keyword", amount: 75.00 },
+              { date: "2023-09-15", description: "Another entry with filter", amount: 120.00 },
+	      { date: "2023-09-20", description: "Additional entry 1", amount: 60.00 },
+              { date: "2023-09-25", description: "Additional entry 2", amount: 90.00 },
+              { date: "2023-09-10", description: "New entry with complex filter keyword", amount: 75.00 },
+              { date: "2023-09-15", description: "Another entry with filter", amount: 120.00 },
+	      { date: "2023-09-20", description: "Additional entry 1", amount: 60.00 },
+              { date: "2023-09-25", description: "Additional entry 2", amount: 90.00 },
+              { date: "2023-09-10", description: "New entry with complex filter keyword", amount: 75.00 },
+              { date: "2023-09-15", description: "Another entry with filter", amount: 120.00 },
+	      { date: "2023-09-20", description: "Additional entry 1", amount: 60.00 },
+              { date: "2023-09-25", description: "Additional entry 2", amount: 90.00 },
+              { date: "2023-09-10", description: "New entry with complex filter keyword", amount: 75.00 },
+              { date: "2023-09-12", description: "Another entry with filter", amount: 120.00 },
+	      { date: "2023-09-20", description: "Additional entry 1", amount: 60.00 },
+              { date: "2023-09-25", description: "Additional entry 2", amount: 90.00 },
+              { date: "2023-09-10", description: "New entry with complex filter keyword", amount: 75.00 },
+              { date: "2023-09-15", description: "Another entry with filter", amount: 120.00 },
+	      { date: "2023-09-20", description: "Additional entry 1", amount: 60.00 },
+              { date: "2023-09-25", description: "Additional entry 2", amount: 90.00 },
+              { date: "2023-09-10", description: "New entry with complex filter keyword", amount: 75.00 },
+              { date: "2023-09-15", description: "Another entry with filter", amount: 120.00 },
+	      { date: "2023-09-20", description: "Additional entry 1", amount: 60.00 },
+              { date: "2023-09-25", description: "Additional entry 2", amount: 90.00 },
+              { date: "2023-09-10", description: "New entry with complex filter keyword", amount: 75.00 },
+              { date: "2023-09-15", description: "Another entry with filter", amount: 120.00 },
+	      { date: "2023-09-20", description: "Additional entry 1", amount: 60.00 },
+              { date: "2023-09-25", description: "Additional entry 2", amount: 90.00 },
+              { date: "2023-09-10", description: "New entry with complex filter keyword", amount: 75.00 },
+              { date: "2023-09-15", description: "Another entry with filter", amount: 120.00 },
+	      { date: "2023-09-20", description: "Additional entry 1", amount: 60.00 },
+              { date: "2023-09-25", description: "Additional entry 2", amount: 90.00 },
+              { date: "2023-09-10", description: "New entry with complex filter keyword", amount: 75.00 },
+              { date: "2023-09-15", description: "Another entry with filter", amount: 120.00 },
+	      { date: "2023-09-20", description: "Additional entry 1", amount: 60.00 },
+              { date: "2023-09-25", description: "Additional entry 2", amount: 90.00 },
+              // Add more data for pagination demonstration
+              // ... (more data here)
+          ];
+
+          // Define the Tabulator table
+          var table = new Tabulator("#journal-table", {
+              data: journalData, // Set the data source
+              layout: "fitColumns",
+	      height: "calc(100vh - 100px)",
+              pagination: "local", // Enable local pagination
+              paginationSize: 30, // Set the number of rows per page
+              columns: [
+		  {
+                      field: "select",
+                      headerSort: false,
+                      formatter: "rowSelection",
+                      align: "center",
+                      width: 40,
+                      headerCheckbox: true, // Enable header checkbox for selecting/unselecting all rows
+                      headerCheckboxThreeStates: true, // Allow three states for the header checkbox
+                  },
+                  { title: "Date", field: "date", width: 150, headerFilter: "input", sorter: "date" },
+                  { title: "Description", field: "description", headerFilter: "input" },
+                  { title: "Amount", field: "amount", align: "right", sorter: "number",
+		    titleFormatter: function(cell){
+			return "<div><span style='font-weight:bold;'>Amount</span><br><input type='number' placeholder='Min' style='width:50px;' id='min-amount-input'> <input type='number' placeholder='Max' style='width:50px;' id='max-amount-input'></div>";
+		    },
+		  },
+                  { 
+                      title: "Action", 
+                      formatter: "buttonCross", 
+                      align: "center", 
+                      width: 100,
+                      headerSort: false,
+                      cellClick: function(e, cell) {
+                          alert("You clicked the action button for row: " + cell.getRow().getIndex());
+                      },
+                  },
+              ],
+              // Enable row selection
+              selectable: "checkbox",
+              // Optional: Add additional configuration options as needed
+              rowFormatter: function (row) {
+                  // Create a row expansion content element
+                  var expansionElement = document.createElement("div");
+                  expansionElement.style.display = "none"; // Initially hide it
+                  expansionElement.innerHTML = `
+                    <p style="margin-left: 20px"><strong>Journal Entry Lines:</strong></p>
+                    <ul style="padding-bottom: 20px; margin-bottom: 0">
+                        <li>Line 1 details</li>
+                        <li>Line 2 details</li>
+                        <!-- Add more journal entry lines as needed -->
+                    </ul>
+                `;
+
+                  // Add a click event listener to toggle the expansion content
+                  row.getElement().addEventListener("dblclick", function () {
+                      if (expansionElement.style.display === "none") {
+                          expansionElement.style.display = "block";
+                      } else {
+                          expansionElement.style.display = "none";
+                      }
+                  });
+
+                  // Append the expansion content to the row
+                  row.getElement().appendChild(expansionElement);
+              },
+          })
+
+          // Render the table
+          table.render();
+
+          // Search/filter functionality
+          var searchInput = document.getElementById("search-input");
+          var minAmountInput = document.getElementById("min-amount-input");
+          var maxAmountInput = document.getElementById("max-amount-input");
+
+          function applyFilters() {
+              var filterValue = searchInput.value.toLowerCase();
+              var minAmount = parseFloat(minAmountInput.value);
+              var maxAmount = parseFloat(maxAmountInput.value);
+	      console.log({filterValue, minAmount, maxAmount});
+
+              table.setFilter(function (data) {
+                  var descriptionMatch = data.description.toLowerCase().includes(filterValue);
+                  var amountMatch = (isNaN(minAmount) || data.amount >= minAmount) &&
+                      (isNaN(maxAmount) || data.amount <= maxAmount);
+
+                  return descriptionMatch && amountMatch;
+              });
+          }
+
+          // Add event listeners for input fields
+          searchInput.addEventListener("input", applyFilters);
+          minAmountInput.addEventListener("input", applyFilters);
+          maxAmountInput.addEventListener("input", applyFilters);
+      })();
+      </script>
+
+
+    <style type="text/css" media="screen">
+      /* Apply the specified background color to the table */
+        #journal-table {
+            background-color: hsla(203, 100%, 32%, 0.5);
+            border: none; /* Remove borders from the table */
+            border-radius: 0; /* Remove border radius */
+        }
+
+        /* Apply the specified background color to the header */
+        .tabulator-header, .tabulator .tabulator-header .tabulator-col, .tabulator .tabulator-footer {
+            background-color: hsla(203, 100%, 32%, 0.5);
+            border: none; /* Remove borders from the header */
+        }
+
+        /* Apply the specified text color to the column headers */
+        .tabulator-header .tabulator-col {
+            color: #ffffff;
+        }
+
+      /* Apply the specified background color to the rows */
+      .tabulator-row.tabulator-row-even {
+            background-color: hsla(203, 100%, 32%, 0.2);
+      }
+        .tabulator-row {
+            background-color: hsla(203, 100%, 32%, 0.3);
+            border: none; /* Remove borders from the rows */
+        }
+
+        /* Apply the specified background color to the selected rows */
+        .tabulator-row.tabulator-selected {
+            background-color: hsla(203, 100%, 32%, 0.8);
+        }
+
+        /* Apply the specified background color to the hovered rows */
+        .tabulator-row:hover {
+            background-color: hsla(203, 100%, 32%, 0.8);
+      }
+
+      .tabulator .tabulator-footer .tabulator-paginator button {
+      color: #fff !important;
+      }
+
+        /* Apply the specified background color and text color to the search input */
+        #search-input {
+            background-color: hsla(203, 100%, 32%, 0.5);
+            color: #ffffff;
+            border: none; /* Remove borders from the search input */
+            border-radius: 0; /* Remove border radius */
+            padding: 5px;
+        }
+
+        /* Apply the specified background color and text color to the Amount input fields */
+        #min-amount-input, #max-amount-input, .tabulator input {
+            background-color: hsla(203, 100%, 32%, 0.5);
+            color: #ffffff;
+            border: none; /* Remove borders from the Amount input fields */
+            border-radius: 0; /* Remove border radius */
+            padding: 5px;
+            width: 50px;
+        }
+
+        /* Apply the specified background color and text color to the button */
+        .tabulator-header button {
+            background-color: hsla(203, 100%, 32%, 0.8);
+            color: #ffffff;
+            border: none; /* Remove borders from the button */
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+	  
+	  
+      </section>
+    </main>
+  </body>
+</html>
+
+
+
