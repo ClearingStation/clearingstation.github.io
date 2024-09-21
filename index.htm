@@ -342,6 +342,7 @@
 	       .content, .slide {padding: 50px 20px !important;}
 	       #main > ul {display: flex !important;}
 	   }
+           sup { position: relative; top: -0.5em; font-size: 50%; }
 
 	 </style>
 	 <!-- Add the slick-theme.css if you want default styling -->
@@ -424,8 +425,8 @@
     <main>
 
       <section>
-	<div class="slick-slider" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
-	  <div class="slide full-bg" style="background-image: url(https://images.unsplash.com/photo-1448932155749-638e51b56f03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80);">
+	<div>
+	  <div class="slide full-bg" style="min-height: 100vh; background-image: url(https://images.unsplash.com/photo-1448932155749-638e51b56f03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80);">
 	    <div class="slide-content">
 	      <h1>Do your business. <br/>We'll handle your finances.</h1>
 	      <h3>From bookkeeping to tax filing, ClearingStation Ltd. is the all-in-one financial partner your business can count on.</h3>
@@ -434,130 +435,276 @@
 	      </div>
 	    </div>
 	  </div>
-
-	  <div class="slide full-bg" style="background-image: url(anna.jpg); background-position: top right;">
-	    <div class="slide-content">
-	      <h1 style="color: #fff;max-width: 700px">
-		<span style="background: rgba(0,0,0,0.4); padding: 5px 10px;">Manitoba PHIA Compliance</span>
-	      </h1>
-	      <div style="max-width: 500px">
-		<p  style="color: #fff;background: rgba(0,0,0,0.4); padding: 5px 10px; display: inline;" class="mt-20">Ensuring Compliance with Manitoba's Personal Health Information Act in Your Accounting</p>
-	      </div>
-	      <div class="mt-20">
-		<a href="landing-doctors.htm" class="btn primary-btn">For Health Care Providers &raquo;</a>
-	      </div>
-	    </div>
-	  </div>
-	  
-	  <div class="slide full-bg" style="background-image: url(tyler.jpg)">
-	    <div class="slide-content">
-	      <div>
-		<h1 style="background: #fff; display: inline-block; padding: 5px 10px;">Years behind in filings?</h1>
-	      </div>
-	      <div>
-		<p style="background: #fff; display: inline-block; padding: 5px 10px;">We'll help you catch up.</p>
-		<div class="mt-20">
-		  <a href="start.htm" class="btn primary-btn">See our Retro Tax plans &raquo;</a>
-		</div>
-	      </div>
-	    </div>
-	  </div>
 	</div>
-	<script src="//code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<script type="text/javascript">
-	  jQuery(document).ready(function() {
-	      $(".slick-slider").slick({
-		  indexSlide:1,
-		  infinite: false,
-		  autoplay: true,
-		  autoplaySpeed: 3000,
-		  arrows: false,
-		  dots: false,
-		  speed: 800,
-		  slidesToShow: 3,
-		  // rtl: true,
-		  adaptiveHeight: false,
-		  accessibility: true,
-		  responsive: [
-		      {
-			  breakpoint: 1500,
-			  settings: {
-			      slidesToShow: 1,
-			      slidesToScroll: 1,
-			      infinite: false,
-			      dots: false,
-			      rows:1,
-			      slidesPerRow:1,
-			      adaptiveHeight: false,
-			  }
-		      },
-		      {
-			  breakpoint: 1224,
-			  settings: {
-			      slidesToShow: 1,
-			      slidesToScroll: 1,
-			      dots: false,
-			      adaptiveHeight: false,
-			      rows:1,
-			      slidesPerRow:1,
-			  }
-		      },
-		      {
-			  breakpoint: 665,
-			  settings: {
-			      slidesToShow: 1,
-			      slidesToScroll: 1,
-			      dots: false,
-			      adaptiveHeight: false, 
-			      rows:1,
-			      slidesPerRow:1,
-
-			  }
-		      },
-
-		  ]
-	      });
-	  });
-	</script>
       </section>
 
       <!-- About the company -->
+      <section style="background: white;">
+        <div class="content" style="">
+	  <div class="flex" style="justify-content: space-between; align-items: center; max-width: 1100px; gap: 80px">
+            <div style="max-width: 300px">
+              <img src="images/optimized/jennifer.jpg" class="img-responsive" />
+              Jennifer Flaming, VP
+            </div>
+            <div>
+	      <h2 style="line-height: 1.2em;">Tired of Drowning in Paperwork? Delegate to Us.</h2>
+	      <h3 style="line-height: 1.2em;">Our offer is simple: Do your business. We'll handle your finances.</h3>
+              <p class="mt-30" style="max-width: 700px">
+                Running a business is hard enough. Don't get slowed down with bookkeeping and tax headaches. At ClearingStation, we simplify your financial processes so you can focus on what really matters—growing your business and boosting your bottom line. From catching up on overdue taxes to handling payroll, we take care of the details so you don’t have to do it anymore.
+              </p>
+              <a href="about.htm" class="green btn primary-btn" style="padding: 10px 20px;">
+                Learn more about us &raquo;
+              </a>
+	    </div>
+          </div>
+	</div>
+      </section>
 
       <!-- Services overview -->
+      <section style="padding: 40px; background-color: #f4f4f4; font-family: Arial, sans-serif; color: #333; text-align: center;">
+        <div class="content">
+          <h2 style="color: #00468b;">Our Core Services</h2>
+          <h3 style="font-size: 1.4em;  margin-bottom: 60px;">
+            Leave your biggest headache to us and get back to what matters most for your growing business.
+          </h3>
 
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 30px">
+
+            <div style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 300px;">
+              <h3 style="font-size: 24px; color: #333; margin-bottom: 10px;">Monthly Bookkeeping</h3>
+              <p>Stop wasting time on spreadsheets. We track your income and expenses so you can focus on growing your revenue.</p>
+            </div>
+
+            <div style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 300px;">
+              <h3 style="font-size: 24px; color: #333; margin-bottom: 10px;">Tax Preparation & Filing</h3>
+              <p>Maximize your deductions and avoid costly penalties. We ensure you stay compliant and pay less in taxes.</p>
+            </div>
+
+            <div style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 300px;">
+              <h3 style="font-size: 24px; color: #333; margin-bottom: 10px;">Payroll Management</h3>
+              <p>Never miss a payroll deadline. We handle everything—accurate, on-time payroll every pay period.</p>
+            </div>
+
+            <div style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 300px;">
+              <h3 style="font-size: 24px; color: #333; margin-bottom: 10px;">Document Scanning<sup>1</sup></h3>
+              <p>Forget about scanning receipts and paperwork—we come to you, pick it up, and digitize everything for instant access.</p>
+            </div>
+          </div>
+
+          <a href="services.htm" class="btn primary-btn" style="background-color: #0077b6">Click here to learn more about our services &raquo;</a>
+
+        </div>
+      </section>
+      <!-- /Services overview -->
+
+      
       <!-- Special Features -->
+      <section style="padding-top: 100px; background: white;">
+        <div class="content">
+          <h2 class="text-center" style="line-height: 1.6em">Why Business Owners are switching to ClearingStation for Bookkeeping</h2>
+          <p class="text-center" style="font-size: 20px; color: #555; margin-bottom: 80px;">Discover why we’re the go-to for business owners seeking to streamline their bookkeeping and tax processes.</p>
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+            <div style="background-color: white; padding: 30px; margin: 20px; flex: 1; min-width: 250px; max-width: 400px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+              <h3 style="margin-bottom: 15px;">Get 10-15 Hours Back Each Month</h3>
+              <p style="font-size: 16px; color: #555;">With ClearingStation handling your bookkeeping, tax filings, and payroll, you’ll have more time to focus on your priorities.</p>
+            </div>
+
+            <div style="background-color: white; padding: 30px; margin: 20px; flex: 1; min-width: 250px; max-width: 400px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+              <h3 style="margin-bottom: 15px;">Save Thousands on Taxes</h3>
+              <p style="font-size: 16px; color: #555;">We don’t just prepare taxes—we find hidden deductions and missed opportunities that are saving our clients thousands of dollars every year.</p>
+            </div>
+
+            <div style="background-color: white; padding: 30px; margin: 20px; flex: 1; min-width: 250px; max-width: 400px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+              <h3 style="margin-bottom: 15px;">We Pick Up Your Documents</h3>
+              <p style="font-size: 16px; color: #555;">Don’t have time to scan and organize paperwork? We’ll come to your office, pick up your documents, and take care of everything.</p>
+            </div>
+
+            <div style="background-color: white; padding: 30px; margin: 20px; flex: 1; min-width: 250px; max-width: 400px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+              <h3 style="margin-bottom: 15px;">Switching is Easy and Seamless</h3>
+              <p style="font-size: 16px; color: #555;">We make switching seamless. We handle the entire transition, working directly with your current accountant or system.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- testimonials -->
+      <section style="background-color: #f0f4f8; padding: 60px 0; font-family: 'Arial', sans-serif; color: #333;">
+        <div class="content">
+          <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+            <h2 style="color: #0077b6; margin-bottom: 60px; text-align: center;">What Our Clients Are Saying</h2>
+
+            <!-- Testimonial 3 -->
+            <div style="background-color: #fff; padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-bottom: 40px;">
+              <p style="font-size: 1.2em; line-height: 1.3em; color: #555;">
+                "I don't even think about bookkeeping anymore. 
+                ClearingStation picks up a box of my documents every month, 
+                takes care of everything, and keeps me organized for tax season. 
+                I do not have to worry about taxes, remit PST, GST, Source Deductions and all that.
+                They handle it every month."</p>
+              <p style="font-size: 1.1em; font-weight: bold; color: #333; margin-top: 15px;">- Isaak K., ISK Mechanics, Selkirk, MB</p>
+            </div>
+
+            <!-- Testimonial 1 -->
+            <div style="background-color: #fff; padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-bottom: 40px;">
+              <p style="font-size: 1.2em; line-height: 1.3em; color: #555;">
+                "Jenn is incredibly knowledgeable and responsive, even on a Sunday afternoon. 
+                She consistently goes above and beyond to ensure everything is handled properly."
+              </p>
+              <p style="font-size: 1.1em; font-weight: bold; color: #333; margin-top: 15px;">- Nico A., Albrecht Enterprises Ltd., Fort St. John, BC</p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div style="background-color: #fff; padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-bottom: 80px;">
+              <p style="font-size: 1.2em; line-height: 1.3em; color: #555;">
+                "Jennifer found tax savings I never knew existed. They fixed errors from my old accountant and saved me thousands in taxes and penalties."</p>
+              <p style="font-size: 1.1em; font-weight: bold; color: #333; margin-top: 15px;">- Anonymous, Winnipeg, MB</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+              <a href="start.htm" style="padding: 15px 30px; background-color: #0077b6; color: #fff; text-decoration: none; text-transform: uppercase; font-weight: bold; font-size: 1.2em;">
+                Schedule a Free Consultation Today &raquo;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /testimonials -->
 
       <section style="background: white">
 	<div class="content">
-	  <h2>Join the Ranks of Successful Businesses in Canada</h2>
+	  <h2 class="text-center">Join the Ranks of Successful Businesses in Canada</h2>
 	  <div class="flex" style="align-items: center; gap: 10px;">
 	    <div style="min-width: 200px; text-align: center;">
 	      <svg style="display: inline-block; margin: 0 auto;" width="100px" xmlns="http://www.w3.org/2000/svg" viewBox="80 0 75 104.99"><defs><style>.cls-1,.cls-2{fill:none;}.cls-1{stroke:green;stroke-miterlimit:10;stroke-width:3.65px;}</style></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_3" data-name="Layer 3"><path class="cls-1" d="M90.59,4.88,89.13,48.35l2,52.88H127S126,76.85,125.71,75.92s-.66-9.54-.66-9.54l7.55-8.61,19.75-29s-3.71.13-4.77-.4-3.45-1.72-4-1.86a14.65,14.65,0,0,0-4.77,1.19,19.5,19.5,0,0,0-3.18,1.46l-2.12,1.59s1.19-3,1.33-3.45a6.76,6.76,0,0,0-1.06-4.37c-1.19-1.86-1.72-4.11-2.52-5.83a10.57,10.57,0,0,1-.93-2.78L126,14s.66,2.39-.13,3.18-.8-2.39-.8-2.39a2.22,2.22,0,0,1-2-.93c-.66-1.06-1.33-1.19-1.06-2.52a25.67,25.67,0,0,0,.8-2.92c0-.8-.93-2.25-.93-2.65V4.22Z"/><rect class="cls-2" width="241.49" height="104.99"/></g></g></svg>
 	    </div>
 	    <div>
               <p class="mb-20">Our clients are successful small businesses in the Software, Medical, Financial, Trucking, Mechanics, Plumbing, and Construction industries. Join their ranks by partnering with us.</p>
-              <p>Proudly based in Manitoba, Canada.</p>
+              <p>We're proudly based in Manitoba, Canada.</p>
             </div>
 
 	  </div>
 	</div>
       </section>
 
-      <!-- Testimonials -->
+      <section style="text-align: center;">
+        <div class="content">
+          <h2 style="font-size: 2rem; margin-bottom: 50px;">How We Make Your Life Easier</h2>
+        
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+            <!-- We Come to You -->
+            <div style="max-width: 300px; padding: 30px 20px 40px 20px; background-color: white; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+              <img src="https://img.icons8.com/ios-filled/100/000000/delivery.png" alt="We Come to You" style="width: 50px; margin-bottom: 10px;">
+              <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Forget the Drive<sup>1</sup></h3>
+              <p style="font-size: 1rem; line-height: 1.5;">We’ll pick up your documents, digitize them, and handle everything—so you don’t have to.</p>
+            </div>
 
-      <section>
-	<div class="content" style="background: #fff; margin: 100px auto;">
-	  <h2 class="mb-20" style="line-height: 1.3;">
-            Why Business Owners are switching to ClearingStation Ltd. for Bookkeeping Services
-          </h2>
-	  <h3 class="mb-30">
-            Experience managing your business with ClearingStation on your side. Start with a free consultation to understand our client services.
-            We simplify your financial life: All you need to do is take a photo of a receipt or upload a digital document, and we'll handle the rest. 
-            Your documents will be booked accurately and stored securely for 7 years, kept up-to-date, and accessible from any location.
-            In the event of an audit, we provide all necessary proofs for transactions at no extra charge.
-	  </h3>
-	  <a href="start.htm?type=monthly" class="green btn primary-btn" style="padding: 10px 20px;">Start Your Free Consultation Today &raquo;</a>
+            <!-- We Do It All -->
+            <div style="max-width: 300px; padding: 30px 20px 40px 20px; background-color: white; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+              <img src="https://img.icons8.com/ios-filled/100/000000/checklist.png" alt="We Do It All" style="width: 50px; margin-bottom: 10px;">
+              <h3 style="font-size: 1.25rem; margin-bottom: 10px;">We Do It All</h3>
+              <p style="font-size: 1rem; line-height: 1.5;">From bookkeeping to payroll, taxes to compliance, we manage your entire financial back office.</p>
+            </div>
+
+            <!-- You Focus on Growing Your Business -->
+            <div style="max-width: 300px; padding: 30px 20px 40px 20px; background-color: white; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+              <img src="https://img.icons8.com/ios-filled/100/000000/rocket--v1.png" alt="You Focus on Growing Your Business" style="width: 50px; margin-bottom: 10px;">
+              <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Focus on Your Business</h3>
+              <p style="font-size: 1rem; line-height: 1.5;">With your financials under control, you’ll have more time and mental energy to scale your business.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Personal note -->
+      <section style="background: white; background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);">
+	<div class="content">
+	  <div class="note" style="margin: 0 auto;">
+            <div class="pin"></div>
+            <h3>A Personal Note</h3>
+            <p>
+              As a business owner, you know the value of time better than anyone—it's the one thing you can’t get back. Yet, every week, hours slip away on paperwork, bookkeeping, and taxes, keeping you from getting things done that you're actually getting paid for.
+            </p>
+            <br />
+            <p>
+              At ClearingStation, we step in so you can step out of those tasks. When your finances are managed efficiently, you're free to grow your business, brainstorm your next big idea, or simply take a break you've more than earned.
+            </p><br />
+            <p>
+              More and more business owners like you are switching to ClearingStation because they understand that time spent on paperwork is time lost.
+            </p>
+            <br />
+            <p>
+              I look forward to helping you get that time back.
+            </p>
+            <br />
+            <p>Best regards, <br>Jennifer Flaming <br>VP, ClearingStation</p>
+          </div>
+          <style>
+
+            .note {
+                background-color: #fdfd96; /* Light yellow paper color */
+                padding: 20px;
+                max-width: 500px;
+                border: 2px solid #e3c565; /* Border simulating note edges */
+                border-radius: 10px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+                font-size: 1.2rem;
+                line-height: 1.6;
+                color: #333;
+                position: relative;
+            }
+
+            .note:before {
+                content: '';
+                position: absolute;
+                top: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 10px;
+                background-color: #f9f9f9;
+                border-radius: 5px;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Simulating a folded crease */
+            }
+
+            .note h3 {
+                font-family: 'Caveat', cursive; /* Handwritten style */
+                margin: 0 0 10px 0;
+                font-size: 1.8rem;
+            }
+
+            .note p {
+                margin: 0;
+            }
+
+            .pin {
+                position: absolute;
+                top: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 30px;
+                height: 30px;
+                background-color: red;
+                border-radius: 50%;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                z-index: 10;
+            }
+
+            .pin:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 8px;
+                height: 8px;
+                background-color: white;
+                border-radius: 50%;
+            }
+          </style>
+	  <div class="text-center" style="margin-top: 30px">
+            <a href="start.htm" class="green btn primary-btn" style="padding: 10px 20px;">Start Your Free Consultation Today &raquo;</a>
+          </div>
 	</div>
       </section>
 
