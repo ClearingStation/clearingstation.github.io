@@ -405,7 +405,7 @@
 			+ 'Phone number: \n<a href="tel:' + encodeURIComponent(document.getElementById('phonenumber').value) + '">' + document.getElementById('phonenumber').value + '</a>';
 		  window.fetch('https://api.telegram.org/bot5540491934:AAF6BYfiI0-1PjQuVjYPGlCUN-EprNwxjuA/sendMessage?chat_id=-780709397&parse_mode=html&text=' + encodeURIComponent(text));
 		  var formDiv = document.getElementById("form");
-		  formDiv.innerHTML = "<p>Thank you for taking the first step towards optimizing your business with ClearingStation Ltd.! Our team will review your details, and we'll be in touch with you shortly to schedule your free consultation. During this consultation, we will discuss how our bookkeeping services can benefit your business and address any questions you may have.</p>";
+		  formDiv.innerHTML = "<p style='border: 4px solid green; padding: 10px;'><b>Thank You for Scheduling Your Consultation</b><br/><br/>We're excited to connect with you and make your journey easier. Expect a call from Jennifer soon. We look forward to helping you for whatever is next for your business.</p>";
 		  gtag('event', 'conversion', {'send_to': 'AW-10952607464/Zz3-CO6Cs9wYEOiNzuYo'});
 	      }
 	    </script>
