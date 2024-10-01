@@ -17,7 +17,6 @@
       }
       .container {
           margin: 50px auto;
-          width: 100%;
           max-width: 600px;
           background-color: white;
           padding: 40px;
@@ -50,7 +49,7 @@
       input:focus {
       }
       .radio-options {
-          margin: 20px 0;
+          margin: 20px 0 0 0;
           display: flex;
           flex-direction: column;
       }
@@ -116,6 +115,7 @@
           max-width: 600px;
           width: 100%;
       }
+     @media (max-width: 600px) {.popup {padding: 10px 20px 30px 20px;}}
       .selected-info {
           background-color: #f0f0f0;
           padding: 20px 15px;
@@ -123,9 +123,13 @@
           cursor: pointer;
           width: 100%;
       }
-      #infoForm {
-          margin-top: 20px;
-      }
+     .selection-group {
+         display: flex; align-items: center; justify-content: space-between;
+     }
+     @media (max-width: 600px) {.selection-group {flex-direction: column;} .selection-group .selected-info {width: 100%; margin: 0;} .selection-group button {display: block; width: 100%; font-size: 0.8em; padding: 10px !important; line-height: 1em;} #infoForm {margin-top: 30px !important;}}
+     #infoForm {
+         margin-top: 20px;
+     }
       .trust-logos {
           display: flex;
           justify-content: space-between;
@@ -214,7 +218,9 @@
               <div><span>$1800 CAD in Accounting Credit</span> <br /> Spend $700 on Business Plan & Document Scanning in Your First 30 Days.</div>
             </label>
           </div>
-          <button class="btn blue primary-btn" style="float: right;" id="selectCreditBtn">Select Credit</button>
+          <div style="text-align: right;">
+              <button class="btn blue primary-btn" id="selectCreditBtn">Select Credit</button>
+          </div>
         </div>
       </div>
 
@@ -222,7 +228,7 @@
       <div class="container" id="step2">
         <h1>Claim Your Accounting Credit</h1>
         <p>You've selected: <span id="selectedCredit"></span></p>
-        <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="selection-group">
           <div class="selected-info" id="selectedInfo"></div>
           <button class="btn primary-btn blue change-selection-btn" id="changeSelectionBtn">Change Selection</button>
         </div>
@@ -246,12 +252,11 @@
           <div><img src="images/optimized/ssl-badge.png" alt="" width="140" /></div>
         </div>
 
-      </div>
-
-
-      <div class="flex" style="display: flex;align-items: center; gap: 10px; max-width: 450px; margin: 50px auto; opacity: 0.8">
+        <div class="flex" style="display: flex;align-items: center; gap: 10px; max-width: 450px; margin: 50px auto; opacity: 0.8">
         Proudly Based in Manitoba, Canada
-        <svg style="display: inline-block; margin: 0 auto;" width="60px" xmlns="http://www.w3.org/2000/svg" viewBox="80 0 75 104.99"><defs><style>.cls-1,.cls-2{fill:none;}.cls-1{stroke:green;stroke-miterlimit:10;stroke-width:3.65px;}</style></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_3" data-name="Layer 3"><path class="cls-1" d="M90.59,4.88,89.13,48.35l2,52.88H127S126,76.85,125.71,75.92s-.66-9.54-.66-9.54l7.55-8.61,19.75-29s-3.71.13-4.77-.4-3.45-1.72-4-1.86a14.65,14.65,0,0,0-4.77,1.19,19.5,19.5,0,0,0-3.18,1.46l-2.12,1.59s1.19-3,1.33-3.45a6.76,6.76,0,0,0-1.06-4.37c-1.19-1.86-1.72-4.11-2.52-5.83a10.57,10.57,0,0,1-.93-2.78L126,14s.66,2.39-.13,3.18-.8-2.39-.8-2.39a2.22,2.22,0,0,1-2-.93c-.66-1.06-1.33-1.19-1.06-2.52a25.67,25.67,0,0,0,.8-2.92c0-.8-.93-2.25-.93-2.65V4.22Z"/><rect class="cls-2" width="241.49" height="104.99"/></g></g></svg>
+            <svg style="display: inline-block; margin: 0 auto;" width="60px" xmlns="http://www.w3.org/2000/svg" viewBox="80 0 75 104.99"><defs><style>.cls-1,.cls-2{fill:none;}.cls-1{stroke:green;stroke-miterlimit:10;stroke-width:3.65px;}</style></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_3" data-name="Layer 3"><path class="cls-1" d="M90.59,4.88,89.13,48.35l2,52.88H127S126,76.85,125.71,75.92s-.66-9.54-.66-9.54l7.55-8.61,19.75-29s-3.71.13-4.77-.4-3.45-1.72-4-1.86a14.65,14.65,0,0,0-4.77,1.19,19.5,19.5,0,0,0-3.18,1.46l-2.12,1.59s1.19-3,1.33-3.45a6.76,6.76,0,0,0-1.06-4.37c-1.19-1.86-1.72-4.11-2.52-5.83a10.57,10.57,0,0,1-.93-2.78L126,14s.66,2.39-.13,3.18-.8-2.39-.8-2.39a2.22,2.22,0,0,1-2-.93c-.66-1.06-1.33-1.19-1.06-2.52a25.67,25.67,0,0,0,.8-2.92c0-.8-.93-2.25-.93-2.65V4.22Z"/><rect class="cls-2" width="241.49" height="104.99"/></g></g></svg>
+        </div>
+
       </div>
 
     </div>
@@ -336,8 +341,9 @@
               step2.style.display = 'block';
 
               // Display the selected credit option in step 2
-              selectedCreditDisplay.textContent = selectedCredit;
-              selectedInfoDisplay.textContent = selectedCredit;
+              const radioOption = document.querySelector(`input[value="${selectedCredit}"]`);
+              selectedCreditDisplay.textContent = radioOption.getAttribute('data-text');
+              selectedInfoDisplay.textContent = radioOption.getAttribute('data-text');
           });
 
           // Allow the user to change their credit selection
