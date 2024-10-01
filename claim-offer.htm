@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="EN">
+  <head>
+    <title>Claim Your Accounting Credit | ClearingStation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+          font-family: 'Roboto', sans-serif;
+          background-color: #f5f5f5;
+          color: #333;
+          margin: 0;
+          padding: 0;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+      }
+      .container {
+          margin: 50px auto;
+          width: 100%;
+          max-width: 600px;
+          background-color: white;
+          padding: 40px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          display: none;
+      }
+      h1, h2 {
+          font-size: 26px;
+          color: #333;
+          margin-bottom: 20px;
+      }
+      p {
+          font-size: 16px;
+          line-height: 1.5;
+      }
+      .form-section {
+          margin-bottom: 20px;
+      }
+      .form-section label {
+          font-size: 16px;
+          font-weight: bold;
+          display: block;
+          margin-bottom: 5px;
+      }
+      input[type="text"], input[type="email"], input[type="tel"] {
+          width: 100%;
+          margin-bottom: 20px;
+      }
+      input:focus {
+      }
+      .radio-options {
+          margin: 20px 0;
+          display: flex;
+          flex-direction: column;
+      }
+      .radio-options label {
+          display: flex;
+          align-items: center;
+          background-color: #f0f4f8;
+          border: 2px solid transparent;
+          border-radius: 8px;
+          padding: 15px;
+          margin-bottom: 10px;
+          cursor: pointer;
+          transition: background-color 0.3s, border-color 0.3s;
+      }
+      .radio-options input[type="radio"] {
+          margin-right: 15px;
+          width: 20px;
+          height: 20px;
+      }
+      .radio-options label:hover {
+          background-color: #e3f2fd;
+      }
+      .radio-options label div span {
+          font-weight: bold;
+      }
+      .radio-options input[type="radio"]:checked + label {
+          border-color: #6200ea;
+          background-color: #e3f2fd;
+      }
+      .submit-btn, .change-selection-btn {
+          display: inline-block;
+          padding: 12px 20px;
+          background-color: #6200ea;
+          color: white;
+          text-align: center;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s;
+          white-space: nowrap !important;
+          margin: 0 !important;
+      }
+      .submit-btn:hover, .change-selection-btn:hover {
+          background-color: #3700b3;
+      }
+      .overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          display: none;
+          justify-content: center;
+          align-items: center;
+      }
+      .popup {
+          background-color: white;
+          padding: 40px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          max-width: 600px;
+          width: 100%;
+      }
+      .selected-info {
+          background-color: #f0f0f0;
+          padding: 20px 15px;
+          margin: 15px 0;
+          cursor: pointer;
+          width: 100%;
+      }
+      #infoForm {
+          margin-top: 20px;
+      }
+      .trust-logos {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 20px;
+      }
+      .trust-logos img {
+          max-width: 80px;
+          filter: grayscale(100%);
+          transition: filter 0.3s;
+      }
+      .trust-logos img:hover {
+          filter: grayscale(0%);
+      }
+      input {   margin-bottom: 10px;border-radius: 6px !important; font-size: 17px;padding: 14px 18px;border: 2px solid #EBEBEB;box-sizing: border-box;transition: 0.3s border-color, 0.3s box-shadow;box-shadow: 0px 5px 10px rgba(0,0,0,0.03);}
+      input:focus {border-color: #2F80ED;z-index: 10; outline: none;}
+      .btn {
+          display: inline-block;
+          margin-bottom: 0;
+          font-weight: 400;
+          text-align: center;
+          white-space: wrap;
+          vertical-align: middle;
+          touch-action: manipulation;
+          cursor: pointer;
+          background-image: none;
+          border: 1px solid transparent;
+          padding: 10px 20px;
+          font-size: 16px;
+          line-height: 1.5;
+          border-radius: 4px;
+          word-wrap: break-word;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          transition: all 0.3s ease;  /* Smooth transition for hover effects */
+      }
+
+      /* Mobile Optimizations */
+      @media (max-width: 768px) {
+          .btn {
+              font-size: 14px;
+              padding: 8px 15px;
+              max-width: 100%; /* Prevent overflow */
+          }
+      }
+      .primary-btn {background: #75af26;color: #fff !important;box-shadow: none;border: 3px solid transparent;padding: 13px 16px !important;transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */}
+      /* Add subtle animation for attention grabbing */
+      .primary-btn.animated {animation: pulse 2s infinite;}
+      /* Subtle pulse effect */
+      @keyframes pulse {0% {transform: scale(1);}50% {transform: scale(1.05);}100% {transform: scale(1);}}
+      .primary-btn.outlined {background: #fff;color: #75af26 !important;border-color: #75af26;transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */}
+      /* Hover states */
+      .btn:hover {background-color: #e6e6e6; /* Add hover effect */}
+      .btn {font-size: 19px;letter-spacing: 0.15px;line-height: 28px;border-radius: 0;font-weight: bold;margin-right: 18px;margin-top: 18px;text-shadow: none;padding: 13px 56px;text-transform: uppercase;padding: 13px 0;max-width: 100%;}
+      .green {  color: #fff !important;background-color: #27AE60;}
+      .blue {background-color: #0077b6;}
+
+    </style>
+  </head>
+  <body>
+
+    <div>
+
+      <!-- Step 1: Select Credit Offer -->
+      <div class="overlay" id="step1">
+        <div class="popup">
+          <h1>Select Your Accounting Credit</h1>
+          <div class="radio-options">
+
+            <label for="credit600">
+              <input type="radio" id="credit600" name="credit" value="600" data-text="$600 CAD in Accounting Credit">
+              <div><span>$600 CAD in Accounting Credit</span> <br /> Spend $300 on our Standard Plan in Your First 30 Days.</div>
+            </label>
+
+
+            <label for="credit1200">
+              <input type="radio" id="credit1200" name="credit" value="1200" data-text="$1200 CAD in Accounting Credit">
+              <div><span>$1200 CAD in Accounting Credit</span> <br /> Spend $500 on our Business Plan in Your First 30 Days.</div>
+            </label>
+
+
+            <label for="credit1800">
+              <input type="radio" id="credit1800" name="credit" value="1800" data-text="$1800 CAD in Accounting Credit">
+              <div><span>$1800 CAD in Accounting Credit</span> <br /> Spend $700 on Business Plan & Document Scanning in Your First 30 Days.</div>
+            </label>
+          </div>
+          <button class="btn blue primary-btn" style="float: right;" id="selectCreditBtn">Select Credit</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Enter Personal Information -->
+      <div class="container" id="step2">
+        <h1>Claim Your Accounting Credit</h1>
+        <p>You've selected: <span id="selectedCredit"></span></p>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="selected-info" id="selectedInfo"></div>
+          <button class="btn primary-btn blue change-selection-btn" id="changeSelectionBtn">Change Selection</button>
+        </div>
+
+        <form id="infoForm">
+          <div class="form-section">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+            <button type="submit" class="btn primary-btn submit-btn" style="width: 100%;">Submit Info</button>
+          </div>
+        </form>
+
+        <!-- Trust Logos -->
+        <div class="trust-logos" style="margin-top: 50px;">
+          <div><img src="images/optimized/gaap.png" alt="" width="100" /></div>
+          <div><img src="images/optimized/dun.png" alt="" width="120" /></div>
+          <div><img src="images/optimized/ssl-badge.png" alt="" width="140" /></div>
+        </div>
+
+      </div>
+
+
+      <div class="flex" style="display: flex;align-items: center; gap: 10px; max-width: 450px; margin: 50px auto; opacity: 0.8">
+        Proudly Based in Manitoba, Canada
+        <svg style="display: inline-block; margin: 0 auto;" width="60px" xmlns="http://www.w3.org/2000/svg" viewBox="80 0 75 104.99"><defs><style>.cls-1,.cls-2{fill:none;}.cls-1{stroke:green;stroke-miterlimit:10;stroke-width:3.65px;}</style></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_3" data-name="Layer 3"><path class="cls-1" d="M90.59,4.88,89.13,48.35l2,52.88H127S126,76.85,125.71,75.92s-.66-9.54-.66-9.54l7.55-8.61,19.75-29s-3.71.13-4.77-.4-3.45-1.72-4-1.86a14.65,14.65,0,0,0-4.77,1.19,19.5,19.5,0,0,0-3.18,1.46l-2.12,1.59s1.19-3,1.33-3.45a6.76,6.76,0,0,0-1.06-4.37c-1.19-1.86-1.72-4.11-2.52-5.83a10.57,10.57,0,0,1-.93-2.78L126,14s.66,2.39-.13,3.18-.8-2.39-.8-2.39a2.22,2.22,0,0,1-2-.93c-.66-1.06-1.33-1.19-1.06-2.52a25.67,25.67,0,0,0,.8-2.92c0-.8-.93-2.25-.93-2.65V4.22Z"/><rect class="cls-2" width="241.49" height="104.99"/></g></g></svg>
+      </div>
+
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const step1 = document.getElementById('step1');
+          const step2 = document.getElementById('step2');
+          const creditOptions = document.getElementsByName('credit');
+          const selectedCreditDisplay = document.getElementById('selectedCredit');
+          const selectedInfoDisplay = document.getElementById('selectedInfo');
+          const changeSelectionBtn = document.getElementById('changeSelectionBtn');
+          const selectCreditBtn = document.getElementById('selectCreditBtn');
+          const infoForm = document.getElementById('infoForm');
+
+          // Function to get query parameters
+          function getQueryParam(param) {
+              const urlParams = new URLSearchParams(window.location.search);
+              return urlParams.get(param);
+          }
+
+
+          // Show step 1 (credit selection) on page load by default
+          function showStep1() {
+              step1.style.display = 'flex';
+              step2.style.display = 'none';
+          }
+
+          // Show step 2 (info form) and pre-fill credit if a query parameter is present
+          function showStep2(selectedCreditValue) {
+              step1.style.display = 'none';
+              step2.style.display = 'block';
+              const radioOption = document.querySelector(`input[value="${selectedCreditValue}"]`);
+              selectedCreditDisplay.textContent = radioOption.getAttribute('data-text');
+              selectedInfoDisplay.textContent = radioOption.getAttribute('data-text');
+
+              // Automatically select the radio button based on the query parameter
+              if (radioOption) {
+                  radioOption.checked = true;
+              }
+          }
+
+          // Check if there is a query parameter for credit selection
+          const creditParam = getQueryParam('opt');
+          if (creditParam) {
+              // Map the URL parameter value to the corresponding credit selection
+              let selectedCreditValue = null;
+              switch (creditParam) {
+              case '600':
+                  selectedCreditValue = "600";
+                  break;
+              case '1200':
+                  selectedCreditValue = "1200";
+                  break;
+              case '1800':
+                  selectedCreditValue = "1800";
+                  break;
+              }
+              if (selectedCreditValue) {
+                  showStep2(selectedCreditValue);
+              }
+          } else {
+              showStep1();
+          }
+
+          // Event listener for selecting the credit option
+          selectCreditBtn.addEventListener('click', function() {
+              let selectedCredit = null;
+              for (let i = 0; i < creditOptions.length; i++) {
+                  if (creditOptions[i].checked) {
+                      selectedCredit = creditOptions[i].value;
+                      break;
+                  }
+              }
+
+              if (!selectedCredit) {
+                  alert('Please select a credit option.');
+                  return;
+              }
+
+              // Hide step 1 and show step 2
+              step1.style.display = 'none';
+              step2.style.display = 'block';
+
+              // Display the selected credit option in step 2
+              selectedCreditDisplay.textContent = selectedCredit;
+              selectedInfoDisplay.textContent = selectedCredit;
+          });
+
+          // Allow the user to change their credit selection
+          changeSelectionBtn.addEventListener('click', function() {
+              step2.style.display = 'none';
+              step1.style.display = 'flex';
+          });
+
+          selectedInfoDisplay.addEventListener('click', function() {
+              step2.style.display = 'none';
+              step1.style.display = 'flex';
+          });
+
+          // Validate and submit the form
+          infoForm.addEventListener('submit', function(event) {
+              event.preventDefault();  // Prevent form from submitting immediately
+
+              const emailInput = document.getElementById('email');
+              const phoneInput = document.getElementById('phone');
+
+              // Validate email
+              if (!emailInput.value) {
+                  alert('Please enter your email address.');
+                  emailInput.focus();
+                  return;
+              }
+
+              if (!validateEmail(emailInput.value)) {
+                  alert('Please enter a valid email address.');
+                  emailInput.focus();
+                  return;
+              }
+
+              // Validate phone
+              if (!phoneInput.value) {
+                  alert('Please enter your phone number.');
+                  phoneInput.focus();
+                  return;
+              }
+
+              if (!validatePhone(phoneInput.value)) {
+                  alert('Please enter a valid phone number.');
+                  phoneInput.focus();
+                  return;
+              }
+
+              send({
+                  credit: selectedCreditDisplay.textContent,
+                  email: emailInput.value,
+                  phone: phoneInput.value
+              });
+
+              // Optionally send the form data via fetch API or another method
+              console.log({
+                  credit: selectedCreditDisplay.textContent,
+                  email: emailInput.value,
+                  phone: phoneInput.value
+              });
+          });
+
+          function send(data){
+              const text =
+                    'Credit: \n<b>' + data.credit + '</b>\n\n'
+                    + 'Email: \n<b>' + data.email + '</b>\n\n'
+                    + 'Phone number: \n<a href="tel:' + encodeURIComponent(data.phone) + '">' + data.phone + '</a>';
+              window.fetch('https://api.telegram.org/bot5540491934:AAF6BYfiI0-1PjQuVjYPGlCUN-EprNwxjuA/sendMessage?chat_id=-780709397&parse_mode=html&text=' + encodeURIComponent(text));
+              var formDiv = document.getElementById("infoForm");
+              formDiv.innerHTML = "<p style='border: 4px solid green; padding: 10px;'><b>You Claimed Your Credit</b><br/><br/>We're excited to help you get started and make your journey easier. Expect a call from Jennifer soon. We look forward to helping you for whatever is next for your business.</p>";
+              gtag('event', 'conversion', {'send_to': 'AW-10952607464/Zz3-CO6Cs9wYEOiNzuYo'});
+          }
+
+          // Basic email validation
+          function validateEmail(email) {
+              const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              return emailPattern.test(email);
+          }
+
+          // Basic phone number validation
+          function validatePhone(phone) {
+              const phonePattern = /^\d{10,15}$/;
+              return phonePattern.test(phone);
+          }
+      });
+      </script>
+
+  </body>
+</html>
