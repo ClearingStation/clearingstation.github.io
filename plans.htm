@@ -213,16 +213,77 @@
 	   section { border-bottom: 1px solid #d8d8d8;}
 	   .content {max-width: 1500px; margin: 0 auto; padding: 100px; font-size: 18px}
 
-	   .plan-wrapper {display: flex; align-items: baseline; justify-content: center; margin-bottom: 100px}
-	   .plan {display: inline-block;background: white; margin: 0 30px;box-shadow: rgba(0, 0, 0, 0.13) 1px 1px 20px 0px;position: relative;width: 500px;}
-	   .plan > div {padding: 20px 30px}
-	   .plan > div:first-of-type {  background-color: rgb(250, 249, 247);border-radius: 5px 5px 0px 0px;color: rgb(47, 48, 52);padding: 43px 34px;text-align: center;}
-	   .plan > div:nth-of-type(3) {  border-top: 1px solid rgb(212, 210, 206);padding: 45px 70px 25px 55px; }
-	   .plan h2 {font-size: 32px;font-weight: bold; margin-bottom: 0px;}
-	   .plan p {margin-bottom: 20px; margin-top: 20px}
-	   .plan small {font-size: 16px;}
-	   .plan .btn { margin: 0}
-	   .plan li {margin-bottom: 10px;}
+	   .plan-wrapper {
+               display: flex;
+               justify-content: center;
+               gap: 40px;
+               margin-top: 50px;
+           }
+           .plan {
+               width: 100%;
+               max-width: 370px;
+               background: white;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+               border-radius: 10px;
+               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+               margin: 0;
+           }
+           .plan > div {
+               padding: 30px;
+           }
+           .plan.highlighted {
+               background-color: rgb(8, 45, 94);
+               color: white;
+           }
+           .plan .header-section {
+               display: flex;
+               flex-direction: column;
+               min-height: 190px;
+               justify-content: space-between;
+               border-bottom: 1px solid #222;
+               margin-bottom: 30px;
+               padding-bottom: 15px;
+           }
+           .plan.highlighted .header-section {
+               border-color: #fff;
+           }
+           .plan.highlighted h2 {color: #fff;}
+           .plan h2 {
+               font-size: 1.6em;
+               margin-bottom: 0;
+           }
+           .plan .tagline {
+               font-size: 0.8em;
+           }
+           .plan .plan-list {
+               display: flex;
+               flex-direction: column;
+               gap: 20px
+           }
+           .plan .plan-list li {
+               display: flex;
+               align-items: center;
+               gap: 10px;
+
+               font-size: 0.8em;
+           }
+           .plan .plan-footer {
+               margin-top: 0px;
+               display: flex;
+               gap: 8px;
+               padding-top: 10px;
+               justify-content: space-between;
+           }
+           .plan .plan-footer .btn {
+               font-size: 0.8em;
+               padding: 5px 10px !important;
+               font-weight: regular !important;
+           }
+           .plan.highlighted .plan-footer .btn.outlined {
+               color: white !important; border-color: white;
+           }
 	   .most-popular-label {width: 145px;background-color: rgb(219, 174, 85);border-radius: 4px;color: rgb(255, 255, 255);font-size: 14px;padding: 5px 12px;position: absolute;right: 16px;text-align: center;text-transform: uppercase;top: -14px;}
 	   b {font-weight: 600;}
 
@@ -265,10 +326,10 @@
            .primary-btn.animated {animation: pulse 2s infinite;}
            /* Subtle pulse effect */
            @keyframes pulse {0% {transform: scale(1);}50% {transform: scale(1.05);}100% {transform: scale(1);}}
-           .primary-btn.outlined {background: #fff;color: #75af26 !important;border-color: #75af26;transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */}
+           .primary-btn.outlined {background: transparent;color: #75af26 !important;border-color: #75af26;transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */}
            /* Hover states */
            .btn:hover {background-color: #e6e6e6; /* Add hover effect */}
-	   .btn {font-size: 19px;letter-spacing: 0.15px;line-height: 28px;border-radius: 0;font-weight: bold;margin-right: 18px;margin-top: 18px;text-shadow: none;padding: 13px 56px;text-transform: uppercase;padding: 13px 0;max-width: 100%;}
+	   .btn {font-size: 19px;letter-spacing: 0.15px;line-height: 28px;border-radius: 0;font-weight: bold;text-shadow: none;padding: 13px 56px;text-transform: uppercase;padding: 13px 0;max-width: 100%;}
 	   .green {  color: #fff !important;background-color: #27AE60;}
            .blue {background-color: #0077b6;}
 	   .industries {justify-content: space-between;}
@@ -302,8 +363,8 @@
                .content, .slide {padding: 20px 10px; /* Reduce padding on content for mobile */}
                .img-responsive {max-width: 100%; /* Ensure images scale with screen size */height: auto; /* Maintain image proportions */}
                .flex, .flex-space-between {display: block; /* Stack flex items vertically */width: 100%; /* Full width for flex items */}
-               .plan {width: 100%; /* Plans span full width */margin: 20px 0; /* Add space between plans */}
-               .plan-wrapper {flex-direction: column; /* Stack plan elements vertically */}
+               .plan-wrapper {flex-direction: column; margin-top: 30px;}
+               .plan {max-width: 100% !important;}
                nav#main {padding-left: 10px;padding-right: 10px;margin-top: 20px; /* Adjust navigation margin */}
                footer {padding: 30px 20px; /* Adjust footer padding */}
                /* Navbar on Mobile */
@@ -354,6 +415,8 @@ src="https://www.facebook.com/tr?id=1217446149566169&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
+<script src="offer.js"></script>
+
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -395,91 +458,189 @@ src="https://www.facebook.com/tr?id=1217446149566169&ev=PageView&noscript=1"
 
     <main>
       <section class="content">
-
-	<h1>Plans</h1>
-
-	<h2 class="mb-20">Simple, straightforward pricing for all your business needs.</h2>
-
-	<h3 class="mb-50">Experience streamlined professional accounting, at the fraction of the cost.</h3>
-
+	<div class="text-center">
+          <h2 class="mb-20" style="margin-top: 100px">Straightforward Pricing.</h2>
+	  <h3>Get the partner your business needs to grow, at an unbeatable price.</h3>
+        </div>
 
 	<div class="plan-wrapper">
 
+          <!-- standard -->
 	  <div class="plan">
-	    <div style="background-color: rgb(8, 45, 94);" class="text-white">
-	      <div class="most-popular-label">Most popular</div>
-	      <h2 class="text-white">Standard Plan</h2>
-	      <p>Streamlined & Affordable Accounting</p>
-	      <h2 class="text-white">$300 <small>/mo</small></h2>
-	    </div>
-	    <div>
-              Includes:<br /><br />
-	      <ul class="plan-list">
-                <li>
-                  <b>Dedicated Bookkeeper:</b>
-                  No more dealign with multiple contacts or explaining the peculiarities of your business over and over.
-                  Your dedicated bookkeeper knows your financials inside and out, providing personalized direct support whenever you need it.
-                </li>
-                <li>
-                  <b>Audit-Ready Monthly Reports:</b>
-                  All your financial reports are prepared with proof attached to every transaction. You're ready for audits at any time - without scrambling for paperwork.
-                </li>
-                <li>
-                  <b>Year-End Financial Package Included:</b>
-                  
-                  Includes a full income statement, balance sheet, and insights on profit/loss trends.
-                </li>
-                <li>
-                  <b>Tax Filing:</b>
-                  GST, and RST submissions included. Add-on: T2 tax filing for $450/year.
-                </li>
-	      </ul>
-	    </div>
-	    <div class="text-center">
-	      <a href="start.htm?type=monthly" class="green btn primary-btn animated" style="padding: 10px 20px;">Start Your Free Consultation &raquo;</a>
+            <div>
+              <div class="header-section">
+	        <div>
+                  <div class="most-popular-label">Most popular</div>
+	          <h2 class="sarabun-semibold">Bookkeeping</h2>
+	          <p class="tagline">Reliable bookkeeping to cover your corporate financial reporting needs.</p>
+                </div>
+	        <h2>$299 <small>/mo</small></h2>
+	      </div>
+	      <div>
+                <p style="font-size: 0.8em; margin-bottom: 20px"><b>For companies averaging less than 100 monthly bank transactions:</b></p>
+	        <ul class="plan-list">
+                  <li>
+                    <div><svg xmlns="http://www.w3.org/2500/svg" width="25" height="25" viewBox="0 0 16 16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6 11 13 4"></polyline></svg></div>
+                    <div>Dedicated Bookkeeper</div>
+                  </li>
 
-	      <!--Take the first step towards a more efficient and profitable business -->
-	    </div>
-	  </div>
+                  <li>
+                    <div><svg xmlns="http://www.w3.org/2500/svg" width="25" height="25" viewBox="0 0 16 16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6 11 13 4"></polyline></svg></div>
+                    <div>Accurate monthly books</div>
+                  </li>
 
-	  <div class="plan">
-	    <div>
-	      <h2>Business Plan</h2>
-	      <p>Elevate Your Business</p>
-	      <h2>$500 <small>/mo</small></h2>
-	    </div>
-	    <div>
-	      <ul class="plan-list">
-                <li>
-                  <b>Elevate Your Financial Strategy:</b>
-                  Take your business to new heights with advanced financial services.
-                </li>
-                <li>
-                  <b>Comprehensive Financial Analysis:</b>
-                  Access everything in the Basic Plan plus in-depth financial statement reviews, profit allocation calculations, and expert tax planning.
-                </li>
-                <li>
-                  <b>Comprehensive Tax Peace of Mind:</b>
-                  Ensure smooth sailing with sales tax filings, corporate T2 filing, payroll management, and T4 issuance.
-                </li>
-              </ul>
+                  <li>
+                    <div><svg xmlns="http://www.w3.org/2500/svg" width="25" height="25" viewBox="0 0 16 16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6 11 13 4"></polyline></svg></div>
+                    <div>Tax-Ready Year-End Financial Package</div>
+                  </li>
+
+                  <li>
+                    <div><svg xmlns="http://www.w3.org/2500/svg" width="25" height="25" viewBox="0 0 16 16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6 11 13 4"></polyline></svg></div>
+                    <div>Payroll Source Deduction Reporting (Up to 3 Employees)</div>
+                  </li>
+
+                  <li>
+                    <div><svg xmlns="http://www.w3.org/2500/svg" width="25" height="25" viewBox="0 0 16 16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6 11 13 4"></polyline></svg></div>
+                    <div>GST & PST/RST/HST & T4/T5 Filing</div>
+                  </li>
+
+                  <li>
+                    <div><svg xmlns="http://www.w3.org/2500/svg" width="25" height="25" viewBox="0 0 16 16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6 11 13 4"></polyline></svg></div>
+                    <div>Balance Sheet & Income Statement</div>
+                  </li>
+
+                  <li>
+                    <div><svg xmlns="http://www.w3.org/2500/svg" width="25" height="25" viewBox="0 0 16 16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6 11 13 4"></polyline></svg></div>
+                    <div>Unlimited Communication with 24-Hours Response Guarantee</div>
+                  </li>
+
+                </ul>
+	      </div>
             </div>
-	    <div class="text-center">
-	      <a href="start.htm?type=hourly" class="btn primary-btn outlined">Get More Info</a>
+	    <div class="plan-footer text-center">
+	      <a href="start.htm?type=monthly" class="blue btn primary-btn sarabun-semibold">Get Started</a>
+              <a href="start.htm?type=monthly" class="outlined btn primary-btn sarabun-semibold">Book a Demo</a>
 	    </div>
 	  </div>
+          <!-- /standard -->
+
+          <!-- business plan -->
+	  <div class="plan highlighted">
+            <div>
+              <div class="header-section">
+	        <div>
+                  <div class="most-popular-label">Most popular</div>
+	          <h2 class="sarabun-semibold">Bookkeeping & Tax</h2>
+	          <p class="tagline">Full-service bookkeeping with income tax advisory and filing to manage your financials seamlessly.</p>
+                </div>
+	        <h2>$499 <small>/mo</small></h2>
+	      </div>
+	      <div>
+                <p style="font-size: 0.8em; margin-bottom: 20px"><b>Includes everything in the Bookkeeping plan, plus:</b></p>
+	        <ul class="plan-list">
+
+                  <li>
+                    <div><svg xmlns="http://www.w3.org/2500/svg" width="25" height="25" viewBox="0 0 16 16" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6 11 13 4"></polyline></svg></div>
+                    <div>Payroll Source Deduction Reporting for up to 10 Employees</div>
+                  </li>
+
+                  <li>
+                    <div><svg xmlns="http://www.w3.org/2500/svg" width="25" height="25" viewBox="0 0 16 16" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6 11 13 4"></polyline></svg></div>
+                    <div>Proactive Quarterly Tax Strategy Session and Year-Round Tax Optimization</div>
+                  </li>
+
+                  <li>
+                    <div><svg xmlns="http://www.w3.org/2500/svg" width="25" height="25" viewBox="0 0 16 16" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6 11 13 4"></polyline></svg></div>
+                    <div>Corporate Tax Filings (T2, S1-S203), Filing of Income Tax for Owner, and Spouse at no extra charge</div>
+                  </li>
+
+                </ul>
+	      </div>
+            </div>
+	    <div class="plan-footer text-center">
+	      <a href="start.htm?type=monthly" class="blue btn primary-btn sarabun-semibold">Get Started</a>
+              <a href="start.htm?type=monthly" class="outlined btn primary-btn sarabun-semibold">Book a Demo</a>
+	    </div>
+	  </div>
+          <!-- /business plan -->
+
+          <!-- standard -->
+	  <div class="plan">
+            <div>
+              <div class="header-section">
+	        <div>
+                  <div class="most-popular-label">Most popular</div>
+	          <h2 class="sarabun-semibold">Financial Management</h2>
+	          <p class="tagline">For businesses who value time.</p>
+                </div>
+	        <h2>$2599 <small>/mo</small></h2>
+	      </div>
+	      <div>
+                <p style="font-size: 0.8em; margin-bottom: 20px"><b>Includes everything in the Bookkeeping & Tax plan, plus:</b></p>
+	        <ul class="plan-list">
+                  <li>
+                    <div><svg xmlns="http://www.w3.org/2500/svg" width="25" height="25" viewBox="0 0 16 16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6 11 13 4"></polyline></svg></div>
+                    <div>Next-Day Bookkeeping Turnaround</div>
+                  </li>
+
+                  <li>
+                    <div><svg xmlns="http://www.w3.org/2500/svg" width="25" height="25" viewBox="0 0 16 16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6 11 13 4"></polyline></svg></div>
+                    <div>Cash Management (A/R & A/P)</div>
+                  </li>
+
+                  <li>
+                    <div><svg xmlns="http://www.w3.org/2500/svg" width="25" height="25" viewBox="0 0 16 16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6 11 13 4"></polyline></svg></div>
+                    <div>Rapid Financial Reconciliation</div>
+                  </li>
+
+                  <li>
+                    <div><svg xmlns="http://www.w3.org/2500/svg" width="25" height="25" viewBox="0 0 16 16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6 11 13 4"></polyline></svg></div>
+                    <div>Custom Financial Reports Within 24 Hours</div>
+                  </li>
+
+                </ul>
+	      </div>
+            </div>
+	    <div class="plan-footer text-center">
+	      <a href="start.htm?type=monthly" class="blue btn primary-btn sarabun-semibold">Get Started</a>
+              <a href="start.htm?type=monthly" class="outlined btn primary-btn sarabun-semibold">Book a Demo</a>
+	    </div>
+	  </div>
+          <!-- /standard -->
+
 	</div>
 
-	<h3 class="text-bold">More Ways to Maximize Savings</h3>
-	<p class="mb-20">
-	  When you refer a fellow entrepreneur to ClearingStation Ltd., both of you will receive $300 in free bookkeeping services. Additionally, our services are fully tax-deductible, allowing you to maximize your tax savings even further.
-	</p>
+      </section>
 
-	<h3 class="text-bold">Complimentary CRA Audit Assistance</h3>
-	<p class="mb-20">
-	  Our commitment to your success extends to helping you stay compliant with government regulations. We offer free support for CRA audits and government communications for all the years you've filed with us. Enjoy accurate financial records and peace of mind at no extra cost.
-	</p>
 
+      <section style="padding-top: 100px; background: lightblue;">
+        <div class="content" style="max-width: 1000px; margin: 0 auto;">
+
+          <div class="" style="background-color: white; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; margin-bottom: 50px;">
+            <div style="margin-bottom: 20px;">
+              <h2 class="text-bold" style="line-height: 1.6em; margin-bottom: 0px;">Catch Up Bookkeeping</h2>
+              <h3 style="margin-bottom: 10px;">Affordable, fast, and hassle-free bookkeeping to get you caught up.</h3>
+              <h4 class="" style="margin-bottom: 10px; font-weight: bold;font-size: 1em;">Starting at $199/mo.</h4>
+              <ol style="list-style: inherit; padding-left: 30px; margin-top: 30px; font-size: 0.9em; max-width: 600px; display: none;">
+                <li style="margin-bottom: 20px;">
+                  <b>Reduce penalties and interest</b>—we'll make sure you pay the least amount and get the most out of your tax filing.
+                </li>
+                <li style="margin-bottom: 20px;">
+                  <b>Accurate, updated books within days</b>—we aim for a quick turnaround because when you're owing time is of essence.
+                </li>
+                <li style="margin-bottom: 20px;">
+                  <b>We handle the mess</b>—we'll pick up your boxes of unorganized documents from your doorstep, scan everything and get it all in order for you.
+                </li>
+                <li>
+                  <b>We deal with the CRA for you</b>—if you're behind or owe a lot, we’ll speak to the CRA on your behalf, work out payment plans, and guide you through even the toughest situations. There’s always a solution, and we’ve seen it all.
+                </li>
+              </ol>
+            </div>
+            <div style="text-align: right; ">
+              <a href="catch-up.htm" style="white-space: nowrap;" class="outlined btn blue primary-btn sarabun-semibold">Learn more &raquo;</a>
+            </div>
+          </div>
+        </div>
       </section>
 
 
@@ -487,7 +648,32 @@ src="https://www.facebook.com/tr?id=1217446149566169&ev=PageView&noscript=1"
         <div class="content">
 	  <h2 class="text-center">Frequently Asked Questions</h2>
           <div class="faq">
-	    <div class="question">
+
+            <div class="question">
+              <h3><i class="fas fa-plus"></i> How will you help optimize my tax situation?</h3>
+              <div class="answer">
+                <p class="mt-20">
+                  Most accountants simply file and book what you provide. At ClearingStation, we go further. With over 10 years of experience handling hundreds of corporations, we actively search for any missed tax deductions—like business expenses, home office costs, and travel—that haven't been submitted and are easily missed because they have been paid for by personal accounts.
+<br /><br />
+                  Our thorough process ensures no deduction is overlooked even if it's not suggested on the bank statements, helping you consistently reduce your taxable income.
+		</p>
+              </div>
+            </div>
+
+            <div class="question">
+              <h3><i class="fas fa-plus"></i> How can you protect my privacy and ensure my financial information is secure?</h3>
+              <div class="answer">
+                <p class="mt-20">
+                  We treat your privacy like it's our own. Bank-level encryption is just the start.
+                  Your financial data is locked down with military-grade AES-256 encryption, backed by strict internal protocols that ensure zero unauthorized access.
+                  Our systems are built to eliminate weak links—we don't rely on third parties for anything unless they meet our rigorous standards.
+                  We never compromise your data for convenience.
+                  From document uploads to tax filings, every step is secured, monitored, and protected.
+		</p>
+              </div>
+            </div>
+            
+	    <div class="question" style="display: none;">
               <h3><i class="fas fa-plus"></i> Does ClearingStation sync with accounting software like QuickBooks?</h3>
               <div class="answer">
                 <p class="mt-20">
@@ -576,18 +762,20 @@ src="https://www.facebook.com/tr?id=1217446149566169&ev=PageView&noscript=1"
 	      max-width: 800px;
 	      margin: 0 auto;
 	      padding: 20px;
+              font-size: 0.9em;
 	  }
 
 	  .question {
 	      margin-bottom: 20px;
 	      border: 1px solid #ddd;
 	      border-radius: 5px;
-	      padding: 10px;
+	      padding: 5px 10px;
 	      cursor: pointer;
 	  }
 
 	  .question h3 {
 	      margin: 10px;
+              font-size: 0.9em;
 	  }
 
 	  .answer {
@@ -609,8 +797,8 @@ src="https://www.facebook.com/tr?id=1217446149566169&ev=PageView&noscript=1"
 
 	  /* Style for the expand/collapse icons */
 	  .question i {
-	      font-size: 1.2rem;
-	      margin-right: 3px;
+	      font-size: 1em;
+	      margin-right: 13px;
 	      transition: transform 0.2s;
 	  }
 

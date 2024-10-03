@@ -207,7 +207,7 @@
 	   nav#main > ul > li > a:hover {background-color: #f4f4f4}
 	   nav#main > ul > li > a.active {font-weight: bold;}
 	   .slide {max-width: 100%; margin-top: 200px;}
-           @media (max-width: 600px) {.slide {margin-top: 70px;}}
+           @media (max-width: 600px) {.slide {}}
 	   .slide-content {max-width: 1500px;  margin: 0 auto; padding: 0 30px;}
 	   footer {padding: 50px 40px; max-width: 1584px; margin-left: auto; margin-right: auto;}
 	   footer a {font-size: 13px;line-height: 16px;letter-spacing: 0.6px;color: rgba(0, 0, 0, 0.54);margin-top: 12px;}
@@ -380,6 +380,7 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1217446149566169&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+<script src="offer.js"></script>
 
   </head>
   <body>
@@ -422,458 +423,427 @@ src="https://www.facebook.com/tr?id=1217446149566169&ev=PageView&noscript=1"
 
     <main>
 
-      <section>
-	<div>
-	  <div class="slide full-bg" style="min-height: 100vh; background-image: url(https://images.unsplash.com/photo-1448932155749-638e51b56f03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80);">
-	    <div class="slide-content">
-
-              <div id="new-here" class="offer-container">
-                <div style="text-align: center;"><img src="images/celebrate.png" alt="Celebrate Icon"/></div>
-                <div class="offer-amount" id="creditAmount">New here?</div>
-
-                <div class="offer-details">
-                    <p id="offerText"><b>Get up to $1800 in Accounting Credit to Jumpstart Your Company.</b> (offer to disappear soon)</p>
-                  <p>Act now to secure your credit with ClearingStation. Register whenever you're ready, but don’t wait claiming this offer—the offer disappears at year's end.</p>
-                </div>
-
-                <div style="min-width: 150px">
-                  <a href="#select-offer" class="claim-button animated">Claim Now</a>
-                </div>
-              </div>
-
-              <div class="offer-container" style="display: none;">
-                <div class="offer-amount" id="creditAmount">$600 CAD</div>
-
-                <div class="offer-details">
-                  <p id="offerText" style="font-weight: bold;">Your <span id="creditAmountText">$600 CAD</span> in Accounting Credit is ready to be claimed.</p>
-                  <p>Click 'Claim Now' and enter your email and phone number. We will apply the offer to your account whenever you become a client.</p>
-                </div>
-
-                <button class="claim-button animated">Claim Now</button>
-              </div>
-              <style>
-                .offer-container {display: flex;align-items: center;gap: 15px;background-color: #eef4ff;padding: 20px;border-radius: 10px;box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);}
-                .offer-amount {white-space: nowrap;background-color: rgba(0, 123, 255, 0.1);border-radius: 10px;padding: 10px 20px;color: #007bff;font-size: 1.2em;font-weight: bold;margin-right: 20px; text-align: center;}
-                .offer-details {flex-grow: 1;}
-                .offer-details p {color: #4a4a4a;}
-                .offer-details a {color: #007bff;text-decoration: none;}
-                .claim-button {background-color: #007bff;color: white;font-size: 16px;padding: 12px 20px;border: none;border-radius: 5px;cursor: pointer;whitespace: nowrap;}
-                .claim-button:hover {background-color: #0056b3;}
-                @media (max-width: 600px) {
-                    .offer-container {flex-direction: column; gap: 20px;}
-                }
-              </style>
-	      <h1>Simplify Your Business.
-              We'll handle the Finances.</h1>
-	      <h3>Effortless bookkeeping, tax filing, and payroll - all in one place.</h3>
-	      <div class="mt-20">
-		<a href="about.htm" class="btn primary-btn">More information &raquo;</a>
-	      </div>
+        <section>
+	    <div class="full-bg" style="min-height: 100vh; background-image: url(https://images.unsplash.com/photo-1448932155749-638e51b56f03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80);">
+	        <div class="content">
+                    <div style="margin-top: 100px">
+                        <!-- credit status -->
+                        <div id="new-here" class="offer-container" style="display: none;"><div style="text-align: center;"><img src="images/celebrate.png" alt="Celebrate Icon"/></div><div class="offer-amount" id="creditAmount">New here?</div><div class="offer-details"><p id="offerText"><b>Get up to $1800 in Accounting Credit to Jumpstart Your Company.</b> (offer to disappear soon)</p><p>Act now to secure your credit with ClearingStation. Register whenever you're ready, but don’t wait claiming this offer—the offer disappears at year's end.</p></div><div style="min-width: 150px"><a href="index.htm#select-offer" class="claim-button">Claim Now</a></div></div><div id="claimed" class="offer-container" style="display: none;"><div style="text-align: center;"><img src="images/celebrate.png" alt="Celebrate Icon"/></div><div class="offer-details"><p id="offerText"><b>Your Credit Is Ready for You.</b></p><p>We automatically apply the credit to your account whenever you're ready to become a client.</p></div></div><div id="offer-container-600" class="offer-container" style="display: none;"><div class="offer-amount" id="creditAmount">$600 CAD</div><div class="offer-details"><p id="offerText" style="font-weight: bold;">Your <span id="creditAmountText">$600 CAD</span> in Accounting Credit is ready to be claimed.</p><p>Click 'Claim Now' and enter your email and phone number. We will apply the offer to your account whenever you become a client.</p></div><a href="index.htm#select-offer" class="claim-button">Claim Now</a></div><div id="offer-container-1200" class="offer-container" style="display: none;"><div class="offer-amount" id="creditAmount">$1200 CAD</div><div class="offer-details"><p id="offerText" style="font-weight: bold;">Your <span id="creditAmountText">$1200 CAD</span> in Accounting Credit is ready to be claimed.</p><p>Click 'Claim Now' and enter your email and phone number. We will apply the offer to your account whenever you become a client.</p></div><a href="index.htm#select-offer" class="claim-button">Claim Now</a></div><div id="offer-container-1800" class="offer-container" style="display: none;"><div class="offer-amount" id="creditAmount">$1800 CAD</div><div class="offer-details"><p id="offerText" style="font-weight: bold;">Your <span id="creditAmountText">$1800 CAD</span> in Accounting Credit is ready to be claimed.</p><p>Click 'Claim Now' and enter your email and phone number. We will apply the offer to your account whenever you become a client.</p></div><a href="index.htm#select-offer" class="claim-button">Claim Now</a></div><script type="text/javascript">(function() {checkSubmissionStatus();})();</script>
+                        <style>.offer-container {display: flex;align-items: center;gap: 15px;background-color: #eef4ff;padding: 20px;border-radius: 10px;box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);}.offer-amount {white-space: nowrap;background-color: rgba(0, 123, 255, 0.1);border-radius: 10px;padding: 10px 20px;color: #007bff;font-size: 1.2em;font-weight: bold;margin-right: 20px; text-align: center;}.offer-details {flex-grow: 1;}.offer-details p {color: #4a4a4a;}.offer-details a {color: #007bff;text-decoration: none;}.claim-button {background-color: #007bff;color: white;font-size: 16px;padding: 12px 20px;border: none;border-radius: 5px;cursor: pointer;whitespace: nowrap;}.claim-button:hover {background-color: #0056b3;}@media (max-width: 600px) {.offer-container {flex-direction: column; gap: 20px;}}</style>
+                        <!-- /credit status -->
+                    </div>
+	            <h1 style="margin-top: 50px;">Simplify Your Business.
+                        We'll handle the Finances.</h1>
+	            <h3>Effortless bookkeeping, tax filing, and payroll - all in one place.</h3>
+	            <div class="mt-20">
+		        <a href="about.htm" class="btn primary-btn">More information &raquo;</a>
+	            </div>
+	        </div>
 	    </div>
-	  </div>
-	</div>
-      </section>
+        </section>
 
-      <!-- About the company -->
-      <section style="background: white;">
-        <div class="content" style="">
-	  <div class="flex" style="justify-content: space-between; align-items: center; max-width: 1100px; gap: 80px;">
-            <div style="max-width: 300px; padding-bottom: 30px">
-              <img src="images/optimized/jennifer.jpg" class="img-responsive" />
-              Jennifer Flaming, VP
-            </div>
-            <div>
-	      <h2 style="line-height: 1.2em;">Run Your Business. <br/>We'll handle the Rest.</h2>
-	      <h3 style="line-height: 1.2em;">We eliminate the noise. You gain time to build.</h3>
-              <p class="mt-30" style="max-width: 700px; margin-bottom: 30px">
-                With ClearingStation, we take the burden of financial management off of your shoulders - so you can focus on growing your business.
-              </p>
-              <a href="about.htm" class="green btn primary-btn" style="padding: 10px 20px; margin-bottom: 40px">
-                Learn more about us &raquo;
-              </a>
+        <!-- About the company -->
+        <section style="background: white;">
+            <div class="content" style="">
+	        <div class="flex" style="justify-content: space-between; align-items: center; max-width: 1100px; gap: 80px;">
+                    <div style="max-width: 300px; padding-bottom: 30px">
+                        <img src="images/optimized/jennifer.jpg" class="img-responsive" />
+                        Jennifer Flaming, VP
+                    </div>
+                    <div>
+	                <h2 style="line-height: 1.2em;">Run Your Business. <br/>We'll handle the Rest.</h2>
+	                <h3 style="line-height: 1.2em;">We eliminate the noise. You gain time to build.</h3>
+                        <p class="mt-30" style="max-width: 700px; margin-bottom: 30px">
+                            With ClearingStation, we take the burden of financial management off of your shoulders - so you can focus on growing your business.
+                        </p>
+                        <a href="about.htm" class="green btn primary-btn" style="padding: 10px 20px; margin-bottom: 40px">
+                            Learn more about us &raquo;
+                        </a>
+	            </div>
+                </div>
 	    </div>
-          </div>
-	</div>
-      </section>
+        </section>
 
-      <section>
-        <div class="content">
-          <h3>Instead of spending hours on Spreadsheets, how about:</h3>
-          <h2 id="work-love-headline">
-            Work on something <br/>
-            <span class="sarabun-extrabold-italic">you love.</span>
-          </h2>
-        </div>
-        <style>
-          #work-love-headline {
-              color: black; font-size: 4em; line-height: 1.2em; padding: 5px 20px;
-          }
-          @media (max-width: 600px) {
-              #work-love-headline {
-                  font-size: 3em !important;
-              }
-          }
-        </style>
-        <!--<video autoplay muted loop id="myVideo" style="width: 100%;">
-            <source src="https://videos.pexels.com/video-files/8083683/8083683-uhd_3840_2160_24fps.mp4" type="video/mp4">
-        </video>-->
-      </section>
-
-      <!-- Services overview -->
-      <section style="padding: 40px; background-color: #f4f4f4; font-family: Arial, sans-serif; color: #333; text-align: center;">
-        <div class="content">
-          <h3 class="sarabun-light-italic" style="margin-bottom: 10px; opacity: 0.5">You Do What You Do Best</h3>
-          <h2 style="color: #00468b; margin-bottom: 50px">And We Do What We Do Best</h2>
-
-          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 30px; text-align: left;">
-
-            <div style="background-color: white; padding: 20px 20px 30px 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 300px;">
-              <h3 style="font-size: 24px; color: #333; margin-bottom: 10px;">Bookkeeping</h3>
-              <p class="sarabun-light-italic" style="margin-bottom: 10px; font-size: 1.1em; display: flex; align-items: center; gap: 8px; justify-content: space-between;">
-                <span style="padding-left: 10px;">Track your income and expenses seamlessly.</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 6L9 17L4 12"></path>
-                </svg>
-              </p>
-              <p style="padding-left: 30px">We handle your monthly bookkeeping, so you don't waste time on spreadsheets.</p>
-            </div>
-
-            <div style="background-color: white; padding: 20px 20px 30px 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 300px;">
-              <h3 style="font-size: 24px; color: #333; margin-bottom: 10px;">Tax Preparation & Filing</h3>
-              <p class="sarabun-light-italic" style="margin-bottom: 10px; font-size: 1.1em; display: flex; align-items: center; gap: 8px; justify-content: space-between;">
-                <span style="padding-left: 10px;">Maximize your deductions and minimize your tax bill.</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 6L9 17L4 12"></path>
-                </svg>
-              </p>
-              <p style="padding-left: 30px">We ensure compliance while finding ways to reduce what you owe.</p>
-            </div>
-
-            <div style="background-color: white; padding: 20px 20px 30px 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 300px;">
-              <h3 style="font-size: 24px; color: #333; margin-bottom: 10px;">Payroll Management</h3>
-              <p class="sarabun-light-italic" style="margin-bottom: 10px; font-size: 1.1em; display: flex; align-items: center; gap: 8px; justify-content: space-between;">
-                <span style="padding-left: 10px;">On-time, accurate payroll—every pay period.</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 6L9 17L4 12"></path>
-                </svg>
-              </p>
-              <p style="padding-left: 30px">No more worrying about deadlines or errors. We handle it all.</p>
-            </div>
-
-            <div style="background-color: white; padding: 20px 20px 30px 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 300px;">
-              <h3 style="font-size: 24px; color: #333; margin-bottom: 10px;">Document Scanning<sup>1</sup></h3>
-              <p class="sarabun-light-italic" style="margin-bottom: 10px; font-size: 1.1em; display: flex; align-items: center; gap: 8px; justify-content: space-between;">
-                <span style="padding-left: 10px;">We come to you.</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 6L9 17L4 12"></path>
-                </svg>
-              </p>
-              <p style="padding-left: 30px">No need to scan your receipts and paperwork. We pick up, digitize and organize everything.</p>
-            </div>
-          </div>
-
-          <a href="services.htm" class="btn primary-btn blue">Click here to learn more about our services &raquo;</a>
-
-        </div>
-      </section>
-      <!-- /Services overview -->
-
-      
-      <!-- Special Features -->
-      <section style="padding-top: 100px; background: white;">
-        <div class="content">
-          <h2 class="text-center" style="line-height: 1.6em">Why Work With ClearingStation?</h2>
-          <p class="text-center" style="font-size: 20px; color: #555; margin-bottom: 80px;">Because we've become the go-to place for business owners seeking to streamline their bookkeeping and tax processes.</p>
-          <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-            <div style="background-color: white; padding: 30px; margin: 20px; flex: 1; min-width: 250px; max-width: 400px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
-              <h3 style="margin-bottom: 15px;">Get 10-15 Hours Back Each Month</h3>
-              <p style="font-size: 16px; color: #555;">With us managing your finances, you get back 10–15 hours every month to focus on what matters most—growing your business.</p>
-            </div>
-
-            <div style="background-color: white; padding: 30px; margin: 20px; flex: 1; min-width: 250px; max-width: 400px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
-              <h3 style="margin-bottom: 15px;">Save Thousands on Taxes</h3>
-              <p style="font-size: 16px; color: #555;">Our clients regularly save thousands by maximizing deductions and finding opportunities other accountants miss.</p>
-            </div>
-            
-            <div style="background-color: white; padding: 30px; margin: 20px; flex: 1; min-width: 250px; max-width: 400px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
-              <h3 style="margin-bottom: 15px;">Switching is Easy and Seamless</h3>
-              <p style="font-size: 16px; color: #555;">Switching to ClearingStation is easy. We handle the entire transition, working with your current accountant or system.</p>
-            </div>
-
-            <div style="background-color: white; padding: 30px; margin: 20px; flex: 1; min-width: 250px; max-width: 400px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
-              <h3 style="margin-bottom: 15px;">We Pick Up Your Documents<sup>1</sup></h3>
-              <p style="font-size: 16px; color: #555;">Forget scanning and organizing paperwork. We’ll come to your office, pick up your documents, and handle the rest.</p>
-            </div>
-
-
-          </div>
-        </div>
-      </section>
-
-
-      <!-- testimonials -->
-      <section style="background-color: #f0f4f8; padding: 60px 0; font-family: 'Arial', sans-serif; color: #333;">
-        <div class="content">
-          <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="color: #0077b6; margin-bottom: 20px; text-align: center;">What Our Clients Are Saying</h2>
-            <p class="text-center" style="font-size: 1.5em; margin-bottom: 60px;">(5,0 ⭐⭐⭐⭐⭐)</p>
-
-            <!-- Testimonial 3 -->
-            <div style="background-color: #fff; padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-bottom: 40px;">
-              <p style="font-size: 1.2em; line-height: 1.3em; color: #555;">
-                "Jennifer has been such a great help when it comes to my book keeping needs. She’s efficient, knowledgeable and timely which is important when it comes to taxes.
-                She helps me with my personal and corporate taxes, bookkeeping and payroll, and has helped many others I have referred to her over the years. Definitely recommend 👍"</p>
-              <p style="font-size: 1.1em; font-weight: bold; color: #333; margin-top: 15px;">- Natalie Kuz, Winnipeg, MB</p>
-            </div>
-
-            <!-- Testimonial 1 -->
-            <div style="background-color: #fff; padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-bottom: 40px;">
-              <p style="font-size: 1.2em; line-height: 1.3em; color: #555;">
-                "Jennifer is knowledgeable about common accounting and tax practices, and exhibited a quick grasp of my personal tax position. She prepared the needed papers swiftly and provided me with the information necessary to avoid common pitfalls later on."
-              </p>
-              <p style="font-size: 1.1em; font-weight: bold; color: #333; margin-top: 15px;">- Angie Kan, Selkirk, MB</p>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div style="background-color: #fff; padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-bottom: 80px;">
-              <p style="font-size: 1.2em; line-height: 1.3em; color: #555;">
-                "ClearingStation has been an absolute game-changer for my business. The team is professional, responsive, and always goes above and beyond. I highly recommend them to everyone all the time."</p>
-              <p style="font-size: 1.1em; font-weight: bold; color: #333; margin-top: 15px;">- David Anderson, Winnipeg, MB</p>
-            </div>
-
-            <div style="text-align: center; margin-top: 40px;">
-              <a href="start.htm" class="btn primary-btn blue">
-                Schedule a Free Consultation Today &raquo;</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /testimonials -->
-
-      <section style="background: white">
-	<div class="content">
-	  <h2 class="text-center">Join Successful Businesses who trust ClearingStation with their Books.</h2>
-	  <div class="client-info">
-	    <div style="min-width: 200px; text-align: center;">
-	      <svg style="display: inline-block; margin: 0 auto;" width="100px" xmlns="http://www.w3.org/2000/svg" viewBox="80 0 75 104.99"><defs><style>.cls-1,.cls-2{fill:none;}.cls-1{stroke:green;stroke-miterlimit:10;stroke-width:3.65px;}</style></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_3" data-name="Layer 3"><path class="cls-1" d="M90.59,4.88,89.13,48.35l2,52.88H127S126,76.85,125.71,75.92s-.66-9.54-.66-9.54l7.55-8.61,19.75-29s-3.71.13-4.77-.4-3.45-1.72-4-1.86a14.65,14.65,0,0,0-4.77,1.19,19.5,19.5,0,0,0-3.18,1.46l-2.12,1.59s1.19-3,1.33-3.45a6.76,6.76,0,0,0-1.06-4.37c-1.19-1.86-1.72-4.11-2.52-5.83a10.57,10.57,0,0,1-.93-2.78L126,14s.66,2.39-.13,3.18-.8-2.39-.8-2.39a2.22,2.22,0,0,1-2-.93c-.66-1.06-1.33-1.19-1.06-2.52a25.67,25.67,0,0,0,.8-2.92c0-.8-.93-2.25-.93-2.65V4.22Z"/><rect class="cls-2" width="241.49" height="104.99"/></g></g></svg>
-	    </div>
-	    <div>
-              <p class="mb-20">
-                Our clients range from newly incorporated startups to established businesses. A high percentage of our clients saw significant growth in the last year.
-                These businesses - spanning Software, Medical, Financial, Law, Mechanics, and Construction - chose us to drive their success.
-                Now it's your turn.<br /><br />
-                Join them by partnering with us.</p>
-              <p class="sarabun-bold-italic">We're proudly based in Manitoba, Canada.</p>
+        <section>
+            <div class="content">
+                <h3>Instead of spending hours on Spreadsheets, how about:</h3>
+                <h2 id="work-love-headline">
+                    Work on something <br/>
+                    <span class="sarabun-extrabold-italic">you love.</span>
+                </h2>
             </div>
             <style>
-              .client-info {display: flex; align-items: center; gap: 10px;}
-              @media (max-width: 600px) {.client-info {gap: 20px;flex-direction: column;}}
+             #work-love-headline {
+                 color: black; font-size: 4em; line-height: 1.2em; padding: 5px 20px;
+             }
+             @media (max-width: 600px) {
+                 #work-love-headline {
+                     font-size: 3em !important;
+                 }
+             }
             </style>
-	  </div>
-	</div>
-      </section>
+            <video autoplay muted loop id="myVideo" style="width: 100%;">
+                <source src="https://videos.pexels.com/video-files/8083683/8083683-uhd_3840_2160_24fps.mp4" type="video/mp4">
+            </video>
+        </section>
 
-      <section style="text-align: center;">
-        <div class="content">
-          <h2 style="font-size: 2rem; margin-bottom: 50px;">How We Simplify Your Life</h2>
-          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-            <!-- We Come to You -->
-            <div style="max-width: 300px; padding: 30px 20px 40px 20px; background-color: white; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
-              <img src="https://img.icons8.com/ios-filled/100/000000/delivery.png" alt="We Come to You" style="width: 50px; margin-bottom: 10px;">
-              <h3 style="font-size: 1.25rem; margin-bottom: 10px;">We Come to You<sup>1</sup></h3>
-              <p style="font-size: 1rem; line-height: 1.5;">No need to leave your office. We’ll pick up your documents, digitize them, and take care of the rest.</p>
+        <!-- Services overview -->
+        <section style="padding: 40px; background-color: #f4f4f4; font-family: Arial, sans-serif; color: #333; text-align: center;">
+            <div class="content">
+                <h3 class="sarabun-light-italic" style="margin-bottom: 10px; opacity: 0.5">You Do What You Do Best</h3>
+                <h2 style="color: #00468b; margin-bottom: 50px">And We Do What We Do Best</h2>
+
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 30px; text-align: left;">
+
+                    <div style="background-color: white; padding: 20px 20px 30px 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 300px;">
+                        <h3 style="font-size: 24px; color: #333; margin-bottom: 10px;">Bookkeeping</h3>
+                        <p class="sarabun-light-italic" style="margin-bottom: 10px; font-size: 1.1em; display: flex; align-items: center; gap: 8px; justify-content: space-between;">
+                            <span style="padding-left: 10px;">Track your income and expenses seamlessly.</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6L9 17L4 12"></path>
+                            </svg>
+                        </p>
+                        <p style="padding-left: 30px">We handle your monthly bookkeeping, so you don't waste time on spreadsheets.</p>
+                    </div>
+
+                    <div style="background-color: white; padding: 20px 20px 30px 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 300px;">
+                        <h3 style="font-size: 24px; color: #333; margin-bottom: 10px;">Tax Preparation & Filing</h3>
+                        <p class="sarabun-light-italic" style="margin-bottom: 10px; font-size: 1.1em; display: flex; align-items: center; gap: 8px; justify-content: space-between;">
+                            <span style="padding-left: 10px;">Maximize your deductions and minimize your tax bill.</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6L9 17L4 12"></path>
+                            </svg>
+                        </p>
+                        <p style="padding-left: 30px">We ensure compliance while finding ways to reduce what you owe.</p>
+                    </div>
+
+                    <div style="background-color: white; padding: 20px 20px 30px 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 300px;">
+                        <h3 style="font-size: 24px; color: #333; margin-bottom: 10px;">Payroll Management</h3>
+                        <p class="sarabun-light-italic" style="margin-bottom: 10px; font-size: 1.1em; display: flex; align-items: center; gap: 8px; justify-content: space-between;">
+                            <span style="padding-left: 10px;">On-time, accurate payroll—every pay period.</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6L9 17L4 12"></path>
+                            </svg>
+                        </p>
+                        <p style="padding-left: 30px">No more worrying about deadlines or errors. We handle it all.</p>
+                    </div>
+
+                    <div style="background-color: white; padding: 20px 20px 30px 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 300px;">
+                        <h3 style="font-size: 24px; color: #333; margin-bottom: 10px;">Document Scanning<sup>1</sup></h3>
+                        <p class="sarabun-light-italic" style="margin-bottom: 10px; font-size: 1.1em; display: flex; align-items: center; gap: 8px; justify-content: space-between;">
+                            <span style="padding-left: 10px;">We come to you.</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6L9 17L4 12"></path>
+                            </svg>
+                        </p>
+                        <p style="padding-left: 30px">No need to scan your receipts and paperwork. We pick up, digitize and organize everything.</p>
+                    </div>
+                </div>
+
+                <a href="services.htm" class="btn primary-btn blue">Click here to learn more about our services &raquo;</a>
+
             </div>
+        </section>
+        <!-- /Services overview -->
 
-            <!-- We Do It All -->
-            <div style="max-width: 300px; padding: 30px 20px 40px 20px; background-color: white; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
-              <img src="https://img.icons8.com/ios-filled/100/000000/checklist.png" alt="We Do It All" style="width: 50px; margin-bottom: 10px;">
-              <h3 style="font-size: 1.25rem; margin-bottom: 10px;">We Handle Everything</h3>
-              <p style="font-size: 1rem; line-height: 1.5;">From bookkeeping to payroll and taxes, we manage your entire financial back office seamlessly.</p>
+        
+        <!-- Special Features -->
+        <section style="padding-top: 100px; background: white;">
+            <div class="content">
+                <h2 class="text-center" style="line-height: 1.6em">Why Work With ClearingStation?</h2>
+                <p class="text-center" style="font-size: 20px; color: #555; margin-bottom: 80px;">Because we've become the go-to place for business owners seeking to streamline their bookkeeping and tax processes.</p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+                    <div style="background-color: white; padding: 30px; margin: 20px; flex: 1; min-width: 250px; max-width: 400px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+                        <h3 style="margin-bottom: 15px;">Get 10-15 Hours Back Each Month</h3>
+                        <p style="font-size: 16px; color: #555;">With us managing your finances, you get back 10–15 hours every month to focus on what matters most—growing your business.</p>
+                    </div>
+
+                    <div style="background-color: white; padding: 30px; margin: 20px; flex: 1; min-width: 250px; max-width: 400px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+                        <h3 style="margin-bottom: 15px;">Save Thousands on Taxes</h3>
+                        <p style="font-size: 16px; color: #555;">Our clients regularly save thousands by maximizing deductions and finding opportunities other accountants miss.</p>
+                    </div>
+                    
+                    <div style="background-color: white; padding: 30px; margin: 20px; flex: 1; min-width: 250px; max-width: 400px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+                        <h3 style="margin-bottom: 15px;">Switching is Easy and Seamless</h3>
+                        <p style="font-size: 16px; color: #555;">Switching to ClearingStation is easy. We handle the entire transition, working with your current accountant or system.</p>
+                    </div>
+
+                    <div style="background-color: white; padding: 30px; margin: 20px; flex: 1; min-width: 250px; max-width: 400px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+                        <h3 style="margin-bottom: 15px;">We Pick Up Your Documents<sup>1</sup></h3>
+                        <p style="font-size: 16px; color: #555;">Forget scanning and organizing paperwork. We’ll come to your office, pick up your documents, and handle the rest.</p>
+                    </div>
+
+
+                </div>
             </div>
+        </section>
 
-            <!-- You Focus on Growing Your Business -->
-            <div style="max-width: 300px; padding: 30px 20px 40px 20px; background-color: white; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
-              <img src="https://img.icons8.com/ios-filled/100/000000/rocket--v1.png" alt="You Focus on Growing Your Business" style="width: 50px; margin-bottom: 10px;">
-              <h3 style="font-size: 1.25rem; margin-bottom: 10px;">You Focus on Growth</h3>
-              <p style="font-size: 1rem; line-height: 1.5;">With your finances in expert hands, you’ll have the time and freedom to grow your business.</p>
+
+        <!-- testimonials -->
+        <section style="background-color: #f0f4f8; padding: 60px 0; font-family: 'Arial', sans-serif; color: #333;">
+            <div class="content">
+                <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+                    <h2 style="color: #0077b6; margin-bottom: 20px; text-align: center;">What Our Clients Are Saying</h2>
+                    <p class="text-center" style="font-size: 1.5em; margin-bottom: 60px;">(5,0 ⭐⭐⭐⭐⭐)</p>
+
+                    <!-- Testimonial 3 -->
+                    <div style="background-color: #fff; padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-bottom: 40px;">
+                        <p style="font-size: 1.2em; line-height: 1.3em; color: #555;">
+                            "Jennifer has been such a great help when it comes to my book keeping needs. She’s efficient, knowledgeable and timely which is important when it comes to taxes.
+                            She helps me with my personal and corporate taxes, bookkeeping and payroll, and has helped many others I have referred to her over the years. Definitely recommend 👍"</p>
+                        <p style="font-size: 1.1em; font-weight: bold; color: #333; margin-top: 15px;">- Natalie Kuz, Winnipeg, MB</p>
+                    </div>
+
+                    <!-- Testimonial 1 -->
+                    <div style="background-color: #fff; padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-bottom: 40px;">
+                        <p style="font-size: 1.2em; line-height: 1.3em; color: #555;">
+                            "Jennifer is knowledgeable about common accounting and tax practices, and exhibited a quick grasp of my personal tax position. She prepared the needed papers swiftly and provided me with the information necessary to avoid common pitfalls later on."
+                        </p>
+                        <p style="font-size: 1.1em; font-weight: bold; color: #333; margin-top: 15px;">- Angie Kan, Selkirk, MB</p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div style="background-color: #fff; padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-bottom: 80px;">
+                        <p style="font-size: 1.2em; line-height: 1.3em; color: #555;">
+                            "ClearingStation has been an absolute game-changer for my business. The team is professional, responsive, and always goes above and beyond. I highly recommend them to everyone all the time."</p>
+                        <p style="font-size: 1.1em; font-weight: bold; color: #333; margin-top: 15px;">- David Anderson, Winnipeg, MB</p>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 40px;">
+                        <a href="start.htm" class="btn primary-btn blue">
+                            Schedule a Free Consultation Today &raquo;</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
+        <!-- /testimonials -->
 
-      <!-- Personal note -->
-      <section style="background: white; background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);">
-	<div class="content">
-	  <div class="note" style="margin: 0 auto;">
-            <div class="pin"></div>
-            <h3>Personal Note from Jennifer Flaming, VP</h3>
-            <p>
-              It's always about time.
-            </p>
-            <br />
-            <p>
-              The moment you owe the CRA, time turns against you. Interest piles up daily and with every passing moment, the weight will get heavier. Delaying any longer? It's not risky. It's dangerous.
-            </p>
-            <br />
-            <p>
-              Sure, you can make more money and eventually pay it back. But don't forget the taxes next year will only grow with the income, making it nearly impossible to catch up.
-            </p>
-            <br />
-            <p>
-              I've worked with hundreds of businesses over the past decade. I've seen it all. And there's one truth that holds: Time is either your greatest asset, or your greatest enemy. Once you lose control, it is almost impossible to regain.
-            </p>
-            <br />
-            <p>
-              The solution? It's simple. Start tackling that challenge head-on now. Whether you work with us or anyone else doesn't matter but you need to tackle time head on.
-            </p>
-            <br />
-            <p>
-              I know this feels overwhelming. You might think the mess is too big for anyone to work through, but here's the thing: All it takes is one call. We'll handle the rest. Years of paperwork? Boxes full of receipts? We painstakingly work through it all, find every possible deduction, every expense, and help bring down what's owed. We'll even think of things that you haven't submitted in these boxes.
-            </p>
-            <br />
-            <p>
-              We'll even come to your office and pick it all up.
-            </p>
-            <br />
-            <p>
-                But we're not just here to clean up the past transactions. We're here to clear the way for the future. No more stress.
-                We offer you a simple way to delegate your biggest headache and reclaim your time and make your time-efficiency your biggest asset again.
-            </p>
-            <br />
-            <p class="" style="font-size: 1.1em">
-              <span class="sarabun-bold-italic">Let's start working together.</span>
-            </p>
-            <br />
-            <p>Best regards, <br><b>Jennifer Flaming</b> <br>VP, ClearingStation</p>
-          </div>
-          <style>
-            .note {background-color: #fdfd96; /* Light yellow paper color */padding: 20px;max-width: 500px;border: 2px solid #e3c565; /* Border simulating note edges */border-radius: 10px;box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */font-size: 1.2rem;line-height: 1.6;color: #333;position: relative;}
-            .note:before {content: '';position: absolute;top: 10px;left: 50%;transform: translateX(-50%);width: 60px;height: 10px;background-color: #f9f9f9;border-radius: 5px;box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Simulating a folded crease */}
-            .note h3 {font-family: 'Caveat', cursive; /* Handwritten style */margin: 0 0 10px 0;font-size: 1.8rem;}
-            .note p {margin: 0; font-size: 0.9em;}
-            .pin {position: absolute;top: -15px;left: 50%;transform: translateX(-50%);width: 30px;height: 30px;background-color: red;border-radius: 50%;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);z-index: 10;}
-            .pin:before {content: '';position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 8px;height: 8px;background-color: white;border-radius: 50%;}
-          </style>
-	  <div class="text-center" style="margin-top: 30px">
-            <a href="start.htm" class="green btn primary-btn animated">Start Your Free Consultation Today &raquo;</a>
-          </div>
-	</div>
-      </section>
+        <section style="background: white">
+	    <div class="content">
+	        <h2 class="text-center">Join Successful Businesses who trust ClearingStation with their Books.</h2>
+	        <div class="client-info">
+	            <div style="min-width: 200px; text-align: center;">
+	                <svg style="display: inline-block; margin: 0 auto;" width="100px" xmlns="http://www.w3.org/2000/svg" viewBox="80 0 75 104.99"><defs><style>.cls-1,.cls-2{fill:none;}.cls-1{stroke:green;stroke-miterlimit:10;stroke-width:3.65px;}</style></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_3" data-name="Layer 3"><path class="cls-1" d="M90.59,4.88,89.13,48.35l2,52.88H127S126,76.85,125.71,75.92s-.66-9.54-.66-9.54l7.55-8.61,19.75-29s-3.71.13-4.77-.4-3.45-1.72-4-1.86a14.65,14.65,0,0,0-4.77,1.19,19.5,19.5,0,0,0-3.18,1.46l-2.12,1.59s1.19-3,1.33-3.45a6.76,6.76,0,0,0-1.06-4.37c-1.19-1.86-1.72-4.11-2.52-5.83a10.57,10.57,0,0,1-.93-2.78L126,14s.66,2.39-.13,3.18-.8-2.39-.8-2.39a2.22,2.22,0,0,1-2-.93c-.66-1.06-1.33-1.19-1.06-2.52a25.67,25.67,0,0,0,.8-2.92c0-.8-.93-2.25-.93-2.65V4.22Z"/><rect class="cls-2" width="241.49" height="104.99"/></g></g></svg>
+	            </div>
+	            <div>
+                        <p class="mb-20">
+                            Our clients range from newly incorporated startups to established businesses. A high percentage of our clients saw significant growth in the last year.
+                            These businesses - spanning Software, Medical, Financial, Law, Mechanics, and Construction - chose us to drive their success.
+                            Now it's your turn.<br /><br />
+                            Join them by partnering with us.</p>
+                        <p class="sarabun-bold-italic">We're proudly based in Manitoba, Canada.</p>
+                    </div>
+                    <style>
+                     .client-info {display: flex; align-items: center; gap: 10px;}
+                     @media (max-width: 600px) {.client-info {gap: 20px;flex-direction: column;}}
+                    </style>
+	        </div>
+	    </div>
+        </section>
 
-      <section id="select-offer">
-        <div class="content offer-content">
-          <div style="max-width: 100%; margin: 0 auto;">
+        <section style="text-align: center;">
+            <div class="content">
+                <h2 style="font-size: 2rem; margin-bottom: 50px;">How We Simplify Your Life</h2>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+                    <!-- We Come to You -->
+                    <div style="max-width: 300px; padding: 30px 20px 40px 20px; background-color: white; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+                        <img src="https://img.icons8.com/ios-filled/100/000000/delivery.png" alt="We Come to You" style="width: 50px; margin-bottom: 10px;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 10px;">We Come to You<sup>1</sup></h3>
+                        <p style="font-size: 1rem; line-height: 1.5;">No need to leave your office. We’ll pick up your documents, digitize them, and take care of the rest.</p>
+                    </div>
 
-            <div style="text-align: center; margin-bottom: 20px;">
-              <img src="images/celebrate.png" alt="Celebrate Icon"/>
-              <br />
-              New Here?
+                    <!-- We Do It All -->
+                    <div style="max-width: 300px; padding: 30px 20px 40px 20px; background-color: white; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+                        <img src="https://img.icons8.com/ios-filled/100/000000/checklist.png" alt="We Do It All" style="width: 50px; margin-bottom: 10px;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 10px;">We Handle Everything</h3>
+                        <p style="font-size: 1rem; line-height: 1.5;">From bookkeeping to payroll and taxes, we manage your entire financial back office seamlessly.</p>
+                    </div>
+
+                    <!-- You Focus on Growing Your Business -->
+                    <div style="max-width: 300px; padding: 30px 20px 40px 20px; background-color: white; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+                        <img src="https://img.icons8.com/ios-filled/100/000000/rocket--v1.png" alt="You Focus on Growing Your Business" style="width: 50px; margin-bottom: 10px;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 10px;">You Focus on Growth</h3>
+                        <p style="font-size: 1rem; line-height: 1.5;">With your finances in expert hands, you’ll have the time and freedom to grow your business.</p>
+                    </div>
+                </div>
             </div>
-            <p>Only for a Limited Time:</p>
-            <h2 class="sarabun-semibold offer-main-headline">Lock In Up to $1800 in Credit Now!</h2>
-            <h2 class="sarabun-semibold offer-subheadline">Starting With Us Can Wait, But Claiming This Credit Really Can't</h2>
+        </section>
 
-            <p class="offer-text">
-              Act now to secure your accounting credit with ClearingStation. Register whenever you're ready, but don’t wait claiming this offer—the offer disappears at year's end.
-            </p>
+        <!-- Personal note -->
+        <section style="background: white; background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);">
+	    <div class="content">
+	        <div class="note" style="margin: 0 auto;">
+                    <div class="pin"></div>
+                    <h3>Personal Note from Jennifer Flaming, VP</h3>
+                    <p>
+                        It's always about time.
+                    </p>
+                    <br />
+                    <p>
+                        The moment you owe the CRA, time turns against you. Interest piles up daily and with every passing moment, the weight will get heavier. Delaying any longer? It's not risky. It's dangerous.
+                    </p>
+                    <br />
+                    <p>
+                        Sure, you can make more money and eventually pay it back. But don't forget the taxes next year will only grow with the income, making it nearly impossible to catch up.
+                    </p>
+                    <br />
+                    <p>
+                        I've worked with hundreds of businesses over the past decade. I've seen it all. And there's one truth that holds: Time is either your greatest asset, or your greatest enemy. Once you lose control, it is almost impossible to regain.
+                    </p>
+                    <br />
+                    <p>
+                        The solution? It's simple. Start tackling that challenge head-on now. Whether you work with us or anyone else doesn't matter but you need to tackle time head on.
+                    </p>
+                    <br />
+                    <p>
+                        I know this feels overwhelming. You might think the mess is too big for anyone to work through, but here's the thing: All it takes is one call. We'll handle the rest. Years of paperwork? Boxes full of receipts? We painstakingly work through it all, find every possible deduction, every expense, and help bring down what's owed. We'll even think of things that you haven't submitted in these boxes.
+                    </p>
+                    <br />
+                    <p>
+                        We'll even come to your office and pick it all up.
+                    </p>
+                    <br />
+                    <p>
+                        But we're not just here to clean up the past transactions. We're here to clear the way for the future. No more stress.
+                        We offer you a simple way to delegate your biggest headache and reclaim your time and make your time-efficiency your biggest asset again.
+                    </p>
+                    <br />
+                    <p class="" style="font-size: 1.1em">
+                        <span class="sarabun-bold-italic">Let's start working together.</span>
+                    </p>
+                    <br />
+                    <p>Best regards, <br><b>Jennifer Flaming</b> <br>VP, ClearingStation</p>
+                </div>
+                <style>
+                 .note {background-color: #fdfd96; /* Light yellow paper color */padding: 20px;max-width: 500px;border: 2px solid #e3c565; /* Border simulating note edges */border-radius: 10px;box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */font-size: 1.2rem;line-height: 1.6;color: #333;position: relative;}
+                 .note:before {content: '';position: absolute;top: 10px;left: 50%;transform: translateX(-50%);width: 60px;height: 10px;background-color: #f9f9f9;border-radius: 5px;box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Simulating a folded crease */}
+                 .note h3 {font-family: 'Caveat', cursive; /* Handwritten style */margin: 0 0 10px 0;font-size: 1.8rem;}
+                 .note p {margin: 0; font-size: 0.9em;}
+                 .pin {position: absolute;top: -15px;left: 50%;transform: translateX(-50%);width: 30px;height: 30px;background-color: red;border-radius: 50%;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);z-index: 10;}
+                 .pin:before {content: '';position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 8px;height: 8px;background-color: white;border-radius: 50%;}
+                </style>
+	        <div class="text-center" style="margin-top: 30px">
+                    <a href="start.htm" class="green btn primary-btn animated">Start Your Free Consultation Today &raquo;</a>
+                </div>
+	    </div>
+        </section>
 
-            <div class="offers-container">
-              <!-- Offer A -->
-              <div class="offer" onclick="selectOffer(this)" data-offer="600">
-                <div class="checkmark"></div>
-                <p class="sarabun-semibold" style="font-size: 2em; color: #007bff;">$600 CAD</p>
-                <p class="sarabun-semibold" style="color: #007bff; margin-bottom: 20px; font-weight: bold;">in Accounting Credit</p>
-                <p style="font-size: 14px; color: #666;">
-                    Spend $300 CAD on our Standard Plan in your first 30 days after activating this offer to unlock this credit.
+        <section id="select-offer">
+            <div class="content offer-content">
+                <div style="max-width: 100%; margin: 0 auto;">
+
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="images/celebrate.png" alt="Celebrate Icon"/>
+                        <br />
+                        New Here?
+                    </div>
+                    <p>Only for a Limited Time:</p>
+                    <h2 class="sarabun-semibold offer-main-headline">Lock In Up to $1800 in Credit Now!</h2>
+                    <h2 class="sarabun-semibold offer-subheadline">Starting With Us Can Wait, But Claiming This Credit Really Can't</h2>
+
+                    <p class="offer-text">
+                        Act now to secure your accounting credit with ClearingStation. Register whenever you're ready, but don’t wait claiming this offer—the offer disappears at year's end.
+                    </p>
+
+                    <div class="offers-container">
+                        <!-- Offer A -->
+                        <div class="offer" onclick="selectOffer(this)" data-offer="600">
+                            <div class="checkmark"></div>
+                            <p class="sarabun-semibold" style="font-size: 2em; color: #007bff;">$600 CAD</p>
+                            <p class="sarabun-semibold" style="color: #007bff; margin-bottom: 20px; font-weight: bold;">in Accounting Credit</p>
+                            <p style="font-size: 14px; color: #666;">
+                                Spend $299 CAD on our Standard Plan in your first 30 days after activating this offer to unlock this credit.
+                            </p>
+                        </div>
+
+                        <!-- Offer B -->
+                        <div class="offer" onclick="selectOffer(this)" data-offer="1200">
+                            <div class="checkmark"></div>
+                            <p class="sarabun-semibold" style="font-size: 2em; color: #007bff;">$1200 CAD</p>
+                            <p class="sarabun-semibold" style="color: #007bff; margin-bottom: 20px;">in Accounting Credit</p>
+                            <p style="font-size: 14px; color: #666;">Spend $500 CAD on our Business Plan in your first 30 days after activating this offer to unlock this credit.</p>
+                        </div>
+
+                        <!-- Offer C -->
+                        <div class="offer" onclick="selectOffer(this)" data-offer="1800">
+                            <div class="checkmark"></div>
+                            <p class="sarabun-semibold" style="font-size: 2em; color: #007bff;">$1800 CAD</p>
+                            <p class="sarabun-semibold" style="color: #007bff; margin-bottom: 20px;">in Accounting Credit</p>
+                            <p style="font-size: 14px; color: #666;">Spend $700 CAD on our Business Plan & Document Scanning Service in your first 30 days after activating this offer to unlock this credit.</p>
+                        </div>
+                    </div>
+
+                    <div class="claim-credit">
+                        <div>
+                            <h3 class="sarabun-semibold">How to claim your credit</h3>
+                            <p>Select an option and click 'Claim Now', enter your Email and Phone Number next. We automatically apply the credit to your account whenever you're ready to become a client.</p>
+                        </div>
+                        <div style="min-width: 150px;">
+                            <a href="claim-offer.htm?" class="offer-button disabled" id="claimButton">Claim Now</a>
+                        </div>
+                    </div>
+
+                    <script>
+                     function selectOffer(selectedOffer) {
+                         // Deselect all offers
+                         const offers = document.querySelectorAll('.offer');
+                         offers.forEach(offer => {
+                             offer.classList.remove('selected');
+                         });
+
+                         // Select the clicked offer
+                         selectedOffer.classList.add('selected');
+
+                         const offer = selectedOffer.getAttribute('data-offer');
+                         document.getElementById('claimButton').setAttribute('href', 'claim-offer.htm?opt=' + offer);
+                         console.log({selectedOffer});
+                         setCookie("creditChoice", offer, 30);
+                         checkSubmissionStatus();
+
+                         // Enable the button
+                         document.getElementById('claimButton').classList.remove('disabled');
+                     }
+                    </script>
+
+                </div>
+                <style>
+                 section#select-offer {background-color: lightblue; padding: 30px;}
+                 .offer-main-headline {font-size: 2.5em;}
+                 .offer-subheadline {color: #2e3b6d; font-size: 1.8em; line-height: 1.4em; margin-bottom: 20px;}
+                 .offer-text {color: #4a4a4a; font-size: 1.1em; line-height: 1.6em; margin-bottom: 40px;}
+                 .offer-content {max-width: 1000px;text-align: center;background-color: white;padding: 40px 80px;box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);position: relative;}
+                 .offer {width: 30%;border: 2px solid #d1d1d1;border-radius: 8px;padding: 20px;background-color: white;position: relative;cursor: pointer;transition: all 0.3s ease;}
+                 .offer.selected {border-color: #007bff;background-color: #eef4ff;}
+                 .offer p {margin: 10px 0;}
+                 .offer .checkmark {position: absolute;top: 10px;right: 10px;width: 24px;height: 24px;border-radius: 50%;border: 2px solid #007bff;background-color: white;display: flex;align-items: center;justify-content: center;font-size: 16px;color: #007bff;}
+                 .offer.selected .checkmark {visibility: visible;}
+                 .offer.selected .checkmark:before {content: '✔';}
+                 .offers-container {display: flex;justify-content: space-around;margin-bottom: 40px; gap: 20px;}
+                 .offer-button {background-color: #007bff;color: white;font-size: 16px;padding: 12px 24px;border: none;border-radius: 5px;cursor: pointer;}
+                 .offer-button.disabled {background-color: #d1d1d1;cursor: not-allowed; pointer-events: none;}
+                 .claim-credit {display: flex; text-align: left; align-items: center; justify-content: space-between; gap: 30px; padding: 30px; background: rgb(232, 240, 254); border-radius: 10px;}
+                 @media (max-width: 600px) {
+                     .offer-main-headline {font-size: 1.9em; margin-bottom: 30px;}
+                     .offer-subheadline {font-size: 1.3em;}
+                     .offer-text {font-size: 0.9em; line-height: 1.6em; margin-bottom: 20px;}
+                     .offers-container {flex-direction: column;}
+                     .offer {width: auto;}
+                     .claim-credit {flex-direction: column;}
+                 }
+                </style>
+        </section>
+
+        <section>
+            <div class="content text-center" style="max-width: 800px">
+                <h2 class="sarabun-semibold" style="font-size: 3em; margin-bottom: 40px;">Let us help.</h2>
+                <p style="font-size: 1.3em; line-height: 1.5em; color: #4a4a4a; margin-bottom: 30px;">
+                    Get started with our free-of-charge, personalized consultation. We're here to make the process easy and stress-free.
                 </p>
-              </div>
-
-              <!-- Offer B -->
-              <div class="offer" onclick="selectOffer(this)" data-offer="1200">
-                <div class="checkmark"></div>
-                <p class="sarabun-semibold" style="font-size: 2em; color: #007bff;">$1200 CAD</p>
-                <p class="sarabun-semibold" style="color: #007bff; margin-bottom: 20px;">in Accounting Credit</p>
-                <p style="font-size: 14px; color: #666;">Spend $500 CAD on our Business Plan in your first 30 days after activating this offer to unlock this credit.</p>
-              </div>
-
-              <!-- Offer C -->
-              <div class="offer" onclick="selectOffer(this)" data-offer="1800">
-                <div class="checkmark"></div>
-                <p class="sarabun-semibold" style="font-size: 2em; color: #007bff;">$1800 CAD</p>
-                <p class="sarabun-semibold" style="color: #007bff; margin-bottom: 20px;">in Accounting Credit</p>
-                <p style="font-size: 14px; color: #666;">Spend $700 CAD on our Business Plan & Document Scanning Service in your first 30 days after activating this offer to unlock this credit.</p>
-              </div>
+                <a href="tel:(204) 381 9308" style="text-decoration: none; display: inline-block; background-color: #eef4ff; color: #007bff; font-size: 16px; padding: 12px 20px; border-radius: 8px; border: 1px solid #007bff; font-weight: bold;">
+                    <img src="https://img.icons8.com/color/24/000000/phone.png" alt="Phone Icon" style="vertical-align: middle; margin-right: 8px;"/> (204) 381 9308
+                </a>
             </div>
-
-            <div class="claim-credit">
-              <div>
-                <h3 class="sarabun-semibold">How to claim your credit</h3>
-                <p>Select an option and click 'Claim Now', enter your Email and Phone Number next. We automatically apply the credit to your account whenever you're ready to become a client.</p>
-              </div>
-              <div style="min-width: 150px;">
-                <a href="claim-offer.htm?" class="offer-button disabled" id="claimButton">Claim Now</a>
-              </div>
-            </div>
-
-        <script>
-          function selectOffer(selectedOffer) {
-              // Deselect all offers
-              const offers = document.querySelectorAll('.offer');
-              offers.forEach(offer => {
-                  offer.classList.remove('selected');
-              });
-
-              // Select the clicked offer
-              selectedOffer.classList.add('selected');
-
-              const offer = selectedOffer.getAttribute('data-offer');
-              document.getElementById('claimButton').setAttribute('href', 'claim-offer.htm?opt=' + offer);
-              console.log({selectedOffer});
-
-              // Enable the button
-              document.getElementById('claimButton').classList.remove('disabled');
-          }
-        </script>
-
-          </div>
-          <style>
-            section#select-offer {background-color: lightblue; padding: 30px;}
-            .offer-main-headline {font-size: 2.5em;}
-            .offer-subheadline {color: #2e3b6d; font-size: 1.8em; line-height: 1.4em; margin-bottom: 20px;}
-            .offer-text {color: #4a4a4a; font-size: 1.1em; line-height: 1.6em; margin-bottom: 40px;}
-            .offer-content {max-width: 1000px;text-align: center;background-color: white;padding: 40px 80px;box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);position: relative;}
-            .offer {width: 30%;border: 2px solid #d1d1d1;border-radius: 8px;padding: 20px;background-color: white;position: relative;cursor: pointer;transition: all 0.3s ease;}
-            .offer.selected {border-color: #007bff;background-color: #eef4ff;}
-            .offer p {margin: 10px 0;}
-            .offer .checkmark {position: absolute;top: 10px;right: 10px;width: 24px;height: 24px;border-radius: 50%;border: 2px solid #007bff;background-color: white;display: flex;align-items: center;justify-content: center;font-size: 16px;color: #007bff;}
-            .offer.selected .checkmark {visibility: visible;}
-            .offer.selected .checkmark:before {content: '✔';}
-            .offers-container {display: flex;justify-content: space-around;margin-bottom: 40px; gap: 20px;}
-            .offer-button {background-color: #007bff;color: white;font-size: 16px;padding: 12px 24px;border: none;border-radius: 5px;cursor: pointer;}
-            .offer-button.disabled {background-color: #d1d1d1;cursor: not-allowed; pointer-events: none;}
-            .claim-credit {display: flex; text-align: left; align-items: center; justify-content: space-between; gap: 30px; padding: 30px; background: rgb(232, 240, 254); border-radius: 10px;}
-            @media (max-width: 600px) {
-                .offer-main-headline {font-size: 1.9em; margin-bottom: 30px;}
-                .offer-subheadline {font-size: 1.3em;}
-                .offer-text {font-size: 0.9em; line-height: 1.6em; margin-bottom: 20px;}
-                .offers-container {flex-direction: column;}
-                .offer {width: auto;}
-                .claim-credit {flex-direction: column;}
-            }
-          </style>
-      </section>
-
-      <section>
-        <div class="content text-center" style="max-width: 800px">
-          <h2 class="sarabun-semibold" style="font-size: 3em; margin-bottom: 40px;">Let us help.</h2>
-          <p style="font-size: 1.3em; line-height: 1.5em; color: #4a4a4a; margin-bottom: 30px;">
-              Get started with our free-of-charge, personalized consultation. We're here to make the process easy and stress-free.
-          </p>
-          <a href="tel:(204) 381 9308" style="text-decoration: none; display: inline-block; background-color: #eef4ff; color: #007bff; font-size: 16px; padding: 12px 20px; border-radius: 8px; border: 1px solid #007bff; font-weight: bold;">
-            <img src="https://img.icons8.com/color/24/000000/phone.png" alt="Phone Icon" style="vertical-align: middle; margin-right: 8px;"/> (204) 381 9308
-          </a>
-        </div>
-      </section>
+        </section>
 
     </main>
 
@@ -916,7 +886,6 @@ src="https://www.facebook.com/tr?id=1217446149566169&ev=PageView&noscript=1"
 	      <svg style="display: inline-block; margin: 0 auto;" width="60px" xmlns="http://www.w3.org/2000/svg" viewBox="80 0 75 104.99"><defs><style>.cls-1,.cls-2{fill:none;}.cls-1{stroke:green;stroke-miterlimit:10;stroke-width:3.65px;}</style></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_3" data-name="Layer 3"><path class="cls-1" d="M90.59,4.88,89.13,48.35l2,52.88H127S126,76.85,125.71,75.92s-.66-9.54-.66-9.54l7.55-8.61,19.75-29s-3.71.13-4.77-.4-3.45-1.72-4-1.86a14.65,14.65,0,0,0-4.77,1.19,19.5,19.5,0,0,0-3.18,1.46l-2.12,1.59s1.19-3,1.33-3.45a6.76,6.76,0,0,0-1.06-4.37c-1.19-1.86-1.72-4.11-2.52-5.83a10.57,10.57,0,0,1-.93-2.78L126,14s.66,2.39-.13,3.18-.8-2.39-.8-2.39a2.22,2.22,0,0,1-2-.93c-.66-1.06-1.33-1.19-1.06-2.52a25.67,25.67,0,0,0,.8-2.92c0-.8-.93-2.25-.93-2.65V4.22Z"/><rect class="cls-2" width="241.49" height="104.99"/></g></g></svg>
 	    </div>
 	  </div>
-	  
 	</div>
       </div>
     </footer>
