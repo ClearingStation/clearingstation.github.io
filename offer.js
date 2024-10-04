@@ -24,8 +24,6 @@ function checkSubmissionStatus() {
     const submitted = getCookie("submissionStatus");
     const creditChoice = getCookie("creditChoice");
 
-    console.log({submitted, creditChoice});
-
     // If the user has submitted, show a thank you message
     if (submitted === "true") {
         document.getElementById('claimed').style.display = "flex";
@@ -37,5 +35,12 @@ function checkSubmissionStatus() {
         document.getElementById('offer-container-' + creditChoice).style.display = "flex";
     } else {
         document.getElementById('new-here').style.display = "flex";
+    }
+
+    if (creditChoice && !window.creditChoiceSet) {
+        setTimeout(function() {
+            document.querySelector('[data-offer="'+ creditChoice +'"]').click();
+            window.creditChoiceSet=true;
+        }, 1000);
     }
 }

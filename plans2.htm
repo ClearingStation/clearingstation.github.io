@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans - ClearingStation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .pricing-header {
+            text-align: center;
+            padding: 40px;
+            background-color: #3b7ddd;
+            color: white;
+        }
+        .pricing-header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        .pricing-header p {
+            font-size: 18px;
+            margin: 10px 0 0;
+        }
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            padding: 50px 20px;
+        }
+        .plan {
+            background-color: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            margin: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .plan:hover {
+            transform: translateY(-10px);
+            border-color: #3b7ddd;
+        }
+        .plan.most-popular {
+            border-color: #3b7ddd;
+            background-color: #f0f7ff;
+            position: relative;
+        }
+        .plan.most-popular::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background-color: #3b7ddd;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        .plan h2 {
+            font-size: 28px;
+            margin: 10px 0;
+        }
+        .plan p {
+            color: #888;
+            margin: 10px 0 20px;
+        }
+        .plan h2 small {
+            font-size: 14px;
+            color: #888;
+        }
+        .plan-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        .plan-list li {
+            text-align: left;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .plan-list li:before {
+            content: '✔';
+            color: #2ecc71;
+            margin-right: 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #3b7ddd;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #2a5f9b;
+        }
+        .testimonial-section {
+            background-color: #f7f7f7;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .testimonial-section p {
+            font-style: italic;
+            color: #555;
+        }
+        .faq-section {
+            background-color: #fff;
+            padding: 40px 20px;
+        }
+        .faq-section h3 {
+            font-size: 20px;
+            color: #333;
+        }
+        .faq-section p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <section class="pricing-header">
+        <h1>Pricing Plans</h1>
+        <p>Choose a plan that works for your business needs</p>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="pricing-container">
+        <!-- Standard Plan -->
+        <div class="plan">
+            <h2>Essentials Plan</h2>
+            <p>Perfect for small businesses looking for reliable bookkeeping and tax compliance.</p>
+            <h2>$300 <small>/mo</small></h2>
+            <div>
+              <ul class="plan-details">
+                <li><b>Bank Reconciliation:</b> Monthly reconciliation and financial closing.</li>
+                <li><b>Reporting:</b> Quarterly recaps and financial reports delivered via email.</li>
+                <li><b>Tax Services:</b> Preparation and filing of GST, PST, and sales tax.</li>
+                <li><b>Payroll Services:</b> For up to 2 employees.</li>
+                <li><b>Audit Support:</b> Assistance with government communications and audits.</li>
+                <li><b>Corporate T2 Return:</b> $450</li>
+                <li><b>T1 Personal Income Tax Return:</b> $75</li>
+              </ul>
+            </div>
+
+
+            <ul class="plan-list">
+
+            <li>Bookkeeping for up to 50 transactions</li>
+                <li>Basic tax services (GST, PST)</li>
+                <li>Payroll for up to 2 employees</li>
+                <li>Bank reconciliation</li>
+            </ul>
+            <a href="start.htm?type=standard" class="btn">Start Essentials</a>
+        </div>
+
+        <!-- Business Plan -->
+        <div class="plan most-popular">
+            <h2>Growth Plan</h2>
+            <p>Ideal for growing businesses ready to scale and optimize their finances.</p>
+            <h2>$500 <small>/mo</small></h2>
+            <ul class="plan-list">
+                <li>Advanced financial services</li>
+                <li>Comprehensive tax filings (T2, GST, PST)</li>
+                <li>Payroll for up to 10 employees</li>
+                <li>Audit support and guidance</li>
+            </ul>
+            <a href="start.htm?type=business" class="btn">Start Growth Plan</a>
+        </div>
+
+        <!-- Document Scanning Plan -->
+        <div class="plan">
+            <h2>Paper-Free Plan</h2>
+            <p>Stay organized without the hassle of managing physical paperwork.</p>
+            <h2>$199 <small>/mo</small></h2>
+            <ul class="plan-list">
+                <li>Monthly document pickup and scanning</li>
+                <li>Secure digital archiving</li>
+                <li>Seamless integration with accounting software</li>
+                <li>Monthly review of documents</li>
+            </ul>
+            <a href="start.htm?type=scanning" class="btn">Get Paper-Free</a>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <p>"ClearingStation saved me countless hours of paperwork. I can now focus on growing my business!" - Dr. John Smith, Winnipeg Physician</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h3>Frequently Asked Questions</h3>
+        <p><strong>What happens if I exceed the transaction limit?</strong></p>
+        <p>If you exceed the limit, you can easily upgrade to a higher plan, or additional transactions will incur a small fee.</p>
+        <p><strong>Is there a money-back guarantee?</strong></p>
+        <p>Yes, we offer a 14-day money-back guarantee if you're not satisfied with our service.</p>
+    </section>
+
+</body>
+</html>
