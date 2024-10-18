@@ -1,32 +1,3 @@
-<!--
-    APPLICATION_NAME "ClearingStation Ltd."
-    APPLICATION_DESCRIPTION "ClearingStation Ltd.: Premier Financial Services & Tax Solutions in Canada"
-
-    OFFLINE_MANIFEST_PATH "./offline.appcache"
-
-    LANG "en"
-    LOCALE "en_US"
-
-    PAGE_KEYWORD ""
-    PAGE_NAME ""
-    PAGE_DESCRIPTION ""
-    PAGE_IMAGE_URL "https://static.example.com/article/about-uselessness.png"
-    PAGE_CANONICAL_URL "https://example.com/about-uselessness"
-    PAGE_SHORTLINK_URL "https://bit.ly/totoenvacances"
-
-    GOOGLE_WEBMASTER_TOOLS_KEY "xxx"
-
-    TWITTER_CREATOR_ACCOUNT "@ChtefiD"
-    TWITTER_WEBSITE_ACCOUNT "@ChtefiD"
-
-    FACEBOOK_PUBLISHER "https://www.facebook.com/my-website-page"
-    FACEBOOK_AUTHOR "https://www.facebook.com/personal-author-page"
-    GOOGLE_PUBLISHER "https://plus.google.com/+my-website-page"
-    GOOGLE_AUTHOR "https://plus.google.com/+personal-author-page"
-
-    SITEMAP_URL "/sitemap.xml"
-
-  -->
 <!DOCTYPE html>
 <html lang="EN">
   <head>
@@ -35,20 +6,19 @@
 
     <meta http-equiv="Content-Language" content="EN">
     <meta name="language" content="EN" />
-    <title>ClearingStation Ltd.: Premier Financial Services & Tax Solutions in Canada</title>
-    <meta name="description" content="Discover comprehensive financial services at ClearingStation Ltd.. Specializing in bookkeeping, tax filing, and financial clarity for businesses in Canada. Get started with our expert team today.">
-    <meta name="keywords" content="Financial services for small businesses in Canada,Canada tax filing and bookkeeping solutions,Financial services in Canada,Custom financial solutions for Canada industries,Healthcare financial compliance services in Canada,Trucking and construction financial management Canada,Automated financial planning services Canada,Retro tax plan assistance for Canada businesses,PHIA compliant accounting services in Steinbach,Expert financial advisory services in Canada" />
-    <meta name="robots" content="index,follow" /> <!-- robots.txt devrait suffir -->
+    <title>ClearingStation Ltd.: Premier Financial Services & Tax Solutions for Business Owners</title>
+    <meta name="description" content="ClearingStation offers full-service bookkeeping, tax filing, payroll, and document scanning for business owners." />
+    <meta name="keywords" content="small business bookkeeping, accounting bookkeeping, bookkeeping business, payroll services, small business accounting, accounting services, bookkeeping near me, accountant winnipeg, bookkeeping winnipeg, bookkeeping services, business accounting, tax accountant near me" />
+    <meta name="keywords" content="bookkeeping, tax filing, payroll, document scanning, Manitoba, business, Canada" />
+    <meta name="robots" content="index,follow" />
 
-    <link rel="pingback" href=".../xmlrpc.php" />
-    <link rel="alternate" type="application/rss+xml" title="..." href=".../feed/" />
-    <link rel="prev" title="..." href=".../page/1" />
-    <link rel="next" title="..." href=".../page/3" />
-    <link rel="canonical" href="{{ PAGE_CANONICAL_URL }}" />
-    <link rel="shortlink" href="{{ PAGE_SHORTLINK_URL }}" />
-    <link rel="publisher" href="{{ GOOGLE_PUBLISHER }}"/>
-    <link rel="author" href="{{ GOOGLE_AUTHOR }}"/>
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ SITEMAP_URL }}" />
+    <link rel="pingback" href="https://www.clearingstation.ca/xmlrpc.php" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.clearingstation.ca/feed/" />
+    <link rel="prev" title="Previous" href="https://www.clearingstation.ca/about.htm" />
+    <link rel="next" title="Next" href="https://www.clearingstation.ca/plans.htm" />
+    <link rel="canonical" href="https://www.clearingstation.ca/" />
+    <link rel="shortlink" href="https://www.clearingstation.ca/" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.clearingstation.ca/sitemap.xml" />
 
     <!-- Resolve DNS asap (can be useful for future pages) -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -57,10 +27,6 @@
     <!-- Use for current page -->
     <link rel="preconnect" href="//fonts.googleapis.com">
 
-    <!-- always nice to use dns-prefetch or preconnect before, for stylesheets that are using those urls -->
-    <!-- eg: <link ref="preconnect" href="//fonts.gstatic.com"> -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800" rel="stylesheet" type="text/css">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <!-- Enable Chrome Frame -->
     <meta http-equiv="Default-Style" content="dark">
 
@@ -68,13 +34,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes, minimal-ui">
 
-    <!-- Don't want the content to be translated on the fly by the browser ? -->
     <meta name="google" value="notranslate">
-    <meta name="google-site-verification" content="{{ GOOGLE_WEBMASTER_TOOLS_KEY }}">
+    <meta name="google-site-verification" content="abcd1234webmasterkey" />
 
     <!-- fav icon -->
-    <link rel="fluid-icon" href="https://.../fluidicon.png" title="..."> <!-- ? -->
-    <link rel="shortcut icon" type="image/x-icon" href="http://.../favicon.ico">
+    <link rel="fluid-icon" href="https://www.clearingstation.ca/fluidicon.png" title="ClearingStation">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.clearingstation.ca/favicon.ico">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -84,309 +49,127 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
-    <link rel="image_src" href="{{ PAGE_IMAGE_URL }}">
+    <link rel="image_src" href="https://www.clearingstation.ca/images/optimized/main.jpg">
 
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
     <!-- Open Graph -->
-    <!-- TODO DYNAMIC ACCORDING TO THE TYPE -->
-    <meta property="og:locale" content="{{ LOCALE }}" />
-    <meta property="og:type" content="article" /> <!-- product... -->
-    <meta property="og:title" content="{{ PAGE_NAME }}" />
+    <meta property="og:locale" content="en_CA" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="ClearingStation - Bookkeeping, Tax Filing, and Document Scanning for Business Owners" />
     <meta property="og:description" content="Corporate Accounting for Canadians" />
-    <meta property="og:image" content="{{ PAGE_IMAGE_URL }}" />
-    <meta property="og:url" content="{{ PAGE_CANONICAL_URL }}" />
-    <meta property="og:site_name" content="{{ APPLICATION_NAME }}" />
+    <meta property="og:image" content="https://www.clearingstation.ca/images/optimized/main.jpg" />
+    <meta property="og:url" content="https://www.clearingstation.ca/page/2" />
+    <meta property="og:site_name" content="ClearingStation" />
 
-    <meta property="article:publisher" content="{{ FACEBOOK_PUBLISHER }}" />
-    <meta property="article:author" content="{{ FACEBOOK_AUTHOR }}" />
+    <meta property="article:publisher" content="https://www.facebook.com/ClearingStation" />
+    <meta property="article:author" content="https://www.facebook.com/profile.php?id=100081014436714" />
     <meta property="article:section" content="Technology" />
     <meta property="article:published_time" content="2015-01-06T23:07:41+00:00" />
     <meta property="article:modified_time" content="2015-05-12T22:24:50+00:00" />
     <meta property="og:updated_time" content="2015-05-12T22:24:50+00:00" />
-    <meta property="fb:admins" content="???" />
+    <meta property="fb:admins" content="admin1234" />
     <meta property="fb:app_id" content="123456789456489" />
 
-    <!-- TODO DYNAMIC ACCORDING TO THE CARD TYPE -->
-    <meta name="twitter:card" content="summary"/> <!-- photo -->
-    <meta name="twitter:title" content="{{ PAGE_NAME }}"/>
-    <meta name="twitter:description" content="Corporate Accounting for Canadians"/>
-    <meta name="twitter:site" content="{{ TWITTER_WEBSITE_ACCOUNT }}"/>
-    <meta name="twitter:image" content="{{ PAGE_IMAGE_URL }}" />
-    <meta name="twitter:creator" content="{{ TWITTER_CREATOR_ACCOUNT }}"/>
-    <meta name="twitter:domain" content="mon.site.com"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="ClearingStation Ltd.: Premier Financial Services & Tax Solutions"/>
+    <meta name="twitter:description" content="ClearingStation Ltd.: Premier Financial Services & Tax Solutions"/>
+    <meta name="twitter:site" content="@ClearingStationCA"/>
+    <meta name="twitter:image" content="https://www.clearingstation.ca/images/optimized/main.jpg" />
+    <meta name="twitter:creator" content="@JenniferFlamingVP"/>
+    <meta name="twitter:domain" content="clearingstation.ca"/>
 
     <!-- Bing -->
-    <meta name="geo.placename" content="United States" />
-    <meta name="geo.position" content="x;x" />
-    <meta name="geo.region" content="usa" />
-    <meta name="ICBM" content="x,x" />
+    <meta name="geo.placename" content="Canada" />
+    <meta name="geo.position" content="49.8251856621797, -97.16914101848603" />
+    <meta name="geo.region" content="ca" />
+    <meta name="ICBM" content="49.8251856621797, -97.16914101848603" />
 
-    <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","url":"https:\/\/...","name":"...","alternateName":"..."}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","url":"https://www.clearingstation.ca","name":"ClearingStation","alternateName":"ClearingStation Accounting Services"}</script>
 
-    <!-- Really Simple Discovery http://en.wikipedia.org/wiki/Really_Simple_Discovery -->
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.example.com/xmlrpc.php?rsd" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.clearingstation.ca/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.clearingstation.ca/wlwmanifest.xml" />
 
-    <!-- WindowsLiveWriter  -->
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.example.com/wlwmanifest.xml" />
-
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="...">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="ClearingStation Search">
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-    <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
 
-         <style>
-           html, body, div, span, applet, object, iframe,
-           h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-           a, abbr, acronym, address, big, cite, code,
-           del, dfn, em, img, ins, kbd, q, s, samp,
-           small, strike, strong, sub, sup, tt, var,
-           b, u, i, center,
-           dl, dt, dd, ol, ul, li,
-           fieldset, form, label, legend,
-           table, caption, tbody, tfoot, thead, tr, th, td,
-           article, aside, canvas, details, embed,
-           figure, figcaption, footer, header, hgroup,
-           menu, nav, output, ruby, section, summary,
-           time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
-           /* HTML5 display-role reset for older browsers */
-           article, aside, details, figcaption, figure,
-           footer, header, hgroup, menu, nav, section {display: block;}
-           body {line-height: 1.6em;}
-           ol, ul {list-style: none;}
-           blockquote, q {quotes: none;}
-           blockquote:before, blockquote:after,
-           q:before, q:after {content: '';content: none;}
-           table {border-collapse: collapse;border-spacing: 0;}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F06R6NDCPK">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-           body {font-family: Geometria, sans-serif; background-color: #f4f4f4;}
-           a {text-decoration: none;}
-           .flex{display: flex;}
-           .flex-space-between{justify-content:space-between;}
-           .flex-center{align-items: center;}
-           .text-bold{font-weight: bold;}
-           .ml-36{margin-left: 36px;}
-           .mt-50{margin-top: 50px;}
-           .mt-30{margin-top: 30px;}
-           .mt-20{margin-top: 20px;}
-           .mt-10{margin-top: 10px;}
-           .mb-20{margin-bottom: 20px;}
-           .mb-30{margin-bottom: 30px;}
-           .mb-50{margin-bottom: 50px;}
-           .img-responsive {width: 100%;max-width: 100%;}
-           .absolute {position: absolute;}
-           .full-bg {background-repeat: no-repeat;background-position: center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
-           .full-bg.fixed {background-attachment: fixed;}
-           .full-height {min-height: 100vh;}
-           .text-center {text-align: center;}
-           .text-white {color: #fff !important;}
-           h1 {font-size: 56px; line-height: 76px; max-width: 60%; margin-top: 106px; color: #282828; font-family: Geometria, sans-serif; font-weight: bold; margin-bottom: 36px;}
-           h2 {font-size: 36px; line-height: 48px; color: #282828; font-family: Geometria, sans-serif; font-weight: bold; margin-bottom: 36px;}
-           h3 {line-height: 1.6em; font-size: 22px;}
-
-           header {height: 48px; position: relative;background-color: #f4f4f4;box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.09);z-index:9;}
-           header #top-nav {height: 48px;font-size: 14px;max-width: 1724px; margin: 0 auto;padding: 0 36px;}
-           header #top-nav ul li {display: inline-block}
-           header #top-nav a {margin-right: 36px;color: rgba(0, 0, 0, .72);}
-           header #top-nav ul li:last-of-type a:last-of-type {margin-right: 0 !important;}
-           nav#main {padding-left: 24px;padding-right: 24px;max-width: 1652px;margin-top: 56px; margin-left: auto; margin-right: auto;position: static;}
-           nav#main > ul {border-radius: 4px 4px 0 0;background-color: #fff; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.02), 0 4px 4px 0 rgba(0, 0, 0, 0.02), 0 8px 8px 0 rgba(0, 0, 0, 0.02), 0 16px 16px 0 rgba(0, 0, 0, 0.02), 0 32px 32px 0 rgba(0, 0, 0, 0.02), 0 64px 64px 0 rgba(0, 0, 0, 0.02);border: 1px solid #e7e7e7;}
-           nav#main > ul > li {flex: 1; border-right: 1px solid #f0f0f0;}
-           nav#main > ul > li > a {display: flex; justify-content: center; align-items:center;height: 80px;color: #282828; transition: background-color 0.2s ease;}
-           nav#main > ul > li > a:hover {background-color: #f4f4f4}
-           nav#main > ul > li > a.active {font-weight: bold;}
-           .slide {max-width: 100%; margin-top: 200px;}
-           @media (max-width: 600px) {.slide {margin-top: 70px;}}
-           .slide-content {max-width: 1500px;  margin: 0 auto; padding: 0 30px;}
-           footer {padding: 50px 40px; max-width: 1584px; margin-left: auto; margin-right: auto;}
-           footer a {font-size: 13px;line-height: 16px;letter-spacing: 0.6px;color: rgba(0, 0, 0, 0.54);margin-top: 12px;}
-           footer b {font-size: 13px;line-height: 16px;letter-spacing: 0.6px;color: rgba(0, 0, 0, 0.54);font-weight: bold;font-family: Geometria, sans-serif;}
-           footer p {font-size: 16px;letter-spacing: 0.27px;line-height: 21px;color: #282828;font-family: Helvetica, Arial, sans-serif;font-feature-settings: 'tnum';}
-           footer ul li {margin-bottom: 15px; }
-
-           .bullet-list li {list-style: inside; margin-bottom: 10px}
-           section { border-bottom: 1px solid #d8d8d8;}
-           .content {max-width: 1500px; margin: 0 auto; padding: 100px; font-size: 18px}
-
-           .plan-wrapper {display: flex; align-items: baseline; justify-content: center; margin-bottom: 100px}
-           .plan {display: inline-block;background: white; margin: 0 30px;box-shadow: rgba(0, 0, 0, 0.13) 1px 1px 20px 0px;position: relative;width: 500px;}
-           .plan > div {padding: 20px 30px}
-           .plan > div:first-of-type {  background-color: rgb(250, 249, 247);border-radius: 5px 5px 0px 0px;color: rgb(47, 48, 52);padding: 43px 34px;text-align: center;}
-           .plan > div:nth-of-type(3) {  border-top: 1px solid rgb(212, 210, 206);padding: 45px 70px 25px 55px; }
-           .plan h2 {font-size: 32px;font-weight: bold; margin-bottom: 0px;}
-           .plan p {margin-bottom: 20px; margin-top: 20px}
-           .plan small {font-size: 16px;}
-           .plan .btn { margin: 0}
-           .plan li {margin-bottom: 10px;}
-           .most-popular-label {width: 145px;background-color: rgb(219, 174, 85);border-radius: 4px;color: rgb(255, 255, 255);font-size: 14px;padding: 5px 12px;position: absolute;right: 16px;text-align: center;text-transform: uppercase;top: -14px;}
-           b {font-weight: 600;}
-
-
-           input {   margin-bottom: 10px;border-radius: 6px !important; font-size: 17px;padding: 14px 18px;border: 2px solid #EBEBEB;box-sizing: border-box;transition: 0.3s border-color, 0.3s box-shadow;box-shadow: 0px 5px 10px rgba(0,0,0,0.03);}
-           input:focus {border-color: #2F80ED;z-index: 10; outline: none;}
-           .btn {
-               display: inline-block;
-               margin-bottom: 0;
-               font-weight: 400;
-               text-align: center;
-               white-space: wrap;
-               vertical-align: middle;
-               touch-action: manipulation;
-               cursor: pointer;
-               background-image: none;
-               border: 1px solid transparent;
-               padding: 10px 20px;
-               font-size: 16px;
-               line-height: 1.5;
-               border-radius: 4px;
-               word-wrap: break-word;
-               -webkit-user-select: none;
-               -moz-user-select: none;
-               -ms-user-select: none;
-               user-select: none;
-               transition: all 0.3s ease;  /* Smooth transition for hover effects */
-           }
-
-           /* Mobile Optimizations */
-           @media (max-width: 768px) {
-               .btn {font-size: 14px;padding: 8px 15px;max-width: 100%; /* Prevent overflow */}
-           }
-           .primary-btn {background: #75af26;color: #fff !important;box-shadow: none;border: 3px solid transparent;padding: 13px 16px !important;transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */}
-           /* Add subtle animation for attention grabbing */
-           .animated {animation: pulse 2s infinite;}
-           /* Subtle pulse effect */
-           @keyframes pulse {0% {transform: scale(1);}50% {transform: scale(1.05);}100% {transform: scale(1);}}
-           .primary-btn.outlined {background: #fff;color: #75af26 !important;border-color: #75af26;transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */}
-           /* Hover states */
-           .btn:hover {background-color: #e6e6e6; /* Add hover effect */}
-           .btn {font-size: 19px;letter-spacing: 0.15px;line-height: 28px;border-radius: 0;font-weight: bold;margin-right: 18px;margin-top: 18px;text-shadow: none;padding: 13px 56px;text-transform: uppercase;padding: 13px 0;max-width: 100%;}
-           .green {  color: #fff !important;background-color: #27AE60;}
-           .blue {background-color: #0077b6;}
-           .industries {justify-content: space-between;}
-           .industries > div{max-width: 100px;}
-           .industries > div > svg {width: 100%;}
-
-           sup { position: relative; top: -0.5em; font-size: 50%; }
-           .sarabun-thin {font-family: "Sarabun", sans-serif;font-weight: 100;font-style: normal;}
-           .sarabun-extralight {font-family: "Sarabun", sans-serif;font-weight: 200;font-style: normal;}
-           .sarabun-light {font-family: "Sarabun", sans-serif;font-weight: 300;font-style: normal;}
-           .sarabun-regular {font-family: "Sarabun", sans-serif;font-weight: 400;font-style: normal;}
-           .sarabun-medium {font-family: "Sarabun", sans-serif;font-weight: 500;font-style: normal;}
-           .sarabun-semibold {font-family: "Sarabun", sans-serif;font-weight: 600;font-style: normal;}
-           .sarabun-bold {font-family: "Sarabun", sans-serif;font-weight: 700;font-style: normal;}
-           .sarabun-extrabold {font-family: "Sarabun", sans-serif;font-weight: 800;font-style: normal;}
-           .sarabun-thin-italic {font-family: "Sarabun", sans-serif;font-weight: 100;font-style: italic;}
-           .sarabun-extralight-italic {font-family: "Sarabun", sans-serif;font-weight: 200;font-style: italic;}
-           .sarabun-light-italic {font-family: "Sarabun", sans-serif;font-weight: 300;font-style: italic;}
-           .sarabun-regular-italic {font-family: "Sarabun", sans-serif;font-weight: 400;font-style: italic;}
-           .sarabun-medium-italic {font-family: "Sarabun", sans-serif;font-weight: 500;font-style: italic;}
-           .sarabun-semibold-italic {font-family: "Sarabun", sans-serif;font-weight: 600;font-style: italic;}
-           .sarabun-bold-italic {font-family: "Sarabun", sans-serif;font-weight: 700;font-style: italic;}
-           .sarabun-extrabold-italic {font-family: "Sarabun", sans-serif;font-weight: 800;font-style: italic;}
-
-           @media (max-width: 600px) {
-               .flex {display: block !important; width: 100%;}
-               .flex-equal > *, .contain {width: 100%;max-width: fit-content;}
-               .mb-text-center {text-align: center;}
-               .content, .slide {padding: 50px 20px !important;}
-               #main > ul {display: flex !important;}
-               .content, .slide {padding: 20px 10px; /* Reduce padding on content for mobile */}
-               .img-responsive {max-width: 100%; /* Ensure images scale with screen size */height: auto; /* Maintain image proportions */}
-               .flex, .flex-space-between {display: block; /* Stack flex items vertically */width: 100%; /* Full width for flex items */}
-               .plan {width: 100%; /* Plans span full width */margin: 20px 0; /* Add space between plans */}
-               .plan-wrapper {flex-direction: column; /* Stack plan elements vertically */}
-               nav#main {padding-left: 10px;padding-right: 10px;margin-top: 20px; /* Adjust navigation margin */}
-               footer {padding: 30px 20px; /* Adjust footer padding */}
-               /* Navbar on Mobile */
-               header #top-nav {padding: 0px 10px;display: flex !important;}
-               .hide-mb {display: none !important;}
-               h2 {line-height:1.2em;}
-           }
-         </style>
-         <!-- Add the slick-theme.css if you want default styling -->
-         <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
-         <!-- Add the slick-theme.css if you want default styling -->
-         <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> -->
-         <link rel="stylesheet" href="slick.css?v=v1.0.49" type="text/css" media="screen" />
-         <link rel="stylesheet" href="slick-theme.css?v=v1.0.49" type="text/css" media="screen" />
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F06R6NDCPK">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-F06R6NDCPK');
-</script>
-<!-- Google Tag Manager -->
-         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      gtag('config', 'G-F06R6NDCPK');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                                               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                     })(window,document,'script','dataLayer','GTM-KFVRL4GM');</script>
-         <!-- End Google Tag Manager -->
-         <script type="application/ld+json">
-           {
-             "@context": "http://schema.org",
-             "@type": "LocalBusiness",
-             "name": "ClearingStation Ltd.",
-             "image": "https://www.clearingstation.ca/example.jpg",
-             "address": {
-               "@type": "PostalAddress",
-               "streetAddress": "123 Main Street",
-               "addressLocality": "Steinbach",
-               "addressRegion": "MB",
-               "postalCode": "R5G 1T3",
-               "addressCountry": "CA"
-             },
-             "geo": {
-               "@type": "GeoCoordinates",
-               "latitude": 49.5258,
-               "longitude": -96.6831
-             },
-             "url": "https://www.clearingstation.ca",
-             "telephone": "+12043819308",
-             "openingHours": "Mo-Fr 08:00-17:00",
-             "description": "Expert financial and accounting services for businesses in Canada, specializing in bookkeeping, tax filing, and financial clarity.",
-             "areaServed": "Canada"
-           }
-         </script>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1217446149566169');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1217446149566169&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-<script src="offer.js"></script>
+    <!-- End Google Tag Manager -->
+    <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "LocalBusiness",
+          "name": "ClearingStation Ltd.",
+          "image": "https://www.clearingstation.ca/images/optimized/jennifer.jpg",
+          "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "1460 Chevrier Blvd #200",
+              "addressLocality": "Winnipeg",
+              "addressRegion": "MB",
+              "postalCode": "R3T 1Y6",
+              "addressCountry": "CA"
+          },
+          "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 49.8251856621797,
+              "longitude": -97.16914101848603
+          },
+          "url": "https://www.clearingstation.ca",
+          "telephone": "+12043819308",
+          "openingHours": "Mo-Fr 08:00-17:00",
+          "description": "Expert financial and accounting services for businesses in Canada, specializing in bookkeeping, tax filing, and financial clarity.",
+          "areaServed": "Canada"
+      }
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                                          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+       if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+       n.queue=[];t=b.createElement(e);t.async=!0;
+       t.src=v;s=b.getElementsByTagName(e)[0];
+       s.parentNode.insertBefore(t,s)}(window, document,'script',
+                                       'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1217446149566169');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+    <script src="offer.js"></script>
 
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
+  <!-- Meta pixel -->
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1217446149566169&ev=PageView&noscript=1"
+                   /></noscript>
+    <!-- End Meta pixel -->
+      <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVRL4GM"
                       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
