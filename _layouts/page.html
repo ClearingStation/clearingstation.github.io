@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<!-- Page layout: hero + content -->
+{% if page.hero_title %}
+{% include sections/page-hero.html title=page.hero_title subtitle=page.hero_subtitle %}
+{% endif %}
+
+{{ content }}

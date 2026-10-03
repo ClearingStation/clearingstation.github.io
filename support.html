@@ -1,0 +1,61 @@
+---
+layout: default
+title: "How Can We Help? | ClearingStation Ltd."
+description: "Contact ClearingStation for bookkeeping, tax, and payroll support. Call (204) 381-9308 or email support@clearingstation.ca."
+nav_active: ""
+---
+
+{% include sections/page-hero.html title="How Can We Help?" subtitle="Our friendly team is here to assist you with any questions about your account, taxes, or our services." %}
+
+<!-- Support Content -->
+<section class="section support-section">
+    <div class="container">
+        <div class="support-grid">
+            <!-- Contact Cards -->
+            <div class="support-cards">
+                <div class="support-card">
+                    <div class="support-card-icon phone">
+                        {% include icons/phone.html size=28 %}
+                    </div>
+                    <div class="support-card-content">
+                        <h3>Call Us</h3>
+                        <p>Speak directly with our team</p>
+                        <a href="tel:{{ site.phone_raw }}" class="support-link">{{ site.phone }}</a>
+                    </div>
+                </div>
+                <div class="support-card">
+                    <div class="support-card-icon email">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <div class="support-card-content">
+                        <h3>Email Us</h3>
+                        <p>We'll respond within 24 hours</p>
+                        <a href="mailto:{{ site.email }}" class="support-link">{{ site.email }}</a>
+                    </div>
+                </div>
+                <div class="support-card">
+                    <div class="support-card-icon hours">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <div class="support-card-content">
+                        <h3>Business Hours</h3>
+                        <p>Monday – Friday</p>
+                        <span class="support-hours">8:00 AM – 5:00 PM</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Message -->
+            <div class="support-message">
+                <div class="support-message-card">
+                    <h2>We're Here to Help</h2>
+                    <p>Whether you have a question about your account, need help with a tax issue, or simply want some advice—our team of knowledgeable and friendly support staff is ready to assist you.</p>
+                    <p>We pride ourselves on providing exceptional support to every client. No question is too small, and we'll do our best to respond to your inquiry as quickly as possible.</p>
+                    <div class="support-signature">
+                        <p>Thank you for choosing ClearingStation.</p>
+                        <p class="signature-tagline">We look forward to helping you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,44 @@
+# Service cards for the services page
+- name: Bookkeeping
+  tagline: "Your financial foundation"
+  price: "From $299/month"
+  icon: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>'
+  features:
+    - Monthly bank reconciliation
+    - Expense categorization
+    - Financial statements
+    - GST/PST filing
+    - Year-end preparation
+
+- name: Tax Preparation
+  tagline: "Maximize your returns"
+  price: "Included in plans"
+  icon: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>'
+  features:
+    - Corporate T2 filing
+    - Personal tax returns
+    - Tax planning & strategy
+    - CRA audit support
+    - GST/PST returns
+
+- name: Payroll
+  tagline: "Hassle-free payroll"
+  price: "Included in plans"
+  icon: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>'
+  features:
+    - Employee payroll processing
+    - T4/ROE preparation
+    - Direct deposit setup
+    - CRA remittances
+    - Workers compensation
+
+- name: Document Scanning
+  tagline: "Go paperless with ease"
+  price: "From $199/month"
+  icon: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>'
+  features:
+    - Monthly document pickup
+    - High-quality scanning
+    - 7-year secure storage
+    - Full-text search access
+    - Staple & long receipt handling

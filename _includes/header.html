@@ -1,0 +1,22 @@
+<!-- Sticky header with active nav via page.nav_active front matter -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="{{ '/' | relative_url }}" class="logo">ClearingStation</a>
+            <nav>
+                <ul class="nav-links">
+                    {% for link in site.data.nav %}
+                    <li><a href="{{ link.url | relative_url }}"{% if page.nav_active == link.key %} class="active"{% endif %}>{{ link.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="tel:{{ site.phone_raw }}" class="header-phone">
+                    {% include icons/phone.html size=18 %}
+                    {{ site.phone }}
+                </a>
+                <a href="{{ '/start.html' | relative_url }}" class="btn btn-primary">Free Consultation</a>
+            </div>
+        </div>
+    </div>
+</header>

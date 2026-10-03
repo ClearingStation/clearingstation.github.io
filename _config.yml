@@ -1,0 +1,41 @@
+# Site settings
+title: "ClearingStation Ltd."
+description: "Expert bookkeeping, tax filing, payroll & document scanning for Manitoba businesses."
+url: "https://www.clearingstation.ca"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+
+# Exclude old files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - "*.zip"
+  - "*.htm"
+  - clearingstation.ca-Performance-on-Search-2026-01-29
+  - invoice-details.html
+  - plumbing_invoice.html
+  - view_invoice.html
+  - blog/self-employed-tax-tips-manitoba-for-plumbers.html
+  - blog/plumbing-invoicing-tool-automated-revenue-insights-autosuggested-line-items.html
+  - main.css
+  - style.css
+  - style2.css
+  - stylecomp.css
+  - pico.css
+  - dashboard.css
+  - slick.css
+  - slick-theme.css
+  - script.js
+  - offer.js
+
+# Site data (used in includes)
+phone: "(204) 381-9308"
+phone_raw: "2043819308"
+email: "support@clearingstation.ca"
+address: "1460 Chevrier Blvd #200<br>Winnipeg, MB R3T 1Y6"
+ga_id: "G-F06R6NDCPK"

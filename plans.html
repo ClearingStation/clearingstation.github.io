@@ -1,0 +1,116 @@
+---
+layout: default
+title: "Simple, Transparent Pricing | ClearingStation Ltd."
+description: "Get the partner your business needs to grow, at an unbeatable price. No hidden fees, no surprises."
+nav_active: pricing
+---
+
+{% include sections/page-hero.html title="Simple, Transparent Pricing" subtitle="Get the partner your business needs to grow, at an unbeatable price. No hidden fees, no surprises." %}
+
+<!-- Main Pricing Grid -->
+<section class="section pricing-main-section">
+    <div class="container">
+        <div class="pricing-grid-3">
+            {% for plan in site.data.pricing %}
+            <div class="pricing-card{% if plan.featured %} featured{% endif %}">
+                {% if plan.featured %}<div class="pricing-badge">Most Popular</div>{% endif %}
+                <div class="pricing-header">
+                    <h3>{{ plan.name }}</h3>
+                    <p class="pricing-tagline">{{ plan.description }}</p>
+                </div>
+                <div class="pricing-price">
+                    <span class="price-amount">{{ plan.price }}</span>
+                    <span class="price-period">{{ plan.period }}</span>
+                </div>
+                <p class="pricing-note">For businesses with less than 100 monthly transactions</p>
+                <ul class="pricing-features">
+                    {% for f in plan.features %}
+                    <li>{% include icons/check.html %} {{ f }}</li>
+                    {% endfor %}
+                </ul>
+                <div class="pricing-cta">
+                    <a href="{{ '/start.html' | relative_url }}" class="btn btn-primary btn-block">Get Started</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Special Plans -->
+<section class="section special-plans-section">
+    <div class="container">
+        <div class="special-plans-grid">
+
+            <!-- Catch Up Bookkeeping -->
+            <div class="special-plan-card">
+                <div class="special-plan-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <div class="special-plan-content">
+                    <h3>Catch Up Bookkeeping</h3>
+                    <p class="special-plan-tagline">Behind on your books? We'll get you current—fast.</p>
+                    <div class="special-plan-price">Starting at $199/month</div>
+                    <ul class="special-plan-features">
+                        <li>Reduce penalties and interest</li>
+                        <li>Accurate books within days</li>
+                        <li>We handle the paperwork mess</li>
+                        <li>CRA communication on your behalf</li>
+                    </ul>
+                    <a href="{{ '/start.html' | relative_url }}?type=catch-up" class="btn btn-secondary">Learn More →</a>
+                </div>
+            </div>
+
+            <!-- Professional Corporation -->
+            <div class="special-plan-card highlight">
+                <div class="special-plan-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                </div>
+                <div class="special-plan-content">
+                    <h3>Professional Corporation</h3>
+                    <p class="special-plan-tagline">Tailored for Physicians, Dentists, and Lawyers</p>
+                    <div class="special-plan-price">Starting at $999/month</div>
+                    <ul class="special-plan-features">
+                        <li>PHIA and PIPEDA compliance</li>
+                        <li>Everything in Bookkeeping & Tax</li>
+                        <li>Cash Management included</li>
+                        <li>Industry-specific expertise</li>
+                    </ul>
+                    <a href="{{ '/start.html' | relative_url }}?type=professional" class="btn btn-primary">Learn More →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section faq-section">
+    <div class="container">
+        <div class="faq-header">
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about working with ClearingStation</p>
+        </div>
+
+        <div class="faq-grid">
+            {% for item in site.data.faq %}
+            <div class="faq-item">
+                <button class="faq-question">
+                    {{ item.question }}
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </button>
+                <div class="faq-answer"><p>{{ item.answer }}</p></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% include sections/cta.html %}
+
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>

@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<!-- Blog post layout -->
+<section class="page-hero">
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p class="subtitle">{{ page.description }}</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="post-content">
+            <div class="post-meta">
+                {{ page.date | date: "%B %d, %Y" }} {% if page.author %} &middot; {{ page.author }}{% endif %}
+            </div>
+            {{ content }}
+        </div>
+    </div>
+</section>
+
+{% include sections/cta.html title="Need Help With Your Taxes?" subtitle="Book a free consultation and let our experts handle it." %}

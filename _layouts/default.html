@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body>
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+    {% include floating-cta.html %}
+
+    <!-- Header scroll effect -->
+    <script>
+        var header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>

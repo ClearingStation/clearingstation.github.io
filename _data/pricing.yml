@@ -1,0 +1,39 @@
+# Pricing plans
+- name: Bookkeeping
+  price: "$299"
+  period: "/month"
+  description: "Essential bookkeeping for small businesses with less than 100 monthly transactions."
+  featured: false
+  features:
+    - Dedicated bookkeeper
+    - Monthly books & reconciliation
+    - Tax-ready year-end package
+    - Payroll for up to 3 employees
+    - GST/PST filing
+    - Email & phone support
+
+- name: Bookkeeping & Tax
+  price: "$499"
+  period: "/month"
+  description: "Complete financial management with tax filing and strategic planning."
+  featured: true
+  features:
+    - Everything in Bookkeeping
+    - Payroll for up to 5 employees
+    - Quarterly tax strategy sessions
+    - Corporate tax filing (T2)
+    - Personal tax filing (T1)
+    - Priority support
+
+- name: Premium
+  price: "Custom"
+  period: ""
+  description: "Tailored solutions for growing businesses with complex needs."
+  featured: false
+  features:
+    - Everything in Bookkeeping & Tax
+    - Unlimited employees
+    - Custom reporting
+    - Controller-level oversight
+    - Dedicated account manager
+    - Same-day support

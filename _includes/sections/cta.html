@@ -1,0 +1,28 @@
+{% comment %}CTA section. Usage: include sections/cta.html title="Ready?" subtitle="Let's talk."{% endcomment %}
+<section class="section cta-section">
+    <div class="container">
+        <h2>{{ include.title | default: "Ready to Get Started?" }}</h2>
+        <p>{{ include.subtitle | default: "Book a free consultation and discover how we can save you time and money." }}</p>
+        <div class="cta-buttons">
+            <a href="{{ '/start.html' | relative_url }}" class="btn btn-primary">
+                Start Free Consultation
+                {% include icons/arrow-right.html %}
+            </a>
+            <a href="tel:{{ site.phone_raw }}" class="btn btn-phone">
+                {% include icons/phone.html %}
+                Call {{ site.phone }}
+            </a>
+        </div>
+        <div class="cta-benefits">
+            <div class="cta-benefit">
+                {% include icons/check.html %} No commitment required
+            </div>
+            <div class="cta-benefit">
+                {% include icons/check.html %} Free consultation
+            </div>
+            <div class="cta-benefit">
+                {% include icons/check.html %} Response within 24 hours
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,15 @@
+# Testimonial data used across multiple pages
+- quote: "ClearingStation transformed how we handle our books. Jennifer and her team are incredibly thorough and always available when we need them."
+  name: "Sarah M."
+  initials: "SM"
+  location: "Winnipeg, MB"
+
+- quote: "After years of doing our own bookkeeping, switching to ClearingStation was the best decision we made. They found deductions we had been missing for years."
+  name: "David K."
+  initials: "DK"
+  location: "Steinbach, MB"
+
+- quote: "Professional, reliable, and genuinely caring about our business success. They handle everything so we can focus on our patients."
+  name: "Dr. Lisa R."
+  initials: "LR"
+  location: "Winnipeg, MB"

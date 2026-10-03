@@ -1,0 +1,16 @@
+# Main navigation links
+- title: Home
+  url: /
+  key: home
+
+- title: About
+  url: /about.html
+  key: about
+
+- title: Services
+  url: /services.html
+  key: services
+
+- title: Pricing
+  url: /plans.html
+  key: pricing

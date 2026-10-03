@@ -1,0 +1,1123 @@
+---
+layout: default
+title: "Document Scanning Canada | $199/Box, Everything Included | ClearingStation"
+description: "Mail us your documents, get searchable PDFs in 5 business days. $199/box, up to 2,500 pages. Try free: send 50 pages in an envelope. Stored in Canada only."
+nav_active: ""
+---
+
+<!-- Structured data: Service + FAQ for rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Document Scanning Service",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "ClearingStation Ltd.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1460 Chevrier Blvd #200",
+      "addressLocality": "Winnipeg",
+      "addressRegion": "MB",
+      "postalCode": "R3T 1Y6",
+      "addressCountry": "CA"
+    },
+    "telephone": "+12043819308",
+    "url": "https://www.clearingstation.ca"
+  },
+  "description": "Mail-in document scanning service for Canadian businesses. $199 per box, up to 2,500 pages. Free trial available.",
+  "areaServed": { "@type": "Country", "name": "CA" },
+  "offers": {
+    "@type": "Offer",
+    "price": "199",
+    "priceCurrency": "CAD",
+    "description": "Up to 2,500 pages per box. Includes staple removal, envelope handling, OCR, and 7-year encrypted storage."
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What if I have more than 2,500 pages?", "acceptedAnswer": { "@type": "Answer", "text": "Send multiple boxes. Volume discounts available for 3 or more boxes." } },
+    { "@type": "Question", "name": "Where do I ship my documents?", "acceptedAnswer": { "@type": "Answer", "text": "ClearingStation Ltd., 1460 Chevrier Blvd #200, Winnipeg, MB R3T 1Y6. Any carrier works." } },
+    { "@type": "Question", "name": "How long does document scanning take?", "acceptedAnswer": { "@type": "Answer", "text": "5 business days from the day we receive your documents. Most customers have their PDFs within 2-3 weeks of mailing." } },
+    { "@type": "Question", "name": "Do you return original documents?", "acceptedAnswer": { "@type": "Answer", "text": "Your choice. We return them via Canada Post at cost, or securely shred them." } },
+    { "@type": "Question", "name": "What is the free trial?", "acceptedAnswer": { "@type": "Answer", "text": "Send us up to 50 pages in a regular envelope. We scan them and email you the results for free. You see exactly what you would get before committing to a full box." } }
+  ]
+}
+</script>
+
+
+<!-- ============================================================
+     STICKY BAR — visible after scrolling past hero.
+     ============================================================ -->
+<div class="ds-sticky" id="dsSticky">
+    <div class="container ds-sticky-inner">
+        <span><strong>Try free</strong> &mdash; send 50 pages in an envelope, on us</span>
+        <a href="#scanning-form" class="btn btn-primary btn-sm">Try Free</a>
+    </div>
+</div>
+
+
+<!-- ============================================================
+     HERO — two columns: copy on left, form on right.
+     The form IS the conversion. Everything else supports it.
+     ============================================================ -->
+<section class="ds-hero" id="dsHero">
+    <div class="container">
+        <div class="ds-hero-grid">
+
+            <!-- Left: copy -->
+            <div class="ds-hero-copy">
+                <h1>Try Our Document<br>Scanning. <span class="ds-price-hl">Free.</span></h1>
+                <p class="ds-hero-sub">
+                    Send us up to 50 pages in a regular envelope.
+                    We scan them and email you searchable PDFs &mdash; no charge, no commitment.
+                    See the quality before you decide.
+                </p>
+                <div class="ds-hero-points">
+                    <div class="ds-hero-point">
+                        <span class="ds-hero-point-icon">{% include icons/check.html %}</span>
+                        <span>Free trial &mdash; up to 50 pages</span>
+                    </div>
+                    <div class="ds-hero-point">
+                        <span class="ds-hero-point-icon">{% include icons/check.html %}</span>
+                        <span>Full boxes: $199 for up to 2,500 pages</span>
+                    </div>
+                    <div class="ds-hero-point">
+                        <span class="ds-hero-point-icon">{% include icons/check.html %}</span>
+                        <span>5 business days after we receive it</span>
+                    </div>
+                    <div class="ds-hero-point">
+                        <span class="ds-hero-point-icon">{% include icons/check.html %}</span>
+                        <span>Stored in Canada only</span>
+                    </div>
+                </div>
+                <!-- Mobile-only CTA that scrolls to form -->
+                <a href="#scanning-form" class="btn btn-primary btn-lg ds-mobile-cta">Try Free</a>
+            </div>
+
+            <!-- Right: form card -->
+            <div class="ds-form-card" id="scanning-form">
+                <div class="ds-form-header">
+                    <h2>Get started</h2>
+                    <p>We&rsquo;ll send you the mailing address and instructions.</p>
+                </div>
+
+                <!-- Trial / Full toggle -->
+                <div class="ds-toggle">
+                    <button type="button" class="ds-toggle-btn active" data-plan="trial" onclick="setPlan('trial')">
+                        Free trial
+                    </button>
+                    <button type="button" class="ds-toggle-btn" data-plan="full" onclick="setPlan('full')">
+                        Full box &mdash; $199
+                    </button>
+                </div>
+
+                <form id="scanning-form-el" onsubmit="return false;">
+                    <div class="ds-form-group">
+                        <label for="ds-name">Name</label>
+                        <input type="text" id="ds-name" placeholder="Your name" required>
+                    </div>
+                    <div class="ds-form-group">
+                        <label for="ds-email">Email</label>
+                        <input type="email" id="ds-email" placeholder="you@company.ca" required>
+                    </div>
+                    <div class="ds-form-group">
+                        <label for="ds-phone">Phone</label>
+                        <input type="tel" id="ds-phone" placeholder="(204) 000-0000" required>
+                    </div>
+
+                    <!-- Box count — only visible for full plan -->
+                    <div class="ds-form-group ds-boxes-group" id="dsBoxesGroup" style="display:none;">
+                        <label for="ds-boxes">How many boxes?</label>
+                        <div class="ds-box-counter">
+                            <button type="button" class="ds-box-btn" onclick="changeBoxes(-1)">&minus;</button>
+                            <input type="number" id="ds-boxes" value="1" min="1" max="99" onchange="updateBoxCost()">
+                            <button type="button" class="ds-box-btn" onclick="changeBoxes(1)">+</button>
+                        </div>
+                        <div class="ds-box-cost" id="dsBoxCost">$199 &mdash; up to 2,500 pages</div>
+                    </div>
+
+                    <button type="button" class="ds-submit-btn" id="dsSubmitBtn" onclick="submitScanForm()">
+                        Get Free Trial Instructions
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                </form>
+
+                <!-- Success state (hidden by default) -->
+                <div class="ds-form-success" id="dsFormSuccess" style="display:none;">
+                    <div class="ds-success-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <h3>You&rsquo;re all set!</h3>
+                    <p id="dsSuccessMsg"></p>
+                    <div class="ds-address-card">
+                        <strong>Mail to:</strong><br>
+                        ClearingStation Ltd.<br>
+                        1460 Chevrier Blvd #200<br>
+                        Winnipeg, MB R3T 1Y6
+                    </div>
+                    <p class="ds-success-note">We&rsquo;ll call you within one business day to make sure everything is clear.</p>
+                </div>
+
+                <!-- Trust badges under form -->
+                <div class="ds-form-trust">
+                    <img src="{{ '/images/optimized/gaap.png' | relative_url }}" alt="GAAP" height="28" onerror="this.style.display='none'">
+                    <img src="{{ '/images/optimized/dun.png' | relative_url }}" alt="Dun & Bradstreet" height="28" onerror="this.style.display='none'">
+                    <img src="{{ '/images/optimized/ssl-badge.png' | relative_url }}" alt="SSL Secured" height="28" onerror="this.style.display='none'">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SOCIAL PROOF BAR — quick credibility after the hero.
+     ============================================================ -->
+<section class="ds-proof-bar">
+    <div class="container">
+        <div class="ds-proof-grid">
+            <div class="ds-proof-item">
+                <div class="ds-proof-num">10,000+</div>
+                <div class="ds-proof-label">Pages scanned</div>
+            </div>
+            <div class="ds-proof-item">
+                <div class="ds-proof-num">100+</div>
+                <div class="ds-proof-label">Businesses served</div>
+            </div>
+            <div class="ds-proof-item">
+                <div class="ds-proof-num">5.0</div>
+                <div class="ds-proof-label">Google rating</div>
+            </div>
+            <div class="ds-proof-item">
+                <div class="ds-proof-num">5 days</div>
+                <div class="ds-proof-label">Turnaround</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     BEFORE / AFTER — visual transformation.
+     ============================================================ -->
+<section class="ds-section">
+    <div class="container">
+        <div class="ds-ba-grid">
+            <div class="ds-ba-card ds-ba-before">
+                <div class="ds-ba-label ds-ba-label-before">Your desk today</div>
+                <ul>
+                    <li><span class="ds-x">&times;</span> Boxes of receipts collecting dust</li>
+                    <li><span class="ds-x">&times;</span> Can&rsquo;t find anything when you need it</li>
+                    <li><span class="ds-x">&times;</span> Vulnerable to fire, flood, loss</li>
+                    <li><span class="ds-x">&times;</span> No time to scan it yourself</li>
+                </ul>
+            </div>
+            <div class="ds-ba-arrow" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+            <div class="ds-ba-card ds-ba-after">
+                <div class="ds-ba-label ds-ba-label-after">After we scan it</div>
+                <ul>
+                    <li><span class="ds-check">{% include icons/check.html %}</span> Organized, searchable PDF files</li>
+                    <li><span class="ds-check">{% include icons/check.html %}</span> Find any document by keyword</li>
+                    <li><span class="ds-check">{% include icons/check.html %}</span> 7-year encrypted cloud backup</li>
+                    <li><span class="ds-check">{% include icons/check.html %}</span> Access from anywhere, anytime</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top:40px;">
+            <a href="#scanning-form" class="btn btn-primary">Try Free</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     HOW IT WORKS — two paths: trial and full.
+     ============================================================ -->
+<section class="ds-section ds-alt-bg">
+    <div class="container">
+        <h2 class="text-center">How It Works</h2>
+        <div class="ds-paths">
+
+            <!-- Trial path -->
+            <div class="ds-path-card ds-path-trial">
+                <div class="ds-path-badge">Free trial</div>
+                <h3>Try it first</h3>
+                <ol class="ds-path-steps">
+                    <li><span>1</span> Fill out the form above</li>
+                    <li><span>2</span> Put up to 50 pages in a regular envelope</li>
+                    <li><span>3</span> Mail it to our Winnipeg office</li>
+                    <li><span>4</span> Get searchable PDFs by email &mdash; free</li>
+                </ol>
+                <a href="#scanning-form" class="btn btn-primary btn-block">Try Free</a>
+            </div>
+
+            <!-- Full path -->
+            <div class="ds-path-card">
+                <div class="ds-path-badge ds-path-badge-full">Full service</div>
+                <h3>$199 per box</h3>
+                <ol class="ds-path-steps">
+                    <li><span>1</span> Pack documents in any box (up to 2,500 pages)</li>
+                    <li><span>2</span> Mail it to us via any carrier</li>
+                    <li><span>3</span> We remove staples, open envelopes, scan everything</li>
+                    <li><span>4</span> Searchable PDFs in 5 business days</li>
+                </ol>
+                <a href="#scanning-form" class="btn btn-secondary btn-block" onclick="setPlan('full')">Order Full Box</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     COMPARISON TABLE — vs DIY vs Staples.
+     Anchors the value of $199.
+     ============================================================ -->
+<section class="ds-section">
+    <div class="container">
+        <h2 class="text-center">How We Compare</h2>
+        <div class="ds-compare-wrap">
+            <table class="ds-compare">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Do it yourself</th>
+                        <th>Office supply store</th>
+                        <th class="ds-compare-hl">ClearingStation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cost per 2,500 pages</td>
+                        <td>Your time + scanner</td>
+                        <td>~$625</td>
+                        <td class="ds-compare-hl"><strong>$199</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Staple removal</td>
+                        <td>You</td>
+                        <td>You</td>
+                        <td class="ds-compare-hl"><strong>Included</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Searchable OCR</td>
+                        <td>Maybe</td>
+                        <td>No</td>
+                        <td class="ds-compare-hl"><strong>Yes</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Secure 7-year storage</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td class="ds-compare-hl"><strong>Included</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Turnaround</td>
+                        <td>Weeks of evenings</td>
+                        <td>Varies</td>
+                        <td class="ds-compare-hl"><strong>5 business days</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Money-back guarantee</td>
+                        <td>&mdash;</td>
+                        <td>No</td>
+                        <td class="ds-compare-hl"><strong>Yes</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center" style="margin-top:40px;">
+            <a href="#scanning-form" class="btn btn-primary">Try Free</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     TRUST SECTION — Jennifer, office, security.
+     Real photos prove this is a real operation.
+     ============================================================ -->
+<section class="ds-section ds-alt-bg">
+    <div class="container">
+        <h2 class="text-center">Your Documents Are in Good Hands</h2>
+        <div class="ds-trust-grid">
+            <div class="ds-trust-card ds-trust-jennifer">
+                <img src="{{ '/images/optimized/jennifer.jpg' | relative_url }}" alt="Jennifer Flaming, VP of ClearingStation" class="ds-trust-photo" onerror="this.style.display='none'">
+                <h3>Jennifer Flaming</h3>
+                <p class="ds-trust-role">VP, ClearingStation</p>
+                <p>Over a decade of experience serving 100+ businesses across Canada. Your documents are handled with the same care we give our bookkeeping and tax clients.</p>
+            </div>
+            <div class="ds-trust-card">
+                <div class="ds-trust-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                </div>
+                <h3>Winnipeg-based</h3>
+                <p>Scanned and stored on our own servers in Winnipeg. Your documents never leave Canada. Never outsourced overseas.</p>
+            </div>
+            <div class="ds-trust-card">
+                <div class="ds-trust-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </div>
+                <h3>Encrypted storage</h3>
+                <p>Military-grade encryption on all files and communication channels. Your documents are unreadable to anyone but you.</p>
+            </div>
+            <div class="ds-trust-card">
+                <div class="ds-trust-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <h3>Your originals, your choice</h3>
+                <p>After scanning, we return your originals by mail or securely shred them. You decide.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+{% include sections/testimonials.html %}
+
+
+<!-- ============================================================
+     FAQ — all answers visible.
+     ============================================================ -->
+<section class="ds-section">
+    <div class="container">
+        <h2 class="text-center">Questions &amp; Answers</h2>
+        <div class="ds-faq">
+            <div class="ds-faq-item">
+                <h3>What&rsquo;s included in the free trial?</h3>
+                <p>Send us up to 50 pages in a regular envelope. We scan them with full OCR and email you the searchable PDFs. No charge, no commitment. You see exactly what the full service delivers.</p>
+            </div>
+            <div class="ds-faq-item">
+                <h3>What if I have more than 2,500 pages?</h3>
+                <p>Send multiple boxes. Volume discounts kick in at 3+ boxes. Contact us for a custom quote on large projects.</p>
+            </div>
+            <div class="ds-faq-item">
+                <h3>Where do I ship my documents?</h3>
+                <p>
+                    ClearingStation Ltd.<br>
+                    1460 Chevrier Blvd #200<br>
+                    Winnipeg, MB R3T 1Y6<br>
+                    Any carrier works &mdash; Canada Post, Purolator, FedEx, UPS.
+                </p>
+            </div>
+            <div class="ds-faq-item">
+                <h3>How long does the whole process take?</h3>
+                <p>5 business days from the day we receive your documents. We email a confirmation when they arrive and again when your files are ready. Most customers have their PDFs within 2&ndash;3 weeks of mailing.</p>
+            </div>
+            <div class="ds-faq-item">
+                <h3>Do you return my originals?</h3>
+                <p>Your choice. We return them via Canada Post (shipping at cost) or securely shred them.</p>
+            </div>
+            <div class="ds-faq-item">
+                <h3>What&rsquo;s the money-back guarantee?</h3>
+                <p>If you&rsquo;re not satisfied with the scan quality on a paid box, we redo it or refund you in full. No questions asked.</p>
+            </div>
+            <div class="ds-faq-item">
+                <h3>What file format do I get?</h3>
+                <p>Searchable PDF by default. Every page is OCR-processed so you can find any word or phrase. TIFF or JPEG available on request.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section class="ds-final-cta">
+    <div class="container text-center">
+        <h2>Ready to clear the backlog?</h2>
+        <p class="ds-final-sub">Start with a free trial. Send 50 pages in an envelope. See the results. Then decide.</p>
+        <a href="#scanning-form" class="btn btn-primary btn-lg">Try Free</a>
+        <p class="ds-final-phone">
+            Questions? Call <a href="tel:{{ site.phone_raw }}">{{ site.phone }}</a>
+        </p>
+        <div class="ds-final-address">
+            <strong>Mail your documents to:</strong><br>
+            ClearingStation Ltd.<br>
+            1460 Chevrier Blvd #200<br>
+            Winnipeg, MB R3T 1Y6
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     STYLES
+     ============================================================ -->
+<style>
+
+/* --- Sticky bar --- */
+.ds-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+    background: var(--primary);
+    color: white;
+    padding: 10px 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+.ds-sticky.visible { transform: translateY(0); }
+.ds-sticky-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+}
+.ds-sticky .btn-sm { padding: 8px 20px; font-size: 14px; }
+
+
+/* --- Hero --- */
+.ds-hero {
+    padding: 140px 0 80px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: white;
+}
+.ds-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 60px;
+    align-items: start;
+}
+.ds-hero h1 {
+    color: white;
+    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    margin-bottom: 20px;
+}
+.ds-price-hl { color: var(--gold); }
+.ds-hero-sub {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+
+/* Hero bullet points */
+.ds-hero-points { display: flex; flex-direction: column; gap: 12px; }
+.ds-hero-point {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.9);
+}
+.ds-hero-point-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    background: rgba(56, 161, 105, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ds-hero-point-icon svg { color: #68d391; width: 14px; height: 14px; }
+.ds-mobile-cta { display: none; }
+
+
+/* --- Form card --- */
+.ds-form-card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    color: var(--text);
+    scroll-margin-top: 100px;
+}
+.ds-form-header h2 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+}
+.ds-form-header p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Toggle: trial / full */
+.ds-toggle {
+    display: flex;
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 24px;
+}
+.ds-toggle-btn {
+    flex: 1;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--font-body);
+    background: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+}
+.ds-toggle-btn.active {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 2px 8px rgba(56, 161, 105, 0.3);
+}
+
+/* Form fields */
+.ds-form-group { margin-bottom: 16px; }
+.ds-form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text);
+}
+.ds-form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 16px;
+    font-family: var(--font-body);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.2s;
+    background: white;
+}
+.ds-form-group input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+.ds-form-group input.error {
+    border-color: #e53e3e;
+    animation: shake 0.3s ease;
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+}
+
+/* Box counter */
+.ds-box-counter {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.ds-box-counter input {
+    width: 60px;
+    text-align: center;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    -moz-appearance: textfield;
+}
+.ds-box-counter input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.ds-box-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+    font-family: var(--font-body);
+    background: var(--cream);
+    border: 2px solid var(--border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    transition: background 0.2s;
+}
+.ds-box-btn:first-child { border-radius: 8px 0 0 8px; }
+.ds-box-btn:last-child { border-radius: 0 8px 8px 0; }
+.ds-box-btn:hover { background: var(--border); }
+.ds-box-cost {
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Submit button */
+.ds-submit-btn {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: var(--font-body);
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    box-shadow: 0 4px 14px rgba(56, 161, 105, 0.4);
+}
+.ds-submit-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 161, 105, 0.5);
+}
+
+/* Form success state */
+.ds-form-success { text-align: center; padding: 16px 0; }
+.ds-success-icon {
+    width: 56px;
+    height: 56px;
+    background: #f0fff4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    color: var(--accent);
+}
+.ds-form-success h3 {
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+.ds-address-card {
+    background: var(--cream);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text);
+}
+.ds-success-note {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Trust badges under form */
+.ds-form-trust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    opacity: 0.6;
+}
+
+
+/* --- Social proof bar --- */
+.ds-proof-bar {
+    background: white;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--border);
+}
+.ds-proof-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+.ds-proof-num {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+.ds-proof-label {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+
+/* --- Shared section styles --- */
+.ds-section { padding: 80px 0; }
+.ds-alt-bg { background: var(--cream); }
+
+/* Before / After */
+.ds-ba-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 24px;
+    align-items: stretch;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.ds-ba-card { border-radius: 16px; padding: 32px; }
+.ds-ba-card ul { list-style: none; }
+.ds-ba-card li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text);
+}
+.ds-ba-before { background: #fff5f5; border: 2px solid #fed7d7; }
+.ds-ba-after { background: #f0fff4; border: 2px solid #c6f6d5; }
+.ds-ba-label {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+}
+.ds-ba-label-before { color: #c53030; }
+.ds-ba-label-after { color: #276749; }
+.ds-x {
+    color: #c53030; font-weight: 700; font-size: 18px;
+    flex-shrink: 0; width: 20px; text-align: center;
+}
+.ds-check {
+    color: var(--accent); flex-shrink: 0; width: 20px;
+    display: flex; align-items: center; justify-content: center;
+}
+.ds-ba-arrow { display: flex; align-items: center; color: var(--text-muted); }
+
+
+/* --- Two paths: trial + full --- */
+.ds-paths {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 900px;
+    margin: 48px auto 0;
+}
+.ds-path-card {
+    background: white;
+    border-radius: 16px;
+    padding: 36px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+.ds-path-trial {
+    border: 2px solid var(--accent);
+}
+.ds-path-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+}
+.ds-path-badge-full {
+    background: var(--primary);
+}
+.ds-path-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+.ds-path-steps {
+    list-style: none;
+    margin-bottom: 24px;
+}
+.ds-path-steps li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 8px 0;
+    font-size: 15px;
+    color: var(--text);
+}
+.ds-path-steps li span {
+    width: 24px;
+    height: 24px;
+    background: var(--cream);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+    color: var(--primary);
+}
+.btn-block { width: 100%; justify-content: center; }
+
+
+/* --- Comparison table --- */
+.ds-compare-wrap { overflow-x: auto; margin-top: 48px; }
+.ds-compare {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+.ds-compare th, .ds-compare td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+.ds-compare thead th {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.ds-compare td:first-child {
+    font-weight: 600;
+    color: var(--text);
+}
+.ds-compare td { color: var(--text-muted); }
+.ds-compare-hl {
+    background: #f0fff4;
+    color: var(--text) !important;
+}
+.ds-compare thead .ds-compare-hl {
+    color: var(--accent) !important;
+    background: #f0fff4;
+}
+
+
+/* --- Trust section --- */
+.ds-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+.ds-trust-card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+.ds-trust-jennifer { grid-row: 1 / 3; display: flex; flex-direction: column; align-items: center; }
+.ds-trust-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border: 4px solid var(--cream);
+}
+.ds-trust-role {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+.ds-trust-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--primary);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    color: white;
+}
+.ds-trust-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.ds-trust-card p { font-size: 14px; margin: 0; }
+
+
+/* --- FAQ --- */
+.ds-faq { max-width: 750px; margin: 48px auto 0; }
+.ds-faq-item {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+}
+.ds-faq-item:last-child { border-bottom: none; }
+.ds-faq-item h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+.ds-faq-item p { font-size: 15px; margin: 0; line-height: 1.7; }
+
+
+/* --- Final CTA --- */
+.ds-final-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: white;
+}
+.ds-final-cta h2 { color: white; margin-bottom: 12px; }
+.ds-final-sub {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 32px;
+}
+.ds-final-cta .btn-lg { padding: 18px 40px; font-size: 17px; }
+.ds-final-phone {
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgba(255,255,255,0.8);
+}
+.ds-final-phone a { color: white; font-weight: 600; text-decoration: underline; }
+.ds-final-address {
+    margin-top: 32px;
+    padding: 24px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    display: inline-block;
+    font-size: 15px;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.8;
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .ds-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .ds-mobile-cta { display: inline-flex; margin-top: 28px; }
+    .ds-trust-grid { grid-template-columns: 1fr 1fr; }
+    .ds-trust-jennifer { grid-row: auto; }
+}
+
+@media (max-width: 900px) {
+    .ds-ba-grid { grid-template-columns: 1fr; gap: 16px; }
+    .ds-ba-arrow { transform: rotate(90deg); justify-content: center; }
+    .ds-paths { grid-template-columns: 1fr; }
+    .ds-trust-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .ds-hero { padding: 120px 0 40px; }
+    .ds-section { padding: 60px 0; }
+    .ds-proof-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .ds-sticky-inner { font-size: 13px; gap: 12px; }
+    .ds-final-cta { padding: 60px 0; }
+    .ds-compare { font-size: 13px; }
+    .ds-compare th, .ds-compare td { padding: 10px 12px; }
+}
+</style>
+
+
+<!-- ============================================================
+     SCRIPTS — form submission (Telegram), calculator, sticky bar.
+     ============================================================ -->
+<script>
+(function() {
+
+    /* --- Sticky bar: show after scrolling past hero --- */
+    var hero = document.getElementById('dsHero');
+    var sticky = document.getElementById('dsSticky');
+    if (hero && sticky) {
+        var obs = new IntersectionObserver(function(entries) {
+            sticky.classList.toggle('visible', !entries[0].isIntersecting);
+        }, { threshold: 0 });
+        obs.observe(hero);
+    }
+
+})();
+
+
+/* --- Plan toggle: switch between trial and full --- */
+var currentPlan = 'trial';
+
+function setPlan(plan) {
+    currentPlan = plan;
+    var btns = document.querySelectorAll('.ds-toggle-btn');
+    btns.forEach(function(b) {
+        b.classList.toggle('active', b.getAttribute('data-plan') === plan);
+    });
+
+    var boxGroup = document.getElementById('dsBoxesGroup');
+    var submitBtn = document.getElementById('dsSubmitBtn');
+    if (plan === 'full') {
+        boxGroup.style.display = 'block';
+        submitBtn.textContent = 'Get Shipping Instructions';
+    } else {
+        boxGroup.style.display = 'none';
+        submitBtn.textContent = 'Get Free Trial Instructions';
+    }
+    /* Re-add the arrow icon */
+    submitBtn.innerHTML += ' <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
+}
+
+
+/* --- Box counter --- */
+function changeBoxes(delta) {
+    var input = document.getElementById('ds-boxes');
+    var val = parseInt(input.value) || 1;
+    val = Math.max(1, Math.min(99, val + delta));
+    input.value = val;
+    updateBoxCost();
+}
+
+function updateBoxCost() {
+    var val = parseInt(document.getElementById('ds-boxes').value) || 1;
+    var cost = val * 199;
+    var pages = (val * 2500).toLocaleString();
+    var el = document.getElementById('dsBoxCost');
+    if (val >= 3) {
+        el.innerHTML = '$' + cost + ' &mdash; up to ' + pages + ' pages <span style="color:var(--gold);font-size:13px;">(volume discount available)</span>';
+    } else {
+        el.innerHTML = '$' + cost + ' &mdash; up to ' + pages + ' pages';
+    }
+}
+
+
+/* --- Form submission via Telegram --- */
+function submitScanForm() {
+    var name = document.getElementById('ds-name');
+    var email = document.getElementById('ds-email');
+    var phone = document.getElementById('ds-phone');
+
+    /* Reset errors */
+    [name, email, phone].forEach(function(el) { el.classList.remove('error'); });
+
+    /* Validate */
+    if (!name.value.trim()) { name.classList.add('error'); name.focus(); return; }
+    if (!email.value.trim()) { email.classList.add('error'); email.focus(); return; }
+    if (!phone.value.trim()) { phone.classList.add('error'); phone.focus(); return; }
+
+    /* Build message */
+    var boxes = parseInt(document.getElementById('ds-boxes').value) || 1;
+    var planLabel = currentPlan === 'trial'
+        ? 'FREE TRIAL (up to 50 pages)'
+        : 'FULL BOX (' + boxes + ' box' + (boxes > 1 ? 'es' : '') + ', $' + (boxes * 199) + ')';
+
+    var text = '<b>DOCUMENT SCANNING</b>\n\n'
+        + 'Plan: ' + planLabel + '\n'
+        + 'Name: <b>' + name.value + '</b>\n'
+        + 'Email: ' + email.value + '\n'
+        + 'Phone: <a href="tel:' + encodeURIComponent(phone.value) + '">' + phone.value + '</a>';
+
+    fetch('https://api.telegram.org/bot5540491934:AAF6BYfiI0-1PjQuVjYPGlCUN-EprNwxjuA/sendMessage?chat_id=-780709397&parse_mode=html&text=' + encodeURIComponent(text));
+
+    /* Show success state */
+    document.getElementById('scanning-form-el').style.display = 'none';
+    document.querySelector('.ds-toggle').style.display = 'none';
+    var success = document.getElementById('dsFormSuccess');
+    success.style.display = 'block';
+
+    var msg = document.getElementById('dsSuccessMsg');
+    if (currentPlan === 'trial') {
+        msg.textContent = 'Put up to 50 pages in a regular envelope and mail it to the address below. We\u2019ll scan them and email your searchable PDFs \u2014 completely free.';
+    } else {
+        msg.textContent = 'Pack your documents in ' + boxes + ' box' + (boxes > 1 ? 'es' : '') + ' and mail to the address below. Searchable PDFs delivered within 5 business days of receipt.';
+    }
+
+    /* Track conversion */
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'scanning_lead', {
+            'event_category': 'scanning',
+            'event_label': currentPlan,
+            'value': currentPlan === 'trial' ? 0 : boxes * 199
+        });
+    }
+}
+</script>
