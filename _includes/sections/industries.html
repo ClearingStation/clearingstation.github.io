@@ -3,12 +3,12 @@
     <div class="container">
         <div class="industries-header">
             <h2>{{ include.title | default: "Industries We Serve" }}</h2>
-            <p>{{ include.subtitle | default: "From medical practices to tech startups, we understand the unique financial needs of your industry." }}</p>
+            <p>{{ include.subtitle | default: "From startups to established enterprises, we've helped businesses across diverse sectors thrive." }}</p>
         </div>
         <div class="industries-grid">
             {% for ind in site.data.industries %}
             <div class="industry-card">
-                <div class="industry-icon">{{ ind.icon }}</div>
+                <div class="industry-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{{ ind.icon }}</svg></div>
                 <h4>{{ ind.name }}</h4>
             </div>
             {% endfor %}

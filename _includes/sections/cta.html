@@ -1,8 +1,8 @@
-{% comment %}CTA section. Usage: include sections/cta.html title="Ready?" subtitle="Let's talk."{% endcomment %}
-<section class="section cta-section">
+{% comment %}CTA section. Params: title, subtitle, id, benefits (true shows the 3 benefit bullets){% endcomment %}
+<section class="section cta-section"{% if include.id %} id="{{ include.id }}"{% endif %}>
     <div class="container">
         <h2>{{ include.title | default: "Ready to Get Started?" }}</h2>
-        <p>{{ include.subtitle | default: "Book a free consultation and discover how we can save you time and money." }}</p>
+        <p>{{ include.subtitle | default: "Schedule your free consultation today. We'll review your needs and recommend the perfect solution." }}</p>
         <div class="cta-buttons">
             <a href="{{ '/start.html' | relative_url }}" class="btn btn-primary">
                 Start Free Consultation
@@ -13,16 +13,12 @@
                 Call {{ site.phone }}
             </a>
         </div>
+        {% if include.benefits %}
         <div class="cta-benefits">
-            <div class="cta-benefit">
-                {% include icons/check.html %} No commitment required
-            </div>
-            <div class="cta-benefit">
-                {% include icons/check.html %} Free consultation
-            </div>
-            <div class="cta-benefit">
-                {% include icons/check.html %} Response within 24 hours
-            </div>
+            <div class="cta-benefit">{% include icons/check.html size=20 %} Review your situation</div>
+            <div class="cta-benefit">{% include icons/check.html size=20 %} Give guidance and recommendations</div>
+            <div class="cta-benefit">{% include icons/check.html size=20 %} Explain our services</div>
         </div>
+        {% endif %}
     </div>
 </section>

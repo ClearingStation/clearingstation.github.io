@@ -1,44 +1,61 @@
-# Service cards for the services page
+# Service cards. "summary" marks a service for the home page cards (with "short_name").
 - name: Bookkeeping
-  tagline: "Your financial foundation"
+  short_name: Bookkeeping
+  tagline: "Track every dollar, effortlessly"
+  summary: "Monthly reconciliation, expense tracking, and financial reports that actually make sense."
   price: "From $299/month"
-  icon: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>'
+  icon: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>'
   features:
-    - Monthly bank reconciliation
-    - Expense categorization
-    - Financial statements
-    - GST/PST filing
-    - Year-end preparation
+    - Monthly bookkeeping
+    - Categorize business income & expenses
+    - Monthly bank reconciliation & close
+    - Accounts payables & receivables
+    - Monthly recap & reports to your inbox
 
-- name: Tax Preparation
-  tagline: "Maximize your returns"
-  price: "Included in plans"
-  icon: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>'
+- name: Tax Preparation & Filing
+  short_name: Tax Preparation
+  tagline: "Maximize deductions, minimize stress"
+  summary: "Maximize deductions, minimize your bill, and stay completely CRA compliant."
+  price: "From $499/return"
+  icon: '<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>'
   features:
     - Corporate T2 filing
-    - Personal tax returns
+    - Sales tax filings (GST/PST)
+    - Review & analyze financial statements
+    - Calculate profit allocation
     - Tax planning & strategy
-    - CRA audit support
-    - GST/PST returns
 
-- name: Payroll
-  tagline: "Hassle-free payroll"
-  price: "Included in plans"
-  icon: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>'
+- name: Payroll Management
+  short_name: Payroll
+  tagline: "On-time, accurate, every time"
+  summary: "On-time, accurate payroll processing with all government remittances handled."
+  price: "From $99/month"
+  icon: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>'
   features:
-    - Employee payroll processing
-    - T4/ROE preparation
-    - Direct deposit setup
-    - CRA remittances
-    - Workers compensation
+    - Payroll processing
+    - Source deduction remittances to CRA
+    - Issuance of T4s
+    - ROE preparation
+    - Year-end payroll reconciliation
 
-- name: Document Scanning
-  tagline: "Go paperless with ease"
-  price: "From $199/month"
-  icon: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>'
+- name: CRA Audit Support
+  tagline: "We've handled over 100 audits"
+  price: "Contact for quote"
+  icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>'
   features:
-    - Monthly document pickup
-    - High-quality scanning
-    - 7-year secure storage
-    - Full-text search access
-    - Staple & long receipt handling
+    - Government communication
+    - Audit preparation & response
+    - Documentation gathering
+    - Representation & advocacy
+    - Post-audit compliance
+
+- name: Financial Consulting
+  tagline: "Strategic guidance for growth"
+  price: "Included with plans"
+  icon: '<line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>'
+  features:
+    - Cash flow analysis
+    - Budget planning
+    - Profitability insights
+    - Business structure advice
+    - Growth planning

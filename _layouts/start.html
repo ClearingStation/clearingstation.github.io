@@ -4,9 +4,25 @@
     {% include head.html %}
 </head>
 <body>
-    {% include header.html %}
+    <!-- Minimal header: logo and phone only -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="{{ '/' | relative_url }}" class="logo">ClearingStation</a>
+                <a href="tel:{{ site.phone_raw }}" class="header-phone">
+                    {% include icons/phone.html size=18 %}
+                    {{ site.phone }}
+                </a>
+            </div>
+        </div>
+    </header>
     {{ content }}
-    {% include floating-cta.html %}
+    <!-- Mini footer -->
+    <footer class="mini-footer">
+        <div class="container">
+            <p>&copy; {{ 'now' | date: '%Y' }} ClearingStation Ltd. &bull; <a href="{{ '/' | relative_url }}">Back to Homepage</a> &bull; <a href="tel:{{ site.phone_raw }}">{{ site.phone }}</a></p>
+        </div>
+    </footer>
     <script>
         var header = document.getElementById('header');
         window.addEventListener('scroll', function() {

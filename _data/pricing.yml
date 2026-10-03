@@ -1,39 +1,43 @@
-# Pricing plans
+# Pricing plans for the plans page. "note" is the line above the feature list.
 - name: Bookkeeping
   price: "$299"
   period: "/month"
-  description: "Essential bookkeeping for small businesses with less than 100 monthly transactions."
+  description: "Reliable bookkeeping for your corporate financial reporting needs"
+  note: "For companies with less than 100 monthly transactions"
   featured: false
   features:
-    - Dedicated bookkeeper
-    - Monthly books & reconciliation
-    - Tax-ready year-end package
+    - Dedicated Bookkeeper
+    - Accurate monthly books
+    - Tax-Ready Year-End Package
     - Payroll for up to 3 employees
-    - GST/PST filing
-    - Email & phone support
+    - GST/PST & T4/T5 Filing
+    - Balance Sheet & Income Statement
+    - 24-hour response guarantee
 
 - name: Bookkeeping & Tax
   price: "$499"
   period: "/month"
-  description: "Complete financial management with tax filing and strategic planning."
+  description: "Full-service bookkeeping with tax advisory and filing"
+  note: "Everything in Bookkeeping, plus:"
   featured: true
   features:
-    - Everything in Bookkeeping
-    - Payroll for up to 5 employees
-    - Quarterly tax strategy sessions
-    - Corporate tax filing (T2)
-    - Personal tax filing (T1)
+    - Payroll for up to 10 employees
+    - Quarterly Tax Strategy Sessions
+    - Year-Round Tax Optimization
+    - Corporate Tax Filing (T2, S1-S203)
+    - Owner & Spouse Personal Tax Filing
     - Priority support
 
-- name: Premium
-  price: "Custom"
-  period: ""
-  description: "Tailored solutions for growing businesses with complex needs."
+- name: Financial Management
+  price: "$2,599"
+  period: "/month"
+  description: "For businesses who value their time above all"
+  note: "Everything in Bookkeeping & Tax, plus:"
   featured: false
   features:
-    - Everything in Bookkeeping & Tax
+    - Next-Day Bookkeeping Turnaround
+    - Cash Management (A/R & A/P)
+    - Rapid Financial Reconciliation
+    - Custom Reports Within 24 Hours
+    - Dedicated Account Manager
     - Unlimited employees
-    - Custom reporting
-    - Controller-level oversight
-    - Dedicated account manager
-    - Same-day support

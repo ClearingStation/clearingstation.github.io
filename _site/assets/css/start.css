@@ -317,3 +317,8 @@
         height: 32px;
     }
 }
+
+/* Mini footer (start page only) */
+.mini-footer { background: var(--primary); color: white; padding: 24px 0; text-align: center; }
+.mini-footer p { color: rgba(255,255,255,0.7); font-size: 14px; margin: 0; }
+.mini-footer a { color: rgba(255,255,255,0.9); text-decoration: none; }

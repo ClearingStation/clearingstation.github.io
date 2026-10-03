@@ -22,14 +22,14 @@ nav_active: pricing
                     <span class="price-amount">{{ plan.price }}</span>
                     <span class="price-period">{{ plan.period }}</span>
                 </div>
-                <p class="pricing-note">For businesses with less than 100 monthly transactions</p>
+                <p class="pricing-note">{{ plan.note }}</p>
                 <ul class="pricing-features">
                     {% for f in plan.features %}
                     <li>{% include icons/check.html %} {{ f }}</li>
                     {% endfor %}
                 </ul>
                 <div class="pricing-cta">
-                    <a href="{{ '/start.html' | relative_url }}" class="btn btn-primary btn-block">Get Started</a>
+                    <a href="{{ '/start.html' | relative_url }}?type=monthly" class="btn {% if plan.featured %}btn-primary{% else %}btn-secondary{% endif %} btn-block">Get Started</a>
                 </div>
             </div>
             {% endfor %}
@@ -101,7 +101,7 @@ nav_active: pricing
             {% for item in site.data.faq %}
             <div class="faq-item">
                 <button class="faq-question">
-                    {{ item.question }}
+                    <span>{{ item.question }}</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                 </button>
                 <div class="faq-answer"><p>{{ item.answer }}</p></div>
@@ -111,6 +111,6 @@ nav_active: pricing
     </div>
 </section>
 
-{% include sections/cta.html %}
+{% include sections/cta.html subtitle="Schedule your free consultation. We'll review your needs and recommend the perfect plan for your business." %}
 
 <script src="{{ '/assets/js/main.js' | relative_url }}"></script>

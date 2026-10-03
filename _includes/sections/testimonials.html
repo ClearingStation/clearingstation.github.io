@@ -1,18 +1,18 @@
-<!-- Testimonials section. Data from _data/testimonials.yml -->
+<!-- Testimonials section. Data from _data/testimonials.yml. Optional param: title -->
 <section class="section testimonials-section">
     <div class="container">
         <div class="testimonials-header">
-            <h2>What Our Clients Say</h2>
+            <h2>{{ include.title | default: "What Our Clients Say" }}</h2>
             <div class="rating-large">
                 <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                <span class="rating-text">5.0 on Google Reviews</span>
+                <span class="rating-text">5.0 rating on Google</span>
             </div>
         </div>
         <div class="testimonials-grid">
             {% for t in site.data.testimonials %}
             <div class="testimonial-card">
                 <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="testimonial-quote">{{ t.quote }}</p>
+                <p class="testimonial-quote">"{{ t.quote }}"</p>
                 <div class="testimonial-author">
                     <div class="author-avatar">{{ t.initials }}</div>
                     <div>

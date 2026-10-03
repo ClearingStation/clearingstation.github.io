@@ -1,14 +1,14 @@
 ---
 layout: default
 title: "ClearingStation Ltd. | Winnipeg's Premier Bookkeeping & Tax Services"
-description: "Expert bookkeeping, tax filing, payroll & document scanning for Manitoba businesses. Save 10-15 hours monthly. Free consultation."
+description: "Expert bookkeeping, tax filing & payroll for Manitoba businesses. Save 10-15 hours monthly. Free consultation."
 nav_active: home
 ---
 
 <!-- Urgency Banner -->
 <div class="urgency-banner" style="margin-top: 72px;">
     <div class="container">
-        <p>Tax season is approaching! <strong>Schedule your free consultation</strong> now and get organized before the deadline.</p>
+        <p>📅 <strong>Tax season is approaching!</strong> Schedule your free consultation now and get organized before the deadline.</p>
     </div>
 </div>
 
@@ -112,14 +112,14 @@ nav_active: home
             <p>Comprehensive financial services designed specifically for small business owners in Manitoba.</p>
         </div>
         <div class="services-grid">
-            {% for svc in site.data.services %}
+            {% for svc in site.data.services %}{% if svc.summary %}
             <div class="service-card">
-                <div class="service-icon">{{ svc.icon }}</div>
-                <h3>{{ svc.name }}</h3>
-                <p>{{ svc.tagline }}</p>
+                <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{{ svc.icon }}</svg></div>
+                <h3>{{ svc.short_name }}</h3>
+                <p>{{ svc.summary }}</p>
                 <div class="price">{{ svc.price }}</div>
             </div>
-            {% endfor %}
+            {% endif %}{% endfor %}
         </div>
     </div>
 </section>
@@ -152,7 +152,60 @@ nav_active: home
 </section>
 
 <!-- Testimonials -->
-{% include sections/testimonials.html %}
+{% include sections/testimonials.html title="What Business Owners Are Saying" %}
+
+<!-- Pricing -->
+<section class="section pricing-section" id="pricing">
+    <div class="container">
+        <div class="pricing-header">
+            <h2>Simple, Transparent Pricing</h2>
+            <p>No hidden fees. No surprises. Just straightforward value.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <p class="tagline">For solo entrepreneurs</p>
+                <div class="price-amount">$299</div>
+                <div class="price-period">/month</div>
+                <ul class="feature-list">
+                    <li>{% include icons/check.html size=20 %} Monthly bookkeeping</li>
+                    <li>{% include icons/check.html size=20 %} Expense categorization</li>
+                    <li>{% include icons/check.html size=20 %} Monthly financial reports</li>
+                    <li>{% include icons/check.html size=20 %} Email support</li>
+                </ul>
+                <a href="#contact" class="btn btn-secondary">Get Started</a>
+            </div>
+            <div class="pricing-card featured">
+                <div class="pricing-badge">Most Popular</div>
+                <h3>Growth</h3>
+                <p class="tagline">For growing businesses</p>
+                <div class="price-amount">$499</div>
+                <div class="price-period">/month</div>
+                <ul class="feature-list">
+                    <li>{% include icons/check.html size=20 %} Everything in Starter</li>
+                    <li>{% include icons/check.html size=20 %} Payroll processing (up to 5)</li>
+                    <li>{% include icons/check.html size=20 %} GST/PST filing</li>
+                    <li>{% include icons/check.html size=20 %} Priority phone support</li>
+                    <li>{% include icons/check.html size=20 %} Quarterly tax planning</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Get Started</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <p class="tagline">For established businesses</p>
+                <div class="price-amount">Custom</div>
+                <div class="price-period">pricing</div>
+                <ul class="feature-list">
+                    <li>{% include icons/check.html size=20 %} Everything in Growth</li>
+                    <li>{% include icons/check.html size=20 %} Unlimited payroll</li>
+                    <li>{% include icons/check.html size=20 %} Dedicated account manager</li>
+                    <li>{% include icons/check.html size=20 %} Strategic tax consultation</li>
+                </ul>
+                <a href="#contact" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Jennifer's Note -->
 <section class="section note-section">
@@ -177,4 +230,4 @@ nav_active: home
 </section>
 
 <!-- Final CTA -->
-{% include sections/cta.html title="Ready to Reclaim Your Time?" subtitle="Schedule your free consultation today. No pressure, no obligation—just a conversation about how we can help." %}
+{% include sections/cta.html id="contact" title="Ready to Reclaim Your Time?" subtitle="Schedule your free consultation today. No pressure, no obligation—just a conversation about how we can help." %}

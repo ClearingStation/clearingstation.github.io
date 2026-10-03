@@ -1,15 +1,15 @@
-# Testimonial data used across multiple pages
-- quote: "ClearingStation transformed how we handle our books. Jennifer and her team are incredibly thorough and always available when we need them."
-  name: "Sarah M."
-  initials: "SM"
+# Testimonial data used across multiple pages (real Google reviews)
+- quote: "Jennifer has been such a great help when it comes to my bookkeeping needs. She's efficient, knowledgeable and timely which is important when it comes to taxes. Definitely recommend!"
+  name: "Natalie Kuz"
+  initials: "NK"
   location: "Winnipeg, MB"
 
-- quote: "After years of doing our own bookkeeping, switching to ClearingStation was the best decision we made. They found deductions we had been missing for years."
-  name: "David K."
-  initials: "DK"
-  location: "Steinbach, MB"
+- quote: "Jennifer exhibited a quick grasp of my personal tax position. She prepared the needed papers swiftly and provided me with the information necessary to avoid common pitfalls later on."
+  name: "Angie Kan"
+  initials: "AK"
+  location: "Selkirk, MB"
 
-- quote: "Professional, reliable, and genuinely caring about our business success. They handle everything so we can focus on our patients."
-  name: "Dr. Lisa R."
-  initials: "LR"
+- quote: "She makes everything super clear and handles all the nitty-gritty details without any fuss. Takes a lot of stress off my shoulders during tax season. Highly recommend!"
+  name: "Donald Walters"
+  initials: "DW"
   location: "Winnipeg, MB"
