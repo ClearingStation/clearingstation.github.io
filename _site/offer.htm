@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Offer Section</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .offer-section {
+      position: relative;
+      padding: 50px;
+      background: linear-gradient(135deg, #f06c64, #f4d03f);
+      color: white;
+      text-align: center;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+      width: 80%;
+      max-width: 900px;
+    }
+
+    .offer-section:hover {
+      transform: scale(1.05);
+    }
+
+    .glow-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulse 5s infinite ease-in-out;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    .offer-title {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    .offer-details {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+
+    .offer-button {
+      display: inline-block;
+      padding: 15px 40px;
+      background: #f4d03f;
+      color: #f06c64;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 2px;
+      transition: background 0.4s ease, transform 0.2s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    .offer-button:hover {
+      background: #f06c64;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1217446149566169');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1217446149566169&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<script src="offer.js"></script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVRL4GM"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+  <div class="offer-section">
+    <div class="glow-ring"></div>
+    <h1 class="offer-title">Special Offer: Get 2 Months of Free Bookkeeping!</h1>
+    <p class="offer-details">Right now, we’re offering 2 months of free bookkeeping when you sign up by <span>[specific date]</span>. See how much time and money you can save—completely risk-free.</p>
+    <a href="#" class="offer-button">Schedule a Free Consultation →</a>
+  </div>
+
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="e8ded926-b6a0-4d9c-96e0-3cea5b65f0b2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</body>
+</html>

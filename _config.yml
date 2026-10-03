@@ -6,7 +6,14 @@ baseurl: ""
 
 # Build settings
 markdown: kramdown
-permalink: /blog/:title/
+
+# Blog posts get pretty URLs; pages keep their .html names (nav links use them)
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      permalink: /blog/:title/
 
 # Exclude old files from build
 exclude:
@@ -15,7 +22,6 @@ exclude:
   - node_modules
   - vendor
   - "*.zip"
-  - "*.htm"
   - clearingstation.ca-Performance-on-Search-2026-01-29
   - invoice-details.html
   - plumbing_invoice.html
