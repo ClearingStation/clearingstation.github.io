@@ -1111,7 +1111,7 @@
   </div>
 </footer>
 <script>
-  function send(){if(!document.getElementById('firstname').value||!document.getElementById('phonenumber').value){return;}const text='OdoAlibi Pre-Order:\n\nName: \n<b>'+document.getElementById('firstname').value+'</b>\n\nContact: \n<b>'+document.getElementById('phonenumber').value+'</b>';fetch('https://api.telegram.org/bot5540491934:AAF6BYfiI0-1PjQuVjYPGlCUN-EprNwxjuA/sendMessage?chat_id=-780709397&parse_mode=html&text='+encodeURIComponent(text));document.getElementById('form').style.display='none';document.getElementById('success-message').style.display='block';}
+  function send(){if(!document.getElementById('firstname').value||!document.getElementById('phonenumber').value){return;}fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({source:'OdoAlibi Pre-Order',name:document.getElementById('firstname').value,phone:document.getElementById('phonenumber').value})});document.getElementById('form').style.display='none';document.getElementById('success-message').style.display='block';}
 </script>
 </body>
 </html>

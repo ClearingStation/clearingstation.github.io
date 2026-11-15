@@ -94,6 +94,28 @@
     background: #fff5f5;
 }
 
+/* Shown when the lead could not be sent */
+.form-error {
+    color: #e53e3e;
+    margin-bottom: 16px;
+}
+
+.form-error a {
+    color: inherit;
+    font-weight: 600;
+}
+
+/* Honeypot field: off-screen for people, visible to bots */
+.form-trap {
+    position: absolute;
+    left: -9999px;
+}
+
+.btn-submit:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
 .btn-submit {
     width: 100%;
     padding: 18px 32px;

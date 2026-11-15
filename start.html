@@ -83,7 +83,9 @@ extra_css: /assets/css/start.css
                 <h1>Start Your Free Consultation</h1>
                 <p class="form-intro">Speak directly with Jennifer in a relaxed, no-pressure conversation. We're here to help.</p>
 
-                <form id="consultation-form">
+                <form id="consultation-form" onsubmit="submitForm(event)">
+                    <!-- Honeypot: hidden from people, filled by bots. The server drops any lead that has it. -->
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="form-trap">
                     <div class="form-group">
                         <label for="firstname">First Name</label>
                         <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" autofocus>
@@ -94,7 +96,9 @@ extra_css: /assets/css/start.css
                         <input type="tel" id="phonenumber" name="phonenumber" placeholder="{{ site.phone }}">
                     </div>
 
-                    <button type="button" class="btn-submit" onclick="submitForm()">
+                    <p id="form-error" class="form-error" hidden>We could not send your request. Please call us at <a href="tel:{{ site.phone_raw }}">{{ site.phone }}</a>.</p>
+
+                    <button type="submit" class="btn-submit">
                         Schedule My Free Call
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -125,9 +129,12 @@ extra_css: /assets/css/start.css
 </main>
 
 <script>
-    function submitForm() {
+    async function submitForm(event) {
+        event.preventDefault();
+        const form = event.target;
         const firstname = document.getElementById('firstname');
         const phonenumber = document.getElementById('phonenumber');
+        const error = document.getElementById('form-error');
 
         // Reset error states
         firstname.classList.remove('error');
@@ -146,14 +153,32 @@ extra_css: /assets/css/start.css
             return;
         }
 
-        // Send to Telegram
-        const text = 'First name: \n<b>' + firstname.value + '</b>\n\n'
-            + 'Phone number: \n<a href="tel:' + encodeURIComponent(phonenumber.value) + '">' + phonenumber.value + '</a>';
+        // Send to our own endpoint (worker/lead.js). It holds the Telegram token
+        // and answers ok only when Telegram took the message.
+        const lead = {
+            source: 'Free consultation',
+            plan: new URLSearchParams(location.search).get('type') || '',
+            name: firstname.value,
+            phone: phonenumber.value,
+            website: form.website.value
+        };
+        const button = form.querySelector('.btn-submit');
+        button.disabled = true;
+        error.hidden = true;
+        const sent = await fetch('/api/lead', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(lead)
+        }).then(r => r.ok, () => false);
 
-        fetch('https://api.telegram.org/bot5540491934:AAF6BYfiI0-1PjQuVjYPGlCUN-EprNwxjuA/sendMessage?chat_id=-780709397&parse_mode=html&text=' + encodeURIComponent(text));
+        // Not sent: say so and give the phone number. Never a false "Thank you".
+        if (!sent) {
+            button.disabled = false;
+            error.hidden = false;
+            return;
+        }
 
         // Show success message
-        const form = document.getElementById('consultation-form');
         form.innerHTML = `
             <div class="success-message">
                 <div class="success-icon">

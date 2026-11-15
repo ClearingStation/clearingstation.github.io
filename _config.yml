@@ -38,6 +38,7 @@ exclude:
   - slick-theme.css
   - script.js
   - offer.js
+  - worker
 
 # Site data (used in includes)
 phone: "(204) 381-9308"

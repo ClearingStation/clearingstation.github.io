@@ -1,0 +1,8 @@
+# Lead endpoint for the website forms. Deploy steps: README.md.
+# The secrets BOT_TOKEN and CHAT_ID are not in this file.
+name = "clearingstation-lead"
+main = "lead.js"
+compatibility_date = "2026-01-01"
+
+# Same address as the site, so the pages post to "/api/lead" and need no URL setting.
+routes = [{ pattern = "www.clearingstation.ca/api/lead", zone_name = "clearingstation.ca" }]
