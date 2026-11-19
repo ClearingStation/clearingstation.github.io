@@ -1,0 +1,105 @@
+{% comment %}
+Lead form: first name + phone, posted to /api/lead (worker/lead.js).
+Use it once per page. Styles: assets/css/start.css.
+Params:
+  source  - lead source shown in Telegram (required), e.g. "Catch-up bookkeeping"
+  badge   - small pill above the title (default "Free • No Obligation")
+  title   - form heading (default "Start Your Free Consultation")
+  intro   - line under the heading
+  button  - submit label (default "Schedule My Free Call")
+  note    - small line under the button (e.g. "Jennifer calls you back in minutes")
+  success - text in the thank-you box
+  h1      - true renders the title as <h1> (when the form is the page's main heading)
+  caller  - false hides the "Jennifer calls you back" photo row (default shown)
+{% endcomment %}
+{% assign tag = 'h2' %}{% if include.h1 %}{% assign tag = 'h1' %}{% endif %}
+<div class="form-section" id="lead">
+    <div class="form-badge">
+        {% include icons/phone.html size=16 %}
+        {{ include.badge | default: "Free &bull; No Obligation" }}
+    </div>
+
+    <{{ tag }} class="form-title">{{ include.title | default: "Start Your Free Consultation" }}</{{ tag }}>
+    {% if include.intro %}<p class="form-intro">{{ include.intro }}</p>{% endif %}
+
+    <form id="lead-form" data-source="{{ include.source }}" onsubmit="submitLead(event)">
+        <!-- Honeypot: hidden from people, filled by bots. The server drops any lead that has it. -->
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="form-trap">
+        <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Your first name" autocomplete="given-name">
+        </div>
+        <div class="form-group">
+            <label for="phonenumber">Phone Number</label>
+            <input type="tel" id="phonenumber" name="phonenumber" placeholder="{{ site.phone }}" autocomplete="tel">
+        </div>
+
+        <p id="form-error" class="form-error" hidden>We could not send your request. Please call us at <a href="tel:{{ site.phone_raw }}">{{ site.phone }}</a>.</p>
+
+        <button type="submit" class="btn-submit">
+            {{ include.button | default: "Schedule My Free Call" }}
+            {% include icons/arrow-right.html size=20 %}
+        </button>
+        {% if include.note %}<p class="form-note">{{ include.note }}</p>{% endif %}
+        {% unless include.caller == false %}
+        <!-- Who calls back: a real face next to the form -->
+        <div class="form-caller">
+            <img src="{{ '/images/optimized/avatar.webp' | relative_url }}" alt="" width="48" height="48">
+            <span><strong>Jennifer Flaming</strong> calls you back herself</span>
+        </div>
+        {% endunless %}
+    </form>
+
+    <!-- Thank-you box, shown when the Worker confirms the lead -->
+    <div class="success-message" id="lead-success" hidden>
+        <div class="success-icon">{% include icons/check.html size=32 %}</div>
+        <h2>Thank You!</h2>
+        <p>{{ include.success | default: "Expect a call from Jennifer soon. Keep your phone close." }}</p>
+    </div>
+</div>
+
+<script>
+    // Mark the first empty field as an error. Returns true when both fields are filled.
+    function leadValid(fields) {
+        fields.forEach(function (f) { f.classList.remove('error'); });
+        var empty = fields.find(function (f) { return !f.value.trim(); });
+        if (empty) { empty.classList.add('error'); empty.focus(); }
+        return !empty;
+    }
+
+    // Send the lead to our own endpoint (worker/lead.js). Show "Thank you" only when it confirms.
+    async function submitLead(event) {
+        event.preventDefault();
+        var form = event.target;
+        var name = form.firstname, phone = form.phonenumber;
+        var error = document.getElementById('form-error');
+        var button = form.querySelector('.btn-submit');
+        if (!leadValid([name, phone])) return;
+
+        var lead = {
+            source: form.dataset.source,
+            plan: new URLSearchParams(location.search).get('type') || '',
+            name: name.value,
+            phone: phone.value,
+            website: form.website.value
+        };
+        button.disabled = true;
+        error.hidden = true;
+        var sent = await fetch('/api/lead', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(lead)
+        }).then(function (r) { return r.ok; }, function () { return false; });
+
+        // Not sent: say so and give the phone number. Never a false "Thank you".
+        button.disabled = false;
+        error.hidden = sent;
+        if (!sent) return;
+
+        form.hidden = true;
+        document.getElementById('lead-success').hidden = false;
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', { 'send_to': 'AW-10952607464/Zz3-CO6Cs9wYEOiNzuYo' });
+        }
+    }
+</script>

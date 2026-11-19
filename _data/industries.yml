@@ -1,24 +1,32 @@
-# Industries served - icon is inline SVG content (inner elements only)
-- name: Medical & Healthcare
+# Industries we serve. One entry per industry landing page.
+# Fills the Industries dropdown (nav.yml), the footer column and the chips on /about.html.
+# icon is inline SVG content (inner elements only).
+- name: Physicians & MPCs
+  url: /bookkeeping-physicians-winnipeg.html
+  note: Billing remittances, salary vs dividends
   icon: '<path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>'
 
-- name: Software & Tech
-  icon: '<rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>'
+- name: Medical Clinics
+  url: /bookkeeping-medical-clinics-winnipeg.html
+  note: Know what each practitioner earns
+  icon: '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><line x1="12" y1="10" x2="12" y2="16"></line><line x1="9" y1="13" x2="15" y2="13"></line>'
 
-- name: Financial Services
-  icon: '<circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>'
-
-- name: Legal Practices
-  icon: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>'
-
-- name: Trucking & Logistics
-  icon: '<rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle>'
-
-- name: Trades & Mechanics
-  icon: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>'
-
-- name: Construction
+- name: Real Estate
+  url: /bookkeeping-real-estate-winnipeg.html
+  note: Agents and landlords
   icon: '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline>'
 
-- name: Retail & E-commerce
+- name: Contractors & Trucking
+  url: /bookkeeping-contractors-trucking-winnipeg.html
+  note: Know which jobs make money
+  icon: '<rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle>'
+
+- name: E-Commerce
+  url: /bookkeeping-ecommerce-winnipeg.html
+  note: Books that match your payouts
   icon: '<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path>'
+
+- name: Self-Employed
+  url: /bookkeeping-self-employed-winnipeg.html
+  note: No surprise tax bill in April
+  icon: '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>'

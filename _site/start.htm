@@ -599,11 +599,12 @@
                 return;
             }
             
-            // Send to Telegram
-            const text = 'First name: \n<b>' + firstname.value + '</b>\n\n'
-                + 'Phone number: \n<a href="tel:' + encodeURIComponent(phonenumber.value) + '">' + phonenumber.value + '</a>';
-            
-            fetch('https://api.telegram.org/bot5540491934:AAF6BYfiI0-1PjQuVjYPGlCUN-EprNwxjuA/sendMessage?chat_id=-780709397&parse_mode=html&text=' + encodeURIComponent(text));
+            // Send to our own endpoint (worker/lead.js). It holds the Telegram token.
+            fetch('/api/lead', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({source: 'Free consultation (start.htm)', name: firstname.value, phone: phonenumber.value})
+            });
             
             // Show success message
             const form = document.getElementById('consultation-form');

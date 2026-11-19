@@ -1,82 +1,60 @@
 ---
 layout: default
-title: "About Us | ClearingStation Ltd. - Winnipeg's Trusted Bookkeeping Partner"
-description: "Meet Jennifer Flaming and the ClearingStation team. Over a decade of experience, 100+ businesses served, and nearly 100 CRA audits managed."
+title: "About Jennifer Flaming | ClearingStation Ltd. - Winnipeg Bookkeeping"
+description: "Meet Jennifer Flaming, VP of ClearingStation. 11+ years in practice, 100+ CRA audits handled, $115M in transactions processed, and an in-house team of Manitoba bookkeepers."
 nav_active: about
 ---
 
-{% include sections/page-hero.html title="About ClearingStation" subtitle="Your business deserves a financial partner who understands the journey. We've helped hundreds of Manitoba businesses build profitable, audit-proof operations." %}
+{% include sections/page-hero.html eyebrow="About" title="A small Winnipeg firm, on purpose" subtitle="We keep the team in-house and the client list personal, so the person who does your books is the person you talk to." %}
 
-<section class="section jennifer-section">
+<!-- Jennifer -->
+<section class="section section-white">
+    <div class="container about-grid">
+        <img class="about-photo" src="{{ '/images/optimized/jennifer.webp' | relative_url }}" alt="Jennifer Flaming, VP of ClearingStation" width="772" height="1080" loading="lazy">
+        <div>
+            <h2>Jennifer Flaming</h2>
+            <p class="role">Vice President, ClearingStation Ltd.</p>
+            <p>Jennifer has spent more than eleven years keeping books and filing taxes for Manitoba businesses. She has handled more than 100 CRA audits for clients, from the first letter to the final answer.</p>
+            <p>Her clients include physicians, clinics, lawyers, contractors, landlords and tech companies. What they share: they want one person who knows their file and picks up the phone.</p>
+            <p>Every client still talks to Jennifer on the first call. She tells you plainly what your books need, what it costs, and when the cheaper plan is enough.</p>
+            {% include sections/proof.html %}
+        </div>
+    </div>
+</section>
+
+<!-- How we work: three plain promises -->
+<section class="section">
     <div class="container">
-        <div class="jennifer-grid">
-            <div class="jennifer-image">
-                <img src="images/optimized/jennifer.jpg" alt="Jennifer Flaming, VP of ClearingStation">
-                <div class="jennifer-badge">
-                    <div class="number">100+</div>
-                    <div class="label">CRA Audits Managed</div>
-                </div>
+        <div class="section-head">
+            <h2>How we work</h2>
+        </div>
+        <div class="card-grid">
+            <div class="card">
+                <h3>One person, your file</h3>
+                <p>You get a dedicated in-house bookkeeper in Manitoba. Not a call centre, not a new face every month.</p>
             </div>
-            <div class="jennifer-content">
-                <h2>Jennifer Flaming</h2>
-                <div class="title">Vice President, ClearingStation Ltd.</div>
-                <p>With over a decade of experience and hands-on management of over 100 CRA audits on behalf of clients, Jennifer brings unparalleled expertise to every client relationship.</p>
-                <p>Her deep knowledge of financial regulations and firsthand understanding of the unexpected challenges businesses face have made her an invaluable partner to hundreds of corporations across Canada.</p>
-                <p>Jennifer has become the trusted financial partner for medical practices, physicians, lawyers, financial advisors, and tech companies who need someone who truly understands their business.</p>
-                <div class="credentials-grid">
-                    <div class="credential"><div class="number">10+</div><div class="label">Years Experience</div></div>
-                    <div class="credential"><div class="number">100+</div><div class="label">Businesses Served</div></div>
-                    <div class="credential"><div class="number">5.0</div><div class="label">Google Rating</div></div>
-                </div>
+            <div class="card">
+                <h3>Ready for the CRA</h3>
+                <p>Every transaction documented, every receipt filed. If the CRA writes, the answer is already in your books.</p>
+            </div>
+            <div class="card">
+                <h3>Plain prices, plain words</h3>
+                <p>Flat monthly prices, no hourly billing. We explain your numbers without jargon.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section mission-section">
-    <div class="container">
-        <div class="text-center" style="max-width:600px;margin:0 auto 60px">
-            <h2>Our Approach</h2>
-            <p>We believe business owners should spend their time building, not buried in spreadsheets.</p>
-        </div>
-        <div class="mission-grid">
-            <div class="mission-card">
-                <div class="mission-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-                <h3>Audit-Proof</h3>
-                <p>Every transaction documented, every receipt categorized. When the CRA comes knocking, you'll be ready.</p>
-            </div>
-            <div class="mission-card">
-                <div class="mission-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
-                <h3>Time Reclaimed</h3>
-                <p>Get back 10-15 hours every month. That's time you can spend growing your business or with family.</p>
-            </div>
-            <div class="mission-card">
-                <div class="mission-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
-                <h3>Money Saved</h3>
-                <p>Our clients regularly save thousands through maximized deductions and strategic tax planning.</p>
-            </div>
+<!-- Where we are -->
+<section class="section section-white">
+    <div class="container split">
+        <img class="place-photo" src="{{ '/images/optimized/winnipeg.webp' | relative_url }}" alt="Winnipeg" width="1920" height="1080" loading="lazy">
+        <div>
+            <h2>Based in Winnipeg</h2>
+            <p>Our office is on Chevrier Boulevard. We meet clients in person, pick up documents, or work fully online with businesses anywhere in Manitoba.</p>
+            <p class="address">{{ site.address }}<br><a href="tel:{{ site.phone_raw }}">{{ site.phone }}</a> &middot; Mon&ndash;Fri, 8:00 AM &ndash; 5:00 PM</p>
         </div>
     </div>
 </section>
 
-{% include sections/industries.html %}
-
-<div class="image-banner" style="background-image:url('images/optimized/tyler.jpg')">
-    <div class="container" style="display: flex; width: 100%; align-items: center; justify-content: center; height: 100%;">
-        <div class="image-banner-content">
-            <h2>"Time is either your greatest asset, or your greatest enemy."</h2>
-        </div>
-    </div>
-</div>
-
-{% include sections/testimonials.html %}
-
-<div class="image-banner" style="background-image:url('images/optimized/winnipeg.jpg');background-position:center 30%">
-    <div class="container" style="display: flex; width: 100%; align-items: center; justify-content: center; height: 100%;">
-        <div class="image-banner-content">
-            <h2>Proudly serving businesses across Winnipeg and Canada</h2>
-        </div>
-    </div>
-</div>
-
-{% include sections/cta.html title="Ready to Partner With Us?" subtitle="Schedule your free consultation today. We'll review your situation and show you exactly how we can help." benefits=true %}
+{% include sections/cta.html %}

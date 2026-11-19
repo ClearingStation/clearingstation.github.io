@@ -1,233 +1,91 @@
 ---
 layout: default
-title: "ClearingStation Ltd. | Winnipeg's Premier Bookkeeping & Tax Services"
-description: "Expert bookkeeping, tax filing & payroll for Manitoba businesses. Save 10-15 hours monthly. Free consultation."
+title: "Bookkeeping, Tax & Payroll in Winnipeg | ClearingStation Ltd."
+description: "Bookkeeping, tax filing and payroll for Manitoba businesses, from $299/month. One dedicated in-house bookkeeper who replies within 24 hours. Free 10-minute call."
 nav_active: home
 ---
 
-<!-- Urgency Banner -->
-<div class="urgency-banner" style="margin-top: 72px;">
-    <div class="container">
-        <p>📅 <strong>Tax season is approaching!</strong> Schedule your free consultation now and get organized before the deadline.</p>
-    </div>
-</div>
-
-<!-- Hero Section -->
+<!-- Hero: who we are, one promise, a real face -->
 <section class="hero">
+    <div class="container hero-grid">
+        <div>
+            <span class="eyebrow">Bookkeeping &middot; Tax &middot; Payroll &middot; Winnipeg</span>
+            <h1>Bookkeeping for Manitoba businesses, with a bookkeeper <span class="highlight">who answers.</span></h1>
+            <p class="lead">Jennifer Flaming and her in-house team keep your books, file your taxes and run your payroll. You get one local person who knows your file and replies within 24 hours.</p>
+            <div class="btn-row">
+                <a href="{{ '/start.html' | relative_url }}" class="btn btn-primary">Book a free 10-minute call {% include icons/arrow-right.html %}</a>
+                <a href="tel:{{ site.phone_raw }}" class="btn btn-secondary">{% include icons/phone.html %} {{ site.phone }}</a>
+            </div>
+            {% include sections/proof.html %}
+        </div>
+        <figure class="hero-photo">
+            <img src="{{ '/images/optimized/jennifer.webp' | relative_url }}" alt="Jennifer Flaming, VP of ClearingStation" width="772" height="1080">
+            <figcaption><strong>Jennifer Flaming</strong>VP, ClearingStation &middot; Winnipeg</figcaption>
+        </figure>
+    </div>
+</section>
+
+<!-- Services: one card per service, each links to its own page -->
+<section class="section">
     <div class="container">
-        <div class="hero-grid">
-            <div class="hero-content">
-                <h1>Stop Drowning in <span class="highlight">Spreadsheets.</span> Start Growing Your Business.</h1>
-                <p class="subtitle">Winnipeg's trusted bookkeeping, tax filing, and payroll service. We handle your finances so you can focus on what you do best.</p>
+        <div class="section-head">
+            <h2>What we do</h2>
+            <p>Six services, one team. Pick what you need now and add the rest later.</p>
+        </div>
+        {% include sections/services.html %}
+    </div>
+</section>
 
-                <div class="hero-cta">
-                    <a href="{{ '/start.html' | relative_url }}" class="btn btn-primary">
-                        Start Free Consultation
-                        {% include icons/arrow-right.html %}
-                    </a>
-                    <a href="tel:{{ site.phone_raw }}" class="btn btn-secondary">
-                        {% include icons/phone.html %}
-                        {{ site.phone }}
-                    </a>
-                </div>
+<!-- How it works -->
+<section class="section section-white">
+    <div class="container">
+        <div class="section-head">
+            <h2>How it works</h2>
+            <p>Three steps. No software to learn.</p>
+        </div>
+        <ol class="steps">
+            <li>
+                <h3>Book a free call</h3>
+                <p>Ten minutes with Jennifer. You learn which plan fits and what it costs. No pressure, no obligation.</p>
+            </li>
+            <li>
+                <h3>We take over your books</h3>
+                <p>We collect your documents (we even pick them up), move your file from QuickBooks or your old bookkeeper, and set everything up.</p>
+            </li>
+            <li>
+                <h3>Your bookkeeper keeps you current</h3>
+                <p>Every month, the same person keeps your books, files on time and answers your questions within 24 hours.</p>
+            </li>
+        </ol>
+    </div>
+</section>
 
-                {% include sections/trust-badges.html %}
-            </div>
+{% include sections/testimonials.html title="What business owners say" %}
 
-            <div class="hero-image">
-                <div class="hero-card">
-                    <div class="hero-card-header">
-                        <img src="{{ '/images/optimized/avatar.png' | relative_url }}" alt="Jennifer Flaming" class="hero-card-avatar" onerror="this.style.display='none'">
-                        <div>
-                            <div class="hero-card-name">Jennifer Flaming</div>
-                            <div class="hero-card-title">VP, ClearingStation</div>
-                        </div>
-                    </div>
-                    <p class="hero-quote">"Every hour you spend on bookkeeping is an hour stolen from growing your business. Let us give that time back to you."</p>
-                    <div class="rating">
-                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        <span class="rating-text">Trusted by 100+ Manitoba businesses</span>
-                    </div>
-                </div>
-            </div>
+<!-- Pricing: the same cards as /plans.html -->
+<section class="section" id="pricing">
+    <div class="container">
+        <div class="section-head">
+            <h2>Flat monthly prices</h2>
+            <p>No hourly billing. The free call tells you which plan you need.</p>
+        </div>
+        {% include sections/pricing.html %}
+        <p class="center-link"><a href="{{ '/plans.html' | relative_url }}">Catch-up and professional corporation plans, and FAQ &rarr;</a></p>
+    </div>
+</section>
+
+<!-- A note from Jennifer: the human voice of the firm -->
+<section class="section section-white">
+    <div class="container note">
+        <img src="{{ '/images/optimized/avatar.webp' | relative_url }}" alt="Jennifer Flaming" width="160" height="160" loading="lazy">
+        <div>
+            <h2>It's always about time.</h2>
+            <p>The moment you owe the CRA, time turns against you. Interest piles up daily, and every month you wait, the weight gets heavier.</p>
+            <p>I've worked with hundreds of businesses over the past eleven years. Years of paperwork, boxes full of receipts: we work through it all, find every deduction we can, and bring down what's owed. We'll even come to your office and pick it up.</p>
+            <p>We're not just here to clean up the past. We're here to clear the way for what comes next.</p>
+            <p class="signature">&mdash; Jennifer Flaming, VP</p>
         </div>
     </div>
 </section>
 
-<!-- Problem/Agitate Section -->
-<section class="section problem-section">
-    <div class="container">
-        <div class="problem-grid">
-            <div>
-                <h2>Sound Familiar?</h2>
-                <ul class="problem-list">
-                    <li>
-                        <div class="problem-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                        </div>
-                        <div class="problem-text">
-                            <h4>Spending weekends on spreadsheets</h4>
-                            <p>Hours lost every week just trying to keep up with receipts, invoices, and reconciliations.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="problem-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                        </div>
-                        <div class="problem-text">
-                            <h4>Worried about CRA compliance</h4>
-                            <p>That nagging fear you're missing something important—or paying more tax than you need to.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="problem-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                        </div>
-                        <div class="problem-text">
-                            <h4>No one to ask questions</h4>
-                            <p>You have questions but your current setup doesn't give you access to expert guidance.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="solution-preview">
-                <h3>What if instead, you could...</h3>
-                <div class="solution-stats">
-                    <div class="stat-card"><div class="stat-number">10-15</div><div class="stat-label">Hours saved every month</div></div>
-                    <div class="stat-card"><div class="stat-number">$1,000s</div><div class="stat-label">In tax savings found</div></div>
-                    <div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">CRA compliant</div></div>
-                    <div class="stat-card"><div class="stat-number">24/7</div><div class="stat-label">Secure document access</div></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Services Section -->
-<section class="section services-section" id="services">
-    <div class="container">
-        <div class="services-header">
-            <h2>Everything You Need. Nothing You Don't.</h2>
-            <p>Comprehensive financial services designed specifically for small business owners in Manitoba.</p>
-        </div>
-        <div class="services-grid">
-            {% for svc in site.data.services %}{% if svc.summary %}
-            <div class="service-card">
-                <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{{ svc.icon }}</svg></div>
-                <h3>{{ svc.short_name }}</h3>
-                <p>{{ svc.summary }}</p>
-                <div class="price">{{ svc.price }}</div>
-            </div>
-            {% endif %}{% endfor %}
-        </div>
-    </div>
-</section>
-
-<!-- How It Works -->
-<section class="section process-section" id="how-it-works">
-    <div class="container">
-        <div class="process-header">
-            <h2>Getting Started is Easy</h2>
-            <p>Three simple steps to financial peace of mind.</p>
-        </div>
-        <div class="process-steps">
-            <div class="process-step">
-                <div class="step-number">1</div>
-                <h3>Free Consultation</h3>
-                <p>Tell us about your business. We'll assess your needs and recommend the right solution—no pressure, no obligation.</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">2</div>
-                <h3>Seamless Handoff</h3>
-                <p>We handle everything: gathering your documents (we'll even pick them up), setting up systems, and coordinating with your current accountant.</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">3</div>
-                <h3>Enjoy Your Freedom</h3>
-                <p>Reclaim 10-15 hours every month. Get clear financial reports. Sleep better knowing your books are handled.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials -->
-{% include sections/testimonials.html title="What Business Owners Are Saying" %}
-
-<!-- Pricing -->
-<section class="section pricing-section" id="pricing">
-    <div class="container">
-        <div class="pricing-header">
-            <h2>Simple, Transparent Pricing</h2>
-            <p>No hidden fees. No surprises. Just straightforward value.</p>
-        </div>
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <h3>Starter</h3>
-                <p class="tagline">For solo entrepreneurs</p>
-                <div class="price-amount">$299</div>
-                <div class="price-period">/month</div>
-                <ul class="feature-list">
-                    <li>{% include icons/check.html size=20 %} Monthly bookkeeping</li>
-                    <li>{% include icons/check.html size=20 %} Expense categorization</li>
-                    <li>{% include icons/check.html size=20 %} Monthly financial reports</li>
-                    <li>{% include icons/check.html size=20 %} Email support</li>
-                </ul>
-                <a href="#contact" class="btn btn-secondary">Get Started</a>
-            </div>
-            <div class="pricing-card featured">
-                <div class="pricing-badge">Most Popular</div>
-                <h3>Growth</h3>
-                <p class="tagline">For growing businesses</p>
-                <div class="price-amount">$499</div>
-                <div class="price-period">/month</div>
-                <ul class="feature-list">
-                    <li>{% include icons/check.html size=20 %} Everything in Starter</li>
-                    <li>{% include icons/check.html size=20 %} Payroll processing (up to 5)</li>
-                    <li>{% include icons/check.html size=20 %} GST/PST filing</li>
-                    <li>{% include icons/check.html size=20 %} Priority phone support</li>
-                    <li>{% include icons/check.html size=20 %} Quarterly tax planning</li>
-                </ul>
-                <a href="#contact" class="btn btn-primary">Get Started</a>
-            </div>
-            <div class="pricing-card">
-                <h3>Enterprise</h3>
-                <p class="tagline">For established businesses</p>
-                <div class="price-amount">Custom</div>
-                <div class="price-period">pricing</div>
-                <ul class="feature-list">
-                    <li>{% include icons/check.html size=20 %} Everything in Growth</li>
-                    <li>{% include icons/check.html size=20 %} Unlimited payroll</li>
-                    <li>{% include icons/check.html size=20 %} Dedicated account manager</li>
-                    <li>{% include icons/check.html size=20 %} Strategic tax consultation</li>
-                </ul>
-                <a href="#contact" class="btn btn-secondary">Contact Us</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Jennifer's Note -->
-<section class="section note-section">
-    <div class="container">
-        <div class="note-grid">
-            <div class="note-author">
-                <img src="{{ '/images/optimized/avatar.png' | relative_url }}" alt="Jennifer Flaming" onerror="this.style.display='none'">
-                <h3>Jennifer Flaming</h3>
-                <p>VP, ClearingStation</p>
-            </div>
-            <div class="note-content">
-                <p><strong>It's always about time.</strong></p>
-                <p>The moment you owe the CRA, time turns against you. Interest piles up daily, and with every passing moment, the weight gets heavier.</p>
-                <p>I've worked with hundreds of businesses over the past decade. I've seen it all. And there's one truth that holds: <strong>Time is either your greatest asset, or your greatest enemy.</strong></p>
-                <p>The solution? Start tackling that challenge head-on now. Years of paperwork? Boxes full of receipts? We painstakingly work through it all, find every possible deduction, and help bring down what's owed.</p>
-                <p>We'll even come to your office and pick it all up.</p>
-                <p>We're not just here to clean up past transactions. We're here to clear the way for the future.</p>
-                <p class="signature">Let's start working together. — Jennifer</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Final CTA -->
-{% include sections/cta.html id="contact" title="Ready to Reclaim Your Time?" subtitle="Schedule your free consultation today. No pressure, no obligation—just a conversation about how we can help." %}
+{% include sections/cta.html id="contact" %}

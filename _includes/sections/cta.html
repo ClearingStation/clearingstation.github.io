@@ -1,24 +1,11 @@
-{% comment %}CTA section. Params: title, subtitle, id, benefits (true shows the 3 benefit bullets){% endcomment %}
+{% comment %}Closing call to action. Params: title, subtitle, id{% endcomment %}
 <section class="section cta-section"{% if include.id %} id="{{ include.id }}"{% endif %}>
     <div class="container">
-        <h2>{{ include.title | default: "Ready to Get Started?" }}</h2>
-        <p>{{ include.subtitle | default: "Schedule your free consultation today. We'll review your needs and recommend the perfect solution." }}</p>
+        <h2>{{ include.title | default: "Talk to Jennifer for 10 Minutes" }}</h2>
+        <p>{{ include.subtitle | default: "Free, no obligation. You learn which plan fits, what it costs and what your books are missing." }}</p>
         <div class="cta-buttons">
-            <a href="{{ '/start.html' | relative_url }}" class="btn btn-primary">
-                Start Free Consultation
-                {% include icons/arrow-right.html %}
-            </a>
-            <a href="tel:{{ site.phone_raw }}" class="btn btn-phone">
-                {% include icons/phone.html %}
-                Call {{ site.phone }}
-            </a>
+            <a href="{{ '/start.html' | relative_url }}" class="btn btn-primary">Book a free call {% include icons/arrow-right.html %}</a>
+            <a href="tel:{{ site.phone_raw }}" class="btn btn-ghost">{% include icons/phone.html %} {{ site.phone }}</a>
         </div>
-        {% if include.benefits %}
-        <div class="cta-benefits">
-            <div class="cta-benefit">{% include icons/check.html size=20 %} Review your situation</div>
-            <div class="cta-benefit">{% include icons/check.html size=20 %} Give guidance and recommendations</div>
-            <div class="cta-benefit">{% include icons/check.html size=20 %} Explain our services</div>
-        </div>
-        {% endif %}
     </div>
 </section>

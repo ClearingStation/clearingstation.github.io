@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Services | ClearingStation Ltd.</title>
-<meta name="description" content="Bookkeeping, tax preparation, payroll, CRA audit support and financial consulting for Manitoba businesses." />
+<title>Services | ClearingStation Ltd. - Winnipeg Bookkeeping, Tax & Payroll</title>
+<meta name="description" content="Monthly and catch-up bookkeeping, payroll, tax filing, CRA audit support and online bookkeeping for Manitoba businesses. Industry specialists for physicians, clinics, real estate and more." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
@@ -22,21 +22,78 @@
 
 </head>
 <body>
-    <!-- Sticky header with active nav via page.nav_active front matter -->
+    <!-- Sticky header. Links from _data/nav.yml; active link via page.nav_active front matter.
+     A link with "dropdown: <file>" lists that _data file's entries: on hover/focus (desktop), inline (mobile menu). -->
 <header class="header" id="header">
     <div class="container">
         <div class="header-inner">
             <a href="/" class="logo">ClearingStation</a>
-            <nav>
+            <nav class="site-nav" id="site-nav">
                 <ul class="nav-links">
                     
-                    <li><a href="/">Home</a></li>
                     
-                    <li><a href="/about.html">About</a></li>
+                    <li>
+                        <a href="/">Home</a>
+                        
+                    </li>
                     
-                    <li><a href="/services.html" class="active">Services</a></li>
                     
-                    <li><a href="/plans.html">Pricing</a></li>
+                    <li class="has-sub">
+                        <a href="/services.html" class="active">Services</a>
+                        
+                        <ul class="sub-menu">
+                            
+                            <li><a href="/monthly-bookkeeping-winnipeg.html"><strong>Monthly Bookkeeping</strong><span>A dedicated bookkeeper, from $299/month</span></a></li>
+                            
+                            <li><a href="/catch-up-bookkeeping-winnipeg.html"><strong>Catch-Up Bookkeeping</strong><span>Behind on your books? Get current.</span></a></li>
+                            
+                            <li><a href="/bookkeeping-payroll-winnipeg.html"><strong>Bookkeeping + Payroll</strong><span>Pay runs, remittances, T4s and ROEs</span></a></li>
+                            
+                            <li><a href="/tax-filing-winnipeg.html"><strong>Tax Filing</strong><span>Personal, self-employed and corporate</span></a></li>
+                            
+                            <li><a href="/cra-audit-support-winnipeg.html"><strong>CRA Audit Support</strong><span>Got a CRA letter? Talk to us first.</span></a></li>
+                            
+                            <li><a href="/online-bookkeeping-manitoba.html"><strong>Online Bookkeeping</strong><span>Fully online, anywhere in Manitoba</span></a></li>
+                            
+                            <li><a href="/services.html"><strong>All Services &rarr;</strong></a></li>
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li class="has-sub">
+                        <a href="/services.html#industries">Industries</a>
+                        
+                        <ul class="sub-menu">
+                            
+                            <li><a href="/bookkeeping-physicians-winnipeg.html"><strong>Physicians & MPCs</strong><span>Billing remittances, salary vs dividends</span></a></li>
+                            
+                            <li><a href="/bookkeeping-medical-clinics-winnipeg.html"><strong>Medical Clinics</strong><span>Know what each practitioner earns</span></a></li>
+                            
+                            <li><a href="/bookkeeping-real-estate-winnipeg.html"><strong>Real Estate</strong><span>Agents and landlords</span></a></li>
+                            
+                            <li><a href="/bookkeeping-contractors-trucking-winnipeg.html"><strong>Contractors & Trucking</strong><span>Know which jobs make money</span></a></li>
+                            
+                            <li><a href="/bookkeeping-ecommerce-winnipeg.html"><strong>E-Commerce</strong><span>Books that match your payouts</span></a></li>
+                            
+                            <li><a href="/bookkeeping-self-employed-winnipeg.html"><strong>Self-Employed</strong><span>No surprise tax bill in April</span></a></li>
+                            
+                            <li><a href="/services.html#industries"><strong>All Industries &rarr;</strong></a></li>
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="/plans.html">Pricing</a>
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="/about.html">About</a>
+                        
+                    </li>
                     
                 </ul>
             </nav>
@@ -45,9 +102,14 @@
                     
 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 
-                    (204) 381-9308
+                    <span class="header-phone-num">(204) 381-9308</span>
                 </a>
-                <a href="/start.html" class="btn btn-primary">Free Consultation</a>
+                <a href="/start.html" class="btn btn-primary btn-sm">Free Consultation</a>
+                <!-- Mobile only: opens the nav as a panel under the header -->
+                <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"
+                        onclick="this.setAttribute('aria-expanded', document.getElementById('header').classList.toggle('nav-open'))">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
             </div>
         </div>
     </div>
@@ -57,375 +119,329 @@
     
 <section class="page-hero">
     <div class="container">
-        <h1>Our Services</h1>
-        <p class="subtitle">Comprehensive financial services designed to give you back your time and peace of mind.</p>
+        <span class="eyebrow">Services</span>
+        <h1>Everything your books need, from one team</h1>
+        <p class="subtitle">Pick a service to see how it works and what it costs. Not sure which one? A free 10-minute call tells you.</p>
     </div>
 </section>
 
 
-<!-- Main Services Grid -->
-<section class="section services-detail-section">
+<!-- All services with their feature lists -->
+<section class="section">
     <div class="container">
-        <div class="services-detail-grid">
-            
-            <div class="service-detail-card">
-                <div class="service-detail-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
-                <div class="service-detail-content">
-                    <h3>Bookkeeping</h3>
-                    <p class="service-tagline">Track every dollar, effortlessly</p>
-                    <ul class="service-features">
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Monthly bookkeeping</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Categorize business income & expenses</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Monthly bank reconciliation & close</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Accounts payables & receivables</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Monthly recap & reports to your inbox</li>
-                        
-                    </ul>
-                    <div class="service-price">From $299/month</div>
-                </div>
-            </div>
-            
-            <div class="service-detail-card">
-                <div class="service-detail-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
-                <div class="service-detail-content">
-                    <h3>Tax Preparation & Filing</h3>
-                    <p class="service-tagline">Maximize deductions, minimize stress</p>
-                    <ul class="service-features">
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Corporate T2 filing</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Sales tax filings (GST/PST)</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Review & analyze financial statements</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Calculate profit allocation</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Tax planning & strategy</li>
-                        
-                    </ul>
-                    <div class="service-price">From $499/return</div>
-                </div>
-            </div>
-            
-            <div class="service-detail-card">
-                <div class="service-detail-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
-                <div class="service-detail-content">
-                    <h3>Payroll Management</h3>
-                    <p class="service-tagline">On-time, accurate, every time</p>
-                    <ul class="service-features">
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Payroll processing</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Source deduction remittances to CRA</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Issuance of T4s</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- ROE preparation</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Year-end payroll reconciliation</li>
-                        
-                    </ul>
-                    <div class="service-price">From $99/month</div>
-                </div>
-            </div>
-            
-            <div class="service-detail-card">
-                <div class="service-detail-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-                <div class="service-detail-content">
-                    <h3>CRA Audit Support</h3>
-                    <p class="service-tagline">We've handled over 100 audits</p>
-                    <ul class="service-features">
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Government communication</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Audit preparation & response</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Documentation gathering</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Representation & advocacy</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Post-audit compliance</li>
-                        
-                    </ul>
-                    <div class="service-price">Contact for quote</div>
-                </div>
-            </div>
-            
-            <div class="service-detail-card">
-                <div class="service-detail-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
-                <div class="service-detail-content">
-                    <h3>Financial Consulting</h3>
-                    <p class="service-tagline">Strategic guidance for growth</p>
-                    <ul class="service-features">
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Cash flow analysis</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Budget planning</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Profitability insights</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        
+<div class="card-grid">
+    
+    <a class="service-card" href="/monthly-bookkeeping-winnipeg.html">
+        <span class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
+        <h3>Monthly Bookkeeping</h3>
+        <p>One dedicated bookkeeper keeps your books current every month and replies within 24 hours.</p>
+        
+        <ul class="check-list">
+            <li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Every transaction categorized</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Monthly bank reconciliation and close</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Accounts payable and receivable</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ GST/PST and T4/T5 filing</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Monthly reports in your inbox</li>
+        </ul>
+        
+        <span class="service-foot">
+            <span class="service-price">From $299/month</span>
+            <span class="service-more">Learn more 
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</span>
+        </span>
+    </a>
+    
+    <a class="service-card" href="/catch-up-bookkeeping-winnipeg.html">
+        <span class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
+        <h3>Catch-Up Bookkeeping</h3>
+        <p>Months or years behind? We sort the backlog, file what is overdue and talk to the CRA for you.</p>
+        
+        <ul class="check-list">
+            <li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ No need to organize anything first</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Missing documents recovered</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Overdue returns filed or amended</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Penalties and interest kept down</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ CRA communication on your behalf</li>
+        </ul>
+        
+        <span class="service-foot">
+            <span class="service-price">From $199/month</span>
+            <span class="service-more">Learn more 
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</span>
+        </span>
+    </a>
+    
+    <a class="service-card" href="/bookkeeping-payroll-winnipeg.html">
+        <span class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+        <h3>Bookkeeping + Payroll</h3>
+        <p>Payroll and books done by one team. Included in every plan, at no extra cost.</p>
+        
+        <ul class="check-list">
+            <li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Pay runs on time, every time</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Source deductions remitted to CRA</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ T4s and ROEs prepared</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Year-end payroll reconciliation</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Up to 3 employees at $299, 10 at $499</li>
+        </ul>
+        
+        <span class="service-foot">
+            <span class="service-price">No extra cost</span>
+            <span class="service-more">Learn more 
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</span>
+        </span>
+    </a>
+    
+    <a class="service-card" href="/tax-filing-winnipeg.html">
+        <span class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
+        <h3>Tax Filing</h3>
+        <p>Corporate, self-employed and personal returns. We look for the deductions others miss.</p>
+        
+        <ul class="check-list">
+            <li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Corporate T2 filing</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Self-employed and personal returns</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ GST/PST returns</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Missed deductions found</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Tax planning for next year</li>
+        </ul>
+        
+        <span class="service-foot">
+            <span class="service-price">From $499/return</span>
+            <span class="service-more">Learn more 
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</span>
+        </span>
+    </a>
+    
+    <a class="service-card" href="/cra-audit-support-winnipeg.html">
+        <span class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span>
+        <h3>CRA Audit Support</h3>
+        <p>Got a letter from the CRA? We prepare the response and speak to the CRA for you.</p>
+        
+        <ul class="check-list">
+            <li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Audits, reviews and document requests</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Documents gathered and organized</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Response prepared and sent</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ We speak to the CRA for you</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Follow-up after the audit</li>
+        </ul>
+        
+        <span class="service-foot">
+            <span class="service-price">Fixed quote</span>
+            <span class="service-more">Learn more 
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</span>
+        </span>
+    </a>
+    
+    <a class="service-card" href="/online-bookkeeping-manitoba.html">
+        <span class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></span>
+        <h3>Online Bookkeeping</h3>
+        <p>A real Manitoba bookkeeper, fully online. No drive to Winnipeg, no software to learn.</p>
+        
+        <ul class="check-list">
+            <li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Send receipts from your phone</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Same dedicated bookkeeper</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Secure document upload</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Calls when you need them</li><li>
+<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Anywhere in Manitoba</li>
+        </ul>
+        
+        <span class="service-foot">
+            <span class="service-price">From $299/month</span>
+            <span class="service-more">Learn more 
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</span>
+        </span>
+    </a>
+    
+</div>
+
+    </div>
+</section>
+
+<!-- Included in every plan: what used to be a separate "consulting" card -->
+<section class="section section-white">
+    <div class="container split">
+        <div>
+            <h2>Included in every plan</h2>
+            <p>Advice is not an extra. Your bookkeeper knows your numbers, so you can ask the questions that matter.</p>
+        </div>
+        <ul class="check-list check-list-lg">
+            <li>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Cash flow check-ins</li>
+            <li>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Budget and profitability questions</li>
+            <li>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
  Business structure advice</li>
-                        
-                        <li>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Growth planning</li>
-                        
-                    </ul>
-                    <div class="service-price">Included with plans</div>
-                </div>
-            </div>
-            
-        </div>
+            <li>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Secure document storage in Winnipeg</li>
+            <li>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ 24-hour response guarantee</li>
+            <li>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+ Migration from QuickBooks or your old bookkeeper</li>
+        </ul>
     </div>
 </section>
 
-<!-- Why Choose Us Banner -->
-<section class="section why-choose-section">
+<!-- Industries: specialist pages -->
+<section class="section" id="industries">
     <div class="container">
-        <div class="why-choose-grid">
-            <div class="why-choose-content">
-                <h2>Why Business Owners Choose ClearingStation</h2>
-                <p>We're not just bookkeepers—we're partners in your success. Every service is designed to give you clarity, save you money, and free up your time.</p>
-                <div class="why-choose-stats">
-                    <div class="why-stat">
-                        <div class="why-stat-number">10-15</div>
-                        <div class="why-stat-label">Hours saved monthly</div>
-                    </div>
-                    <div class="why-stat">
-                        <div class="why-stat-number">$1,000s</div>
-                        <div class="why-stat-label">In tax savings per client</div>
-                    </div>
-                    <div class="why-stat">
-                        <div class="why-stat-number">100+</div>
-                        <div class="why-stat-label">CRA audits handled</div>
-                    </div>
-                </div>
-            </div>
-            <div class="why-choose-image">
-                <img src="images/optimized/jennifer.jpg" alt="Jennifer Flaming" onerror="this.style.display='none'">
-            </div>
+        <div class="section-head">
+            <h2>Industries we know well</h2>
+            <p>Each industry has its own rules and its own traps. See how we handle yours.</p>
         </div>
+        
+<div class="card-grid card-grid-sm">
+    
+    <a class="industry" href="/bookkeeping-physicians-winnipeg.html">
+        <span class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></span>
+        <span><strong>Physicians & MPCs</strong>Billing remittances, salary vs dividends</span>
+    </a>
+    
+    <a class="industry" href="/bookkeeping-medical-clinics-winnipeg.html">
+        <span class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><line x1="12" y1="10" x2="12" y2="16"></line><line x1="9" y1="13" x2="15" y2="13"></line></svg></span>
+        <span><strong>Medical Clinics</strong>Know what each practitioner earns</span>
+    </a>
+    
+    <a class="industry" href="/bookkeeping-real-estate-winnipeg.html">
+        <span class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
+        <span><strong>Real Estate</strong>Agents and landlords</span>
+    </a>
+    
+    <a class="industry" href="/bookkeeping-contractors-trucking-winnipeg.html">
+        <span class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></span>
+        <span><strong>Contractors & Trucking</strong>Know which jobs make money</span>
+    </a>
+    
+    <a class="industry" href="/bookkeeping-ecommerce-winnipeg.html">
+        <span class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></span>
+        <span><strong>E-Commerce</strong>Books that match your payouts</span>
+    </a>
+    
+    <a class="industry" href="/bookkeeping-self-employed-winnipeg.html">
+        <span class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
+        <span><strong>Self-Employed</strong>No surprise tax bill in April</span>
+    </a>
+    
+</div>
+
     </div>
 </section>
-
-<!-- Testimonials section. Data from _data/testimonials.yml. Optional param: title -->
-<section class="section testimonials-section">
-    <div class="container">
-        <div class="testimonials-header">
-            <h2>What Our Clients Say</h2>
-            <div class="rating-large">
-                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                <span class="rating-text">5.0 rating on Google</span>
-            </div>
-        </div>
-        <div class="testimonials-grid">
-            
-            <div class="testimonial-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="testimonial-quote">"Jennifer has been such a great help when it comes to my bookkeeping needs. She's efficient, knowledgeable and timely which is important when it comes to taxes. Definitely recommend!"</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">NK</div>
-                    <div>
-                        <div class="author-name">Natalie Kuz</div>
-                        <div class="author-location">Winnipeg, MB</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="testimonial-quote">"Jennifer exhibited a quick grasp of my personal tax position. She prepared the needed papers swiftly and provided me with the information necessary to avoid common pitfalls later on."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">AK</div>
-                    <div>
-                        <div class="author-name">Angie Kan</div>
-                        <div class="author-location">Selkirk, MB</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="testimonial-quote">"She makes everything super clear and handles all the nitty-gritty details without any fuss. Takes a lot of stress off my shoulders during tax season. Highly recommend!"</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">DW</div>
-                    <div>
-                        <div class="author-name">Donald Walters</div>
-                        <div class="author-location">Winnipeg, MB</div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
-
-
-<!-- Industries grid. Data from _data/industries.yml -->
-<section class="section industries-section">
-    <div class="container">
-        <div class="industries-header">
-            <h2>Industries We Serve</h2>
-            <p>From startups to established enterprises, we've helped businesses across diverse sectors thrive.</p>
-        </div>
-        <div class="industries-grid">
-            
-            <div class="industry-card">
-                <div class="industry-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
-                <h4>Medical & Healthcare</h4>
-            </div>
-            
-            <div class="industry-card">
-                <div class="industry-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
-                <h4>Software & Tech</h4>
-            </div>
-            
-            <div class="industry-card">
-                <div class="industry-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
-                <h4>Financial Services</h4>
-            </div>
-            
-            <div class="industry-card">
-                <div class="industry-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
-                <h4>Legal Practices</h4>
-            </div>
-            
-            <div class="industry-card">
-                <div class="industry-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div>
-                <h4>Trucking & Logistics</h4>
-            </div>
-            
-            <div class="industry-card">
-                <div class="industry-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
-                <h4>Trades & Mechanics</h4>
-            </div>
-            
-            <div class="industry-card">
-                <div class="industry-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
-                <h4>Construction</h4>
-            </div>
-            
-            <div class="industry-card">
-                <div class="industry-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></div>
-                <h4>Retail & E-commerce</h4>
-            </div>
-            
-        </div>
-    </div>
-</section>
-
 
 
 <section class="section cta-section">
     <div class="container">
-        <h2>Ready to Get Started?</h2>
-        <p>Schedule your free consultation today. We'll review your needs and recommend the perfect solution.</p>
+        <h2>Talk to Jennifer for 10 Minutes</h2>
+        <p>Free, no obligation. You learn which plan fits, what it costs and what your books are missing.</p>
         <div class="cta-buttons">
-            <a href="/start.html" class="btn btn-primary">
-                Start Free Consultation
-                
-<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-
-            </a>
-            <a href="tel:2043819308" class="btn btn-phone">
-                
-<svg width="1" height="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-
-                Call (204) 381-9308
-            </a>
+            <a href="/start.html" class="btn btn-primary">Book a free call 
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+            <a href="tel:2043819308" class="btn btn-ghost">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+ (204) 381-9308</a>
         </div>
-        
-        <div class="cta-benefits">
-            <div class="cta-benefit">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Review your situation</div>
-            <div class="cta-benefit">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Give guidance and recommendations</div>
-            <div class="cta-benefit">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
- Explain our services</div>
-        </div>
-        
     </div>
 </section>
 
 
 
-    <!-- Site footer with 4-column grid -->
+    <!-- Site footer: brand, Services and Industries (from _data), Company, Contact -->
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <a href="/" class="logo" style="color:#fff">ClearingStation</a>
-                <p>Expert bookkeeping, tax filing, and payroll services for Manitoba businesses. Based in Winnipeg, serving all of Canada.</p>
+                <a href="/" class="logo">ClearingStation</a>
+                <p>Bookkeeping, tax filing and payroll for Manitoba businesses. In-house bookkeepers, based in Winnipeg.</p>
             </div>
             <div>
                 <h4>Services</h4>
                 <ul class="footer-links">
-                    <li><a href="/services.html">Bookkeeping</a></li>
-                    <li><a href="/services.html">Tax Preparation</a></li>
-                    <li><a href="/services.html">Payroll</a></li>
+                    
+                    <li><a href="/monthly-bookkeeping-winnipeg.html">Monthly Bookkeeping</a></li>
+                    
+                    <li><a href="/catch-up-bookkeeping-winnipeg.html">Catch-Up Bookkeeping</a></li>
+                    
+                    <li><a href="/bookkeeping-payroll-winnipeg.html">Bookkeeping + Payroll</a></li>
+                    
+                    <li><a href="/tax-filing-winnipeg.html">Tax Filing</a></li>
+                    
+                    <li><a href="/cra-audit-support-winnipeg.html">CRA Audit Support</a></li>
+                    
+                    <li><a href="/online-bookkeeping-manitoba.html">Online Bookkeeping</a></li>
+                    
+                </ul>
+            </div>
+            <div>
+                <h4>Industries</h4>
+                <ul class="footer-links">
+                    
+                    <li><a href="/bookkeeping-physicians-winnipeg.html">Physicians & MPCs</a></li>
+                    
+                    <li><a href="/bookkeeping-medical-clinics-winnipeg.html">Medical Clinics</a></li>
+                    
+                    <li><a href="/bookkeeping-real-estate-winnipeg.html">Real Estate</a></li>
+                    
+                    <li><a href="/bookkeeping-contractors-trucking-winnipeg.html">Contractors & Trucking</a></li>
+                    
+                    <li><a href="/bookkeeping-ecommerce-winnipeg.html">E-Commerce</a></li>
+                    
+                    <li><a href="/bookkeeping-self-employed-winnipeg.html">Self-Employed</a></li>
+                    
                 </ul>
             </div>
             <div>
                 <h4>Company</h4>
                 <ul class="footer-links">
-                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/about.html">About</a></li>
                     <li><a href="/plans.html">Pricing</a></li>
+                    <li><a href="/security.html">Security</a></li>
                     <li><a href="/support.html">Help</a></li>
                     <li><a href="/login.htm">Client Login</a></li>
                 </ul>
@@ -435,13 +451,14 @@
                 <ul class="footer-links">
                     <li><a href="tel:2043819308">(204) 381-9308</a></li>
                     <li><a href="mailto:support@clearingstation.ca">support@clearingstation.ca</a></li>
-                    <li><span style="color:rgba(255,255,255,0.7)">1460 Chevrier Blvd #200<br>Winnipeg, MB R3T 1Y6</span></li>
+                    <li>1460 Chevrier Blvd #200<br>Winnipeg, MB R3T 1Y6</li>
+                    <li>Mon&ndash;Fri, 8:00 AM &ndash; 5:00 PM</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 ClearingStation Ltd. All rights reserved.</p>
-            <p>Proudly based in Manitoba, Canada 🍁</p>
+            <p>&copy; 2026 ClearingStation Ltd.</p>
+            <p>Winnipeg, Manitoba</p>
         </div>
     </div>
 </footer>

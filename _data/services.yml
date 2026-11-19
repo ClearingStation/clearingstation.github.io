@@ -1,61 +1,82 @@
-# Service cards. "summary" marks a service for the home page cards (with "short_name").
-- name: Bookkeeping
-  short_name: Bookkeeping
-  tagline: "Track every dollar, effortlessly"
-  summary: "Monthly reconciliation, expense tracking, and financial reports that actually make sense."
-  price: "From $299/month"
+# One entry per service. Single source for:
+#   - the Services dropdown in the header and the footer column (name, url, note)
+#   - the service cards on the home page (summary, price)
+#   - the detailed cards on /services.html (features)
+# Each url is that service's own landing page. Prices must match _data/pricing.yml.
+- name: Monthly Bookkeeping
+  url: /monthly-bookkeeping-winnipeg.html
+  note: A dedicated bookkeeper, from $299/month
+  summary: One dedicated bookkeeper keeps your books current every month and replies within 24 hours.
+  price: From $299/month
   icon: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>'
   features:
-    - Monthly bookkeeping
-    - Categorize business income & expenses
-    - Monthly bank reconciliation & close
-    - Accounts payables & receivables
-    - Monthly recap & reports to your inbox
+    - Every transaction categorized
+    - Monthly bank reconciliation and close
+    - Accounts payable and receivable
+    - GST/PST and T4/T5 filing
+    - Monthly reports in your inbox
 
-- name: Tax Preparation & Filing
-  short_name: Tax Preparation
-  tagline: "Maximize deductions, minimize stress"
-  summary: "Maximize deductions, minimize your bill, and stay completely CRA compliant."
-  price: "From $499/return"
+- name: Catch-Up Bookkeeping
+  url: /catch-up-bookkeeping-winnipeg.html
+  note: Behind on your books? Get current.
+  summary: Months or years behind? We sort the backlog, file what is overdue and talk to the CRA for you.
+  price: From $199/month
+  icon: '<circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>'
+  features:
+    - No need to organize anything first
+    - Missing documents recovered
+    - Overdue returns filed or amended
+    - Penalties and interest kept down
+    - CRA communication on your behalf
+
+- name: Bookkeeping + Payroll
+  url: /bookkeeping-payroll-winnipeg.html
+  note: Pay runs, remittances, T4s and ROEs
+  summary: Payroll and books done by one team. Included in every plan, at no extra cost.
+  price: No extra cost
+  icon: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>'
+  features:
+    - Pay runs on time, every time
+    - Source deductions remitted to CRA
+    - T4s and ROEs prepared
+    - Year-end payroll reconciliation
+    - Up to 3 employees at $299, 10 at $499
+
+- name: Tax Filing
+  url: /tax-filing-winnipeg.html
+  note: Personal, self-employed and corporate
+  summary: Corporate, self-employed and personal returns. We look for the deductions others miss.
+  price: From $499/return
   icon: '<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>'
   features:
     - Corporate T2 filing
-    - Sales tax filings (GST/PST)
-    - Review & analyze financial statements
-    - Calculate profit allocation
-    - Tax planning & strategy
-
-- name: Payroll Management
-  short_name: Payroll
-  tagline: "On-time, accurate, every time"
-  summary: "On-time, accurate payroll processing with all government remittances handled."
-  price: "From $99/month"
-  icon: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>'
-  features:
-    - Payroll processing
-    - Source deduction remittances to CRA
-    - Issuance of T4s
-    - ROE preparation
-    - Year-end payroll reconciliation
+    - Self-employed and personal returns
+    - GST/PST returns
+    - Missed deductions found
+    - Tax planning for next year
 
 - name: CRA Audit Support
-  tagline: "We've handled over 100 audits"
-  price: "Contact for quote"
+  url: /cra-audit-support-winnipeg.html
+  note: Got a CRA letter? Talk to us first.
+  summary: Got a letter from the CRA? We prepare the response and speak to the CRA for you.
+  price: Fixed quote
   icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>'
   features:
-    - Government communication
-    - Audit preparation & response
-    - Documentation gathering
-    - Representation & advocacy
-    - Post-audit compliance
+    - Audits, reviews and document requests
+    - Documents gathered and organized
+    - Response prepared and sent
+    - We speak to the CRA for you
+    - Follow-up after the audit
 
-- name: Financial Consulting
-  tagline: "Strategic guidance for growth"
-  price: "Included with plans"
-  icon: '<line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>'
+- name: Online Bookkeeping
+  url: /online-bookkeeping-manitoba.html
+  note: Fully online, anywhere in Manitoba
+  summary: A real Manitoba bookkeeper, fully online. No drive to Winnipeg, no software to learn.
+  price: From $299/month
+  icon: '<rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>'
   features:
-    - Cash flow analysis
-    - Budget planning
-    - Profitability insights
-    - Business structure advice
-    - Growth planning
+    - Send receipts from your phone
+    - Same dedicated bookkeeper
+    - Secure document upload
+    - Calls when you need them
+    - Anywhere in Manitoba

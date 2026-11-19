@@ -28,17 +28,11 @@ exclude:
   - view_invoice.html
   - blog/self-employed-tax-tips-manitoba-for-plumbers.html
   - blog/plumbing-invoicing-tool-automated-revenue-insights-autosuggested-line-items.html
-  - main.css
-  - style.css
-  - style2.css
-  - stylecomp.css
-  - pico.css
-  - dashboard.css
-  - slick.css
-  - slick-theme.css
-  - script.js
-  - offer.js
+  # Old home page; local jekyll serve prefers index.htm over index.html.
+  # Glob form, because a plain "index.htm" prefix-matches index.html too.
+  - "index.ht[m]"
   - worker
+# Root CSS/JS stay in the build: the old .htm pages still load them
 
 # Site data (used in includes)
 phone: "(204) 381-9308"

@@ -1,116 +1,69 @@
 ---
 layout: default
-title: "Simple, Transparent Pricing | ClearingStation Ltd."
-description: "Get the partner your business needs to grow, at an unbeatable price. No hidden fees, no surprises."
+title: "Pricing | ClearingStation Ltd. - Flat Monthly Bookkeeping Prices"
+description: "Bookkeeping from $299/month, bookkeeping and tax from $499/month. Flat monthly prices, no hourly billing, payroll included."
 nav_active: pricing
 ---
 
-{% include sections/page-hero.html title="Simple, Transparent Pricing" subtitle="Get the partner your business needs to grow, at an unbeatable price. No hidden fees, no surprises." %}
+{% include sections/page-hero.html eyebrow="Pricing" title="Flat monthly prices" subtitle="No hourly billing, no surprise invoices. Payroll is included in every plan." %}
 
-<!-- Main Pricing Grid -->
-<section class="section pricing-main-section">
+<!-- Main plans (same include as the home page) -->
+<section class="section">
     <div class="container">
-        <div class="pricing-grid-3">
-            {% for plan in site.data.pricing %}
-            <div class="pricing-card{% if plan.featured %} featured{% endif %}">
-                {% if plan.featured %}<div class="pricing-badge">Most Popular</div>{% endif %}
-                <div class="pricing-header">
-                    <h3>{{ plan.name }}</h3>
-                    <p class="pricing-tagline">{{ plan.description }}</p>
-                </div>
-                <div class="pricing-price">
-                    <span class="price-amount">{{ plan.price }}</span>
-                    <span class="price-period">{{ plan.period }}</span>
-                </div>
-                <p class="pricing-note">{{ plan.note }}</p>
-                <ul class="pricing-features">
-                    {% for f in plan.features %}
-                    <li>{% include icons/check.html %} {{ f }}</li>
-                    {% endfor %}
+        {% include sections/pricing.html %}
+    </div>
+</section>
+
+<!-- Special plans -->
+<section class="section section-white">
+    <div class="container">
+        <div class="section-head">
+            <h2>Special situations</h2>
+        </div>
+        <div class="card-grid card-grid-2">
+            <div class="card">
+                <h3>Catch-up bookkeeping</h3>
+                <p>Months or years behind? We get you current, then keep you there.</p>
+                <div class="card-price">From $199/month</div>
+                <ul class="check-list">
+                    <li>{% include icons/check.html %} Penalties and interest kept down</li>
+                    <li>{% include icons/check.html %} Accurate books within days</li>
+                    <li>{% include icons/check.html %} We handle the paperwork mess</li>
+                    <li>{% include icons/check.html %} CRA communication on your behalf</li>
                 </ul>
-                <div class="pricing-cta">
-                    <a href="{{ '/start.html' | relative_url }}?type=monthly" class="btn {% if plan.featured %}btn-primary{% else %}btn-secondary{% endif %} btn-block">Get Started</a>
-                </div>
+                <a href="{{ '/catch-up-bookkeeping-winnipeg.html' | relative_url }}" class="btn btn-secondary">How catch-up works {% include icons/arrow-right.html size=16 %}</a>
             </div>
-            {% endfor %}
+            <div class="card">
+                <h3>Professional corporations</h3>
+                <p>For physicians, dentists and lawyers who run a professional corporation.</p>
+                <div class="card-price">From $999/month</div>
+                <ul class="check-list">
+                    <li>{% include icons/check.html %} Everything in Bookkeeping &amp; Tax</li>
+                    <li>{% include icons/check.html %} PHIA and PIPEDA compliance</li>
+                    <li>{% include icons/check.html %} Cash management included</li>
+                    <li>{% include icons/check.html %} Salary vs dividend planning</li>
+                </ul>
+                <a href="{{ '/bookkeeping-physicians-winnipeg.html' | relative_url }}" class="btn btn-secondary">For physicians &amp; MPCs {% include icons/arrow-right.html size=16 %}</a>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Special Plans -->
-<section class="section special-plans-section">
-    <div class="container">
-        <div class="special-plans-grid">
-
-            <!-- Catch Up Bookkeeping -->
-            <div class="special-plan-card">
-                <div class="special-plan-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
-                </div>
-                <div class="special-plan-content">
-                    <h3>Catch Up Bookkeeping</h3>
-                    <p class="special-plan-tagline">Behind on your books? We'll get you current—fast.</p>
-                    <div class="special-plan-price">Starting at $199/month</div>
-                    <ul class="special-plan-features">
-                        <li>Reduce penalties and interest</li>
-                        <li>Accurate books within days</li>
-                        <li>We handle the paperwork mess</li>
-                        <li>CRA communication on your behalf</li>
-                    </ul>
-                    <a href="{{ '/start.html' | relative_url }}?type=catch-up" class="btn btn-secondary">Learn More →</a>
-                </div>
-            </div>
-
-            <!-- Professional Corporation -->
-            <div class="special-plan-card highlight">
-                <div class="special-plan-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                    </svg>
-                </div>
-                <div class="special-plan-content">
-                    <h3>Professional Corporation</h3>
-                    <p class="special-plan-tagline">Tailored for Physicians, Dentists, and Lawyers</p>
-                    <div class="special-plan-price">Starting at $999/month</div>
-                    <ul class="special-plan-features">
-                        <li>PHIA and PIPEDA compliance</li>
-                        <li>Everything in Bookkeeping & Tax</li>
-                        <li>Cash Management included</li>
-                        <li>Industry-specific expertise</li>
-                    </ul>
-                    <a href="{{ '/start.html' | relative_url }}?type=professional" class="btn btn-primary">Learn More →</a>
-                </div>
-            </div>
-
+<!-- FAQ: native <details>, no script needed -->
+<section class="section">
+    <div class="container narrow">
+        <div class="section-head">
+            <h2>Frequently asked questions</h2>
         </div>
-    </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="section faq-section">
-    <div class="container">
-        <div class="faq-header">
-            <h2>Frequently Asked Questions</h2>
-            <p>Everything you need to know about working with ClearingStation</p>
-        </div>
-
-        <div class="faq-grid">
+        <div class="faq">
             {% for item in site.data.faq %}
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>{{ item.question }}</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                </button>
-                <div class="faq-answer"><p>{{ item.answer }}</p></div>
-            </div>
+            <details>
+                <summary>{{ item.question }}</summary>
+                <p>{{ item.answer }}</p>
+            </details>
             {% endfor %}
         </div>
     </div>
 </section>
 
-{% include sections/cta.html subtitle="Schedule your free consultation. We'll review your needs and recommend the perfect plan for your business." %}
-
-<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+{% include sections/cta.html %}

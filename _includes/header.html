@@ -1,21 +1,38 @@
-<!-- Sticky header with active nav via page.nav_active front matter -->
+<!-- Sticky header. Links from _data/nav.yml; active link via page.nav_active front matter.
+     A link with "dropdown: <file>" lists that _data file's entries: on hover/focus (desktop), inline (mobile menu). -->
 <header class="header" id="header">
     <div class="container">
         <div class="header-inner">
             <a href="{{ '/' | relative_url }}" class="logo">ClearingStation</a>
-            <nav>
+            <nav class="site-nav" id="site-nav">
                 <ul class="nav-links">
                     {% for link in site.data.nav %}
-                    <li><a href="{{ link.url | relative_url }}"{% if page.nav_active == link.key %} class="active"{% endif %}>{{ link.title }}</a></li>
+                    {% assign subs = site.data[link.dropdown] %}
+                    <li{% if subs %} class="has-sub"{% endif %}>
+                        <a href="{{ link.url | relative_url }}"{% if page.nav_active == link.key %} class="active"{% endif %}>{{ link.title }}</a>
+                        {% if subs %}
+                        <ul class="sub-menu">
+                            {% for sub in subs %}
+                            <li><a href="{{ sub.url | relative_url }}"><strong>{{ sub.name }}</strong><span>{{ sub.note }}</span></a></li>
+                            {% endfor %}
+                            <li><a href="{{ link.url | relative_url }}"><strong>All {{ link.title }} &rarr;</strong></a></li>
+                        </ul>
+                        {% endif %}
+                    </li>
                     {% endfor %}
                 </ul>
             </nav>
             <div class="header-cta">
                 <a href="tel:{{ site.phone_raw }}" class="header-phone">
                     {% include icons/phone.html size=18 %}
-                    {{ site.phone }}
+                    <span class="header-phone-num">{{ site.phone }}</span>
                 </a>
-                <a href="{{ '/start.html' | relative_url }}" class="btn btn-primary">Free Consultation</a>
+                <a href="{{ '/start.html' | relative_url }}" class="btn btn-primary btn-sm">Free Consultation</a>
+                <!-- Mobile only: opens the nav as a panel under the header -->
+                <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"
+                        onclick="this.setAttribute('aria-expanded', document.getElementById('header').classList.toggle('nav-open'))">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
             </div>
         </div>
     </div>

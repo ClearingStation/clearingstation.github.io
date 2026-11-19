@@ -1,0 +1,16 @@
+{% comment %}Plan cards from _data/pricing.yml. Home page and /plans.html both use this, so prices never drift.{% endcomment %}
+<div class="pricing-grid">
+    {% for plan in site.data.pricing %}
+    <div class="plan{% if plan.featured %} plan-featured{% endif %}">
+        {% if plan.featured %}<span class="plan-badge">Most popular</span>{% endif %}
+        <h3>{{ plan.name }}</h3>
+        <p class="plan-desc">{{ plan.description }}</p>
+        <div class="plan-price">{{ plan.price }}<small>{{ plan.period }}</small></div>
+        <p class="plan-note">{{ plan.note }}</p>
+        <ul class="check-list">
+            {% for f in plan.features %}<li>{% include icons/check.html %} {{ f }}</li>{% endfor %}
+        </ul>
+        <a href="{{ '/start.html' | relative_url }}?type={{ plan.name | slugify }}" class="btn {% if plan.featured %}btn-primary{% else %}btn-secondary{% endif %} btn-block">Get started</a>
+    </div>
+    {% endfor %}
+</div>

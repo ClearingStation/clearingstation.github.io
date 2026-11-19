@@ -1,24 +1,33 @@
-<!-- Site footer with 4-column grid -->
+<!-- Site footer: brand, Services and Industries (from _data), Company, Contact -->
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <a href="{{ '/' | relative_url }}" class="logo" style="color:#fff">ClearingStation</a>
-                <p>Expert bookkeeping, tax filing, and payroll services for Manitoba businesses. Based in Winnipeg, serving all of Canada.</p>
+                <a href="{{ '/' | relative_url }}" class="logo">ClearingStation</a>
+                <p>Bookkeeping, tax filing and payroll for Manitoba businesses. In-house bookkeepers, based in Winnipeg.</p>
             </div>
             <div>
                 <h4>Services</h4>
                 <ul class="footer-links">
-                    <li><a href="{{ '/services.html' | relative_url }}">Bookkeeping</a></li>
-                    <li><a href="{{ '/services.html' | relative_url }}">Tax Preparation</a></li>
-                    <li><a href="{{ '/services.html' | relative_url }}">Payroll</a></li>
+                    {% for svc in site.data.services %}
+                    <li><a href="{{ svc.url | relative_url }}">{{ svc.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                <h4>Industries</h4>
+                <ul class="footer-links">
+                    {% for ind in site.data.industries %}
+                    <li><a href="{{ ind.url | relative_url }}">{{ ind.name }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
             <div>
                 <h4>Company</h4>
                 <ul class="footer-links">
-                    <li><a href="{{ '/about.html' | relative_url }}">About Us</a></li>
+                    <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
                     <li><a href="{{ '/plans.html' | relative_url }}">Pricing</a></li>
+                    <li><a href="{{ '/security.html' | relative_url }}">Security</a></li>
                     <li><a href="{{ '/support.html' | relative_url }}">Help</a></li>
                     <li><a href="/login.htm">Client Login</a></li>
                 </ul>
@@ -28,13 +37,14 @@
                 <ul class="footer-links">
                     <li><a href="tel:{{ site.phone_raw }}">{{ site.phone }}</a></li>
                     <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-                    <li><span style="color:rgba(255,255,255,0.7)">{{ site.address }}</span></li>
+                    <li>{{ site.address }}</li>
+                    <li>Mon&ndash;Fri, 8:00 AM &ndash; 5:00 PM</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; {{ 'now' | date: '%Y' }} ClearingStation Ltd. All rights reserved.</p>
-            <p>Proudly based in Manitoba, Canada 🍁</p>
+            <p>&copy; {{ 'now' | date: '%Y' }} ClearingStation Ltd.</p>
+            <p>Winnipeg, Manitoba</p>
         </div>
     </div>
 </footer>

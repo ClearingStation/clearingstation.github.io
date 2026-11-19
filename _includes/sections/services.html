@@ -1,0 +1,22 @@
+{% comment %}
+Service cards from _data/services.yml. Each card links to the service's landing page.
+Param: detail (true shows the feature list; used on /services.html)
+{% endcomment %}
+<div class="card-grid">
+    {% for svc in site.data.services %}
+    <a class="service-card" href="{{ svc.url | relative_url }}">
+        <span class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{{ svc.icon }}</svg></span>
+        <h3>{{ svc.name }}</h3>
+        <p>{{ svc.summary }}</p>
+        {% if include.detail %}
+        <ul class="check-list">
+            {% for f in svc.features %}<li>{% include icons/check.html %} {{ f }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        <span class="service-foot">
+            <span class="service-price">{{ svc.price }}</span>
+            <span class="service-more">Learn more {% include icons/arrow-right.html size=16 %}</span>
+        </span>
+    </a>
+    {% endfor %}
+</div>

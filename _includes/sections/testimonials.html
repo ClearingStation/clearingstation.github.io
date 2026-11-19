@@ -1,26 +1,17 @@
-<!-- Testimonials section. Data from _data/testimonials.yml. Optional param: title -->
-<section class="section testimonials-section">
+{% comment %}Google reviews from _data/testimonials.yml. Param: title. Links to the Google listing when site.google_reviews_url is set.{% endcomment %}
+<section class="section section-navy">
     <div class="container">
-        <div class="testimonials-header">
+        <div class="section-head">
             <h2>{{ include.title | default: "What Our Clients Say" }}</h2>
-            <div class="rating-large">
-                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                <span class="rating-text">5.0 rating on Google</span>
-            </div>
+            <p><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google{% if site.google_reviews_url %} &middot; <a href="{{ site.google_reviews_url }}" target="_blank" rel="noopener">Read all reviews</a>{% endif %}</p>
         </div>
-        <div class="testimonials-grid">
+        <div class="card-grid">
             {% for t in site.data.testimonials %}
-            <div class="testimonial-card">
+            <figure class="review">
                 <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="testimonial-quote">"{{ t.quote }}"</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">{{ t.initials }}</div>
-                    <div>
-                        <div class="author-name">{{ t.name }}</div>
-                        <div class="author-location">{{ t.location }}</div>
-                    </div>
-                </div>
-            </div>
+                <blockquote>{{ t.quote }}</blockquote>
+                <figcaption><span class="avatar">{{ t.initials }}</span><span><strong>{{ t.name }}</strong>{{ t.location }}</span></figcaption>
+            </figure>
             {% endfor %}
         </div>
     </div>

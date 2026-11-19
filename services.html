@@ -1,66 +1,46 @@
 ---
 layout: default
-title: "Our Services | ClearingStation Ltd."
-description: "Bookkeeping, tax preparation, payroll, CRA audit support and financial consulting for Manitoba businesses."
+title: "Services | ClearingStation Ltd. - Winnipeg Bookkeeping, Tax & Payroll"
+description: "Monthly and catch-up bookkeeping, payroll, tax filing, CRA audit support and online bookkeeping for Manitoba businesses. Industry specialists for physicians, clinics, real estate and more."
 nav_active: services
 ---
 
-{% include sections/page-hero.html title="Our Services" subtitle="Comprehensive financial services designed to give you back your time and peace of mind." %}
+{% include sections/page-hero.html eyebrow="Services" title="Everything your books need, from one team" subtitle="Pick a service to see how it works and what it costs. Not sure which one? A free 10-minute call tells you." %}
 
-<!-- Main Services Grid -->
-<section class="section services-detail-section">
+<!-- All services with their feature lists -->
+<section class="section">
     <div class="container">
-        <div class="services-detail-grid">
-            {% for svc in site.data.services %}
-            <div class="service-detail-card">
-                <div class="service-detail-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{{ svc.icon }}</svg></div>
-                <div class="service-detail-content">
-                    <h3>{{ svc.name }}</h3>
-                    <p class="service-tagline">{{ svc.tagline }}</p>
-                    <ul class="service-features">
-                        {% for f in svc.features %}
-                        <li>{% include icons/check.html %} {{ f }}</li>
-                        {% endfor %}
-                    </ul>
-                    <div class="service-price">{{ svc.price }}</div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
+        {% include sections/services.html detail=true %}
     </div>
 </section>
 
-<!-- Why Choose Us Banner -->
-<section class="section why-choose-section">
-    <div class="container">
-        <div class="why-choose-grid">
-            <div class="why-choose-content">
-                <h2>Why Business Owners Choose ClearingStation</h2>
-                <p>We're not just bookkeepers—we're partners in your success. Every service is designed to give you clarity, save you money, and free up your time.</p>
-                <div class="why-choose-stats">
-                    <div class="why-stat">
-                        <div class="why-stat-number">10-15</div>
-                        <div class="why-stat-label">Hours saved monthly</div>
-                    </div>
-                    <div class="why-stat">
-                        <div class="why-stat-number">$1,000s</div>
-                        <div class="why-stat-label">In tax savings per client</div>
-                    </div>
-                    <div class="why-stat">
-                        <div class="why-stat-number">100+</div>
-                        <div class="why-stat-label">CRA audits handled</div>
-                    </div>
-                </div>
-            </div>
-            <div class="why-choose-image">
-                <img src="images/optimized/jennifer.jpg" alt="Jennifer Flaming" onerror="this.style.display='none'">
-            </div>
+<!-- Included in every plan: what used to be a separate "consulting" card -->
+<section class="section section-white">
+    <div class="container split">
+        <div>
+            <h2>Included in every plan</h2>
+            <p>Advice is not an extra. Your bookkeeper knows your numbers, so you can ask the questions that matter.</p>
         </div>
+        <ul class="check-list check-list-lg">
+            <li>{% include icons/check.html size=20 %} Cash flow check-ins</li>
+            <li>{% include icons/check.html size=20 %} Budget and profitability questions</li>
+            <li>{% include icons/check.html size=20 %} Business structure advice</li>
+            <li>{% include icons/check.html size=20 %} Secure document storage in Winnipeg</li>
+            <li>{% include icons/check.html size=20 %} 24-hour response guarantee</li>
+            <li>{% include icons/check.html size=20 %} Migration from QuickBooks or your old bookkeeper</li>
+        </ul>
     </div>
 </section>
 
-{% include sections/testimonials.html %}
+<!-- Industries: specialist pages -->
+<section class="section" id="industries">
+    <div class="container">
+        <div class="section-head">
+            <h2>Industries we know well</h2>
+            <p>Each industry has its own rules and its own traps. See how we handle yours.</p>
+        </div>
+        {% include sections/industries.html %}
+    </div>
+</section>
 
-{% include sections/industries.html %}
-
-{% include sections/cta.html benefits=true %}
+{% include sections/cta.html %}

@@ -1,16 +1,24 @@
-# Main navigation links
+# Main navigation links.
+# "dropdown" names a _data file whose entries (name, url, note) fill a dropdown under the link.
+# The Services dropdown and the footer Services column both read _data/services.yml.
 - title: Home
   url: /
   key: home
 
-- title: About
-  url: /about.html
-  key: about
-
 - title: Services
   url: /services.html
   key: services
+  dropdown: services
+
+- title: Industries
+  url: /services.html#industries
+  key: industries
+  dropdown: industries
 
 - title: Pricing
   url: /plans.html
   key: pricing
+
+- title: About
+  url: /about.html
+  key: about

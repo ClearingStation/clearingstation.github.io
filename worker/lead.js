@@ -40,6 +40,9 @@ export default {
 
         // The browser shows "Thank You" only when Telegram accepted the message.
         const sent = await sendTelegram(message(lead), env);
-        return sent.ok ? reply(200, 'ok') : reply(502, 'Telegram did not accept the lead');
+        if (sent.ok) return reply(200, 'ok');
+        // Telegram's reason goes to the Worker log only (`npx wrangler tail`).
+        console.log('Telegram refused:', await sent.text());
+        return reply(502, 'Telegram did not accept the lead');
     },
 };
