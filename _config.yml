@@ -4,16 +4,32 @@ description: "Expert bookkeeping, tax filing & payroll for Manitoba businesses."
 url: "https://www.clearingstation.ca"
 baseurl: ""
 
+lang: en-CA
+timezone: America/Winnipeg
+
 # Build settings
 markdown: kramdown
+plugins:
+  - jekyll-feed      # /blog/feed.xml (sitemap.xml is our own template)
 
-# Blog posts get pretty URLs; pages keep their .html names (nav links use them)
+# RSS feed for the blog
+feed:
+  path: blog/feed.xml
+
+# Default author and share image for SEO tags (_includes/seo.html)
+author: Jennifer Flaming
+author_url: /about.html
+share_image: /images/optimized/jennifer.jpg
+
 defaults:
+  # Blog posts get pretty URLs; pages keep their .html names (nav links use them)
   - scope:
       path: ""
       type: posts
     values:
+      layout: post
       permalink: /blog/:title/
+      extra_css: /assets/css/blog.css
 
 # Exclude old files from build
 exclude:
@@ -40,3 +56,13 @@ phone_raw: "2043819308"
 email: "support@clearingstation.ca"
 address: "1460 Chevrier Blvd #200<br>Winnipeg, MB R3T 1Y6"
 ga_id: "G-F06R6NDCPK"
+# Structured address and map position for the LocalBusiness schema
+street: "1460 Chevrier Blvd #200"
+city: Winnipeg
+region: MB
+postal_code: R3T 1Y6
+geo_lat: 49.8252385
+geo_lng: -97.1690497
+# Google Business reviews (the "5.0 from N Google reviews" lines link here). Update the count now and then.
+google_reviews_count: 22
+google_reviews_url: "https://www.google.com/maps/place/ClearingStation+Ltd.+Bookkeeping+%26+Accounting+Services/@49.8252385,-97.1716246,770m/data=!3m2!1e3!5s0x52ea743dcb763bad:0x616d1bbbdb27681a!4m8!3m7!1s0x47f090c3808364f9:0x8f3ad3383674de4d!8m2!3d49.8252385!4d-97.1690497!9m1!1b1!16s%2Fg%2F11whrtq1xt"

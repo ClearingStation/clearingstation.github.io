@@ -19,12 +19,12 @@ extra_css: /assets/css/start.css
                     <li>{% include icons/check.html size=18 %} The professional expenses physicians often miss</li>
                 </ul>
                 <div class="lp-proof">
-                    <span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google</span>
+                    <span>{% include google-rating.html %}</span>
                     <span>Works with physicians &amp; medical practices</span>
                     <span>In-house Manitoba bookkeepers</span>
                 </div>
             </div>
-            {% include lead-form.html source="Industry: physicians" badge="Free &bull; Confidential" title="Review Your MPC Setup in 10 Minutes" intro="Leave your first name and number. Jennifer calls you back. Ten minutes, between patients is fine." button="Review My MPC Setup" note="Free &middot; No obligation &middot; Jennifer calls you back" success="Thank you. Jennifer will call you soon to review your MPC setup. Keep your phone close." %}
+            {% include lead-form.html source="Industry: physicians" badge="Free &bull; Confidential" title="Review Your MPC Setup in 10 Minutes" intro="Leave your name and how to reach you. Jennifer gets back to you. Ten minutes, between patients is fine." button="Review My MPC Setup" note="Free &middot; No obligation &middot; Jennifer gets back to you" success="Thank you. Jennifer will call you soon to review your MPC setup. Keep your phone close." %}
         </div>
     </div>
 </section>
@@ -114,36 +114,40 @@ extra_css: /assets/css/start.css
     </div>
 </section>
 
-<!-- Price: real plans and which one usually fits a physician -->
+<!-- Price: one plan for physicians, shown against what it replaces -->
 <section class="lp-section">
     <div class="container lp-narrow">
-        <h2>Physician Bookkeeping Prices</h2>
-        <p class="lp-sub">Flat monthly prices. Most incorporated physicians start with Bookkeeping &amp; Tax. Jennifer confirms the fit on the call.</p>
+        <h2>One Price for Your Whole Practice</h2>
+        <p class="lp-sub">Your books, your corporate return, both personal returns and your payroll. One team, one flat monthly price.</p>
         <div class="lp-prices">
             <div class="lp-price">
-                <h3>Bookkeeping &amp; Tax</h3>
-                <div class="lp-amount">$499<small>/mo</small></div>
-                <p>Monthly books for your MPC, plus:</p>
+                <h3>Professional Corporation</h3>
+                <div class="lp-amount">$999<small>/mo</small></div>
+                <p>About $33 a day. A business expense your MPC deducts. Everything included:</p>
                 <ul>
+                    <li>Monthly bookkeeping for your MPC</li>
                     <li>Corporate tax filing (T2)</li>
                     <li>Owner &amp; spouse personal tax filing</li>
                     <li>Quarterly tax strategy sessions</li>
                     <li>Payroll up to 10 employees</li>
                     <li>Priority support</li>
+                    <li>Cash management (A/R &amp; A/P)</li>
+                    <li>PHIA and PIPEDA compliance</li>
                 </ul>
             </div>
-            <div class="lp-price">
-                <h3>Professional Corporation</h3>
-                <div class="lp-amount">$999<small>/mo</small></div>
-                <p>Starting price. Everything in Bookkeeping &amp; Tax, plus:</p>
+            <!-- What the one plan replaces -->
+            <div class="lp-replaces">
+                <h3>What it replaces</h3>
                 <ul>
-                    <li>PHIA and PIPEDA compliance</li>
-                    <li>Cash management included</li>
-                    <li>Industry-specific expertise</li>
+                    <li><strong>A bookkeeper.</strong> A part-time hire at 20 hours a week costs more than $2,000 a month in wages alone.</li>
+                    <li><strong>A tax preparer.</strong> Three returns each year: your T2, yours and your spouse's.</li>
+                    <li><strong>A payroll service.</strong> Pay runs, T4s and remittances for up to 10 staff.</li>
+                    <li><strong>A tax planner.</strong> Four strategy sessions a year on salary, dividends and what to keep in your MPC.</li>
                 </ul>
+                <p>Four services, one invoice and one person who knows your file.</p>
             </div>
         </div>
-        <p class="lp-sub" style="margin-top:32px">Not incorporated? Tax preparation starts at $499 per return. The call is free and there is no obligation. <a href="#lead">Review my MPC setup</a>.</p>
+        <p class="lp-sub" style="margin-top:32px">The call is free and there is no obligation. <a href="#lead">Review my MPC setup</a>.</p>
     </div>
 </section>
 
@@ -160,7 +164,7 @@ extra_css: /assets/css/start.css
         </details>
         <details>
             <summary>How much does bookkeeping for doctors cost in Winnipeg?</summary>
-            <p>Bookkeeping &amp; Tax is $499/month and includes your T2 and personal returns. The Professional Corporation plan starts at $999/month. If you are not incorporated, tax preparation starts at $499 per return.</p>
+            <p>One flat price: $999/month for the Professional Corporation plan. It includes your monthly books, the corporate T2, personal returns for you and your spouse, payroll for up to 10 staff and quarterly tax strategy sessions.</p>
         </details>
         <details>
             <summary>Are you an accountant for doctors or a bookkeeper?</summary>
@@ -180,7 +184,7 @@ extra_css: /assets/css/start.css
         </details>
         <details>
             <summary>How do you protect my financial information?</summary>
-            <p>Your data is protected with AES-256 encryption. All our bookkeepers are in-house and located in Manitoba. The Professional Corporation plan includes PHIA and PIPEDA compliance.</p>
+            <p>Your data is protected with AES-256 encryption. All our bookkeepers are in-house and located in Manitoba. Your plan includes PHIA and PIPEDA compliance.</p>
         </details>
     </div>
 </section>
@@ -205,7 +209,7 @@ extra_css: /assets/css/start.css
       "name": "ClearingStation Ltd.",
       "url": "https://www.clearingstation.ca/bookkeeping-physicians-winnipeg.html",
       "telephone": "+1-204-381-9308",
-      "priceRange": "$499-$999/month",
+      "priceRange": "$999/month",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "1460 Chevrier Blvd #200",
@@ -227,7 +231,7 @@ extra_css: /assets/css/start.css
         { "@type": "Question", "name": "Do you do bookkeeping for Medical Professional Corporations?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. Jennifer works with physicians and medical practices. We keep your MPC books each month, file the corporate T2 and file personal returns for you and your spouse." } },
         { "@type": "Question", "name": "How much does bookkeeping for doctors cost in Winnipeg?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Bookkeeping & Tax is $499/month and includes your T2 and personal returns. The Professional Corporation plan starts at $999/month. If you are not incorporated, tax preparation starts at $499 per return." } },
+          "acceptedAnswer": { "@type": "Answer", "text": "One flat price: $999/month for the Professional Corporation plan. It includes your monthly books, the corporate T2, personal returns for you and your spouse, payroll for up to 10 staff and quarterly tax strategy sessions." } },
         { "@type": "Question", "name": "Are you an accountant for doctors or a bookkeeper?",
           "acceptedAnswer": { "@type": "Answer", "text": "We are a Winnipeg bookkeeping and tax firm. Your dedicated bookkeeper keeps your books each month, and we prepare and file your corporate and personal tax returns." } },
         { "@type": "Question", "name": "Should I incorporate as a physician in Manitoba?",
@@ -237,7 +241,7 @@ extra_css: /assets/css/start.css
         { "@type": "Question", "name": "Do physicians charge GST?",
           "acceptedAnswer": { "@type": "Answer", "text": "Most medical services are exempt from GST. Some services, such as certain medical-legal reports or cosmetic work, can be taxable. We check what applies to your billings." } },
         { "@type": "Question", "name": "How do you protect my financial information?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Your data is protected with AES-256 encryption. All our bookkeepers are in-house and located in Manitoba. The Professional Corporation plan includes PHIA and PIPEDA compliance." } }
+          "acceptedAnswer": { "@type": "Answer", "text": "Your data is protected with AES-256 encryption. All our bookkeepers are in-house and located in Manitoba. Your plan includes PHIA and PIPEDA compliance." } }
       ]
     }
   ]

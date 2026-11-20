@@ -1,0 +1,12 @@
+# Let search engines crawl the live site. Block private files.
+# Old .htm URLs stay crawlable on purpose: Google must see their 301/410
+# before it drops them. Block them here only after they leave the index.
+User-agent: *
+Disallow: /*.pdf$
+Disallow: /*.zip$
+Disallow: /database.org
+Disallow: /worker/
+Disallow: /searchconsole/
+Disallow: /clearingstation.ca-Performance-on-Search-2026-01-29/
+
+Sitemap: https://www.clearingstation.ca/sitemap.xml

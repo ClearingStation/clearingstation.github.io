@@ -18,7 +18,7 @@
 
 - name: Contractors & Trucking
   url: /bookkeeping-contractors-trucking-winnipeg.html
-  note: Know which jobs make money
+  note: Job costing reports and WIP schedules
   icon: '<rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle>'
 
 - name: E-Commerce

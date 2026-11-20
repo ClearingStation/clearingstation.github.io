@@ -1,0 +1,42 @@
+---
+layout: default
+title: "Bookkeeping & Tax Blog for Winnipeg Businesses | ClearingStation"
+description: "Plain answers on bookkeeping, payroll, GST/PST, tax filing and CRA audits for Winnipeg and Manitoba business owners. Written by Jennifer Flaming."
+extra_css: /assets/css/blog.css
+---
+{% comment %}
+Blog index: every post, grouped by category (_data/blog_categories.yml).
+One page with all links is the simplest way for Google to find every post.
+{% endcomment %}
+{% include sections/page-hero.html eyebrow="Blog" title="Bookkeeping & Tax Answers for Manitoba Businesses" subtitle="Plain answers to the questions our clients ask most. Written by Jennifer Flaming and our Winnipeg team." %}
+
+<section class="section">
+    <div class="container">
+        {% if site.posts.size > 0 %}
+        <h2>Latest</h2>
+        <div class="post-list">
+            {% for p in site.posts limit:3 %}{% include post-card.html post=p %}{% endfor %}
+        </div>
+        {% endif %}
+
+        {% for cat in site.data.blog_categories %}
+        {% assign posts = site.posts | where: "category", cat.key %}
+        {% if posts.size > 0 %}
+        <h2 id="{{ cat.key }}">{{ cat.name }}</h2>
+        <div class="post-list">
+            {% for p in posts %}{% include post-card.html post=p %}{% endfor %}
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% assign other = site.posts | where_exp: "p", "p.category == nil" %}
+        {% if other.size > 0 %}
+        <h2 id="more">More articles</h2>
+        <div class="post-list">
+            {% for p in other %}{% include post-card.html post=p %}{% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+{% include sections/cta.html %}

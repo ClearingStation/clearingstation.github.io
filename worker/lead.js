@@ -6,7 +6,7 @@
 const ORIGINS = ['https://www.clearingstation.ca', 'https://clearingstation.ca', 'http://localhost:4000'];
 
 // Lead fields in message order, with the label shown in Telegram.
-const LABELS = { source: 'Source', plan: 'Plan', name: 'Name', phone: 'Phone', email: 'Email', business: 'Business', time: 'Best time' };
+const LABELS = { source: 'Source', plan: 'Plan', name: 'Name', contact: 'Reach by', phone: 'Phone', email: 'Email', business: 'Business', time: 'Best time' };
 
 // Cut long values and escape the characters Telegram HTML mode reserves.
 const escape = (value) => String(value).slice(0, 200).replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
@@ -36,7 +36,8 @@ export default {
         const lead = await req.json();
         // "website" is a hidden trap field. Only bots fill it. Answer ok and drop the lead.
         if (lead.website) return reply(200, 'ok');
-        if (!lead.name || !lead.phone) return reply(400, 'Name and phone are required');
+        // A lead needs a name and one way to reach them: phone (call or text) or email.
+        if (!lead.name || !(lead.phone || lead.email)) return reply(400, 'Name and phone or email are required');
 
         // The browser shows "Thank You" only when Telegram accepted the message.
         const sent = await sendTelegram(message(lead), env);

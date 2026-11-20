@@ -24,7 +24,8 @@ nav_active: pricing
             <div class="card">
                 <h3>Catch-up bookkeeping</h3>
                 <p>Months or years behind? We get you current, then keep you there.</p>
-                <div class="card-price">From $199/month</div>
+                {% assign catchup = site.data.services | where: "url", "/catch-up-bookkeeping-winnipeg.html" | first %}
+                <div class="card-price">{{ catchup.price }}</div>
                 <ul class="check-list">
                     <li>{% include icons/check.html %} Penalties and interest kept down</li>
                     <li>{% include icons/check.html %} Accurate books within days</li>

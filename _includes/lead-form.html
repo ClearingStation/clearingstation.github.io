@@ -1,5 +1,5 @@
 {% comment %}
-Lead form: first name + phone, posted to /api/lead (worker/lead.js).
+Lead form: first name + how to reach you (call, text or email), posted to /api/lead (worker/lead.js).
 Use it once per page. Styles: assets/css/start.css.
 Params:
   source  - lead source shown in Telegram (required), e.g. "Catch-up bookkeeping"
@@ -8,7 +8,8 @@ Params:
   intro   - line under the heading
   button  - submit label (default "Schedule My Free Call")
   note    - small line under the button (e.g. "Jennifer calls you back in minutes")
-  success - text in the thank-you box
+  success - text in the thank-you box. Write "call you" in it: the form swaps it for "text you"
+            or "email you" when the visitor picks that way to be reached.
   h1      - true renders the title as <h1> (when the form is the page's main heading)
   caller  - false hides the "Jennifer calls you back" photo row (default shown)
 {% endcomment %}
@@ -29,9 +30,20 @@ Params:
             <label for="firstname">First Name</label>
             <input type="text" id="firstname" name="firstname" placeholder="Your first name" autocomplete="given-name">
         </div>
+        <!-- Not everyone wants a call: let the visitor pick how Jennifer replies -->
+        <fieldset class="form-reach">
+            <legend>How should Jennifer reach you?</legend>
+            <label><input type="radio" name="contact" value="call" checked onchange="leadReach(this.form)"> Call</label>
+            <label><input type="radio" name="contact" value="text" onchange="leadReach(this.form)"> Text</label>
+            <label><input type="radio" name="contact" value="email" onchange="leadReach(this.form)"> Email</label>
+        </fieldset>
         <div class="form-group">
             <label for="phonenumber">Phone Number</label>
             <input type="tel" id="phonenumber" name="phonenumber" placeholder="{{ site.phone }}" autocomplete="tel">
+        </div>
+        <div class="form-group" hidden>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
         </div>
 
         <p id="form-error" class="form-error" hidden>We could not send your request. Please call us at <a href="tel:{{ site.phone_raw }}">{{ site.phone }}</a>.</p>
@@ -45,7 +57,7 @@ Params:
         <!-- Who calls back: a real face next to the form -->
         <div class="form-caller">
             <img src="{{ '/images/optimized/avatar.webp' | relative_url }}" alt="" width="48" height="48">
-            <span><strong>Jennifer Flaming</strong> calls you back herself</span>
+            <span><strong>Jennifer Flaming</strong> replies to you herself</span>
         </div>
         {% endunless %}
     </form>
@@ -54,7 +66,7 @@ Params:
     <div class="success-message" id="lead-success" hidden>
         <div class="success-icon">{% include icons/check.html size=32 %}</div>
         <h2>Thank You!</h2>
-        <p>{{ include.success | default: "Expect a call from Jennifer soon. Keep your phone close." }}</p>
+        <p>{{ include.success | default: "Jennifer will call you soon." }}</p>
     </div>
 </div>
 
@@ -67,20 +79,31 @@ Params:
         return !empty;
     }
 
+    // Show the phone field for "call" and "text", the email field for "email".
+    function leadReach(form) {
+        var email = form.contact.value === 'email';
+        form.phonenumber.closest('.form-group').hidden = email;
+        form.email.closest('.form-group').hidden = !email;
+    }
+
     // Send the lead to our own endpoint (worker/lead.js). Show "Thank you" only when it confirms.
     async function submitLead(event) {
         event.preventDefault();
         var form = event.target;
-        var name = form.firstname, phone = form.phonenumber;
+        var name = form.firstname, contact = form.contact.value;
+        // The field the visitor filled: email for "email", phone for "call" and "text"
+        var reach = contact === 'email' ? form.email : form.phonenumber;
         var error = document.getElementById('form-error');
         var button = form.querySelector('.btn-submit');
-        if (!leadValid([name, phone])) return;
+        if (!leadValid([name, reach])) return;
 
         var lead = {
             source: form.dataset.source,
             plan: new URLSearchParams(location.search).get('type') || '',
             name: name.value,
-            phone: phone.value,
+            contact: contact,
+            phone: contact === 'email' ? '' : form.phonenumber.value,
+            email: contact === 'email' ? form.email.value : '',
             website: form.website.value
         };
         button.disabled = true;
@@ -96,6 +119,9 @@ Params:
         error.hidden = sent;
         if (!sent) return;
 
+        // Thank-you text says "call you"; match the way the visitor picked
+        var thanks = document.querySelector('#lead-success p');
+        thanks.textContent = thanks.textContent.replace('call you', { call: 'call you', text: 'text you', email: 'email you' }[contact]);
         form.hidden = true;
         document.getElementById('lead-success').hidden = false;
         if (typeof gtag !== 'undefined') {

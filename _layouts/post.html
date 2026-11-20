@@ -1,23 +1,63 @@
 ---
 layout: default
 ---
-<!-- Blog post layout -->
-<section class="page-hero">
-    <div class="container">
-        <h1>{{ page.title }}</h1>
-        <p class="subtitle">{{ page.description }}</p>
-    </div>
-</section>
+{% comment %}
+Blog post layout. Front matter it reads:
+  title, description, date, last_modified_at, author
+  category   - one of the categories in _data/blog_categories.yml
+  service    - url of the landing page this post supports (from _data/services.yml or industries.yml)
+  faq        - list of {q, a}, shown at the end and sent to Google as FAQ schema
+{% endcomment %}
+{% assign cat = site.data.blog_categories | where: "key", page.category | first %}
+{% assign svc = site.data.services | where: "url", page.service | first %}
+{% unless svc %}{% assign svc = site.data.industries | where: "url", page.service | first %}{% endunless %}
+{% assign minutes = content | number_of_words | divided_by: 200 | plus: 1 %}
+
+{% capture crumb %}<a href="{{ '/blog/' | relative_url }}">Blog</a>{% if cat %} &middot; <a href="{{ '/blog/' | relative_url }}#{{ cat.key }}">{{ cat.name }}</a>{% endif %}{% endcapture %}
+{% include sections/page-hero.html eyebrow=crumb title=page.title subtitle=page.description %}
 
 <section class="section">
     <div class="container">
-        <div class="post-content">
+        <article class="post-content">
             <div class="post-meta">
-                {{ page.date | date: "%B %d, %Y" }} {% if page.author %} &middot; {{ page.author }}{% endif %}
+                By <a href="{{ site.author_url | relative_url }}">{{ page.author | default: site.author }}</a>
+                &middot; <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+                {% if page.last_modified_at %}&middot; Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%B %-d, %Y" }}</time>{% endif %}
+                &middot; {{ minutes }} min read
             </div>
+
             {{ content }}
-        </div>
+
+            {% if page.faq %}
+            <h2>Frequently asked questions</h2>
+            {% for f in page.faq %}
+            <h3>{{ f.q }}</h3>
+            <p>{{ f.a }}</p>
+            {% endfor %}
+            {% endif %}
+
+            {% if svc %}
+            <!-- The landing page this post supports: the main internal link -->
+            <aside class="post-service">
+                <p class="post-service-label">How we can help</p>
+                <h3><a href="{{ svc.url | relative_url }}">{{ svc.name }}</a></h3>
+                <p>{{ svc.summary | default: svc.note }}</p>
+                <a class="btn btn-primary" href="{{ svc.url | relative_url }}">See {{ svc.name }} {% include icons/arrow-right.html %}</a>
+            </aside>
+            {% endif %}
+
+            <!-- Author box: tells Google and readers who wrote this -->
+            <aside class="post-author">
+                <img src="{{ '/images/optimized/jennifer.webp' | relative_url }}" alt="{{ site.author }}" width="64" height="64" loading="lazy">
+                <div>
+                    <strong><a href="{{ site.author_url | relative_url }}">{{ site.author }}</a></strong>
+                    <p>Founder of ClearingStation and CRA authorized representative. 11+ years of bookkeeping and tax work for Manitoba businesses, and more than 100 CRA audits handled.</p>
+                </div>
+            </aside>
+        </article>
+
+        {% include post-related.html %}
     </div>
 </section>
 
-{% include sections/cta.html title="Need Help With Your Taxes?" subtitle="Book a free consultation and let our experts handle it." %}
+{% include sections/cta.html %}

@@ -3,8 +3,37 @@
 <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
 <title>Online Bookkeeping in Manitoba | ClearingStation</title>
-<meta name="description" content="Online bookkeeping for Manitoba businesses, by a real bookkeeper in Manitoba. No office visits, from $299/month. Leave your number for a free 10-minute call." />
+<meta name="description" content="Online bookkeeping for Manitoba businesses, by a real bookkeeper in Manitoba. No office visits, from $299/month. Leave your number for a free 10-minute call.">
+<link rel="canonical" href="https://www.clearingstation.ca/online-bookkeeping-manitoba.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<!-- Social share preview -->
+<meta property="og:site_name" content="ClearingStation Ltd.">
+<meta property="og:locale" content="en_CA">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Online Bookkeeping in Manitoba | ClearingStation">
+<meta property="og:description" content="Online bookkeeping for Manitoba businesses, by a real bookkeeper in Manitoba. No office visits, from $299/month. Leave your number for a free 10-minute call.">
+<meta property="og:url" content="https://www.clearingstation.ca/online-bookkeeping-manitoba.html">
+<meta property="og:image" content="https://www.clearingstation.ca/images/optimized/jennifer.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+
+
+
+
+
+
+
+
+<link type="application/atom+xml" rel="alternate" href="https://www.clearingstation.ca/blog/feed.xml" title="ClearingStation Ltd." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
@@ -72,7 +101,7 @@
                             
                             <li><a href="/bookkeeping-real-estate-winnipeg.html"><strong>Real Estate</strong><span>Agents and landlords</span></a></li>
                             
-                            <li><a href="/bookkeeping-contractors-trucking-winnipeg.html"><strong>Contractors & Trucking</strong><span>Know which jobs make money</span></a></li>
+                            <li><a href="/bookkeeping-contractors-trucking-winnipeg.html"><strong>Contractors & Trucking</strong><span>Job costing reports and WIP schedules</span></a></li>
                             
                             <li><a href="/bookkeeping-ecommerce-winnipeg.html"><strong>E-Commerce</strong><span>Books that match your payouts</span></a></li>
                             
@@ -137,7 +166,10 @@
  What a normal month looks like with zero office visits</li>
                 </ul>
                 <div class="lp-proof">
-                    <span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google</span>
+                    <span>
+
+<a class="google-rating" href="https://www.google.com/maps/place/ClearingStation+Ltd.+Bookkeeping+%26+Accounting+Services/@49.8252385,-97.1716246,770m/data=!3m2!1e3!5s0x52ea743dcb763bad:0x616d1bbbdb27681a!4m8!3m7!1s0x47f090c3808364f9:0x8f3ad3383674de4d!8m2!3d49.8252385!4d-97.1690497!9m1!1b1!16s%2Fg%2F11whrtq1xt" target="_blank" rel="noopener"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 from 22 Google reviews</a>
+</span>
                     <span>In-house Manitoba bookkeepers</span>
                     <span>AES-256 encryption</span>
                 </div>
@@ -153,7 +185,7 @@
     </div>
 
     <h2 class="form-title">See How It Works Online</h2>
-    <p class="form-intro">No office visit. Even the consult is a phone call. Leave your first name and number and Jennifer calls you back.</p>
+    <p class="form-intro">No office visit. Leave your name and how to reach you, and Jennifer gets back to you.</p>
 
     <form id="lead-form" data-source="Online bookkeeping" onsubmit="submitLead(event)">
         <!-- Honeypot: hidden from people, filled by bots. The server drops any lead that has it. -->
@@ -162,9 +194,20 @@
             <label for="firstname">First Name</label>
             <input type="text" id="firstname" name="firstname" placeholder="Your first name" autocomplete="given-name">
         </div>
+        <!-- Not everyone wants a call: let the visitor pick how Jennifer replies -->
+        <fieldset class="form-reach">
+            <legend>How should Jennifer reach you?</legend>
+            <label><input type="radio" name="contact" value="call" checked onchange="leadReach(this.form)"> Call</label>
+            <label><input type="radio" name="contact" value="text" onchange="leadReach(this.form)"> Text</label>
+            <label><input type="radio" name="contact" value="email" onchange="leadReach(this.form)"> Email</label>
+        </fieldset>
         <div class="form-group">
             <label for="phonenumber">Phone Number</label>
             <input type="tel" id="phonenumber" name="phonenumber" placeholder="(204) 381-9308" autocomplete="tel">
+        </div>
+        <div class="form-group" hidden>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
         </div>
 
         <p id="form-error" class="form-error" hidden>We could not send your request. Please call us at <a href="tel:2043819308">(204) 381-9308</a>.</p>
@@ -180,7 +223,7 @@
         <!-- Who calls back: a real face next to the form -->
         <div class="form-caller">
             <img src="/images/optimized/avatar.webp" alt="" width="48" height="48">
-            <span><strong>Jennifer Flaming</strong> calls you back herself</span>
+            <span><strong>Jennifer Flaming</strong> replies to you herself</span>
         </div>
         
     </form>
@@ -204,20 +247,31 @@
         return !empty;
     }
 
+    // Show the phone field for "call" and "text", the email field for "email".
+    function leadReach(form) {
+        var email = form.contact.value === 'email';
+        form.phonenumber.closest('.form-group').hidden = email;
+        form.email.closest('.form-group').hidden = !email;
+    }
+
     // Send the lead to our own endpoint (worker/lead.js). Show "Thank you" only when it confirms.
     async function submitLead(event) {
         event.preventDefault();
         var form = event.target;
-        var name = form.firstname, phone = form.phonenumber;
+        var name = form.firstname, contact = form.contact.value;
+        // The field the visitor filled: email for "email", phone for "call" and "text"
+        var reach = contact === 'email' ? form.email : form.phonenumber;
         var error = document.getElementById('form-error');
         var button = form.querySelector('.btn-submit');
-        if (!leadValid([name, phone])) return;
+        if (!leadValid([name, reach])) return;
 
         var lead = {
             source: form.dataset.source,
             plan: new URLSearchParams(location.search).get('type') || '',
             name: name.value,
-            phone: phone.value,
+            contact: contact,
+            phone: contact === 'email' ? '' : form.phonenumber.value,
+            email: contact === 'email' ? form.email.value : '',
             website: form.website.value
         };
         button.disabled = true;
@@ -233,6 +287,9 @@
         error.hidden = sent;
         if (!sent) return;
 
+        // Thank-you text says "call you"; match the way the visitor picked
+        var thanks = document.querySelector('#lead-success p');
+        thanks.textContent = thanks.textContent.replace('call you', { call: 'call you', text: 'text you', email: 'email you' }[contact]);
         form.hidden = true;
         document.getElementById('lead-success').hidden = false;
         if (typeof gtag !== 'undefined') {
@@ -341,7 +398,10 @@
     <div class="container">
         <div class="section-head">
             <h2>What Our Clients Say</h2>
-            <p><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google</p>
+            <p>
+
+<a class="google-rating" href="https://www.google.com/maps/place/ClearingStation+Ltd.+Bookkeeping+%26+Accounting+Services/@49.8252385,-97.1716246,770m/data=!3m2!1e3!5s0x52ea743dcb763bad:0x616d1bbbdb27681a!4m8!3m7!1s0x47f090c3808364f9:0x8f3ad3383674de4d!8m2!3d49.8252385!4d-97.1690497!9m1!1b1!16s%2Fg%2F11whrtq1xt" target="_blank" rel="noopener"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 from 22 Google reviews</a>
+ &middot; <a href="https://www.google.com/maps/place/ClearingStation+Ltd.+Bookkeeping+%26+Accounting+Services/@49.8252385,-97.1716246,770m/data=!3m2!1e3!5s0x52ea743dcb763bad:0x616d1bbbdb27681a!4m8!3m7!1s0x47f090c3808364f9:0x8f3ad3383674de4d!8m2!3d49.8252385!4d-97.1690497!9m1!1b1!16s%2Fg%2F11whrtq1xt" target="_blank" rel="noopener">Read all reviews &rarr;</a></p>
         </div>
         <div class="card-grid">
             
@@ -383,7 +443,7 @@
             </details>
             <details>
                 <summary>I use QuickBooks. Can you take over my books?</summary>
-                <p>Yes. We migrate your bookkeeping from QuickBooks or any other software and keep everything continuous. We use our own secure systems, so you don't pay for extra third-party software.</p>
+                <p>Yes. We migrate your bookkeeping from QuickBooks or any other software and keep everything continuous. If you ever leave, you get your full books back in Excel and PDF. We use our own secure systems, so you don't pay for extra third-party software.</p>
             </details>
             <details>
                 <summary>Is my financial data safe with a remote bookkeeper?</summary>
@@ -449,7 +509,7 @@
         { "@type": "Question", "name": "Do you offer virtual bookkeeping outside Winnipeg?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work with businesses in Winnipeg, Brandon and across rural Manitoba. You never need to visit our office." } },
         { "@type": "Question", "name": "I use QuickBooks. Can you take over my books?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We migrate your bookkeeping from QuickBooks or any other software and keep everything continuous. We use our own secure systems, so you don't pay for extra third-party software." } },
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We migrate your bookkeeping from QuickBooks or any other software and keep everything continuous. If you ever leave, you get your full books back in Excel and PDF. We use our own secure systems, so you don't pay for extra third-party software." } },
         { "@type": "Question", "name": "Is my financial data safe with a remote bookkeeper?",
           "acceptedAnswer": { "@type": "Answer", "text": "Your data is protected with AES-256 encryption and strict internal rules on who can access it. Our bookkeepers are our own staff in Manitoba, not outsourced." } },
         { "@type": "Question", "name": "Do you handle Manitoba GST/PST filing?",

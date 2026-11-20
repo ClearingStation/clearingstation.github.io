@@ -1,0 +1,16 @@
+# Blog categories. A post sets `category: <key>`.
+# The blog index shows one section per category, in this order.
+- key: catch-up
+  name: Catch-Up & Cleanup
+- key: bookkeeping
+  name: Bookkeeping Basics
+- key: payroll
+  name: Payroll
+- key: tax
+  name: Tax & GST/PST
+- key: cra
+  name: CRA Audits & Letters
+- key: industries
+  name: By Industry
+- key: hiring
+  name: Choosing a Bookkeeper

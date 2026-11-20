@@ -19,12 +19,12 @@ extra_css: /assets/css/start.css
                     <li>{% include icons/check.html size=18 %} The home-office and vehicle costs you can claim</li>
                 </ul>
                 <div class="lp-proof">
-                    <span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google</span>
+                    <span>{% include google-rating.html %}</span>
                     <span>In-house Manitoba bookkeepers</span>
                     <span>11+ years in practice</span>
                 </div>
             </div>
-            {% include lead-form.html source="Industry: self-employed" title="Know What to Set Aside Before April" intro="Leave your first name and number. Jennifer calls you back and answers your self-employed tax questions in plain words." button="Tell Me What To Set Aside" note="Free &middot; No obligation &middot; No papers needed for the call" success="Thank you. Jennifer will call you soon. Have a rough idea of what you earned this year." %}
+            {% include lead-form.html source="Industry: self-employed" title="Know What to Set Aside Before April" intro="Leave your name and how to reach you. Jennifer gets back to you and answers your self-employed tax questions in plain words." button="Tell Me What To Set Aside" note="Free &middot; No obligation &middot; No papers needed for the call" success="Thank you. Jennifer will call you soon. Have a rough idea of what you earned this year." %}
         </div>
     </div>
 </section>
@@ -120,16 +120,7 @@ extra_css: /assets/css/start.css
         <h2>What Self-Employed Tax Help Costs</h2>
         <p class="lp-sub">Many freelancers only need the yearly return. We tell you on the call if that is you.</p>
         <div class="lp-prices">
-            <div class="lp-price">
-                <h3>Tax Preparation</h3>
-                <div class="lp-amount">$499<small>/return</small></div>
-                <p>From $499. Often all a small freelancer needs.</p>
-                <ul>
-                    <li>Personal return with your T2125</li>
-                    <li>We look for missed deductions</li>
-                    <li>We handle CRA questions</li>
-                </ul>
-            </div>
+            {% include sections/tax-prices.html keys="self,self-books" %}
             <div class="lp-price">
                 <h3>Bookkeeping</h3>
                 <div class="lp-amount">$299<small>/mo</small></div>
@@ -175,7 +166,7 @@ extra_css: /assets/css/start.css
         </details>
         <details>
             <summary>Do I need a bookkeeper or just a freelancer accountant at tax time?</summary>
-            <p>Many small freelancers only need a yearly return, from $499. When your volume grows, our Bookkeeping plan is $299/month. We tell you honestly which one fits.</p>
+            <p>Many small freelancers only need a yearly return: $450 to file, or $900 if we also do your year of books. When your volume grows, our Bookkeeping plan is $299/month. We tell you honestly which one fits.</p>
         </details>
         <details>
             <summary>Should I incorporate to save tax?</summary>
@@ -233,7 +224,7 @@ extra_css: /assets/css/start.css
         { "@type": "Question", "name": "Why did the CRA send me an instalment reminder?",
           "acceptedAnswer": { "@type": "Answer", "text": "When no tax is withheld from your income, the CRA can ask you to pay tax in instalments during the year. We check your situation and tell you what to pay." } },
         { "@type": "Question", "name": "Do I need a bookkeeper or just a freelancer accountant at tax time?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Many small freelancers only need a yearly return, from $499. When your volume grows, our Bookkeeping plan is $299/month. We tell you honestly which one fits." } },
+          "acceptedAnswer": { "@type": "Answer", "text": "Many small freelancers only need a yearly return: $450 to file, or $900 if we also do your year of books. When your volume grows, our Bookkeeping plan is $299/month. We tell you honestly which one fits." } },
         { "@type": "Question", "name": "Should I incorporate to save tax?",
           "acceptedAnswer": { "@type": "Answer", "text": "It depends on how much you earn and how much you leave in the business. For many freelancers it does not pay off yet. We look at your numbers and give you a straight answer." } }
       ]

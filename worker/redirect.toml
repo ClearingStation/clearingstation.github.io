@@ -1,0 +1,44 @@
+# Redirect Worker for old URLs. Deploy: npx wrangler deploy -c redirect.toml (see README.md).
+name = "clearingstation-redirect"
+main = "redirect.js"
+compatibility_date = "2026-01-01"
+
+# The whole bare domain, plus one route per old www URL (keep in sync with MOVED and GONE in redirect.js).
+# Every other www page goes straight to GitHub Pages.
+routes = [
+    { pattern = "clearingstation.ca/*", zone_name = "clearingstation.ca" },
+
+    # MOVED
+    { pattern = "www.clearingstation.ca/landing-doctors.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/document-scanning.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/index.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/index1.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/index2.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/index3.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/about.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/about2.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/plans.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/plans2.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/plans-old.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/start.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/landing.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/offer.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/form.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/services.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/support.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/security.htm", zone_name = "clearingstation.ca" },
+
+    # GONE
+    { pattern = "www.clearingstation.ca/automation.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/bench.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/dash.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/dashboard.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/dashboard_no_other_currencies.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/document_editor*", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/invoice_tool.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/journal_entries.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/login.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/note.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/odo.htm", zone_name = "clearingstation.ca" },
+    { pattern = "www.clearingstation.ca/odbalibi.htm", zone_name = "clearingstation.ca" },
+]

@@ -317,7 +317,18 @@ p { margin-bottom: 16px; color: var(--text-muted); }
 
 /* Proof facts as a tidy 2x2 grid in the hero and on About */
 .hero .proof, .about-grid .proof { display: grid; grid-template-columns: repeat(2, max-content); gap: 10px 32px; }
-@media (max-width: 420px) { .hero .proof, .about-grid .proof { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .hero .proof, .about-grid .proof { grid-template-columns: 1fr; } }
 
 /* The lead form toggles boxes with the hidden attribute; never let a display rule override it */
 [hidden] { display: none !important; }
+
+/* "5.0 on Google" link: looks like the text around it, underlines on hover */
+.google-rating { color: inherit; text-decoration: none; }
+.google-rating:hover { text-decoration: underline; }
+
+/* Home hero: "Or start where you are" pill links to the catch-up, CRA and tax pages */
+.paths { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: -12px 0 28px; font-size: 15px; }
+.paths span { width: 100%; color: var(--text-muted); }
+.paths a { padding: 8px 16px; border: 1px solid var(--border); border-radius: 999px; background: #fff;
+    color: var(--primary); font-weight: 600; text-decoration: none; }
+.paths a:hover { border-color: var(--accent); color: var(--accent); }

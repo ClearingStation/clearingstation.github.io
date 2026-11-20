@@ -1,0 +1,17 @@
+{% comment %}
+One-time tax price cards from _data/tax_prices.yml. Outputs only the cards:
+wrap them in <div class="lp-prices"> (start.css), so a page can add its own cards next to them.
+Param: keys - comma list of cards, in order, e.g. "self,self-books"
+{% endcomment %}
+{% assign keys = include.keys | split: "," %}
+{% for key in keys %}
+{% assign p = site.data.tax_prices | where: "key", key | first %}
+<div class="lp-price">
+    <h3>{{ p.name }}</h3>
+    <div class="lp-amount">{{ p.amount }}<small>{{ p.unit }}</small></div>
+    <p>{{ p.note }}</p>
+    <ul>
+        {% for f in p.features %}<li>{{ f }}</li>{% endfor %}
+    </ul>
+</div>
+{% endfor %}

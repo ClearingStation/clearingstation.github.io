@@ -3,7 +3,7 @@
   answer: "Most accountants simply file what you provide. At ClearingStation, we go further. With over 11 years of experience handling hundreds of corporations, we actively search for missed tax deductions—like business expenses, home office costs, and travel—that haven't been submitted. Our thorough process ensures no deduction is overlooked, helping you consistently reduce your taxable income."
 
 - question: "How do you protect my financial information?"
-  answer: "We treat your privacy like our own. Your files are encrypted, stored on our servers in Winnipeg, and only our in-house team can open them. Your private key is handed to you in person when we set up your account. See our Security page for details."
+  answer: "We treat your privacy like our own. Your files are encrypted, stored on our servers in Winnipeg, and only our in-house team can open them. You log in with your password and a code on your phone, or with a YubiKey. See our Security page for details."
 
 - question: "What exactly does my bookkeeper do?"
   answer: "Your bookkeeper handles everything: categorizing every transaction, reconciling bank accounts monthly, keeping you audit-ready with proof-documents, tracking payroll and expenses, optimizing tax deductions, delivering clean financial reports on time, and handling all communication with tax authorities."
@@ -16,3 +16,6 @@
 
 - question: "What if I need to switch from QuickBooks?"
   answer: "If you're transitioning from QuickBooks or any other software, we'll help you migrate your bookkeeping seamlessly and ensure continuity. We use our own secure systems, eliminating the need for additional third-party software."
+
+- question: "If I leave, do I get my books back?"
+  answer: "Yes. Your books are yours. When you leave, you get your full books and documents in standard formats like Excel and PDF, ready for your next bookkeeper or for QuickBooks. No fee and no lock-in."

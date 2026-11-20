@@ -25,3 +25,20 @@ curl -i -X POST https://www.clearingstation.ca/api/lead -H 'Origin: https://www.
 ```
 
 A `200 ok` response means the lead is in the Telegram chat.
+
+# Redirect Worker
+
+`redirect.js` handles old URLs, because GitHub Pages cannot send a 301 or a 410 itself:
+
+- `clearingstation.ca` (no www) gets a 301 to the same page on `www`.
+- Old pages in `MOVED` get a 301 to their new page.
+- Old prototypes in `GONE` get a 410, so Google drops them.
+
+To change a URL, edit `MOVED` or `GONE` in `redirect.js` and its route in `redirect.toml`. Then deploy and check:
+
+```sh
+npx wrangler deploy -c redirect.toml
+curl -sI https://www.clearingstation.ca/landing-doctors.htm | head -3   # 301, Location: .../bookkeeping-physicians-winnipeg.html
+curl -sI https://www.clearingstation.ca/login.htm | head -1             # 410
+curl -sI https://clearingstation.ca/ | head -3                          # 301 to https://www.clearingstation.ca/
+```

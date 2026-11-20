@@ -19,12 +19,12 @@ extra_css: /assets/css/start.css
                     <li>{% include icons/check.html size=18 %} What a normal month looks like with zero office visits</li>
                 </ul>
                 <div class="lp-proof">
-                    <span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google</span>
+                    <span>{% include google-rating.html %}</span>
                     <span>In-house Manitoba bookkeepers</span>
                     <span>AES-256 encryption</span>
                 </div>
             </div>
-            {% include lead-form.html source="Online bookkeeping" title="See How It Works Online" intro="No office visit. Even the consult is a phone call. Leave your first name and number and Jennifer calls you back." button="Show Me How It Works Online" note="Free 10-minute call. No obligation." success="Jennifer will call you soon. That's the first step done, and you didn't leave your desk." %}
+            {% include lead-form.html source="Online bookkeeping" title="See How It Works Online" intro="No office visit. Leave your name and how to reach you, and Jennifer gets back to you." button="Show Me How It Works Online" note="Free 10-minute call. No obligation." success="Jennifer will call you soon. That's the first step done, and you didn't leave your desk." %}
         </div>
     </div>
 </section>
@@ -137,7 +137,7 @@ extra_css: /assets/css/start.css
             </details>
             <details>
                 <summary>I use QuickBooks. Can you take over my books?</summary>
-                <p>Yes. We migrate your bookkeeping from QuickBooks or any other software and keep everything continuous. We use our own secure systems, so you don't pay for extra third-party software.</p>
+                <p>Yes. We migrate your bookkeeping from QuickBooks or any other software and keep everything continuous. If you ever leave, you get your full books back in Excel and PDF. We use our own secure systems, so you don't pay for extra third-party software.</p>
             </details>
             <details>
                 <summary>Is my financial data safe with a remote bookkeeper?</summary>
@@ -201,7 +201,7 @@ extra_css: /assets/css/start.css
         { "@type": "Question", "name": "Do you offer virtual bookkeeping outside Winnipeg?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work with businesses in Winnipeg, Brandon and across rural Manitoba. You never need to visit our office." } },
         { "@type": "Question", "name": "I use QuickBooks. Can you take over my books?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We migrate your bookkeeping from QuickBooks or any other software and keep everything continuous. We use our own secure systems, so you don't pay for extra third-party software." } },
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We migrate your bookkeeping from QuickBooks or any other software and keep everything continuous. If you ever leave, you get your full books back in Excel and PDF. We use our own secure systems, so you don't pay for extra third-party software." } },
         { "@type": "Question", "name": "Is my financial data safe with a remote bookkeeper?",
           "acceptedAnswer": { "@type": "Answer", "text": "Your data is protected with AES-256 encryption and strict internal rules on who can access it. Our bookkeepers are our own staff in Manitoba, not outsourced." } },
         { "@type": "Question", "name": "Do you handle Manitoba GST/PST filing?",

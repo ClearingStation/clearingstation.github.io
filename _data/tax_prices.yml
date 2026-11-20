@@ -1,0 +1,43 @@
+# One-time tax return prices. The single source for every page that shows them.
+# Shown as cards by _includes/sections/tax-prices.html (pick cards by key).
+# If you change a price, also change the page descriptions (front matter cannot read data):
+# tax-filing-winnipeg.html, bookkeeping-self-employed-winnipeg.html.
+- key: t1
+  name: Personal Tax Return
+  amount: "$75"
+  unit: "/person"
+  note: A simple T1 for employees, students and retirees.
+  features:
+    - Personal T1 return
+    - We look for missed credits and deductions
+    - Each spouse at the same price
+
+- key: self
+  name: Self-Employed Return
+  amount: "$450"
+  unit: "/return"
+  note: Filing only. You bring your income and expense totals.
+  features:
+    - Personal return with your T2125
+    - We look for missed deductions
+    - We handle CRA questions
+
+- key: self-books
+  name: Self-Employed + Bookkeeping
+  amount: "$900"
+  unit: " one time"
+  note: We do the year's books from your receipts and statements, then file.
+  features:
+    - No need to organize anything first
+    - Your year of books, done for you
+    - Personal return with your T2125
+
+- key: t2
+  name: Corporate Tax Return
+  amount: "$450"
+  unit: "/return"
+  note: A one-time T2 for your corporation.
+  features:
+    - Corporate T2 with schedules
+    - We look for missed deductions
+    - We handle CRA questions

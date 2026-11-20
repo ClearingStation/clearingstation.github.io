@@ -420,3 +420,20 @@
 /* Consultation page: clear the fixed site header (72px) */
 .consultation-page { min-height: 100vh; padding: 120px 0 72px; }
 @media (max-width: 600px) { .consultation-page { padding: 96px 0 48px; } }
+
+/* "What it replaces" box next to a single price card (physicians page) */
+.lp-replaces { padding: 36px 32px; text-align: left; }
+.lp-replaces h3 { margin-bottom: 16px; }
+.lp-replaces ul { list-style: none; margin: 0 0 16px; }
+.lp-replaces li { padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 15px; color: var(--text); }
+.lp-replaces li strong { display: block; color: var(--primary); }
+.lp-replaces p { font-weight: 600; color: var(--primary); margin: 0; }
+@media (max-width: 640px) { .lp-replaces { padding: 8px 0 0; } }
+
+/* Lead form: "How should Jennifer reach you?" as three pill buttons */
+.form-reach { border: 0; padding: 0; margin: 0 0 20px; }
+.form-reach legend { font-weight: 600; color: var(--text); font-size: 15px; margin-bottom: 8px; }
+.form-reach label { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; margin: 0 6px 6px 0;
+    border: 2px solid var(--border); border-radius: 999px; background: var(--warm-white); cursor: pointer; font-size: 15px; }
+.form-reach label:has(:checked) { border-color: var(--accent); background: white; color: var(--primary); font-weight: 600; }
+.form-reach input { accent-color: var(--accent); }

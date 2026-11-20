@@ -19,12 +19,12 @@ extra_css: /assets/css/start.css
                     <li>{% include icons/check.html size=18 %} The deductions your books are probably missing now</li>
                 </ul>
                 <div class="lp-proof">
-                    <span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google</span>
+                    <span>{% include google-rating.html %}</span>
                     <span>In-house Manitoba bookkeepers</span>
                     <span>11+ years, hundreds of corporations</span>
                 </div>
             </div>
-            {% include lead-form.html source="Monthly bookkeeping" title="Find Your Right Plan in 10 Minutes" intro="Leave your first name and number. Jennifer calls you back and tells you which plan fits &mdash; no sales pitch." button="Find My Right Plan" note="Free &middot; No obligation &middot; Jennifer calls you back" success="Thank you. Jennifer will call you soon to find your right plan. Keep your phone close." %}
+            {% include lead-form.html source="Monthly bookkeeping" title="Find Your Right Plan in 10 Minutes" intro="Leave your name and how to reach you. Jennifer gets back to you and tells you which plan fits &mdash; no sales pitch." button="Find My Right Plan" note="Free &middot; No obligation &middot; Jennifer gets back to you" success="Thank you. Jennifer will call you soon to find your right plan. Keep your phone close." %}
         </div>
     </div>
 </section>
@@ -166,7 +166,7 @@ extra_css: /assets/css/start.css
         </details>
         <details>
             <summary>Can I switch from my current bookkeeper or QuickBooks?</summary>
-            <p>Yes. We migrate your books from QuickBooks or any other software and keep continuity. We use our own secure systems, so you need no extra software.</p>
+            <p>Yes. We migrate your books from QuickBooks or any other software and keep continuity. We use our own secure systems, so you need no extra software. If you ever leave, you get your full books back in Excel and PDF.</p>
         </details>
         <details>
             <summary>Will you find deductions I am missing?</summary>
@@ -225,7 +225,7 @@ extra_css: /assets/css/start.css
         { "@type": "Question", "name": "What does a monthly bookkeeper do?",
           "acceptedAnswer": { "@type": "Answer", "text": "Your bookkeeper categorizes every transaction, reconciles your bank accounts monthly, tracks payroll and expenses, files GST/PST and T4/T5, and delivers a balance sheet and income statement. You stay audit-ready." } },
         { "@type": "Question", "name": "Can I switch from my current bookkeeper or QuickBooks?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We migrate your books from QuickBooks or any other software and keep continuity. We use our own secure systems, so you need no extra software." } },
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We migrate your books from QuickBooks or any other software and keep continuity. We use our own secure systems, so you need no extra software. If you ever leave, you get your full books back in Excel and PDF." } },
         { "@type": "Question", "name": "Will you find deductions I am missing?",
           "acceptedAnswer": { "@type": "Answer", "text": "We actively search for missed deductions, like business expenses, home office costs and travel. On the call, Jennifer tells you where your books likely fall short." } },
         { "@type": "Question", "name": "I am behind on my books. Can you still help?",

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="section-head">
             <h2>{{ include.title | default: "What Our Clients Say" }}</h2>
-            <p><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google{% if site.google_reviews_url %} &middot; <a href="{{ site.google_reviews_url }}" target="_blank" rel="noopener">Read all reviews</a>{% endif %}</p>
+            <p>{% include google-rating.html %}{% if site.google_reviews_url %} &middot; <a href="{{ site.google_reviews_url }}" target="_blank" rel="noopener">Read all reviews &rarr;</a>{% endif %}</p>
         </div>
         <div class="card-grid">
             {% for t in site.data.testimonials %}
