@@ -325,9 +325,9 @@ p { margin-bottom: 16px; color: var(--text-muted); }
     *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
 }
 
-/* Proof facts as a tidy 2x2 grid in the hero and on About */
-.hero .proof, .about-grid .proof { display: grid; grid-template-columns: repeat(2, max-content); gap: 10px 32px; }
-@media (max-width: 600px) { .hero .proof, .about-grid .proof { grid-template-columns: 1fr; } }
+/* Proof facts as a tidy 2x2 grid in the heroes (home and landing pages) and on About */
+.hero .proof, .lp-hero .proof, .about-grid .proof { display: grid; grid-template-columns: repeat(2, max-content); gap: 10px 32px; }
+@media (max-width: 600px) { .hero .proof, .lp-hero .proof, .about-grid .proof { grid-template-columns: 1fr; } }
 
 /* The lead form toggles boxes with the hidden attribute; never let a display rule override it */
 [hidden] { display: none !important; }

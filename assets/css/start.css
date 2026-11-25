@@ -347,7 +347,7 @@
 .lp-hero { padding: 128px 0 80px; background: linear-gradient(180deg, var(--cream), var(--warm-white)); }
 .lp-hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; }
 /* Industry photo under the hero proof line (sections/industry-photo.html) */
-.lp-photo { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; margin-top: 28px; border-radius: var(--radius-lg); }
+.lp-photo { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: center 20%; margin-top: 28px; border-radius: var(--radius-lg); }
 .lp-eyebrow { display: inline-block; margin-bottom: 16px; font-size: 14px; font-weight: 600;
     letter-spacing: .06em; text-transform: uppercase; color: var(--accent-text); }
 .lp-hero h1 { margin-bottom: 20px; font-size: clamp(2.1rem, 3.8vw, 3rem); }
@@ -355,7 +355,6 @@
 .lp-checks { list-style: none; margin-bottom: 28px; }
 .lp-checks li { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; color: var(--text); }
 .lp-checks svg { flex-shrink: 0; margin-top: 5px; color: var(--accent); }
-.lp-proof { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 15px; color: var(--text-muted); }
 
 /* Sections */
 .lp-section { padding: 88px 0; }
