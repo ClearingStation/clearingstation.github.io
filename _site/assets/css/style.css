@@ -145,13 +145,13 @@ p { margin-bottom: 16px; color: var(--text-muted); }
 .service-price { font-weight: 600; color: var(--primary); }
 .service-more { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; color: var(--accent-text); white-space: nowrap; }
 
-/* Industry card (sections/industries.html) */
-.industry { display: flex; gap: 16px; align-items: center; padding: 20px 24px; background: #fff; color: inherit; text-decoration: none;
+/* Industry card (sections/industries.html): photo on top, name and note below */
+.industry { display: flex; flex-direction: column; overflow: hidden; background: #fff; color: inherit; text-decoration: none;
     border: 1px solid var(--border); border-radius: var(--radius-lg); transition: border-color .2s; }
 .industry:hover { border-color: var(--accent); }
-.industry .service-icon { margin: 0; }
+.industry img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
 .industry strong { display: block; color: var(--primary); }
-.industry > span:last-child { font-size: 15px; color: var(--text-muted); line-height: 1.4; }
+.industry > span { padding: 16px 20px 20px; font-size: 15px; color: var(--text-muted); line-height: 1.4; }
 
 /* Check list: used in services, plans, special plans */
 .check-list { list-style: none; margin-bottom: 24px; }

@@ -1,32 +1,38 @@
 # Industries we serve. One entry per industry landing page.
-# Fills the Industries dropdown (nav.yml), the footer column and the chips on /about.html.
-# icon is inline SVG content (inner elements only).
+# Fills the Industries dropdown (nav.yml), the footer column, the industry cards and the landing page photos.
+# image: photo slug in /images/industries/ (<slug>-640.webp and <slug>-1200.webp, 3:2, Pexels License).
 - name: Physicians & MPCs
   url: /bookkeeping-physicians-winnipeg.html
   note: Billing remittances, salary vs dividends
-  icon: '<path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>'
+  image: physicians
+  alt: Doctor with a stethoscope examining a patient
 
 - name: Medical Clinics
   url: /bookkeeping-medical-clinics-winnipeg.html
   note: Know what each practitioner earns
-  icon: '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><line x1="12" y1="10" x2="12" y2="16"></line><line x1="9" y1="13" x2="15" y2="13"></line>'
+  image: medical-clinics
+  alt: Patients checking in at a medical clinic front desk
 
 - name: Real Estate
   url: /bookkeeping-real-estate-winnipeg.html
   note: Agents and landlords
-  icon: '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline>'
+  image: real-estate
+  alt: Real estate agent handing house keys to a buyer
 
 - name: Contractors & Trucking
   url: /bookkeeping-contractors-trucking-winnipeg.html
   note: Job costing reports and WIP schedules
-  icon: '<rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle>'
+  image: contractors-trucking
+  alt: Contractor in a hard hat and safety vest on a job site
 
 - name: E-Commerce
   url: /bookkeeping-ecommerce-winnipeg.html
   note: Books that match your payouts
-  icon: '<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path>'
+  image: ecommerce
+  alt: Online seller packing an order into a shipping box
 
 - name: Self-Employed
   url: /bookkeeping-self-employed-winnipeg.html
   note: No surprise tax bill in April
-  icon: '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>'
+  image: self-employed
+  alt: Self-employed woman working on a laptop at her kitchen table

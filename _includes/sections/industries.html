@@ -1,8 +1,8 @@
-{% comment %}Industries as linked cards, one per industry landing page. Data from _data/industries.yml.{% endcomment %}
-<div class="card-grid card-grid-sm">
+{% comment %}Industries as photo cards, one per industry landing page. Data from _data/industries.yml.{% endcomment %}
+<div class="card-grid">
     {% for ind in site.data.industries %}
     <a class="industry" href="{{ ind.url | relative_url }}">
-        <span class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{{ ind.icon }}</svg></span>
+        <img src="{{ '/images/industries/' | append: ind.image | append: '-640.webp' | relative_url }}" alt="{{ ind.alt }}" width="640" height="427" loading="lazy">
         <span><strong>{{ ind.name }}</strong>{{ ind.note }}</span>
     </a>
     {% endfor %}

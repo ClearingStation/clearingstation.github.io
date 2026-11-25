@@ -42,7 +42,7 @@ Push it early and it goes live on the next push after its date.
 - Do not publish many thin or near-duplicate posts (for example the same post for 10 cities).
   Google penalizes "scaled content" across the whole site.
 - Do not write about document scanning. We no longer offer it.
-- Do not call Jennifer a CPA, accountant or VP. She is the Founder of ClearingStation and a CRA authorized representative.
+- Do not call Jennifer a CPA, accountant or VP. She is the Founder of ClearingStation. Do not call her a CRA authorized representative.
   Posts can explain what a CPA or accountant does, but never claim the title for us.
 - Do not paste AI text without editing. Read it aloud, add the real case, cut what Jennifer would not say.
 
