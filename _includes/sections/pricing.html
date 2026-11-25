@@ -8,7 +8,7 @@
         <div class="plan-price">{{ plan.price }}<small>{{ plan.period }}</small></div>
         <p class="plan-note">{{ plan.note }}</p>
         <ul class="check-list">
-            {% for f in plan.features %}<li>{% include icons/check.html %} {{ f }}</li>{% endfor %}
+            {% for f in plan.features %}<li>{% include icons/check.html size=18 %} {{ f }}</li>{% endfor %}
         </ul>
         <a href="{{ '/start.html' | relative_url }}?type={{ plan.name | slugify }}" class="btn {% if plan.featured %}btn-primary{% else %}btn-secondary{% endif %} btn-block">Get started</a>
     </div>

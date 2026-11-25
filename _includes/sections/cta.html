@@ -1,11 +1,13 @@
-{% comment %}Closing call to action. Params: title, subtitle, id{% endcomment %}
+{% comment %}Closing call to action. Params: title, subtitle, id.
+Icons get an explicit size: inside an include with params, include.size returns the param count (1).{% endcomment %}
 <section class="section cta-section"{% if include.id %} id="{{ include.id }}"{% endif %}>
     <div class="container">
         <h2>{{ include.title | default: "Talk to Jennifer for 10 Minutes" }}</h2>
         <p>{{ include.subtitle | default: "Free, no obligation. You learn which plan fits, what it costs and what your books are missing." }}</p>
         <div class="cta-buttons">
-            <a href="{{ '/start.html' | relative_url }}" class="btn btn-primary">Book a free call {% include icons/arrow-right.html %}</a>
-            <a href="tel:{{ site.phone_raw }}" class="btn btn-ghost">{% include icons/phone.html %} {{ site.phone }}</a>
+            <a href="{{ '/start.html' | relative_url }}" class="btn btn-primary btn-book">Book a free call {% include icons/arrow-right.html size=18 %}</a>
+            <a href="tel:{{ site.phone_raw }}" class="btn btn-ghost btn-call">{% include icons/phone.html size=18 %} {{ site.phone }}</a>
         </div>
+        <p class="answer-note">Jennifer answers the phone {{ site.answer_hours }}.</p>
     </div>
 </section>

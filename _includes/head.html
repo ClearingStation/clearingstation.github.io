@@ -15,4 +15,10 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', '{{ site.ga_id }}');
+  // Count every tap on a phone link as a GA4 "phone_call" event (mark it as a key event in GA4).
+  // link_class tells which button: call-bar, btn-call, header-phone, or empty for text links.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (a) gtag('event', 'phone_call', { link_class: a.className });
+  });
 </script>

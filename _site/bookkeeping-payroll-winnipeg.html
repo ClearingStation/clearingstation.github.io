@@ -47,6 +47,12 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-F06R6NDCPK');
+  // Count every tap on a phone link as a GA4 "phone_call" event (mark it as a key event in GA4).
+  // link_class tells which button: call-bar, btn-call, header-phone, or empty for text links.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (a) gtag('event', 'phone_call', { link_class: a.className });
+  });
 </script>
 
 </head>
@@ -552,14 +558,13 @@
     </div>
 </footer>
 
-    <!-- Floating phone button (bottom-right) -->
-<div class="floating-cta">
-    <a href="tel:2043819308" class="floating-btn" aria-label="Call us">
-        
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    <!-- Mobile call bar (phones only): a labelled, full-width tap-to-call at the bottom of every page -->
+<a href="tel:2043819308" class="call-bar">
+    
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 
-    </a>
-</div>
+    <span><strong>Call Jennifer &middot; (204) 381-9308</strong><small>She answers Mon&ndash;Fri, 8&ndash;5</small></span>
+</a>
 
 
     <!-- Header scroll effect -->

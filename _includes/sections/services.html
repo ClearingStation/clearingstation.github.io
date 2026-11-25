@@ -10,7 +10,7 @@ Param: detail (true shows the feature list; used on /services.html)
         <p>{{ svc.summary }}</p>
         {% if include.detail %}
         <ul class="check-list">
-            {% for f in svc.features %}<li>{% include icons/check.html %} {{ f }}</li>{% endfor %}
+            {% for f in svc.features %}<li>{% include icons/check.html size=18 %} {{ f }}</li>{% endfor %}
         </ul>
         {% endif %}
         <span class="service-foot">

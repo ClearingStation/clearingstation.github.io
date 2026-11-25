@@ -1,6 +1,5 @@
-<!-- Floating phone button (bottom-right) -->
-<div class="floating-cta">
-    <a href="tel:{{ site.phone_raw }}" class="floating-btn" aria-label="Call us">
-        {% include icons/phone.html size=24 %}
-    </a>
-</div>
+<!-- Mobile call bar (phones only): a labelled, full-width tap-to-call at the bottom of every page -->
+<a href="tel:{{ site.phone_raw }}" class="call-bar">
+    {% include icons/phone.html size=22 %}
+    <span><strong>Call Jennifer &middot; {{ site.phone }}</strong><small>She answers {{ site.answer_hours }}</small></span>
+</a>

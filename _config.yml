@@ -53,6 +53,8 @@ exclude:
 # Site data (used in includes)
 phone: "(204) 381-9308"
 phone_raw: "2043819308"
+# Who answers the phone and when (call bar, home hero, closing call section)
+answer_hours: "Mon&ndash;Fri, 8&ndash;5"
 email: "support@clearingstation.ca"
 address: "1460 Chevrier Blvd #200<br>Winnipeg, MB R3T 1Y6"
 ga_id: "G-F06R6NDCPK"
