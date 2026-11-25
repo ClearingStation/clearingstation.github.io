@@ -65,6 +65,5 @@ region: MB
 postal_code: R3T 1Y6
 geo_lat: 49.8252385
 geo_lng: -97.1690497
-# Google Business reviews (the "5.0 from N Google reviews" lines link here). Update the count now and then.
-google_reviews_count: 22
+# Google Business reviews (the "5.0 on Google" lines link here).
 google_reviews_url: "https://www.google.com/maps/place/ClearingStation+Ltd.+Bookkeeping+%26+Accounting+Services/@49.8252385,-97.1716246,770m/data=!3m2!1e3!5s0x52ea743dcb763bad:0x616d1bbbdb27681a!4m8!3m7!1s0x47f090c3808364f9:0x8f3ad3383674de4d!8m2!3d49.8252385!4d-97.1690497!9m1!1b1!16s%2Fg%2F11whrtq1xt"
