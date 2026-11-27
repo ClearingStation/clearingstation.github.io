@@ -393,6 +393,9 @@
 .lp-price:first-child:not(:only-child) p { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.2); }
 .lp-price:first-child:not(:only-child) li::before { color: #68d391; }
 
+/* Terms cards directly under the price cards */
+.lp-prices + .lp-cards { margin-top: 24px; }
+
 /* FAQ with native <details>, no script needed */
 .lp-faq details { border-bottom: 1px solid var(--border); padding: 20px 0; }
 .lp-faq summary { cursor: pointer; list-style: none; font-weight: 600; font-size: 1.1rem; color: var(--primary); }
@@ -438,3 +441,70 @@
     border: 2px solid var(--border); border-radius: 999px; background: var(--warm-white); cursor: pointer; font-size: 15px; }
 .form-reach label:has(:checked) { border-color: var(--accent); background: white; color: var(--primary); font-weight: 600; }
 .form-reach input { accent-color: var(--accent); }
+
+/* Report sheet (physicians page): a plain ruled table in mono type, like a printed chart page.
+   Structure: .lp-report > table. */
+.lp-report { max-width: 980px; margin: 0 auto; overflow: hidden; text-align: left; background: #fff;
+    border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-md);
+    font-family: var(--font-mono, ui-monospace, 'SF Mono', Menlo, Consolas, monospace); font-size: 14px; }
+.lp-report table { width: 100%; border-collapse: collapse; }
+.lp-report th { padding: 10px 24px; text-align: left; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--text-muted); background: var(--warm-white); border-bottom: 1px solid var(--primary); }
+.lp-report td { padding: 14px 24px; vertical-align: top; color: var(--text); border-bottom: 1px solid var(--border); }
+.lp-report td:first-child { width: 42%; font-weight: 600; color: var(--primary); }
+/* Graph-paper hero, like chart paper; fades into the page at the bottom */
+.lp-hero.lp-chart { background:
+    linear-gradient(180deg, transparent, var(--warm-white) 90%),
+    linear-gradient(color-mix(in srgb, var(--border) 55%, transparent) 1px, transparent 1px) 0 0 / 100% 30px,
+    linear-gradient(90deg, color-mix(in srgb, var(--border) 55%, transparent) 1px, transparent 1px) 0 0 / 30px 100%,
+    var(--cream); }
+/* Phones: each row of the sheet becomes a stacked block, column heads hidden */
+@media (max-width: 700px) {
+    .lp-report thead { display: none; }
+    .lp-report tr { display: block; padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .lp-report td, .lp-report td:first-child { display: block; width: auto; padding: 2px 20px; border: 0; }
+}
+
+/* Call to action under a section: one centred button */
+.lp-cta { margin: 40px 0 0; text-align: center; }
+/* Button at the bottom of a price card, with a small note under it */
+.lp-price .btn { margin-top: 24px; }
+.lp-price > small { display: block; margin-top: 12px; text-align: center; font-size: 13px; opacity: .75; }
+.lp-price:first-child:not(:only-child) > small { color: #fff; }
+
+/* Person block (.lp-person): large portrait with a number badge on the left, name and text on the right */
+.lp-person { display: grid; grid-template-columns: minmax(0, 420px) 1fr; gap: 64px; align-items: center; text-align: left; }
+.lp-person h2 { text-align: left; margin-bottom: 4px; }
+.lp-person-photo { position: relative; }
+.lp-person-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: top;
+    border: 1px solid var(--border); border-radius: var(--radius-lg); }
+.lp-person-badge { position: absolute; left: -16px; bottom: 24px; padding: 14px 18px; border-radius: var(--radius-lg);
+    background: var(--primary); box-shadow: var(--shadow-lg); font-family: var(--font-mono, inherit); font-size: 12px;
+    letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,0.75); }
+.lp-person-badge strong { display: block; margin-bottom: 6px; font-family: var(--font-body); font-size: 1.7rem; line-height: 1;
+    letter-spacing: 0; color: #68d391; }
+.lp-role { font-family: var(--font-mono, inherit); font-size: 13px; font-weight: 600; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--accent-text); }
+@media (max-width: 900px) {
+    .lp-person { grid-template-columns: 1fr; gap: 32px; }
+    .lp-person-photo { max-width: 420px; }
+    .lp-person-badge { left: 12px; }
+}
+
+/* ===== CHART ACCENTS (body.chart, physicians page) =====
+   Keeps the site look (navy, green, Fraunces, DM Sans) and adds small medical-chart details:
+   mono section labels, "Step 01" numbers and Q1..Q7 in the FAQ. The report sheet (.lp-report) carries the rest.
+   Turn it on with front matter `body_class: chart`. */
+body.chart { --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+/* Section label: mono capitals with a short rule in front; centred above a centred section head */
+.chart .lp-eyebrow { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 12px; letter-spacing: .14em; }
+.chart .lp-eyebrow::before { content: ''; width: 26px; height: 1px; background: currentColor; }
+.chart .lp-section > .container > .lp-eyebrow { justify-content: center; }
+/* Step label in place of the big numeral */
+.chart .lp-num { font-family: var(--font-mono); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+/* FAQ: numbered Q1, Q2 ... in mono */
+.chart .lp-faq { counter-reset: q; }
+.chart .lp-faq details { counter-increment: q; }
+.chart .lp-faq summary::before { content: 'Q' counter(q); margin-right: 12px; font-family: var(--font-mono); font-size: 13px; font-weight: 500; color: var(--accent-text); }
+/* Lead form: larger photo of Jennifer under the button */
+.chart .form-caller img { width: 72px; height: 72px; }
