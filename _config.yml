@@ -9,12 +9,14 @@ timezone: America/Winnipeg
 
 # Build settings
 markdown: kramdown
-plugins:
-  - jekyll-feed      # /blog/feed.xml (sitemap.xml is our own template)
-
-# RSS feed for the blog
-feed:
-  path: blog/feed.xml
+# The blog is off for now. To turn it on again:
+#   1. Remove "blog/" from the exclude list below.
+#   2. Uncomment the plugin and feed lines here, and the jekyll-feed group in the Gemfile.
+#   3. Put {% feed_meta %} back in _includes/head.html, under the seo include.
+# plugins:
+#   - jekyll-feed      # /blog/feed.xml (sitemap.xml is our own template)
+# feed:
+#   path: blog/feed.xml
 
 # Default author and share image for SEO tags (_includes/seo.html)
 author: Jennifer Flaming
@@ -38,6 +40,7 @@ exclude:
   - node_modules
   - vendor
   - "*.zip"
+  - blog/            # blog is off for now (index and posts), see the note at "Build settings"
   - clearingstation.ca-Performance-on-Search-2026-01-29
   - invoice-details.html
   - plumbing_invoice.html

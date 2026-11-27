@@ -6,6 +6,7 @@ gem "base64"
 gem "bigdecimal"
 
 # RSS feed for the blog. On the GitHub Pages allow-list.
-group :jekyll_plugins do
-  gem "jekyll-feed"      # builds /blog/feed.xml
-end
+# Off while the blog is off (see _config.yml). Uncomment to turn it on again.
+# group :jekyll_plugins do
+#   gem "jekyll-feed"      # builds /blog/feed.xml
+# end
