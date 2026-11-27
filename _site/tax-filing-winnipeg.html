@@ -60,7 +60,7 @@
 </script>
 
 </head>
-<body>
+<body class="accents">
     <!-- Sticky header. Links from _data/nav.yml; active link via page.nav_active front matter.
      A link with "dropdown: <file>" lists that _data file's entries: on hover/focus (desktop), inline (mobile menu). -->
 <header class="header" id="header">
@@ -224,7 +224,7 @@
         <p id="form-error" class="form-error" hidden>We could not send your request. Please call us at <a href="tel:2043819308">(204) 381-9308</a>.</p>
 
         <button type="submit" class="btn-submit">
-            Find My Missed Deductions
+            Book My Free Call
             
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
 
@@ -313,35 +313,64 @@
     </div>
 </section>
 
-<!-- Sound familiar: the visitor's own thoughts, in their words -->
+<!-- Who you talk to: Jennifer's portrait and record -->
+
+<section class="lp-section alt">
+    <div class="container lp-person">
+        <div class="lp-person-photo">
+            <img src="/images/optimized/jennifer-840.webp" alt="Jennifer Flaming, founder of ClearingStation" width="840" height="1176" loading="lazy">
+            <div class="lp-person-badge"><strong>100+</strong> CRA audits managed</div>
+        </div>
+        <div>
+            <span class="lp-eyebrow">Who you talk to</span>
+            <h2>Jennifer Flaming</h2>
+            <p class="lp-role">Founder, ClearingStation Ltd.</p>
+            <p>Jennifer has spent more than eleven years keeping books and filing taxes for Manitoba businesses. She has handled more than 100 CRA audits for clients, from the first letter to the final answer.</p>
+            <p>You talk to Jennifer on the first call. She tells you plainly what your return needs, when it is due and what it costs.</p>
+            <a href="#lead" class="btn btn-primary">Book My Free Call 
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Deadline sheet: CRA filing and payment dates as general rules, each one checked on canada.ca.
+     Keep it consistent with the deadline FAQ below. data-label shows the column name on phones. -->
 <section class="lp-section">
     <div class="container">
-        <h2>Sound familiar?</h2>
-        <p class="lp-sub">If one of these is on your mind, a short call will help.</p>
-        <div class="lp-cards">
-            <div class="lp-card">
-                <h3>"I think I overpaid last year."</h3>
-                <p>The bill felt too high, but nobody explained why or what you could claim.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"My preparer just files what I hand over."</h3>
-                <p>No questions about your vehicle, home office or travel. Just a form and an invoice.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"The deadline is coming and my papers are a mess."</h3>
-                <p>Receipts in a shoebox, bank statements in three apps, and no time to sort them.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"I missed the deadline. How bad is it?"</h3>
-                <p>You do not know what you owe, and every week you wait feels worse.</p>
-            </div>
+        <span class="lp-eyebrow">CRA deadlines</span>
+        <h2>Which deadline is yours?</h2>
+        <p class="lp-sub">The date depends on what you file. These are the CRA rules for the returns we prepare.</p>
+        <div class="lp-report lp-dates">
+            <table>
+                <thead>
+                    <tr><th>What you file</th><th>File by</th><th>Pay by</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Personal return (T1)</td><td data-label="File by">April 30</td><td data-label="Pay by">April 30</td></tr>
+                    <tr><td>Personal return, you or your spouse self-employed</td><td data-label="File by">June 15</td><td data-label="Pay by">April 30</td></tr>
+                    <tr><td>Corporate return (T2)</td><td data-label="File by">Six months after your fiscal year end</td><td data-label="Pay by">Two months after your fiscal year end. Three months for some small Canadian-controlled private corporations.</td></tr>
+                    <tr><td>T4 and T5 slips</td><td data-label="File by">Last day of February</td><td data-label="Pay by">Nothing to pay. Your employees get their T4 slips by the same day.</td></tr>
+                    <tr><td>GST/HST, monthly or quarterly</td><td data-label="File by">One month after the period ends</td><td data-label="Pay by">Same day</td></tr>
+                    <tr><td>GST/HST, annual</td><td data-label="File by">Three months after your fiscal year end</td><td data-label="Pay by">Same day</td></tr>
+                    <tr><td>GST/HST, annual, sole proprietor with a December 31 year end</td><td data-label="File by">June 15</td><td data-label="Pay by">April 30</td></tr>
+                </tbody>
+            </table>
+            <p class="lp-report-note">If a date falls on a Saturday, Sunday or public holiday, the due date is the next business day. Source: Canada Revenue Agency, canada.ca. These are the general rules. On the call, Jennifer tells you your own date.</p>
         </div>
+        
+<p class="lp-cta"><a href="#lead" class="btn btn-primary">Book My Free Call 
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a></p>
+
     </div>
 </section>
 
 <!-- Curiosity block: open loops that only the call closes -->
 <section class="lp-section alt">
     <div class="container">
+        <span class="lp-eyebrow">The first call</span>
         <h2>What you will find out on a 10-minute call</h2>
         <p class="lp-sub">No forms, no papers. Tell Jennifer what you do and how you file today.</p>
         <div class="lp-cards">
@@ -368,20 +397,21 @@
 <!-- How it works: three steps from form to filed return -->
 <section class="lp-section">
     <div class="container">
+        <span class="lp-eyebrow">How it works</span>
         <h2>How tax preparation with us works</h2>
         <div class="lp-cards">
             <div class="lp-card">
-                <span class="lp-num">1</span>
+                <span class="lp-num">Step 01</span>
                 <h3>Leave your name and number</h3>
                 <p>Jennifer calls you back for a free 10-minute review. No obligation.</p>
             </div>
             <div class="lp-card">
-                <span class="lp-num">2</span>
+                <span class="lp-num">Step 02</span>
                 <h3>Send us what you have</h3>
                 <p>Upload papers securely with AES-256 encryption. If documents are missing, we help you recover them.</p>
             </div>
             <div class="lp-card">
-                <span class="lp-num">3</span>
+                <span class="lp-num">Step 03</span>
                 <h3>We search, prepare and file</h3>
                 <p>We look for missed deductions, file your return with the CRA and handle CRA questions for you.</p>
             </div>
@@ -392,6 +422,7 @@
 <!-- Price: one-time return prices from _data/tax_prices.yml, then the all-year plan -->
 <section class="lp-section alt">
     <div class="container lp-narrow">
+        <span class="lp-eyebrow">Fees</span>
         <h2>Tax return prices</h2>
         <p class="lp-sub">One-time prices. You know the cost before any work starts.</p>
         <div class="lp-prices">
@@ -440,7 +471,12 @@
 
 
         </div>
-        <p class="lp-sub" style="margin-top:32px">Want it handled all year? <strong>Bookkeeping &amp; Tax is $499/month</strong>: tax-ready bookkeeping, corporate T2 filing, owner and spouse personal returns, and quarterly tax strategy sessions. <a href="#lead">Find my missed deductions</a>.</p>
+        <p class="lp-sub" style="margin-top:32px">Want it handled all year? <strong>Bookkeeping &amp; Tax is $499/month</strong>: tax-ready bookkeeping, corporate T2 filing, owner and spouse personal returns, and quarterly tax strategy sessions.</p>
+        
+<p class="lp-cta"><a href="#lead" class="btn btn-primary">Book My Free Call 
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a></p>
+
     </div>
 </section>
 
@@ -483,6 +519,7 @@
 <!-- FAQ: real questions people search, honest answers -->
 <section class="lp-section">
     <div class="container lp-narrow lp-faq">
+        <span class="lp-eyebrow">Common questions</span>
         <h2>Tax filing in Winnipeg: common questions</h2>
         <details>
             <summary>What are the tax filing deadlines in Canada?</summary>
@@ -520,7 +557,7 @@
     <div class="container lp-narrow">
         <h2>Find out what last year's return missed</h2>
         <p>Ten minutes with Jennifer. Your deadline, your penalty risk, and the deductions owners like you miss.</p>
-        <a href="#lead" class="btn btn-primary">Find My Missed Deductions 
+        <a href="#lead" class="btn btn-primary">Book My Free Call 
 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
 </a>
         <a href="tel:2043819308" class="btn btn-phone">

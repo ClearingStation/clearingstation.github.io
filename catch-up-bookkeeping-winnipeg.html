@@ -3,6 +3,7 @@ layout: start
 title: "Catch Up Bookkeeping in Winnipeg | ClearingStation"
 description: "Behind on your books? Catch up bookkeeping in Winnipeg from $199 per month behind, with one fixed total before we start. No lecture. Free 10-minute call."
 extra_css: /assets/css/start.css
+body_class: accents   # mono section labels, step and FAQ numbers, see start.css
 ---
 {% comment %}Catch-up price, from _data/services.yml (the single source).{% endcomment %}
 {% assign catchup = site.data.services | where: "url", page.url | first %}
@@ -28,41 +29,19 @@ extra_css: /assets/css/start.css
                 </ul>
             </div>
             <div>
-                {% include lead-form.html source="Catch-up bookkeeping" title="Find Out What Your Catch-Up Costs" intro="Leave your name and how to reach you. Jennifer gets back to you for a quick, judgment-free chat." button="Get My Fixed Catch-Up Quote" note="Free, no obligation. Bring the shoebox as it is." success="Jennifer will call you soon. You don't need to prepare anything. Just tell her where things stand." %}
+                {% include lead-form.html source="Catch-up bookkeeping" title="Find Out What Your Catch-Up Costs" intro="Leave your name and how to reach you. Jennifer gets back to you for a quick, judgment-free chat." button="Book My Free Call" note="Free, no obligation. Bring the shoebox as it is." success="Jennifer will call you soon. You don't need to prepare anything. Just tell her where things stand." %}
             </div>
         </div>
     </div>
 </section>
 
-<!-- Sound familiar: their own thoughts, so they feel understood -->
-<section class="lp-section alt">
-    <div class="container">
-        <h2>Sound familiar?</h2>
-        <p class="lp-sub">If you're behind on bookkeeping, you're not the only one. Here is what we hear most often.</p>
-        <div class="lp-cards">
-            <div class="lp-card">
-                <h3>"There's a box of receipts I avoid looking at."</h3>
-                <p>Paper, emails, bank statements in five places. You don't know where to start.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"There's a CRA letter I haven't opened."</h3>
-                <p>You know it won't go away. You just don't want to face it alone.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"I have a deadline coming."</h3>
-                <p>Year-end, a GST filing, a bank loan or a lease that asks for financial statements.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"I'm scared of what it will cost."</h3>
-                <p>You expect a huge bill and a lecture. You get neither from us.</p>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Who you talk to: Jennifer's portrait and record -->
+{% include sections/jennifer.html note="You talk to Jennifer on the first call. She tells you plainly what your catch-up needs and what it costs. No lecture." %}
 
 <!-- Curiosity: what they learn on the call (promise, don't answer) -->
 <section class="lp-section">
     <div class="container">
+        <span class="lp-eyebrow">The first call</span>
         <h2>What you'll find out on a 10-minute call</h2>
         <p class="lp-sub">Every catch-up is different. On the call, Jennifer looks at your situation and tells you:</p>
         <div class="lp-cards">
@@ -89,25 +68,48 @@ extra_css: /assets/css/start.css
 <!-- How it works: three small steps, the first one is the form -->
 <section class="lp-section alt">
     <div class="container">
+        <span class="lp-eyebrow">How it works</span>
         <h2>How catch-up bookkeeping works</h2>
         <p class="lp-sub">You don't sort, scan or label anything first. We start from wherever you are.</p>
         <div class="lp-cards">
             <div class="lp-card">
-                <span class="lp-num">1</span>
+                <span class="lp-num">Step 01</span>
                 <h3>Leave your name and number</h3>
                 <p>Jennifer calls you back. Tell her how far behind you are and what deadline you face.</p>
             </div>
             <div class="lp-card">
-                <span class="lp-num">2</span>
+                <span class="lp-num">Step 02</span>
                 <h3>Get your fixed quote</h3>
                 <p>You learn the price, the timeline and what to send. No obligation to go ahead.</p>
             </div>
             <div class="lp-card">
-                <span class="lp-num">3</span>
+                <span class="lp-num">Step 03</span>
                 <h3>We clean up and file</h3>
                 <p>Your dedicated bookkeeper rebuilds the books, recovers missing documents, files overdue returns and talks to CRA for you.</p>
             </div>
         </div>
+        <!-- Example catch-up sheet: one row per year, oldest first. Green = done, cream = in work. -->
+        <div class="lp-report lp-steps">
+            <p class="lp-sample"><strong>Example.</strong> Three years behind, part-way through step 3. Oldest year first.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Documents gathered <small>You send what you have. We recover what is missing.</small></th>
+                        <th>Books rebuilt <small>Transactions recorded. Bank and credit card accounts reconciled.</small></th>
+                        <th>Returns filed <small>Overdue GST and tax returns filed.</small></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Year 1 (oldest)</td><td class="done" data-label="Documents">Done</td><td class="done" data-label="Books">Done</td><td class="done" data-label="Returns">Done</td></tr>
+                    <tr><td>Year 2</td><td class="done" data-label="Documents">Done</td><td class="done" data-label="Books">Done</td><td class="now" data-label="Returns">In work</td></tr>
+                    <tr><td>Year 3</td><td class="done" data-label="Documents">Done</td><td class="now" data-label="Books">In work</td><td data-label="Returns">Next</td></tr>
+                    <tr><td>This year so far</td><td class="now" data-label="Documents">In work</td><td data-label="Books">Next</td><td data-label="Returns">Not due yet</td></tr>
+                    <tr><td>After the catch-up</td><td colspan="3" class="done">Current. Your dedicated bookkeeper keeps the books each month.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        {% include sections/lp-cta.html %}
     </div>
 </section>
 
@@ -119,7 +121,7 @@ extra_css: /assets/css/start.css
             <div class="lp-amount">{{ catchup.price }}</div>
             <p>You pay for each month of books we bring current. Six months behind starts at ${{ catchup.price_month | times: 6 }}. Busy months with many transactions cost more, so Jennifer confirms one fixed total on the call. No hourly surprises.</p>
             <p>Once you're current, monthly plans start from $299/month to keep you there, with a dedicated bookkeeper and GST/PST filing included.</p>
-            <a href="#lead" class="btn btn-primary">Get My Fixed Catch-Up Quote {% include icons/arrow-right.html size=18 %}</a>
+            <a href="#lead" class="btn btn-primary">Book My Free Call {% include icons/arrow-right.html size=18 %}</a>
         </div>
     </div>
 </section>
@@ -130,6 +132,7 @@ extra_css: /assets/css/start.css
 <!-- FAQ: real questions people search, honest answers (mirrored in JSON-LD below) -->
 <section class="lp-section alt">
     <div class="container lp-narrow">
+        <span class="lp-eyebrow">Common questions</span>
         <h2>Catch-up bookkeeping questions</h2>
         <div class="lp-faq">
             <details>
@@ -169,7 +172,7 @@ extra_css: /assets/css/start.css
     <div class="container lp-narrow">
         <h2>Find out your number in 10 minutes</h2>
         <p>Your fixed catch-up price, how fast it can be done, and what you really need to find. No lecture, no obligation.</p>
-        <a href="#lead" class="btn btn-primary">Get My Fixed Catch-Up Quote {% include icons/arrow-right.html size=18 %}</a>
+        <a href="#lead" class="btn btn-primary">Book My Free Call {% include icons/arrow-right.html size=18 %}</a>
         <a href="tel:{{ site.phone_raw }}" class="btn btn-phone">{% include icons/phone.html size=18 %} {{ site.phone }}</a>
     </div>
 </section>

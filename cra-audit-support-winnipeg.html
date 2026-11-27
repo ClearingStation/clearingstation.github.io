@@ -3,6 +3,7 @@ layout: start
 title: "CRA Audit Support in Winnipeg | ClearingStation"
 description: "Got a CRA audit or review letter? 100+ CRA audits handled, 11+ years in practice. Talk to Jennifer before you reply to CRA."
 extra_css: /assets/css/start.css
+body_class: accents   # mono section labels, step and FAQ numbers, see start.css
 ---
 
 <!-- Hero: name the letter, calm them down, form right away -->
@@ -25,44 +26,64 @@ extra_css: /assets/css/start.css
                     <li><strong>11+ years</strong>, Manitoba-based</li>
                 </ul>
             </div>
-            {% include lead-form.html source="CRA audit support" badge="Free &bull; Confidential" title="Talk to Us Before You Talk to CRA" intro="Leave your name and how to reach you. Jennifer gets back to you and reads the letter with you." button="Call Me About My CRA Letter" note="Free, no obligation. Have your CRA letter ready." success="Jennifer will call you soon. Keep your CRA letter close, and please do not reply to CRA until you speak with her." %}
+            {% include lead-form.html source="CRA audit support" badge="Free &bull; Confidential" title="Talk to Us Before You Talk to CRA" intro="Leave your name and how to reach you. Jennifer gets back to you and reads the letter with you." button="Book My Free Call" note="Free, no obligation. Have your CRA letter ready." success="Jennifer will call you soon. Keep your CRA letter close, and please do not reply to CRA until you speak with her." %}
         </div>
     </div>
 </section>
 
-<!-- Sound familiar: mirror what goes through their head right now -->
-<section class="lp-section alt">
+<!-- Who you talk to: Jennifer's portrait and her CRA record -->
+{% include sections/jennifer.html note="You talk to Jennifer on the first call. She reads the letter with you. She tells you plainly what CRA asks for, what to do first and what our help costs." %}
+
+<!-- Sample letter: the parts of a CRA review letter, each with a margin note. Our own sample, not a CRA document. -->
+<section class="lp-section">
     <div class="container">
-        <h2>Sound Familiar?</h2>
-        <p class="lp-sub">A CRA letter can wreck your whole week. You are not the first. Tax audit help in Winnipeg is one call away.</p>
-        <div class="lp-cards">
-            <div class="lp-card">
-                <h3>"Is this an audit?"</h3>
-                <p>The letter says review, or request for information, or audit. You can't tell what it means for you.</p>
+        <span class="lp-eyebrow">Sample letter</span>
+        <h2>How to Read a CRA Letter</h2>
+        <p class="lp-sub">Look for these four parts on your letter. The notes say what each part means and what we do.</p>
+        <div class="lp-report lp-letter">
+            <p class="lp-sample"><strong>Sample.</strong> Written by ClearingStation to explain a review letter. Not a CRA document.</p>
+            <div class="lp-letter-row">
+                <div>
+                    <p>Date: [date of the letter]</p>
+                    <p>Reference number: [upper right corner]</p>
+                    <p>[Your name and address]</p>
+                </div>
+                <p class="lp-note"><strong>1 &middot; Reference number</strong> CRA puts a reference number in the upper right corner and asks for it on your reply. Keep the letter in your hand when Jennifer calls.</p>
             </div>
-            <div class="lp-card">
-                <h3>"The deadline is right there."</h3>
-                <p>You have days, maybe less. You don't know if you can make it, or what happens if you don't.</p>
+            <div class="lp-letter-row">
+                <div>
+                    <p>Re: Review of your income tax return for [tax year]</p>
+                    <p>We are reviewing the following claim on your return: [claim].</p>
+                </div>
+                <p class="lp-note"><strong>2 &middot; What it is</strong> This line names the tax year and the type of letter: a review, a request for information or an audit. CRA says a review is not a tax audit. We tell you which one you have and how serious it is.</p>
             </div>
-            <div class="lp-card">
-                <h3>"How much will I owe?"</h3>
-                <p>You keep running numbers in your head. Penalties, interest, reassessed years. You can't sleep.</p>
+            <div class="lp-letter-row">
+                <div>
+                    <p>Please send us:</p>
+                    <ul>
+                        <li>[receipts or invoices for the claim]</li>
+                        <li>[bank statements for the period]</li>
+                    </ul>
+                    <p>You or your authorized representative can send the documents.</p>
+                </div>
+                <p class="lp-note"><strong>3 &middot; What CRA asks for</strong> Often it is less than you fear. We tell you what to gather first and what can wait. Once you authorize us as your representative, we gather and organize the documents and prepare the response.</p>
             </div>
-            <div class="lp-card">
-                <h3>"I don't want to call CRA."</h3>
-                <p>You are scared to say the wrong thing. You wish someone could just talk to them for you.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"My books are a mess."</h3>
-                <p>Receipts are missing. The bookkeeping is behind. You don't know what CRA will find.</p>
+            <div class="lp-letter-row">
+                <div>
+                    <p>Reply by: [date]</p>
+                    <p>If you need more time, call the telephone number at the bottom of this letter.</p>
+                </div>
+                <p class="lp-note"><strong>4 &middot; Reply date</strong> This is your deadline. We look at it and tell you if asking for more time makes sense in your case, and how.</p>
             </div>
         </div>
+        {% include sections/lp-cta.html %}
     </div>
 </section>
 
 <!-- Curiosity: what the call answers, without giving it away -->
-<section class="lp-section">
+<section class="lp-section alt">
     <div class="container">
+        <span class="lp-eyebrow">The first call</span>
         <h2>What You'll Find Out on a 10-Minute Call</h2>
         <p class="lp-sub">Read us the letter. We have seen these many times, so we can tell you a lot, fast.</p>
         <div class="lp-cards">
@@ -83,27 +104,28 @@ extra_css: /assets/css/start.css
                 <p>Often it is less than you fear. We tell you what to gather first, and what can wait.</p>
             </div>
         </div>
-        <p class="lp-sub" style="margin-top:40px"><a href="#lead" class="btn btn-primary">Call Me About My CRA Letter</a></p>
+        {% include sections/lp-cta.html %}
     </div>
 </section>
 
 <!-- How it works: three simple steps -->
-<section class="lp-section alt">
+<section class="lp-section">
     <div class="container">
+        <span class="lp-eyebrow">How it works</span>
         <h2>How CRA Audit Help Works</h2>
         <div class="lp-cards">
             <div class="lp-card">
-                <span class="lp-num">1</span>
+                <span class="lp-num">Step 01</span>
                 <h3>Leave your name and number</h3>
                 <p>Jennifer calls you back. Have the CRA letter in your hand.</p>
             </div>
             <div class="lp-card">
-                <span class="lp-num">2</span>
+                <span class="lp-num">Step 02</span>
                 <h3>Get a clear plan and a quote</h3>
                 <p>We explain the letter, your deadline and your first step. You get a quote for our help on the call.</p>
             </div>
             <div class="lp-card">
-                <span class="lp-num">3</span>
+                <span class="lp-num">Step 03</span>
                 <h3>We deal with CRA</h3>
                 <p>We gather and organize your documents and prepare the response. We stay with you up to the end of the file.</p>
             </div>
@@ -112,14 +134,14 @@ extra_css: /assets/css/start.css
 </section>
 
 <!-- Services and price: what we do and how the quote works -->
-<section class="lp-section">
+<section class="lp-section alt">
     <div class="container lp-narrow">
         <div class="lp-price">
             <h2>CRA Bookkeeping Support, Start to Finish</h2>
             <p>Government communication &middot; Audit preparation and response &middot; Documentation gathering &middot; Representation and advocacy &middot; Post-audit compliance</p>
             <div class="lp-amount">Free first call</div>
             <p>Every CRA file is different, so we don't guess a price. You get a quote on the call, before you agree to anything.</p>
-            <a href="#lead" class="btn btn-primary">Get My Quote on the Call</a>
+            <a href="#lead" class="btn btn-primary">Book My Free Call {% include icons/arrow-right.html size=18 %}</a>
         </div>
     </div>
 </section>
@@ -127,8 +149,9 @@ extra_css: /assets/css/start.css
 {% include sections/testimonials.html %}
 
 <!-- FAQ: real questions people search after a CRA letter -->
-<section class="lp-section alt">
+<section class="lp-section">
     <div class="container lp-narrow">
+        <span class="lp-eyebrow">Common questions</span>
         <h2>CRA Audit Support: Common Questions</h2>
         <div class="lp-faq">
             <details>
@@ -168,7 +191,7 @@ extra_css: /assets/css/start.css
     <div class="container lp-narrow">
         <h2>Don't Call CRA Before You Talk to Us</h2>
         <p>In 10 minutes, find out how serious your letter is, what to do first, and whether more time is possible. Keep the letter in hand.</p>
-        <a href="#lead" class="btn btn-primary">Call Me About My CRA Letter</a>
+        <a href="#lead" class="btn btn-primary">Book My Free Call {% include icons/arrow-right.html size=18 %}</a>
         <a href="tel:{{ site.phone_raw }}" class="btn btn-phone">{% include icons/phone.html size=18 %} {{ site.phone }}</a>
     </div>
 </section>

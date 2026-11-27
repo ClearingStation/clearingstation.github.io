@@ -3,6 +3,7 @@ layout: start
 title: "Bookkeeping for E-Commerce in Winnipeg | ClearingStation"
 description: "Bookkeeping for e-commerce in Winnipeg: Shopify, Amazon and Etsy payouts reconciled, sales tax checked. Find your real profit margin on a free 10-minute call."
 extra_css: /assets/css/start.css
+body_class: accents   # mono section labels, step and FAQ numbers, see start.css
 ---
 
 <!-- Hero: mirror the online seller (payouts, channels, sales tax), form on the right -->
@@ -15,7 +16,7 @@ extra_css: /assets/css/start.css
                 <p class="lp-lead">Your Shopify, Amazon or Etsy payouts arrive net of fees, refunds and chargebacks, so your bank never matches your sales. We reconcile every channel and show you what you really keep.</p>
                 <ul class="lp-checks">
                     <li>{% include icons/check.html size=18 %} Your real profit margin per product after fees, shipping and ads</li>
-                    <li>{% include icons/check.html size=18 %} Whether you charge the right sales tax to out-of-province buyers</li>
+                    <li>{% include icons/check.html size=18 %} GST/PST returns filed by your bookkeeper</li>
                     <li>{% include icons/check.html size=18 %} Which plan fits your order volume</li>
                 </ul>
                 <ul class="proof">
@@ -26,48 +27,18 @@ extra_css: /assets/css/start.css
                 </ul>
                 {% include sections/industry-photo.html %}
             </div>
-            {% include lead-form.html source="Industry: e-commerce" title="Find Your Real Profit Margin" intro="Leave your name and how to reach you. Jennifer gets back to you and looks at your store's numbers with you &mdash; no sales pitch." button="Find My Real Profit Margin" note="Free &middot; No obligation &middot; Jennifer gets back to you" success="Thank you. Jennifer will call you soon to talk about your store. Keep your phone close." %}
+            {% include lead-form.html source="Industry: e-commerce" title="Book a Free 10-Minute Call About Your Store" intro="Leave your name and how to reach you. Jennifer gets back to you and asks a few questions about your store &mdash; no sales pitch." button="Book My Free Call" note="Free &middot; No obligation &middot; Jennifer gets back to you" success="Thank you. Jennifer will call you soon to talk about your store. Keep your phone close." %}
         </div>
     </div>
 </section>
 
-<!-- Sound familiar: online seller pains in their own words -->
-<section class="lp-section alt">
-    <div class="container">
-        <h2>Sound Familiar?</h2>
-        <p class="lp-sub">Most online store owners in Manitoba who look for an e-commerce bookkeeper say one of these.</p>
-        <div class="lp-cards">
-            <div class="lp-card">
-                <h3>"My deposits never match my sales."</h3>
-                <p>Shopify Payments, PayPal, Stripe and Amazon each pay out on their own schedule, minus fees and refunds. Nothing lines up.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"I sell a lot. Am I making money?"</h3>
-                <p>Revenue looks good. But after cost of goods, shipping, returns and platform fees, you have no idea what each product earns.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"I ship to Ontario and BC. What tax do I charge?"</h3>
-                <p>Out-of-province orders can mean GST/HST at the buyer's province rate, and maybe PST registration somewhere else.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"Meta and Google ads eat my profit."</h3>
-                <p>Ad spend goes up every month. You can't tell which sales it actually paid for.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"Inventory is a guess."</h3>
-                <p>Stock bought from overseas, duties and freight on top. Your cost of goods sold is a number you hope is close.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"It started as a side hustle."</h3>
-                <p>Now it's a real business. Your spreadsheet and shoebox of receipts can't keep up anymore.</p>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Who you talk to: Jennifer's portrait and record -->
+{% include sections/jennifer.html note="You talk to Jennifer on the first call. She tells you plainly what your store's books need and what it costs." %}
 
 <!-- Curiosity block: e-commerce open loops only the call closes -->
 <section class="lp-section">
     <div class="container lp-narrow">
+        <span class="lp-eyebrow">The first call</span>
         <h2>What You'll Find Out on a 10-Minute Call</h2>
         <p class="lp-sub">Jennifer asks a few quick questions about your store. Then she tells you:</p>
         <div class="lp-cards">
@@ -76,8 +47,8 @@ extra_css: /assets/css/start.css
                 <p>How to see what each product earns after platform fees, refunds, shipping and ad spend.</p>
             </div>
             <div class="lp-card">
-                <h3>If your sales tax is right</h3>
-                <p>Whether you collect the right tax for customers outside Manitoba. We check it on the call.</p>
+                <h3>Sales tax across provinces</h3>
+                <p>How tax on sales outside Manitoba works in general, and what your bookkeeper files for you.</p>
             </div>
             <div class="lp-card">
                 <h3>Why payouts don't match sales</h3>
@@ -94,31 +65,34 @@ extra_css: /assets/css/start.css
 <!-- How it works: three steps -->
 <section class="lp-section alt">
     <div class="container">
+        <span class="lp-eyebrow">How it works</span>
         <h2>How Our Online Store Bookkeeping Works</h2>
         <p class="lp-sub">Three steps. Keep selling, we do the books.</p>
         <div class="lp-cards">
             <div class="lp-card">
-                <span class="lp-num">1</span>
+                <span class="lp-num">Step 01</span>
                 <h3>Leave your name and number</h3>
                 <p>Jennifer calls you back. You tell her your channels and volume. She tells you your plan and price.</p>
             </div>
             <div class="lp-card">
-                <span class="lp-num">2</span>
+                <span class="lp-num">Step 02</span>
                 <h3>We connect your channels</h3>
                 <p>We bring in your Shopify, Amazon, Etsy or WooCommerce sales and processor payouts. We migrate from QuickBooks or other software.</p>
             </div>
             <div class="lp-card">
-                <span class="lp-num">3</span>
+                <span class="lp-num">Step 03</span>
                 <h3>Your bookkeeper takes over</h3>
                 <p>One dedicated bookkeeper reconciles every payout monthly, files your GST/PST and replies within 24 hours.</p>
             </div>
         </div>
+        {% include sections/lp-cta.html %}
     </div>
 </section>
 
 <!-- Price: real plans, honest note about order volume -->
 <section class="lp-section">
     <div class="container lp-narrow">
+        <span class="lp-eyebrow">Fees</span>
         <h2>E-Commerce Bookkeeping Prices</h2>
         <p class="lp-sub">Flat monthly prices. Many stores have more than 100 transactions a month &mdash; then you get a fixed quote for a bigger plan on the call.</p>
         <div class="lp-prices">
@@ -147,7 +121,8 @@ extra_css: /assets/css/start.css
                 </ul>
             </div>
         </div>
-        <p class="lp-sub" style="margin-top:32px">The call is free and there is no obligation. <a href="#lead">Find my real profit margin</a>.</p>
+        <p class="lp-sub" style="margin-top:32px">The call is free and there is no obligation.</p>
+        {% include sections/lp-cta.html %}
     </div>
 </section>
 
@@ -157,6 +132,7 @@ extra_css: /assets/css/start.css
 <!-- FAQ: real questions online sellers search -->
 <section class="lp-section alt">
     <div class="container lp-narrow lp-faq">
+        <span class="lp-eyebrow">Common questions</span>
         <h2>E-Commerce Bookkeeping FAQ</h2>
         <details>
             <summary>Do you do Shopify bookkeeping?</summary>
@@ -168,7 +144,7 @@ extra_css: /assets/css/start.css
         </details>
         <details>
             <summary>What sales tax do I charge customers in other provinces?</summary>
-            <p>In general, GST/HST on goods shipped to another province follows the customer's province, not yours. Some provinces can also require you to register for their PST. The rules depend on your sales, so we check your situation on the call.</p>
+            <p>In general, GST/HST on goods shipped to another province follows the customer's province, not yours. Some provinces can also require you to register for their PST. The rules depend on your sales. Your bookkeeper files your GST/PST returns.</p>
         </details>
         <details>
             <summary>Do Etsy sellers have to pay taxes?</summary>
@@ -193,8 +169,8 @@ extra_css: /assets/css/start.css
 <section class="lp-final">
     <div class="container lp-narrow">
         <h2>What Does Each Product Really Earn You?</h2>
-        <p>Take 10 minutes. Jennifer shows you why your payouts don't match your sales, checks your out-of-province sales tax and tells you how to see your real margin.</p>
-        <a href="#lead" class="btn btn-primary">Find My Real Profit Margin {% include icons/arrow-right.html size=18 %}</a>
+        <p>Take 10 minutes. Jennifer shows you why your payouts don't match your sales and tells you how to see your real margin.</p>
+        <a href="#lead" class="btn btn-primary">Book My Free Call {% include icons/arrow-right.html size=18 %}</a>
         <a href="tel:{{ site.phone_raw }}" class="btn btn-phone">{% include icons/phone.html size=18 %} {{ site.phone }}</a>
     </div>
 </section>
@@ -233,7 +209,7 @@ extra_css: /assets/css/start.css
         { "@type": "Question", "name": "Can you help Amazon and Etsy sellers in Canada?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. Amazon and Etsy payouts include many fees and adjustments. We split each payout into sales, fees, refunds and tax, so your books show what really happened." } },
         { "@type": "Question", "name": "What sales tax do I charge customers in other provinces?",
-          "acceptedAnswer": { "@type": "Answer", "text": "In general, GST/HST on goods shipped to another province follows the customer's province, not yours. Some provinces can also require you to register for their PST. The rules depend on your sales, so we check your situation on the call." } },
+          "acceptedAnswer": { "@type": "Answer", "text": "In general, GST/HST on goods shipped to another province follows the customer's province, not yours. Some provinces can also require you to register for their PST. The rules depend on your sales. Your bookkeeper files your GST/PST returns." } },
         { "@type": "Question", "name": "Do Etsy sellers have to pay taxes?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. Income from an Etsy shop is business income and goes on your tax return, even as a side hustle. Good books let you claim your costs, like materials, shipping and fees." } },
         { "@type": "Question", "name": "Can you track inventory and cost of goods sold?",

@@ -3,6 +3,7 @@ layout: default
 title: "Pricing | ClearingStation Ltd. - Flat Monthly Bookkeeping Prices"
 description: "Bookkeeping from $299/month, bookkeeping and tax from $499/month. Flat monthly prices, no hourly billing, payroll included."
 nav_active: pricing
+extra_css: /assets/css/start.css   # for the Jennifer block (.lp-person)
 ---
 
 {% include sections/page-hero.html eyebrow="Pricing" title="Flat monthly prices" subtitle="No hourly billing, no surprise invoices. Payroll is included in every plan." %}
@@ -13,6 +14,12 @@ nav_active: pricing
         {% include sections/pricing.html %}
     </div>
 </section>
+
+<!-- Who helps you choose: Jennifer's portrait and record. Her button goes to the consultation page. -->
+{% include sections/jennifer.html href="/start.html" note="Not sure which plan fits? Call Jennifer for 10 minutes. She tells you plainly what your books need, what it costs, and when the cheaper plan is enough." %}
+
+<!-- Real Google reviews, right after the prices -->
+{% include sections/testimonials.html %}
 
 <!-- Special plans -->
 <section class="section section-white">
@@ -67,4 +74,5 @@ nav_active: pricing
     </div>
 </section>
 
+<!-- Closing call to action -->
 {% include sections/cta.html %}

@@ -475,6 +475,7 @@
 /* Person block (.lp-person): large portrait with a number badge on the left, name and text on the right */
 .lp-person { display: grid; grid-template-columns: minmax(0, 420px) 1fr; gap: 64px; align-items: center; text-align: left; }
 .lp-person h2 { text-align: left; margin-bottom: 4px; }
+.lp-person h2 + p:not(.lp-role) { margin-top: 14px; }   /* no role line: give the text room under the name */
 .lp-person-photo { position: relative; }
 .lp-person-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: top;
     border: 1px solid var(--border); border-radius: var(--radius-lg); }
@@ -508,3 +509,123 @@ body.chart { --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
 .chart .lp-faq summary::before { content: 'Q' counter(q); margin-right: 12px; font-family: var(--font-mono); font-size: 13px; font-weight: 500; color: var(--accent-text); }
 /* Lead form: larger photo of Jennifer under the button */
 .chart .form-caller img { width: 72px; height: 72px; }
+
+/* ===== INDUSTRY PAGE ACCENTS (body.accents) =====
+   The small details of the chart accents, without the graph-paper hero: mono section labels,
+   "Step 01" numbers and Q1..Q7 in the FAQ. Turn it on with front matter `body_class: accents`. */
+body.accents { --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+/* Section label: mono capitals with a short rule in front; centred above a centred section head */
+.accents .lp-eyebrow { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 12px; letter-spacing: .14em; }
+.accents .lp-eyebrow::before { content: ''; flex-shrink: 0; width: 26px; height: 1px; background: currentColor; }
+.accents .lp-section > .container > .lp-eyebrow { justify-content: center; }
+/* Step label in place of the big numeral */
+.accents .lp-num { font-family: var(--font-mono); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+/* FAQ: numbered Q1, Q2 ... in mono */
+.accents .lp-faq { counter-reset: q; }
+.accents .lp-faq details { counter-increment: q; }
+.accents .lp-faq summary::before { content: 'Q' counter(q); margin-right: 12px; font-family: var(--font-mono); font-size: 13px; font-weight: 500; color: var(--accent-text); }
+
+/* ===== MONTHLY + ONLINE VISUALS ===== */
+/* (monthly-bookkeeping-winnipeg.html, online-bookkeeping-manitoba.html) */
+/* Line under a block, e.g. the note under the price cards */
+.lp-sub.lp-after { margin: 32px auto 0; }
+
+/* Fact sheet next to a photo (.lp-person): narrower label column */
+.lp-person .lp-report { margin-top: 24px; }
+@media (min-width: 701px) { .lp-person .lp-report td:first-child { width: 34%; } }
+
+/* ===== CRA + CATCH-UP VISUALS =====
+   Two sample documents, both built on the report sheet (.lp-report):
+   - .lp-letter: annotated sample CRA letter (cra-audit-support-winnipeg.html)
+   - .lp-steps:  example catch-up sheet, one row per year (catch-up-bookkeeping-winnipeg.html)
+   Shared: .lp-sample (the "Sample" strip on top of a sheet). */
+
+/* "Sample" strip: first line of a sheet, same look as the sheet's column heads */
+.lp-sample { margin: 0; padding: 10px 24px; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--text-muted); background: var(--warm-white); border-bottom: 1px solid var(--primary); }
+.lp-sample strong { color: var(--primary); }
+/* A sheet with a button under it */
+.lp-report + .lp-cta, .lp-cards + .lp-report { margin-top: 40px; }
+
+/* Annotated letter. Structure: .lp-report.lp-letter > .lp-letter-row > div (letter part) + p.lp-note (margin note) */
+.lp-letter-row { display: grid; grid-template-columns: 1.2fr 1fr; border-bottom: 1px solid var(--border); }
+.lp-letter-row:last-child { border-bottom: 0; }
+.lp-letter-row > div { padding: 22px 24px; background: var(--cream); color: var(--text); }
+.lp-letter-row > div p { margin: 0 0 6px; color: inherit; }
+.lp-letter-row > div ul { margin: 0 0 6px 20px; }
+/* Margin note: green rule on the letter side, body type so it reads as our voice, not the letter's */
+.lp-note { margin: 0; padding: 22px 24px; border-left: 2px solid var(--accent); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+.lp-note strong { display: block; margin-bottom: 6px; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-text); }
+
+/* Catch-up sheet. Structure: .lp-report.lp-steps > table. Cell state: .done, .now (no class = not started) */
+.lp-steps table { table-layout: fixed; }   /* three even step columns */
+.lp-steps th { vertical-align: top; }
+.lp-steps td:first-child { width: 22%; }
+.lp-steps th small { display: block; margin-top: 4px; font-size: 12px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.lp-steps td { color: var(--text-muted); border-left: 1px solid var(--border); }
+.lp-steps td:first-child { border-left: 0; }
+.lp-steps .done { font-weight: 600; color: var(--accent-text); background: color-mix(in srgb, var(--accent) 12%, #fff); }
+.lp-steps .now { font-weight: 600; color: var(--primary); background: var(--cream); }
+
+/* Phones: the note goes under its letter part; each year becomes a block with the step name in front of the state */
+@media (max-width: 700px) {
+    .lp-letter-row { grid-template-columns: 1fr; }
+    .lp-note { border-left: 0; border-top: 2px solid var(--accent); }
+    .lp-sample, .lp-letter-row > div, .lp-note { padding-left: 20px; padding-right: 20px; }
+    .lp-steps tr { padding: 0; }
+    .lp-steps td, .lp-steps td:first-child { width: auto; padding: 8px 20px; border-left: 0; }
+    .lp-steps td[data-label]::before { content: attr(data-label) ': '; font-weight: 400; color: var(--text-muted); }
+}
+
+/* ===== TAX FILING + PAYROLL VISUALS =====
+   Two sheets in the look of .lp-report: a deadline sheet with three columns (tax filing page)
+   and a one-month pay-run calendar (payroll page). */
+
+/* Small print at the bottom of a sheet: source and limits */
+.lp-report-note { margin: 0; padding: 14px 24px; font-size: 12px; line-height: 1.6; background: var(--warm-white); }
+
+/* Deadline sheet (.lp-report.lp-dates): what you file | file by | pay by */
+@media (min-width: 701px) {
+    .lp-dates td:first-child { width: 34%; }
+    .lp-dates td:nth-child(2) { width: 28%; }
+}
+@media (max-width: 700px) {
+    /* Stacked rows: each date shows its column name in front */
+    .lp-dates td[data-label]::before { content: attr(data-label) ': '; font-size: 11px; letter-spacing: .1em;
+        text-transform: uppercase; color: var(--text-muted); }
+    .lp-report-note { padding: 14px 20px; }
+}
+
+/* Pay-run calendar (.lp-cal): month grid on the left, what we do on each marked day on the right.
+   Structure: .lp-cal > table (caption, 7 columns) + ol.lp-cal-key + p.lp-report-note. */
+.lp-cal { display: grid; grid-template-columns: 1fr 1fr; max-width: 980px; margin: 0 auto; overflow: hidden; background: #fff;
+    border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-md);
+    font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 14px; }
+.lp-cal table { width: 100%; table-layout: fixed; border-collapse: collapse; border-right: 1px solid var(--border); }
+.lp-cal caption, .lp-cal th { padding: 10px 4px; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--text-muted); background: var(--warm-white); border-bottom: 1px solid var(--border); }
+.lp-cal caption { color: var(--accent-text); }
+.lp-cal th { border-bottom-color: var(--primary); }
+/* Day cell: number on top, mark under it */
+.lp-cal td { height: 64px; padding: 6px; vertical-align: top; color: var(--text-muted); border: 1px solid var(--border); }
+.lp-cal td:first-child { border-left: 0; }
+.lp-cal td:last-child { border-right: 0; }
+.lp-cal tr:last-child td { border-bottom: 0; }
+.lp-cal td b { display: block; margin-top: 6px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+/* Marked days: pay day is navy, a CRA due date is green */
+.lp-cal .pay { color: #fff; background: var(--primary); }
+.lp-cal .cra { color: #fff; background: var(--accent-text); }
+/* Key: one line per marked day */
+.lp-cal-key { list-style: none; margin: 0; padding: 8px 24px; }
+.lp-cal-key li { padding: 14px 0; color: var(--text); border-bottom: 1px solid var(--border); }
+.lp-cal-key li:last-child { border-bottom: 0; }
+.lp-cal-key strong { display: block; color: var(--primary); }
+.lp-cal .lp-report-note { grid-column: 1 / -1; border-top: 1px solid var(--border); }
+@media (max-width: 800px) {
+    /* Phones: calendar on top, key under it */
+    .lp-cal { grid-template-columns: 1fr; }
+    .lp-cal table { border-right: 0; border-bottom: 1px solid var(--border); }
+    .lp-cal td { height: 52px; padding: 4px; font-size: 13px; }
+    .lp-cal td b { margin-top: 2px; font-size: 10px; letter-spacing: 0; }
+    .lp-cal-key { padding: 4px 20px; }
+}

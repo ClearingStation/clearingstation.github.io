@@ -3,6 +3,7 @@ layout: start
 title: "Bookkeeping and Payroll Services Winnipeg | ClearingStation"
 description: "Bookkeeping and payroll in one Winnipeg team: pay runs, CRA remittances, T4s and ROEs. Payroll may already be in your plan. Leave your number for a free call."
 extra_css: /assets/css/start.css
+body_class: accents   # mono section labels, step numbers and Q1.. in the FAQ, see start.css
 ---
 
 <!-- Hero: mirror the new employer's worry, form on the right -->
@@ -25,30 +26,51 @@ extra_css: /assets/css/start.css
                     <li><strong>$115M</strong> in transactions processed</li>
                 </ul>
             </div>
-            {% include lead-form.html source="Bookkeeping + payroll" title="Is Payroll Already in Your Plan?" intro="Leave your name and how to reach you. Jennifer gets back to you and checks your headcount in 10 minutes." button="See If Payroll Is Included For Me" note="Free call. No obligation." success="Thank you. Jennifer will call you soon to go over your payroll. Keep your phone close." %}
+            {% include lead-form.html source="Bookkeeping + payroll" title="Is Payroll Already in Your Plan?" intro="Leave your name and how to reach you. Jennifer gets back to you and checks your headcount in 10 minutes." button="Book My Free Call" note="Free call. No obligation." success="Thank you. Jennifer will call you soon to go over your payroll. Keep your phone close." %}
         </div>
     </div>
 </section>
 
-<!-- Sound familiar: the owner's own thoughts about payroll -->
-<section class="lp-section alt">
+<!-- Who you talk to: Jennifer's portrait and record -->
+{% include sections/jennifer.html note="You talk to Jennifer on the first call. She tells you plainly what your payroll needs and what it costs." %}
+
+<!-- Pay-run calendar: one example February with the pay days, the CRA remittance date and the T4 deadline.
+     Not a real year. Dates are CRA rules checked on canada.ca. Structure: .lp-cal > table + ol.lp-cal-key. -->
+<section class="lp-section">
     <div class="container">
-        <h2>Sound familiar?</h2>
-        <p class="lp-sub">Most owners who call us about small business payroll say one of these.</p>
-        <div class="lp-cards">
-            <div class="lp-card"><h3>"I just hired my first employee."</h3><p>Now you have to deduct CPP, EI and income tax, and you are not sure you do it right.</p></div>
-            <div class="lp-card"><h3>"When is the CRA remittance due?"</h3><p>You know late remittances bring penalties. You do not know your own schedule.</p></div>
-            <div class="lp-card"><h3>"I run payroll at night."</h3><p>Payday comes every two weeks, and it eats the time you need for the business.</p></div>
-            <div class="lp-card"><h3>"What if someone gets paid wrong?"</h3><p>One mistake on a pay stub and your team stops trusting you.</p></div>
-            <div class="lp-card"><h3>"T4s and ROEs scare me."</h3><p>Year-end slips and Records of Employment come with rules you do not want to learn the hard way.</p></div>
-            <div class="lp-card"><h3>"My bookkeeper and payroll do not talk."</h3><p>Two providers, two sets of numbers, and you are in the middle.</p></div>
+        <span class="lp-eyebrow">A month of payroll</span>
+        <h2>What we do, day by day</h2>
+        <p class="lp-sub">An example February for an employer who pays every second Friday and remits to the CRA each month.</p>
+        <div class="lp-cal">
+            <table>
+                <caption>Example month &middot; February &middot; not a real year</caption>
+                <thead>
+                    <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td></td><td></td><td>1</td><td>2</td><td class="pay">3 <b>Pay</b></td><td>4</td></tr>
+                    <tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+                    <tr><td>12</td><td>13</td><td>14</td><td class="cra">15 <b>CRA</b></td><td>16</td><td class="pay">17 <b>Pay</b></td><td>18</td></tr>
+                    <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+                    <tr><td>26</td><td>27</td><td class="cra">28 <b>T4</b></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+            <ol class="lp-cal-key">
+                <li><strong>3 and 17 &middot; Pay day</strong> We run the pay and deduct CPP, EI and income tax.</li>
+                <li><strong>15 &middot; CRA remittance due</strong> We send January's source deductions to the CRA. A regular remitter pays by the 15th of the next month.</li>
+                <li><strong>28 &middot; T4 deadline</strong> We file last year's T4 return. Your employees get their T4 slips by the last day of February.</li>
+                <li><strong>All month</strong> Your dedicated bookkeeper enters each pay run in your books.</li>
+            </ol>
+            <p class="lp-report-note">Your remittance schedule can differ. The CRA sets it by the amount you withhold. If a due date falls on a Saturday, Sunday or public holiday, the due date is the next business day. Source: Canada Revenue Agency, canada.ca.</p>
         </div>
+        {% include sections/lp-cta.html %}
     </div>
 </section>
 
 <!-- Curiosity block: what only the call answers -->
-<section class="lp-section">
+<section class="lp-section alt">
     <div class="container">
+        <span class="lp-eyebrow">The first call</span>
         <h2>What you'll find out on a 10-minute call</h2>
         <p class="lp-sub">Jennifer asks a few questions about your business. Then she tells you:</p>
         <div class="lp-cards">
@@ -61,20 +83,21 @@ extra_css: /assets/css/start.css
 </section>
 
 <!-- How it works: three steps, step 1 is the form -->
-<section class="lp-section alt">
+<section class="lp-section">
     <div class="container">
+        <span class="lp-eyebrow">How it works</span>
         <h2>How our payroll services work</h2>
         <p class="lp-sub">Three steps. You only do the first one.</p>
         <div class="lp-cards">
-            <div class="lp-card"><span class="lp-num">1</span><h3>Leave your name and number</h3><p>Jennifer calls you back. No forms to fill out beyond two fields.</p></div>
-            <div class="lp-card"><span class="lp-num">2</span><h3>Get a clear answer</h3><p>On the call you learn which plan fits and what payroll costs for your headcount.</p></div>
-            <div class="lp-card"><span class="lp-num">3</span><h3>We take over</h3><p>Your dedicated bookkeeper runs payroll, remittances and the books from then on.</p></div>
+            <div class="lp-card"><span class="lp-num">Step 01</span><h3>Leave your name and number</h3><p>Jennifer calls you back. No forms to fill out beyond two fields.</p></div>
+            <div class="lp-card"><span class="lp-num">Step 02</span><h3>Get a clear answer</h3><p>On the call you learn which plan fits and what payroll costs for your headcount.</p></div>
+            <div class="lp-card"><span class="lp-num">Step 03</span><h3>We take over</h3><p>Your dedicated bookkeeper runs payroll, remittances and the books from then on.</p></div>
         </div>
     </div>
 </section>
 
 <!-- Price: real prices only -->
-<section class="lp-section">
+<section class="lp-section alt">
     <div class="container lp-narrow">
         <div class="lp-price">
             <h2>Outsourced payroll from $99/month</h2>
@@ -82,7 +105,7 @@ extra_css: /assets/css/start.css
             <div class="lp-amount">$299/month</div>
             <p>The Bookkeeping plan includes payroll for up to 3 employees, monthly books, GST/PST and T4/T5 filing, and a dedicated bookkeeper. The Bookkeeping &amp; Tax plan ($499/month) covers payroll for up to 10 employees.</p>
             <p>The first call is free and has no obligation.</p>
-            <a href="#lead" class="btn btn-primary">See If Payroll Is Included For Me</a>
+            <a href="#lead" class="btn btn-primary">Book My Free Call</a>
         </div>
     </div>
 </section>
@@ -91,8 +114,9 @@ extra_css: /assets/css/start.css
 {% include sections/testimonials.html %}
 
 <!-- FAQ: real search questions, matched by the JSON-LD below -->
-<section class="lp-section alt">
+<section class="lp-section">
     <div class="container lp-narrow lp-faq">
+        <span class="lp-eyebrow">Common questions</span>
         <h2>Bookkeeping and payroll FAQ</h2>
         <details>
             <summary>What does outsourced payroll cost in Winnipeg?</summary>
@@ -126,7 +150,7 @@ extra_css: /assets/css/start.css
     <div class="container lp-narrow">
         <h2>Payroll may already be in your plan</h2>
         <p>Find out in 10 minutes if it costs you anything extra, and when your next CRA remittance is due.</p>
-        <a href="#lead" class="btn btn-primary">See If Payroll Is Included For Me</a>
+        <a href="#lead" class="btn btn-primary">Book My Free Call</a>
         <a href="tel:{{ site.phone_raw }}" class="btn btn-phone">{% include icons/phone.html size=18 %} {{ site.phone }}</a>
     </div>
 </section>

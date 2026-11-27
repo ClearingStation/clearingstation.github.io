@@ -3,6 +3,7 @@ layout: start
 title: "Monthly Bookkeeping Services Winnipeg | ClearingStation"
 description: "Monthly bookkeeping in Winnipeg from $299/month with a dedicated Manitoba bookkeeper and a 24-hour response guarantee. Find your right plan on a free call."
 extra_css: /assets/css/start.css
+body_class: accents   # mono section labels, step and FAQ numbers, see start.css
 ---
 
 <!-- Hero: mirror the comparison shopper, show the price, form on the right -->
@@ -25,40 +26,18 @@ extra_css: /assets/css/start.css
                     <li><strong>$115M</strong> in transactions processed</li>
                 </ul>
             </div>
-            {% include lead-form.html source="Monthly bookkeeping" title="Find Your Right Plan in 10 Minutes" intro="Leave your name and how to reach you. Jennifer gets back to you and tells you which plan fits &mdash; no sales pitch." button="Find My Right Plan" note="Free &middot; No obligation &middot; Jennifer gets back to you" success="Thank you. Jennifer will call you soon to find your right plan. Keep your phone close." %}
+            {% include lead-form.html source="Monthly bookkeeping" title="Find Your Right Plan in 10 Minutes" intro="Leave your name and how to reach you. Jennifer gets back to you and tells you which plan fits &mdash; no sales pitch." button="Book My Free Call" note="Free &middot; No obligation &middot; Jennifer gets back to you" success="Thank you. Jennifer will call you soon to find your right plan. Keep your phone close." %}
         </div>
     </div>
 </section>
 
-<!-- Sound familiar: their pains in their own words -->
-<section class="lp-section alt">
-    <div class="container">
-        <h2>Sound Familiar?</h2>
-        <p class="lp-sub">Most owners who look for bookkeeping services in Winnipeg are in one of these spots.</p>
-        <div class="lp-cards">
-            <div class="lp-card">
-                <h3>"I do the books at 11 pm."</h3>
-                <p>You run the business all day. Then you sort receipts at night and still wonder if it is right.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"My bookkeeper takes days to reply."</h3>
-                <p>You send a question and hear nothing. You stop asking, and small problems get bigger.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"I got a tax bill I did not expect."</h3>
-                <p>The books looked fine all year. Then year-end came with errors and a surprise bill.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"I don't know who does my books."</h3>
-                <p>A different person every time, or someone far away. You want one local person who knows your file.</p>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Who you talk to: Jennifer's portrait and record -->
+{% include sections/jennifer.html note="You talk to Jennifer on the first call. She tells you plainly which plan fits your business and what it costs." %}
 
 <!-- Curiosity block: open loops only the call closes -->
 <section class="lp-section">
     <div class="container lp-narrow">
+        <span class="lp-eyebrow">The first call</span>
         <h2>What You'll Find Out on a 10-Minute Call</h2>
         <p class="lp-sub">Jennifer asks a few quick questions about your business. Then she tells you:</p>
         <div class="lp-cards">
@@ -82,34 +61,38 @@ extra_css: /assets/css/start.css
     </div>
 </section>
 
-<!-- How it works: three steps -->
+<!-- How it works: three steps, then what a normal month looks like -->
 <section class="lp-section alt">
     <div class="container">
+        <span class="lp-eyebrow">How it works</span>
         <h2>How Our Monthly Bookkeeping Services Work</h2>
         <p class="lp-sub">Three steps. No software to learn.</p>
         <div class="lp-cards">
             <div class="lp-card">
-                <span class="lp-num">1</span>
+                <span class="lp-num">Step 01</span>
                 <h3>Leave your name and number</h3>
                 <p>Jennifer calls you back. In 10 minutes you know your plan and your price.</p>
             </div>
             <div class="lp-card">
-                <span class="lp-num">2</span>
+                <span class="lp-num">Step 02</span>
                 <h3>We move your books over</h3>
                 <p>We migrate your file from QuickBooks, other software or your current bookkeeper.</p>
             </div>
             <div class="lp-card">
-                <span class="lp-num">3</span>
+                <span class="lp-num">Step 03</span>
                 <h3>Your bookkeeper takes over</h3>
                 <p>One dedicated bookkeeper keeps your books each month and replies within 24 hours.</p>
             </div>
         </div>
+
+        {% include sections/lp-cta.html %}
     </div>
 </section>
 
 <!-- Price: the real monthly prices up front, to stop tab-hopping -->
 <section class="lp-section">
     <div class="container lp-narrow">
+        <span class="lp-eyebrow">Fees</span>
         <h2>Monthly Bookkeeping Prices</h2>
         <p class="lp-sub">Flat monthly prices. The free call tells you which one you need.</p>
         <div class="lp-prices">
@@ -138,7 +121,8 @@ extra_css: /assets/css/start.css
                 </ul>
             </div>
         </div>
-        <p class="lp-sub" style="margin-top:32px">The call is free and there is no obligation. <a href="#lead">Find my right plan</a>.</p>
+        <p class="lp-sub lp-after">The call is free and there is no obligation.</p>
+        {% include sections/lp-cta.html %}
     </div>
 </section>
 
@@ -148,6 +132,7 @@ extra_css: /assets/css/start.css
 <!-- FAQ: real questions people search -->
 <section class="lp-section alt">
     <div class="container lp-narrow lp-faq">
+        <span class="lp-eyebrow">Common questions</span>
         <h2>Monthly Bookkeeping FAQ</h2>
         <details>
             <summary>How much does monthly bookkeeping cost in Winnipeg?</summary>
@@ -185,7 +170,7 @@ extra_css: /assets/css/start.css
     <div class="container lp-narrow">
         <h2>Still Comparing Bookkeepers in Winnipeg?</h2>
         <p>Take 10 minutes. Jennifer tells you your right plan, the hours you get back and the deductions you are missing.</p>
-        <a href="#lead" class="btn btn-primary">Find My Right Plan {% include icons/arrow-right.html size=18 %}</a>
+        <a href="#lead" class="btn btn-primary">Book My Free Call {% include icons/arrow-right.html size=18 %}</a>
         <a href="tel:{{ site.phone_raw }}" class="btn btn-phone">{% include icons/phone.html size=18 %} {{ site.phone }}</a>
     </div>
 </section>
