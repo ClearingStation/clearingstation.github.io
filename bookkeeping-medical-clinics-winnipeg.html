@@ -3,10 +3,11 @@ layout: start
 title: "Bookkeeping for Medical Clinics in Winnipeg | ClearingStation"
 description: "Bookkeeping for medical clinics in Winnipeg: billing deposits, practitioner splits, payroll and GST in one set of books. See profit per practitioner. Free call."
 extra_css: /assets/css/start.css
+body_class: chart   # medical chart accents, see start.css
 ---
 
-<!-- Hero: mirror the clinic owner / office manager, form on the right -->
-<section class="lp-hero">
+<!-- Hero: mirror the clinic owner / office manager, form on the right. Graph-paper background (lp-chart). -->
+<section class="lp-hero lp-chart">
     <div class="container">
         <div class="lp-hero-grid">
             <div>
@@ -26,48 +27,43 @@ extra_css: /assets/css/start.css
                 </ul>
                 {% include sections/industry-photo.html %}
             </div>
-            {% include lead-form.html source="Industry: medical clinics" title="See Your Clinic's Numbers in 10 Minutes" intro="Leave your name and how to reach you. Jennifer gets back to you and asks a few questions about your clinic &mdash; no sales pitch." button="See My Clinic's Numbers Clearly" note="Free &middot; No obligation &middot; Jennifer gets back to you" success="Thank you. Jennifer will call you soon about your clinic's books. Keep your phone close." %}
+            {% include lead-form.html source="Industry: medical clinics" title="Book a Free 10-Minute Call About Your Clinic" intro="Leave your name and how to reach you. Jennifer gets back to you and asks a few questions about your clinic &mdash; no sales pitch." button="Book My Free Call" note="Free &middot; No obligation &middot; Jennifer gets back to you" success="Thank you. Jennifer will call you soon about your clinic's books. Keep your phone close." %}
         </div>
     </div>
 </section>
 
-<!-- Sound familiar: clinic pains in the owner's own words -->
+<!-- Who you talk to: Jennifer's portrait and record -->
+{% include sections/jennifer.html note="You talk to Jennifer on the first call. She tells you plainly what your clinic's books need and what it costs." %}
+
+<!-- Sound familiar: what clinic owners tell us and what we do about it, as one plain sheet -->
 <section class="lp-section alt">
     <div class="container">
+        <span class="lp-eyebrow">Common problems</span>
         <h2>Sound Familiar?</h2>
         <p class="lp-sub">Clinic owners and office managers tell us the same things &mdash; medical, dental, physio, chiro, massage and optometry alike.</p>
-        <div class="lp-cards">
-            <div class="lp-card">
-                <h3>"Money comes in from five places."</h3>
-                <p>Provincial billing, insurers, direct billing and patient payments at the front desk. Matching deposits to visits takes days.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"I hope the splits are right."</h3>
-                <p>Each associate has a different split or overhead arrangement. You do the math in a spreadsheet and hope nobody asks.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"Is she a contractor or an employee?"</h3>
-                <p>Some practitioners invoice you, others are on payroll with the front desk and assistants. It is easy to get wrong.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"GST? On some things, I think."</h3>
-                <p>Most health services are exempt. Products and some services are not. You are not sure where your line is.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"Month-end is chaos."</h3>
-                <p>Rent, equipment, supplies, payouts and payroll all land at once. The books are always weeks behind.</p>
-            </div>
-            <div class="lp-card">
-                <h3>"Which part of the clinic makes money?"</h3>
-                <p>You know total revenue. You do not know which practitioner or service line actually pays the lease.</p>
-            </div>
+        <div class="lp-report">
+            <table>
+                <thead>
+                    <tr><th>What clinic owners tell us</th><th>What we do</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>"Money comes in from five places."</td><td>Your bookkeeper records the deposits from provincial billing, insurers and the front desk each month.</td></tr>
+                    <tr><td>"I hope the splits are right."</td><td>We record each associate's split or expense-sharing arrangement the same way every month.</td></tr>
+                    <tr><td>"Is she a contractor or an employee?"</td><td>We run payroll for your employees and record the payouts to practitioners who invoice you.</td></tr>
+                    <tr><td>"GST? On some things, I think."</td><td>We review your sales and file your GST/PST returns.</td></tr>
+                    <tr><td>"Month-end is chaos."</td><td>One dedicated bookkeeper does your books every month and replies within 24 hours.</td></tr>
+                    <tr><td>"Which part of the clinic makes money?"</td><td>We set up your books so revenue and costs show by practitioner and by service line.</td></tr>
+                </tbody>
+            </table>
         </div>
+        {% include sections/lp-cta.html %}
     </div>
 </section>
 
 <!-- Curiosity block: clinic-specific open loops only the call closes -->
 <section class="lp-section">
     <div class="container lp-narrow">
+        <span class="lp-eyebrow">The first call</span>
         <h2>What You'll Find Out on a 10-Minute Call</h2>
         <p class="lp-sub">Jennifer asks how your clinic bills, pays and splits. Then she tells you:</p>
         <div class="lp-cards">
@@ -94,31 +90,34 @@ extra_css: /assets/css/start.css
 <!-- How it works: three steps -->
 <section class="lp-section alt">
     <div class="container">
+        <span class="lp-eyebrow">How it works</span>
         <h2>How Our Clinic Bookkeeping Works</h2>
         <p class="lp-sub">Healthcare bookkeeping for clinics across Manitoba, in three steps. Your team keeps using the software they know.</p>
         <div class="lp-cards">
             <div class="lp-card">
-                <span class="lp-num">1</span>
+                <span class="lp-num">Step 01</span>
                 <h3>Leave your name and number</h3>
                 <p>Jennifer calls you back. In 10 minutes you know what your clinic needs and which plan fits.</p>
             </div>
             <div class="lp-card">
-                <span class="lp-num">2</span>
+                <span class="lp-num">Step 02</span>
                 <h3>We set up your clinic's books</h3>
                 <p>We move your file from QuickBooks, other software or your current bookkeeper, and set up tracking by practitioner and service line.</p>
             </div>
             <div class="lp-card">
-                <span class="lp-num">3</span>
+                <span class="lp-num">Step 03</span>
                 <h3>Your bookkeeper takes over</h3>
                 <p>One dedicated bookkeeper handles deposits, payouts, payroll and GST each month, and replies within 24 hours.</p>
             </div>
         </div>
+        {% include sections/lp-cta.html %}
     </div>
 </section>
 
 <!-- Price: the plans that usually fit a multi-practitioner clinic -->
 <section class="lp-section">
     <div class="container lp-narrow">
+        <span class="lp-eyebrow">Fees</span>
         <h2>Medical Clinic Accounting Prices</h2>
         <p class="lp-sub">Most clinics with a front desk and a few practitioners fit Bookkeeping &amp; Tax. Larger clinics often need more. We confirm your fit on the call.</p>
         <div class="lp-prices">
@@ -147,7 +146,8 @@ extra_css: /assets/css/start.css
                 </ul>
             </div>
         </div>
-        <p class="lp-sub" style="margin-top:32px">Small clinic with less than 100 transactions a month? Our Bookkeeping plan starts at $299/month. The call is free and there is no obligation. <a href="#lead">See my clinic's numbers clearly</a>.</p>
+        <p class="lp-sub" style="margin-top:32px">Small clinic with less than 100 transactions a month? Our Bookkeeping plan starts at $299/month. The call is free and there is no obligation.</p>
+        {% include sections/lp-cta.html %}
     </div>
 </section>
 
@@ -157,6 +157,7 @@ extra_css: /assets/css/start.css
 <!-- FAQ: real questions clinic owners search -->
 <section class="lp-section alt">
     <div class="container lp-narrow lp-faq">
+        <span class="lp-eyebrow">Common questions</span>
         <h2>Clinic Bookkeeping FAQ</h2>
         <details>
             <summary>Do you do bookkeeping for dental, physio and chiropractic clinics?</summary>
@@ -194,7 +195,7 @@ extra_css: /assets/css/start.css
     <div class="container lp-narrow">
         <h2>Which Part of Your Clinic Really Pays the Rent?</h2>
         <p>Take 10 minutes. Jennifer tells you how to see profit per practitioner, whether your splits are recorded right, and where your GST line is.</p>
-        <a href="#lead" class="btn btn-primary">See My Clinic's Numbers Clearly {% include icons/arrow-right.html size=18 %}</a>
+        <a href="#lead" class="btn btn-primary">Book My Free Call {% include icons/arrow-right.html size=18 %}</a>
         <a href="tel:{{ site.phone_raw }}" class="btn btn-phone">{% include icons/phone.html size=18 %} {{ site.phone }}</a>
     </div>
 </section>

@@ -1,0 +1,19 @@
+{% comment %}"Who you talk to": large portrait of Jennifer with her record. A real face builds the most trust.
+Params: note - the second paragraph, written for the page's audience.
+        label - button text (default "Book My Free Call").{% endcomment %}
+<section class="lp-section">
+    <div class="container lp-person">
+        <div class="lp-person-photo">
+            <img src="{{ '/images/optimized/jennifer-840.webp' | relative_url }}" alt="Jennifer Flaming, founder of ClearingStation" width="840" height="1176" loading="lazy">
+            <div class="lp-person-badge"><strong>100+</strong> CRA audits managed</div>
+        </div>
+        <div>
+            <span class="lp-eyebrow">Who you talk to</span>
+            <h2>Jennifer Flaming</h2>
+            <p class="lp-role">Founder, ClearingStation Ltd.</p>
+            <p>Jennifer has spent more than eleven years keeping books and filing taxes for Manitoba businesses, physicians and medical practices among them. She has handled more than 100 CRA audits for clients, from the first letter to the final answer.</p>
+            <p>{{ include.note }}</p>
+            <a href="#lead" class="btn btn-primary">{{ include.label | default: "Book My Free Call" }} {% include icons/arrow-right.html size=18 %}</a>
+        </div>
+    </div>
+</section>

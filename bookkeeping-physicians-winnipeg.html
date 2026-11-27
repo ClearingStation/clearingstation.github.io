@@ -32,23 +32,8 @@ body_class: chart   # medical chart accents, see start.css
     </div>
 </section>
 
-<!-- Who you talk to: large portrait of Jennifer. A real face and a track record build the most trust. -->
-<section class="lp-section">
-    <div class="container lp-person">
-        <div class="lp-person-photo">
-            <img src="{{ '/images/optimized/jennifer-840.webp' | relative_url }}" alt="Jennifer Flaming, founder of ClearingStation" width="840" height="1176" loading="lazy">
-            <div class="lp-person-badge"><strong>100+</strong> CRA audits managed</div>
-        </div>
-        <div>
-            <span class="lp-eyebrow">Who you talk to</span>
-            <h2>Jennifer Flaming</h2>
-            <p class="lp-role">Founder, ClearingStation Ltd.</p>
-            <p>Jennifer has spent more than eleven years keeping books and filing taxes for Manitoba businesses, physicians and medical practices among them. She has handled more than 100 CRA audits for clients, from the first letter to the final answer.</p>
-            <p>You talk to Jennifer on the first call. She tells you plainly what your MPC needs and what it costs.</p>
-            <a href="#lead" class="btn btn-primary">Book My Free Call {% include icons/arrow-right.html size=18 %}</a>
-        </div>
-    </div>
-</section>
+<!-- Who you talk to: Jennifer's portrait and record -->
+{% include sections/jennifer.html note="You talk to Jennifer on the first call. She tells you plainly what your MPC needs and what it costs." %}
 
 <!-- Sound familiar: what doctors tell us and what we do about it, as one plain sheet -->
 <section class="lp-section alt">
@@ -71,8 +56,7 @@ body_class: chart   # medical chart accents, see start.css
                 </tbody>
             </table>
         </div>
-        <!-- Call to action: one label on the whole page, always to the form -->
-        <p class="lp-cta"><a href="#lead" class="btn btn-primary">Book My Free Call {% include icons/arrow-right.html size=18 %}</a></p>
+        {% include sections/lp-cta.html %}
     </div>
 </section>
 
@@ -126,8 +110,7 @@ body_class: chart   # medical chart accents, see start.css
                 <p>Your dedicated bookkeeper reconciles your billing and expenses each month and replies within 24 hours.</p>
             </div>
         </div>
-        <!-- Call to action: one label on the whole page, always to the form -->
-        <p class="lp-cta"><a href="#lead" class="btn btn-primary">Book My Free Call {% include icons/arrow-right.html size=18 %}</a></p>
+        {% include sections/lp-cta.html %}
     </div>
 </section>
 
